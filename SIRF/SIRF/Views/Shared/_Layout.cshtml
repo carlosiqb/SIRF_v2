@@ -1,0 +1,108 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    <title>Sistema Integral de Recursos Financieros</title>
+
+    <link rel="stylesheet" href="~/Content/bootstrap.css" />
+    <link rel="stylesheet" href="~/Content/bootstrap.min.css" />
+
+    <link rel="stylesheet" href="~/Css/StyleMaster.css" />
+    <link rel="stylesheet" href="~/Css/bootstrap-datepicker.css" />
+    <link rel="stylesheet" href="~/Css/select2.min.css" />
+
+    <link rel="shortcut icon" type="image/x-icon" href="~/favicon_PFP.ico">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+    <script type="text/javascript" src="~/Scripts/Utilerias/Ajax.js"></script>
+
+</head>
+<body>
+
+    <div style="width: 100%; height: 110px; background-color: white; margin-top: -50px !important">
+        <div style="width: 100%; background-color: white; ">
+            <div class="col-sm-1">
+            </div>
+            <div class="col-sm-6">
+                <img ID="ImgLogos" runat="server" src="~/Img/logos.png" />
+            </div>
+            <div class="col-sm-5">
+                <div class="row">
+                    <div class="col-xs-12" style="height: 5px">&nbsp;</div>
+                </div>
+                <div class="row">
+                    <div class="controls col-sm-5">
+                        <div class="row">
+                            <div class="col-sm-1"></div>
+                            <div class="col-sm-11">
+                                <img ID="imgLogosSIRF" runat="server" src="~/Img/logoSIRF.png" style="height: 51px" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="controls col-sm-2">
+                        <div class="row">
+                            <div class="col-sm-1"></div>
+                            <div class="col-sm-11">
+                                <a href="" id="aCerrarSesion" alt="Cerrar Sesion" runat="server" style="display: none">
+                                    <img src="~/Img/Salir.png" width="80%" height="80%" />
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="controls col-sm-5">
+                        <input id="hdfIPv4" type="hidden" runat="server" />
+                        <span class="control-label" id="lblNomUsuario"></span>
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <span class="control-label" style="font-size: xx-small" id="lblUnidadAdm"></span><br/>
+                                <span class="control-label" style="font-size: xx-small" id="lblDescripcionPerfil"></span>
+                                <span class="control-label" style="font-size: xx-small" id="lblTipoRolUsuario"></span>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-12">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="divMenu" class="hidden" style="background-color: transparent; z-index: 10; position: fixed; width: 50%; margin-left: 0%; margin-right: auto; height: 122px">
+            <p>
+                <button class="btn btn-primary" id="btnCollapse" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample" style="height:auto;">
+                    <span class="glyphicon glyphicon-menu-hamburger" style="width: 40px; height: 65px;"></span>
+                </button>
+            </p>
+            <div class="collapse" id="collapseExample">
+                <div id="bloqueMenu" class="card card-block">
+                    <div class="col-md-3">
+                        <ul class="nav nav-pills nav-stacked" runat="server" id="accordion1"></ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="principal">
+        <div class="loading hidden" align="center">
+            Cargando. Favor de esperar...<br />
+            <br />
+            <img src="~/Img/loader.gif" alt="" />
+        </div>
+    </div>
+
+    @RenderBody()
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+
+
+</body>
+</html>

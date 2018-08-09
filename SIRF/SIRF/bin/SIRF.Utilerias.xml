@@ -1,0 +1,167 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>SIRF.Utilerias</name>
+    </assembly>
+    <members>
+        <member name="T:SIRF.Utilerias.ConstruccionSelect">
+            <summary>
+            Utilerias para Documentos
+            </summary>
+        </member>
+        <member name="T:SIRF.Utilerias.Documentos">
+            <summary>
+            Utilerias para Documentos
+            </summary>
+        </member>
+        <member name="T:SIRF.Utilerias.Instance`1">
+            <summary>
+            Clase para el consumo de patrón de diseño Singleton
+            </summary>
+        </member>
+        <member name="P:SIRF.Utilerias.Instance`1.Instances">
+            <summary>
+            Evalua si la instancia existe, procede a utilizarla; en caso contrario la crea para ser utilizada.
+            </summary>
+        </member>
+        <member name="M:SIRF.Utilerias.Documentos.CodificarArchivo(System.String)">
+            <summary>
+            Método para la codificación del archivo a guardar en base de datos.
+            </summary>
+            <param name="sNombreArchivo">Ruta y Nombre del archivo</param>
+            <returns>arreglo de bytes</returns>
+        </member>
+        <member name="M:SIRF.Utilerias.Documentos.DecodificarArchivo(System.String)">
+            <summary>
+            Método para la decodificación del archivo a guardado en base de datos.
+            </summary>
+            <param name="sBase64">Archivo guardado en base datos</param>
+            <returns></returns>
+        </member>
+        <member name="T:SIRF.Utilerias.Respuesta`1">
+            <summary>
+            Clase Respuesta
+            </summary>
+            <typeparam name="T">Parametro generico</typeparam>
+        </member>
+        <member name="F:SIRF.Utilerias.Respuesta`1.disposing">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:SIRF.Utilerias.Respuesta`1.Dispose">
+            <summary>
+            Constructor de Dispose
+            </summary>
+        </member>
+        <member name="M:SIRF.Utilerias.Respuesta`1.Dispose(System.Boolean)">
+            <summary>
+            Virtual de Dispose
+            </summary>
+            <param name="b"></param>
+        </member>
+        <member name="M:SIRF.Utilerias.Respuesta`1.Finalize">
+            <summary>
+            Destructor de la clase Respuesta
+            </summary>
+        </member>
+        <member name="P:SIRF.Utilerias.Respuesta`1.TipoEstatus">
+            <summary>
+            Propiedad de tipo objeto TipoEstatus.
+            </summary>
+        </member>
+        <member name="P:SIRF.Utilerias.Respuesta`1.ListaErrores">
+            <summary>
+            Propiedad de tipo lista de cadenas.
+            </summary>
+        </member>
+        <member name="P:SIRF.Utilerias.Respuesta`1.MensajeUsuario">
+            <summary>
+            Propiedad de tipo cadena.
+            </summary>
+        </member>
+        <member name="P:SIRF.Utilerias.Respuesta`1.NumeroRegistros">
+            <summary>
+            Propiedad de tipo entero.
+            </summary>
+        </member>
+        <member name="P:SIRF.Utilerias.Respuesta`1.IdEntidad">
+            <summary>
+            Propiedad de tipo entero.
+            </summary>
+        </member>
+        <member name="P:SIRF.Utilerias.Respuesta`1.ListaRegistros">
+            <summary>
+            Propiedad de tipo lista generica
+            </summary>
+        </member>
+        <member name="P:SIRF.Utilerias.Respuesta`1.EstatusRespuesta">
+            <summary>
+            Propiedad de tipo entero.
+            </summary>
+        </member>
+        <member name="P:SIRF.Utilerias.Respuesta`1.TipoRespuesta">
+            <summary>
+            Propiedad de tipo generica.
+            </summary>
+        </member>
+        <member name="T:SIRF.Utilerias.ServicioFTP">
+            <summary>
+            Clase para la carga de archivo mediante FTP
+            </summary>
+        </member>
+        <member name="M:SIRF.Utilerias.ServicioFTP.#ctor(System.String,System.String,System.String)">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="M:SIRF.Utilerias.ServicioFTP.ListadoArchivos(System.String)">
+            <summary>
+            Obtien la lista de archivos en directorio FTP
+            </summary>
+            <param name="directorio">~\Directorio FTP</param>
+            <returns>Archivos</returns>
+        </member>
+        <member name="M:SIRF.Utilerias.ServicioFTP.ImportarArchivo(System.String,System.String)">
+            <summary>
+            Envía respaldo de archivo a FTP
+            </summary>
+            <param name="archivoDestino">~\Archivo FTP</param>
+            <param name="archivoOrigen">~\Archivo LOCAL</param>
+            <returns></returns>
+        </member>
+        <member name="M:SIRF.Utilerias.ServicioFTP.ExportarArchivo(System.String,System.String)">
+            <summary>
+            Descarga archivo del servidor FTP 
+            </summary>
+            <param name="archivoOrigen">~\Archivo FTP</param>
+            <param name="archivoDestino">~\Respaldo local</param>
+        </member>
+        <member name="M:SIRF.Utilerias.ServicioFTP.EliminarArchivo(System.String)">
+            <summary>
+            Elimina archivo de FTP
+            </summary>
+            <param name="archivo">~\Archivo FTP</param>
+        </member>
+        <member name="M:SIRF.Utilerias.ServicioFTP.RenombrarArchivo(System.String,System.String)">
+            <summary>
+            Renombrar archivo de FTP
+            </summary>
+            <param name="archivoFTP">~\Archivo FTP</param>
+            <param name="nuevoNombreArchivo">Nuevo nombre para archivo</param>
+        </member>
+        <member name="M:SIRF.Utilerias.ServicioFTP.CrearCarpeta(System.String)">
+            <summary>
+            Crea carpeta en servidor FTP
+            </summary>
+            <param name="nuevaCarpeta">~\Carpeta</param>
+        </member>
+        <member name="M:SIRF.Utilerias.Utils.ValidaNumeroOficio(System.String)">
+            <summary>
+            Valida el Numero de Oficio capturado
+            </summary>
+            <param name="numOficio">Numero de Oficio capturado</param>
+            <returns>Si contiene solo letras, numeros, / y -</returns>
+        </member>
+    </members>
+</doc>

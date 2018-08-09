@@ -1,0 +1,6 @@
+C:\Users\luisg.indra\Documents\Ultrasist\SIRF\SIRF_V2.0\SIRF_V2\SIRF.Objetos\bin\Release\SIRF.Objetos.dll
+C:\Users\luisg.indra\Documents\Ultrasist\SIRF\SIRF_V2.0\SIRF_V2\SIRF.Objetos\bin\Release\SIRF.Objetos.pdb
+C:\Users\luisg.indra\Documents\Ultrasist\SIRF\SIRF_V2.0\SIRF_V2\SIRF.Objetos\obj\Release\SIRF.Objetos.csprojAssemblyReference.cache
+C:\Users\luisg.indra\Documents\Ultrasist\SIRF\SIRF_V2.0\SIRF_V2\SIRF.Objetos\obj\Release\SIRF.Objetos.csproj.CoreCompileInputs.cache
+C:\Users\luisg.indra\Documents\Ultrasist\SIRF\SIRF_V2.0\SIRF_V2\SIRF.Objetos\obj\Release\SIRF.Objetos.dll
+C:\Users\luisg.indra\Documents\Ultrasist\SIRF\SIRF_V2.0\SIRF_V2\SIRF.Objetos\obj\Release\SIRF.Objetos.pdb

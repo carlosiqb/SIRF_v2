@@ -1,0 +1,1485 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>SIRF.Objetos</name>
+    </assembly>
+    <members>
+        <member name="T:SIRF.Objetos.ITipoSolicitud">
+            <summary>
+            Interface de tipo  ITipoSolicitud
+            </summary>
+        </member>
+        <member name="M:SIRF.Objetos.ITipoSolicitud.Set">
+            <summary>
+            Propiedad SET
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:SIRF.Objetos.OAccion">
+            <summary>
+            Objeto de tipo OAccion 
+            </summary>
+        </member>
+        <member name="P:SIRF.Objetos.OAccion.AccionID">
+            <summary>
+            Propiedad Identificador
+            </summary>
+        </member>
+        <member name="P:SIRF.Objetos.OAccion.DescripcionAccion">
+            <summary>
+            Propiedad Descripción acción
+            </summary>
+        </member>
+        <member name="P:SIRF.Objetos.OAccion.Accion">
+            <summary>
+            Propiedad Acción
+            </summary>
+        </member>
+        <member name="P:SIRF.Objetos.OAccion.controlFormulario">
+            <summary>
+            Propiedad controlFormulario
+            </summary>
+        </member>
+        <member name="P:SIRF.Objetos.OAccion.EstatusLogico">
+            <summary>
+            Propiedad Estatus lógico
+            </summary>        
+        </member>
+        <member name="P:SIRF.Objetos.OBancos.bancoID">
+            <summary>
+            Identificador
+            </summary>
+        </member>
+        <member name="P:SIRF.Objetos.OBancos.cveBanco">
+            <summary>
+            Clave Banco
+            </summary>
+        </member>
+        <member name="P:SIRF.Objetos.OBancos.descripcionBanco">
+            <summary>
+            Descripcion Banco
+            </summary>
+        </member>
+        <member name="P:SIRF.Objetos.OBancos.EstatusLogico">
+            <summary>
+            Estatus lógico
+            </summary>
+        </member>
+        <member name="T:SIRF.Objetos.OConceptoGastos">
+            <summary>
+            Objeto de tipo OConceptoGastos
+            </summary>
+        </member>
+        <member name="P:SIRF.Objetos.OConceptoGastos.conceptoGastosID">
+            <summary>
+            Porpiedad conceptoGastosID
+            </summary>
+        </member>
+        <member name="P:SIRF.Objetos.OConceptoGastos.descripcionConceptoGasto">
+            <summary>
+            Propiedad descripcionConceptoGasto
+            </summary>
+        </member>
+        <member name="P:SIRF.Objetos.OConceptoGastos.tipoSolicitudID">
+            <summary>
+             propiedad tipoSolicitudID
+            </summary>
+        </member>
+        <member name="P:SIRF.Objetos.OConceptoGastos.estatusLogico">
+            <summary>
+            propiedad estatusLogico
+            </summary> 
+        </member>
+        <member name="T:SIRF.Objetos.OCuentaBancaria">
+            <summary>
+            Objeto de tipo OCuentaBancaria
+            </summary>
+        </member>
+        <member name="T:SIRF.Objetos.OCuotaExcel">
+            <summary>
+            Objeto de tipo OCuotaDiaria
+            </summary>
+        </member>
+        <member name="T:SIRF.Objetos.OCuotaDiaria">
+            <summary>
+            Objeto de tipo OCuotaDiaria
+            </summary>
+        </member>
+        <member name="M:SIRF.Objetos.OCuotaDiaria.Set">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:SIRF.Objetos.OCuotaDiaria.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="P:SIRF.Objetos.OCuotaDiaria.CuotaDiariaID">
+            <summary>
+            Identificador
+            </summary>
+        </member>
+        <member name="P:SIRF.Objetos.OCuotaDiaria.TipoCuota">
+            <summary>
+            Catálogo  CatTipoCuotas
+            </summary>
+        </member>
+        <member name="P:SIRF.Objetos.OCuotaDiaria.Partida">
+            <summary>
+            Catálogo CatPartida
+            </summary>
+        </member>
+        <member name="P:SIRF.Objetos.OCuotaDiaria.NumeroDiasEfectivos">
+            <summary>
+            Numero de dias efectivos
+            </summary>
+        </member>
+        <member name="P:SIRF.Objetos.OCuotaDiaria.MontoPagar">
+            <summary>
+            MOnto apagar
+            </summary>
+        </member>
+        <member name="P:SIRF.Objetos.OCuotaDiaria.NumeroExpediente">
+            <summary>
+            Numero de expediente
+            </summary>
+        </member>
+        <member name="P:SIRF.Objetos.OCuotaDiaria.FechaInicio">
+            <summary>
+            Fecha inicial del periodo de pago
+            </summary>
+        </member>
+        <member name="P:SIRF.Objetos.OCuotaDiaria.FechaFin">
+            <summary>
+            Fecha final del periodo de pago
+            </summary>
+        </member>
+        <member name="P:SIRF.Objetos.OCuotaDiaria.InstitucionBancaria">
+            <summary>
+            Institución bancaria
+            </summary>
+        </member>
+        <member name="P:SIRF.Objetos.OCuotaDiaria.Cuenta">
+            <summary>
+            Tipo de cuenta
+            </summary>
+        </member>
+        <member name="P:SIRF.Objetos.OCuotaDiaria.CuentaBancaria">
+            <summary>
+            Cuenta bancaria
+            </summary>
+        </member>
+        <member name="P:SIRF.Objetos.OCuotaDiaria.CLABEInterbancaria">
+            <summary>
+            CLABE Interbancaria
+            </summary>
+        </member>
+        <member name="P:SIRF.Objetos.OCuotaDiaria.SoloLectura">
+            <summary>
+            Edición de la cuota
+            </summary>
+        </member>
+        <member name="P:SIRF.Objetos.ODestino.DestinoID">
+            <summary>
+            Identificador
+            </summary>
+        </member>
+        <member name="P:SIRF.Objetos.ODestino.EntidadFederativa">
+            <summary>
+            Catálogo entidad federativa
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "P:SIRF.Objetos.ODestino.DescripcionDestino" -->
+        <member name="P:SIRF.Objetos.ODestino.EstatusLogico">
+            <summary>
+            Estatus lógico
+            </summary>
+        </member>
+        <member name="P:SIRF.Objetos.ODestino.Orden">
+            <summary>
+            Orden
+            </summary>
+        </member>
+        <member name="P:SIRF.Objetos.OEntidadFederativa.EntidadFederativaID">
+            <summary>
+            Identificador
+            </summary>
+        </member>
+        <member name="P:SIRF.Objetos.OEntidadFederativa.Pais">
+            <summary>
+            Catálogo pais
+            </summary>
+        </member>
+        <member name="P:SIRF.Objetos.OEntidadFederativa.DescripcionEntidadFederativa">
+            <summary>
+            Entidad federativa
+            </summary>
+        </member>
+        <member name="P:SIRF.Objetos.OEntidadFederativa.EstatusLogico">
+            <summary>
+            Estatus lógico
+            </summary>
+        </member>
+        <member name="T:SIRF.Objetos.OEstatusMovimiento">
+            <summary>
+            Objeto de tipo OEstatusMovimiento
+            </summary>
+        </member>
+        <member name="P:SIRF.Objetos.OEstatusMovimiento.EstatusMovimientoID">
+            <summary>
+            Propiedad estatusMovimientoID
+            </summary>
+        </member>
+        <member name="P:SIRF.Objetos.OEstatusMovimiento.SolicitudID">
+            <summary>
+            Propiedad solicitudID
+            </summary>
+        </member>
+        <member name="P:SIRF.Objetos.OEstatusMovimiento.UsuarioID">
+            <summary>
+            Propiedad usuarioID
+            </summary>
+        </member>
+        <member name="P:SIRF.Objetos.OEstatusMovimiento.FechaMovimiento">
+            <summary>
+            Propiedad fechaMovimiento
+            </summary>
+        </member>
+        <member name="P:SIRF.Objetos.OEstatusMovimiento.Observaciones">
+            <summary>
+            Propiedad observaciones
+            </summary>
+        </member>
+        <member name="P:SIRF.Objetos.OEstatusMovimiento.Movimiento">
+            <summary>
+            Propiedad movimiento
+            </summary>
+        </member>
+        <member name="P:SIRF.Objetos.OEstatusMovimiento.Usuario">
+            <summary>
+            Propiedad usuario
+            </summary>
+        </member>
+        <member name="P:SIRF.Objetos.OEstatusMovimiento.Fecha">
+            <summary>
+            Propiedad fecha
+            </summary>
+        </member>
+        <member name="P:SIRF.Objetos.OEstatusMovimiento.Modulo">
+            <summary>
+            Propiedad Modulo
+            </summary>
+        </member>
+        <member name="T:SIRF.Objetos.OBusquedaParametro">
+            <summary>
+            Objeto de tipo ObjetoBusquedaParametro.
+            </summary>
+        </member>
+        <member name="P:SIRF.Objetos.OBusquedaParametro.TipoBusqueda">
+            <summary>
+            Propiedad TipoBusqueda.
+            </summary>
+        </member>
+        <member name="P:SIRF.Objetos.OBusquedaParametro.TipoSolicitudID">
+            <summary>
+            Propiedad TipoSolicitudID
+            </summary>
+        </member>
+        <member name="P:SIRF.Objetos.OBusquedaParametro.ExpedienteID">
+            <summary>
+            Propiedad ExpedienteID
+            </summary>
+        </member>
+        <member name="P:SIRF.Objetos.OBusquedaParametro.UsuarioID">
+            <summary>
+            Propiedad UsuarioID
+            </summary>
+        </member>
+        <member name="P:SIRF.Objetos.OBusquedaParametro.PerfilID">
+            <summary>
+            Propiedad PerfilID
+            </summary>
+        </member>
+        <member name="P:SIRF.Objetos.OBusquedaParametro.Descripcion">
+            <summary>
+            Propiedad Descripcion
+            </summary>
+        </member>
+        <member name="P:SIRF.Objetos.OBusquedaParametro.NumeroExpediente">
+            <summary>
+            Propiedad NumeroExpediente
+            </summary>
+        </member>
+        <member name="P:SIRF.Objetos.OBusquedaParametro.FechaInicio">
+            <summary>
+            Propiedad FechaInicio
+            </summary>
+        </member>
+        <member name="P:SIRF.Objetos.OBusquedaParametro.FechaFin">
+            <summary>
+            Propiedad FechaFin
+            </summary>
+        </member>
+        <member name="T:SIRF.Objetos.ODocumento">
+            <summary>
+            Objeto de tipo ODocumento
+            </summary>
+        </member>
+        <member name="M:SIRF.Objetos.ODocumento.#ctor">
+            <summary>
+            Constructor del objeto de tipo ODocumento.
+            </summary>
+        </member>
+        <member name="P:SIRF.Objetos.ODocumento.DocumentoID">
+            <summary>
+            Identificador
+            </summary>
+        </member>
+        <member name="P:SIRF.Objetos.ODocumento.TipoDocumento">
+            <summary>
+            Catálogo tipo de documento
+            </summary>
+        </member>
+        <member name="P:SIRF.Objetos.ODocumento.DescripcionDocumento">
+            <summary>
+            Descripción del tipo de documento
+            </summary>
+        </member>
+        <member name="P:SIRF.Objetos.ODocumento.Anexo">
+            <summary>
+            Nombre del archivo
+            </summary>
+        </member>
+        <member name="P:SIRF.Objetos.ODocumento.Ruta">
+            <summary>
+            Directorio del servidor
+            </summary>
+        </member>
+        <member name="P:SIRF.Objetos.ODocumento.Equipo">
+            <summary>
+            Equipo del usuario
+            </summary>
+        </member>
+        <member name="P:SIRF.Objetos.ODocumento.FechaRecepcion">
+            <summary>
+            Fecha de carga de documento
+            </summary>
+        </member>
+        <member name="P:SIRF.Objetos.ODocumento.Edicion">
+            <summary>
+            Saber si el boton eliminar es de modo edicion o no
+            </summary>
+        </member>
+        <member name="P:SIRF.Objetos.ODocumento.Solicitud">
+            <summary>
+            Solicitud
+            </summary>
+        </member>
+        <member name="P:SIRF.Objetos.ODocumento.Extension">
+            <summary>
+            Extensión del archivo
+            </summary>
+        </member>
+        <member name="P:SIRF.Objetos.ODocumento.DocumentoBase64">
+            <summary>
+            Documento
+            </summary>
+        </member>
+        <member name="T:SIRF.Objetos.OEstatusSolicitud">
+            <summary>
+            Objeto de tipo OEstatusSolicitud
+            </summary>
+        </member>
+        <member name="P:SIRF.Objetos.OEstatusSolicitud.EstatusID">
+            <summary>
+            Propiedad Identificador
+            </summary>
+        </member>
+        <member name="P:SIRF.Objetos.OEstatusSolicitud.DescripcionEstatus">
+            <summary>
+            Propiedad Descripción
+            </summary>
+        </member>
+        <member name="P:SIRF.Objetos.OEstatusSolicitud.DescripcionCorta">
+            <summary>
+            Propiedad Descripción corta
+            </summary>
+        </member>
+        <member name="P:SIRF.Objetos.OEstatusSolicitud.EstatusLogico">
+            <summary>
+            Propiedad Estatus lógico
+            </summary>
+        </member>
+        <member name="P:SIRF.Objetos.OEstatusSolicitud.EstatusSiguiente">
+            <summary>
+            Propiedad estatusSiguiente
+            </summary>
+        </member>
+        <member name="P:SIRF.Objetos.OEstatusSolicitud.EstatusDevolucion">
+            <summary>
+            Propiedad estatusDevolucion
+            </summary>
+        </member>
+        <member name="P:SIRF.Objetos.OEstatusSolicitud.EstatusAlternativo">
+            <summary>
+            Propiedad estatusAlternativo
+            </summary>
+        </member>
+        <member name="P:SIRF.Objetos.OEstatusSolicitud.EstatusAltDev">
+            <summary>
+            Propiedad estatusAltDev
+            </summary>
+        </member>
+        <member name="T:SIRF.Objetos.OEvento">
+            <summary>
+            Objeto de tipo OEvento
+            </summary>
+        </member>
+        <member name="P:SIRF.Objetos.OEvento.EventoId">
+            <summary>
+            Propiedad  EventoId
+            </summary>
+        </member>
+        <member name="P:SIRF.Objetos.OEvento.CveEvento">
+            <summary>
+            Propiedad  CveEvento
+            </summary>
+        </member>
+        <member name="P:SIRF.Objetos.OEvento.DescEvento">
+            <summary>
+            Propiedad DescEvento
+            </summary>
+        </member>
+        <member name="P:SIRF.Objetos.OEvento.DescLargaEvento">
+            <summary>
+            Propiedad DescLargaEvento
+            </summary>
+        </member>
+        <member name="P:SIRF.Objetos.OEvento.ModuloId">
+            <summary>
+            Propiedad ModuloId
+            </summary>
+        </member>
+        <member name="P:SIRF.Objetos.OEvento.PerfilId">
+            <summary>
+            Propiedad PerfilId
+            </summary>
+        </member>
+        <member name="P:SIRF.Objetos.OEvento.EstatusLogico">
+            <summary>
+            Propiedad EstatusLogico
+            </summary>
+        </member>
+        <member name="P:SIRF.Objetos.OExpedienteCuenta.RegistroID">
+            <summary>
+            Propiedad RegistroID
+            </summary>
+        </member>
+        <member name="P:SIRF.Objetos.OExpedienteCuenta.CuentaIntegranteID">
+            <summary>
+            Propiedad CuentaIntegranteID
+            </summary>
+        </member>
+        <member name="P:SIRF.Objetos.OExpedienteCuenta.Expediente">
+            <summary>
+            Propiedad Expediente
+            </summary>
+        </member>
+        <member name="P:SIRF.Objetos.OExpedienteCuenta.DescripcionCuenta">
+            <summary>
+            Propiedad DescripcionCuenta
+            </summary>
+        </member>
+        <member name="P:SIRF.Objetos.OExpedienteCuenta.CLABEInterbancaria">
+            <summary>
+            Propiedad CLABEInterbancaria
+            </summary>
+        </member>
+        <member name="P:SIRF.Objetos.OExpedienteCuenta.DescripcionBanco">
+            <summary>
+            Propiedad DescripcionBanco
+            </summary>
+        </member>
+        <member name="P:SIRF.Objetos.OExpedienteCuenta.TipoCuentaID">
+             <summary>
+            Propiedad TipoCuentaID
+             </summary>
+        </member>
+        <member name="P:SIRF.Objetos.OExpedienteCuenta.DescripcionTipoCuenta">
+            <summary>
+            Propiedad DescripcionTipoCuenta
+            </summary>
+        </member>
+        <member name="P:SIRF.Objetos.OExpedienteCuenta.EstatusLogico">
+            <summary>
+            Propiedad EstatusLogico
+            </summary>
+        </member>
+        <member name="P:SIRF.Objetos.OExpedienteDato.Expediente">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:SIRF.Objetos.OExpedienteDato.Grado">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:SIRF.Objetos.OExpedienteDato.Cargo">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:SIRF.Objetos.OExpedienteDato.Nombre">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:SIRF.Objetos.OExpedienteDato.CODAdscripcion">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:SIRF.Objetos.OExpedienteDato.Adscripcion">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:SIRF.Objetos.OExpedienteDato.CODCentroDistribucion">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:SIRF.Objetos.OExpedienteDato.EnlaceID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:SIRF.Objetos.OExpedienteDato.CODEstatusIntegrante">
+            <summary>
+            Código estatus del integrante : Author JUVA
+            </summary>
+        </member>
+        <member name="P:SIRF.Objetos.OExpedienteDato.EstatusIntegrante">
+            <summary>
+            Estatus del integrante : Author JUVA
+            </summary>
+        </member>
+        <member name="P:SIRF.Objetos.OExpedienteDato.RFC">
+            <summary>
+            RFC del empleado : Author JUVA
+            </summary>
+        </member>
+        <member name="P:SIRF.Objetos.OFormaComprobacion.idFormaComprobacion">
+            <summary>
+            Identificador
+            </summary>
+        </member>
+        <member name="P:SIRF.Objetos.OFormaComprobacion.FormaComprobacion">
+            <summary>
+            Descripcion formas de comprobacion
+            </summary>
+        </member>
+        <member name="P:SIRF.Objetos.OFormaComprobacion.estatusLogico">
+            <summary>
+            Estatus lógica
+            </summary>
+        </member>
+        <member name="T:SIRF.Objetos.OHomologado">
+            <summary>
+            Objeto de tipo OHomologado
+            </summary>
+        </member>
+        <member name="P:SIRF.Objetos.OHomologado.HomologadoID">
+            <summary>
+            Identificador
+            </summary>
+        </member>
+        <member name="P:SIRF.Objetos.OHomologado.ImporteHomologado">
+            <summary>
+            Importe homologado
+            </summary>
+        </member>
+        <member name="P:SIRF.Objetos.OHomologado.NumeroExpediente">
+            <summary>
+            Número de expediente
+            </summary>
+        </member>
+        <member name="T:SIRF.Objetos.OIpv4">
+            <summary>
+            Objeto de tipo Ipv4
+            </summary>
+        </member>
+        <member name="P:SIRF.Objetos.OIpv4.Ipv4ID">
+            <summary>
+            Propiedad Ipv4ID.
+            </summary>
+        </member>
+        <member name="P:SIRF.Objetos.OIpv4.usuarioID">
+            <summary>
+            Propiedad usuarioID.
+            </summary>
+        </member>
+        <member name="P:SIRF.Objetos.OIpv4.ip">
+            <summary> 
+            Propiedad IP
+            </summary>
+        </member>
+        <member name="P:SIRF.Objetos.OIpv4.EstatusLogico">
+            <summary>
+            Propiedad EstatusLogico.
+            </summary>
+        </member>
+        <member name="T:SIRF.Objetos.OLogError">
+            <summary>
+            Objeto de tipo OLogError
+            </summary>
+        </member>
+        <member name="P:SIRF.Objetos.OLogError.logErrorID">
+            <summary>
+            Propiedad logErrorID
+            </summary>
+        </member>
+        <member name="P:SIRF.Objetos.OLogError.usuarioID">
+            <summary>
+            Propiedad usuarioID
+            </summary>
+        </member>
+        <member name="P:SIRF.Objetos.OLogError.error">
+            <summary>
+            Propiedad error
+            </summary>
+        </member>
+        <member name="P:SIRF.Objetos.OLogError.formulario">
+            <summary>
+            Propiedad formulario
+            </summary>
+        </member>
+        <member name="P:SIRF.Objetos.OLogError.evento">
+            <summary>
+            Propiedad evento
+            </summary>
+        </member>
+        <member name="P:SIRF.Objetos.OLogError.fecha">
+            <summary>
+            Propiedad fecha
+            </summary>
+        </member>
+        <member name="P:SIRF.Objetos.OLogError.codigoError">
+            <summary>
+            Propiedad codigoError
+            </summary>
+        </member>
+        <member name="P:SIRF.Objetos.OLogError.ipEquipo">
+            <summary>
+            Propiedad ipEquipo
+            </summary>
+        </member>
+        <member name="P:SIRF.Objetos.OLogError.Usuarios">
+            <summary>
+            Propiedad Usuarios
+            </summary>
+        </member>
+        <member name="T:SIRF.Objetos.OLogin">
+            <summary>
+            Objeto de tipo OLogin
+            </summary>
+        </member>
+        <member name="P:SIRF.Objetos.OLogin.Usuario">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:SIRF.Objetos.OLogin.Modulos">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:SIRF.Objetos.OLogin.SubModulos">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:SIRF.Objetos.OLogin.Acciones">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:SIRF.Objetos.OModulo">
+            <summary>
+             Objeto de tipo OModulo.
+            </summary>
+        </member>
+        <member name="P:SIRF.Objetos.OModulo.ModuloID">
+            <summary>
+            Propiedad ModuloID.
+            </summary>
+        </member>
+        <member name="P:SIRF.Objetos.OModulo.DescripcionModulo">
+            <summary>
+            Propiedad DescripcionModulo.
+            </summary>
+        </member>
+        <member name="P:SIRF.Objetos.OModulo.EstatusLogico">
+            <summary>
+            Propiedad EstatusLogico.
+            </summary>
+        </member>
+        <member name="T:SIRF.Objetos.OMoneda">
+            <summary>
+            Objeto de tipo OMoneda
+            </summary>
+        </member>
+        <member name="P:SIRF.Objetos.OMoneda.MonedaID">
+            <summary>
+            Identificador
+            </summary>
+        </member>
+        <member name="P:SIRF.Objetos.OMoneda.DescripcionMoneda">
+            <summary>
+            Moneda
+            </summary>
+        </member>
+        <member name="P:SIRF.Objetos.OMoneda.Codigo">
+            <summary>
+            Código
+            </summary>
+        </member>
+        <member name="P:SIRF.Objetos.OMoneda.EstatusLogico">
+            <summary>
+            Estatus lógico
+            </summary>
+        </member>
+        <member name="P:SIRF.Objetos.OMunicipioLocalidad.MunicipioLocalidadID">
+            <summary>
+            Identificador
+            </summary>
+        </member>
+        <member name="P:SIRF.Objetos.OMunicipioLocalidad.Entidad">
+            <summary>
+            Catálogo entidad federativa
+            </summary>
+        </member>
+        <member name="P:SIRF.Objetos.OMunicipioLocalidad.DescripcionMunicipioLocalidad">
+            <summary>
+            Municipio / Localidad
+            </summary>
+        </member>
+        <member name="P:SIRF.Objetos.OMunicipioLocalidad.MasEconomico">
+            <summary>
+            Más económico
+            </summary>
+        </member>
+        <member name="P:SIRF.Objetos.OMunicipioLocalidad.EstatusLogico">
+            <summary>
+            Estatus lógico
+            </summary>
+        </member>
+        <member name="P:SIRF.Objetos.OPaises.PaisID">
+            <summary>
+            Identificador
+            </summary>
+        </member>
+        <member name="P:SIRF.Objetos.OPaises.DescripcionPais">
+            <summary>
+            Pais
+            </summary>
+        </member>
+        <member name="P:SIRF.Objetos.OPaises.TipoControl">
+            <summary>
+            Tipo control
+            </summary>
+        </member>
+        <member name="P:SIRF.Objetos.OPaises.EstatusLogico">
+            <summary>
+            Estatus lógico
+            </summary>
+        </member>
+        <member name="T:SIRF.Objetos.OPartida">
+            <summary>
+            Objeto de tipo OPartida
+            </summary>
+        </member>
+        <member name="F:SIRF.Objetos.OPartida._denominacion">
+            <summary>
+            Denominación
+            </summary>
+        </member>
+        <member name="P:SIRF.Objetos.OPartida.CodPartida">
+            <summary>
+            Identificador de la partida
+            </summary>
+        </member>
+        <member name="P:SIRF.Objetos.OPartida.DescripcionPartida">
+            <summary>
+            Partida descripción
+            </summary>
+        </member>
+        <member name="P:SIRF.Objetos.OPartida.Capitulo">
+            <summary>
+            Capítulo
+            </summary>
+        </member>
+        <member name="P:SIRF.Objetos.OPartida.Concepto">
+            <summary>
+            Concepto
+            </summary>
+        </member>
+        <member name="P:SIRF.Objetos.OPartida.EstatusLogico">
+            <summary>
+            Estatus lógico
+            </summary>
+        </member>
+        <member name="T:SIRF.Objetos.OPermisos">
+            <summary>
+            Objeto de tipo  OPermisos
+            </summary>
+        </member>
+        <member name="P:SIRF.Objetos.OPermisos.Modulos">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:SIRF.Objetos.OPermisos.SubModulos">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:SIRF.Objetos.OPermisos.Acciones">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:SIRF.Objetos.OPrioridad">
+            <summary>
+            Objeto de tipo OPrioridad
+            </summary>
+        </member>
+        <member name="P:SIRF.Objetos.OPrioridad.PrioridadID">
+            <summary>
+            Identificador
+            </summary>
+        </member>
+        <member name="P:SIRF.Objetos.OPrioridad.DescripcionPrioridad">
+            <summary>
+            Prioridad
+            </summary>
+        </member>
+        <member name="P:SIRF.Objetos.OPrioridad.EstatusLogico">
+            <summary>
+            Estatus lógico
+            </summary>
+        </member>
+        <member name="T:SIRF.Objetos.ORegion">
+            <summary>
+            Objeto de tipo ORegion
+            </summary>
+        </member>
+        <member name="P:SIRF.Objetos.ORegion.RegionID">
+            <summary>
+            Identificador
+            </summary>
+        </member>
+        <member name="P:SIRF.Objetos.ORegion.DescripcionRegion">
+            <summary>
+            Región
+            </summary>
+        </member>
+        <member name="P:SIRF.Objetos.ORegion.EstatusLogico">
+            <summary>
+            Estatus lógico
+            </summary>
+        </member>
+        <member name="T:SIRF.Objetos.ORegional">
+            <summary>
+            Objeto de tipo ORegional
+            </summary>
+        </member>
+        <member name="M:SIRF.Objetos.ORegional.Set">
+            <summary>
+            Propiedad SET
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:SIRF.Objetos.ORegional.op_Implicit(SIRF.Objetos.ORegion)~SIRF.Objetos.ORegional">
+            <summary>
+            
+            </summary>
+            <param name="v"></param>
+        </member>
+        <member name="P:SIRF.Objetos.ORegional.RegionalID">
+            <summary>
+            Propiedad RegionalID
+            </summary>
+        </member>
+        <member name="T:SIRF.Objetos.OSolicitud">
+            <summary>
+            Objeto de tipo  OSolicitud
+            </summary>
+        </member>
+        <member name="M:SIRF.Objetos.OSolicitud.#ctor">
+            <summary>
+            Constructor
+            </summary>        
+        </member>
+        <member name="P:SIRF.Objetos.OSolicitud.CodPartida">
+            <summary>
+            Idetificador de Partida
+            </summary>
+        </member>
+        <member name="P:SIRF.Objetos.OSolicitud.SolicitudID">
+            <summary>
+            Indetificador de solicitud 
+            </summary>
+        </member>
+        <member name="P:SIRF.Objetos.OSolicitud.SolicitudesID">
+            <summary>
+            Listado de Indetificadores de solicitud
+            </summary>
+        </member>
+        <member name="P:SIRF.Objetos.OSolicitud.TipoSolicitudGenerica">
+            <summary>
+            Detalle de la solicitud
+            </summary>
+        </member>
+        <member name="P:SIRF.Objetos.OSolicitud.TipoSolicitud">
+            <summary>
+            Catálogo de tipo de solicitud
+            </summary>
+        </member>
+        <member name="P:SIRF.Objetos.OSolicitud.Prioridad">
+            <summary>
+            Catálogo de prioridad
+            </summary>
+        </member>
+        <member name="P:SIRF.Objetos.OSolicitud.UnidadAdministrativa">
+            <summary>
+            Catálogo de unidad administrativa
+            </summary>
+        </member>
+        <member name="P:SIRF.Objetos.OSolicitud.Estatus">
+            <summary>
+            Catálogo de estatus
+            "Registrada"
+            </summary>
+        </member>
+        <member name="P:SIRF.Objetos.OSolicitud.FechaSolicitud">
+            <summary>
+            Fecha de negocio
+            </summary>
+        </member>
+        <member name="P:SIRF.Objetos.OSolicitud.Observaciones">
+            <summary>
+            Observaciones
+            </summary>
+        </member>
+        <member name="P:SIRF.Objetos.OSolicitud.OficioSolicitud">
+            <summary>
+            Oficio de solicitud
+            </summary>
+        </member>
+        <member name="P:SIRF.Objetos.OSolicitud.FechaControl">
+            <summary>
+            Fecha del Sistema
+            </summary>
+        </member>
+        <member name="P:SIRF.Objetos.OSolicitud.Consecutivo">
+            <summary>
+            Folio de solicitud 00000/YYYY
+            </summary>
+        </member>
+        <member name="P:SIRF.Objetos.OSolicitud.Anio">
+            <summary>
+            Folio de solicitud 00000/YYYY
+            </summary>
+        </member>
+        <member name="P:SIRF.Objetos.OSolicitud.FechaActualizacion">
+            <summary>
+            Fecha actualización
+            </summary>
+        </member>
+        <member name="P:SIRF.Objetos.OSolicitud.Region">
+            <summary>
+            Catálogo Region
+            </summary>
+        </member>
+        <member name="P:SIRF.Objetos.OSolicitud.Documentos">
+            <summary>
+            Documentos adjuntos a la solicitud
+            </summary>
+        </member>
+        <member name="P:SIRF.Objetos.OSolicitud.Monto">
+            <summary>
+            Monto total de la solicitud
+            </summary>
+        </member>
+        <member name="P:SIRF.Objetos.OSolicitud.MontoPendientePago">
+            <summary>
+            Monto pendiente de pago de presupuesto
+            </summary>
+        </member>
+        <member name="P:SIRF.Objetos.OSolicitud.NumeroFolio">
+            <summary>
+            Numero de folio conformado del consecutivo y el año de regitro
+            </summary>
+        </member>
+        <member name="P:SIRF.Objetos.OSolicitud.CargarDetalle">
+            <summary>
+            Verdadero en caso de requerir el detalle de la solicitud
+            </summary>
+        </member>
+        <member name="P:SIRF.Objetos.OSolicitud.PerfilID">
+            <summary>
+            Filtro de negocio, por perfil de usuario
+            </summary>
+        </member>
+        <member name="P:SIRF.Objetos.OSolicitud.Homologado">
+            <summary>
+            Homologación de viáticos
+            </summary>
+        </member>
+        <member name="P:SIRF.Objetos.OSolicitud.AnioFolGen">
+            <summary>
+            Año - Parte del folio 
+            </summary>
+        </member>
+        <member name="P:SIRF.Objetos.OSolicitud.ConsecutivoFolGen">
+            <summary>
+            Consecutivo - parte del folio
+            </summary>
+        </member>
+        <member name="P:SIRF.Objetos.OSolicitud.MesFolGen">
+            <summary>
+            Mes - Parte del folio
+            </summary>
+        </member>
+        <member name="P:SIRF.Objetos.OSolicitud.FolioAgrupacionPoliza">
+            <summary>
+            Folio de agrupación
+            </summary>
+        </member>
+        <member name="P:SIRF.Objetos.OSolicitud.Rechazada">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:SIRF.Objetos.OSolicitud.SolFirmaID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:SIRF.Objetos.OSolicitud.Descripcion">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:SIRF.Objetos.OSolicitud.EstatusLogico">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:SIRF.Objetos.OSolicitud.TipoSolFirmaID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:SIRF.Objetos.OSolicitud.MotivosRechazo">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:SIRF.Objetos.OSolicitud.Evento">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:SIRF.Objetos.OSolicitud.titularCuentaBan">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:SIRF.Objetos.OSolicitudRecursos">
+            <summary>
+            Objeto de tipo OSolicitudRecursos
+            </summary>
+        </member>
+        <member name="P:SIRF.Objetos.OSolicitudRecursos.solicitudID">
+            <summary>
+            Propiedad solicitudID
+            </summary>
+        </member>
+        <member name="P:SIRF.Objetos.OSolicitudRecursos.anio">
+            <summary>
+            Propiedad anio
+            </summary>
+        </member>
+        <member name="P:SIRF.Objetos.OSolicitudRecursos.tipoSolicitudID">
+            <summary>
+            Propiedad tipoSolicitudID
+            </summary>
+        </member>
+        <member name="P:SIRF.Objetos.OSolicitudRecursos.prioridadID">
+            <summary>
+            Propiedad prioridadID
+            </summary>
+        </member>
+        <member name="P:SIRF.Objetos.OSolicitudRecursos.codUA">
+            <summary>
+            Propiedad codUA
+            </summary>
+        </member>
+        <member name="P:SIRF.Objetos.OSolicitudRecursos.estatusID">
+            <summary>
+            Propiedad estatusID
+            </summary>
+        </member>
+        <member name="P:SIRF.Objetos.OSolicitudRecursos.fechaSolicitud">
+            <summary>
+            Propiedad fechaSolicitud
+            </summary>
+        </member>
+        <member name="P:SIRF.Objetos.OSolicitudRecursos.observaciones">
+            <summary>
+            Propiedad observaciones
+            </summary>
+        </member>
+        <member name="P:SIRF.Objetos.OSolicitudRecursos.oficioSolicitud">
+            <summary>
+            Propiedad oficioSolicitud
+            </summary>
+        </member>
+        <member name="P:SIRF.Objetos.OSolicitudRecursos.fechaControl">
+            <summary>
+            Propiedad fechaControl
+            </summary>
+        </member>
+        <member name="P:SIRF.Objetos.OSolicitudRecursos.consecutivo">
+            <summary>
+            Propiedad consecutivo
+            </summary>
+        </member>
+        <member name="P:SIRF.Objetos.OSolicitudRecursos.fechaActualizacion">
+            <summary>
+            Propiedad fechaActualizacion
+            </summary>
+        </member>
+        <member name="P:SIRF.Objetos.OSolicitudRecursos.eventoId">
+            <summary>
+            Propiedad eventoId
+            </summary>
+        </member>
+        <member name="T:SIRF.Objetos.OSubModulo">
+            <summary>
+            Objeto de tipo OSubModulo 
+            </summary>
+        </member>
+        <member name="P:SIRF.Objetos.OSubModulo.SubmoduloID">
+            <summary>
+            Propiedad SubmoduloID
+            </summary>
+        </member>
+        <member name="P:SIRF.Objetos.OSubModulo.DescripcionSubModulo">
+            <summary>
+            Propiedad Submodulo
+            </summary>
+        </member>
+        <member name="P:SIRF.Objetos.OSubModulo.EstatusLogico">
+            <summary>
+            Propiedad EstatusLogico
+            </summary>
+        </member>
+        <member name="P:SIRF.Objetos.OSubModulo.Url">
+            <summary>
+            Propiedad URL
+            </summary>
+        </member>
+        <member name="P:SIRF.Objetos.OSubModulo.ModuloID">
+            <summary>
+            Propiedad ModuloID
+            </summary>
+        </member>
+        <member name="T:SIRF.Objetos.OTipoCuota">
+            <summary>
+            Objeto de tipo OTipoCuota
+            </summary>
+        </member>
+        <member name="P:SIRF.Objetos.OTipoCuota.TipoCuotaID">
+            <summary>
+            Identificador
+            </summary>
+        </member>
+        <member name="P:SIRF.Objetos.OTipoCuota.DescripcionTipoCuota">
+            <summary>
+            Tipos cuota
+            </summary>
+        </member>
+        <member name="P:SIRF.Objetos.OTipoCuota.EstatusLogico">
+            <summary>
+            Estatus lógico
+            </summary>
+        </member>
+        <member name="T:SIRF.Objetos.OTipoDocumento">
+            <summary>
+            Objeto de tipo OTipoDocumento 
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "P:SIRF.Objetos.OTipoDocumento.TipoDocumentoID" -->
+        <member name="P:SIRF.Objetos.OTipoDocumento.tipoSolicitudID">
+            <summary>
+            Identificador único del tipo de solicitud.
+            </summary>
+        </member>
+        <member name="P:SIRF.Objetos.OTipoDocumento.DescripcionTipoDoc">
+            <summary>
+            Tipo documento
+            </summary>
+        </member>
+        <member name="P:SIRF.Objetos.OTipoDocumento.Prefijo">
+            <summary>
+            Prefijo
+            </summary>
+        </member>
+        <member name="P:SIRF.Objetos.OTipoDocumento.EstatusLogico">
+            <summary>
+            Estatus lógico
+            </summary>
+        </member>
+        <member name="P:SIRF.Objetos.OTipoPago.TipoPagoID">
+            <summary>
+            Identificador
+            </summary>
+        </member>
+        <member name="P:SIRF.Objetos.OTipoPago.DescripcionTipoPago">
+            <summary>
+            Tipo pago
+            </summary>
+        </member>
+        <member name="P:SIRF.Objetos.OTipoPago.EstatusLogico">
+            <summary>
+            Estatus lógica
+            </summary>
+        </member>
+        <member name="T:SIRF.Objetos.OTipoSolicitud">
+            <summary>
+            Objeto de tipo OTipoSolicitud
+            </summary>
+        </member>
+        <member name="M:SIRF.Objetos.OTipoSolicitud.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="P:SIRF.Objetos.OTipoSolicitud.TipoSolicitudID">
+            <summary>
+            Identificador
+            </summary>
+        </member>
+        <member name="P:SIRF.Objetos.OTipoSolicitud.Region">
+            <summary>
+            Catálogo región
+            </summary>
+        </member>
+        <member name="P:SIRF.Objetos.OTipoSolicitud.DescripcionTipoSolicitud">
+            <summary>
+            Tipo solicitud
+            </summary>
+        </member>
+        <member name="P:SIRF.Objetos.OTipoSolicitud.TipoSolicitudControlCod">
+            <summary>
+            Control COD
+            </summary>
+        </member>
+        <member name="P:SIRF.Objetos.OTipoSolicitud.EstatusLogico">
+            <summary>
+            Estatus lógico
+            </summary>
+        </member>
+        <member name="P:SIRF.Objetos.OTipoSolicitud.AreaPago">
+            <summary>
+            Aare de pago
+            </summary>
+        </member>
+        <member name="T:SIRF.Objetos.OUnidadAdministrativa">
+            <summary>
+            Objeto de tipo OUnidadAdministrativa
+            </summary>
+        </member>
+        <member name="P:SIRF.Objetos.OUnidadAdministrativa.CodUA">
+            <summary>
+            Identificador
+            </summary>
+        </member>
+        <member name="P:SIRF.Objetos.OUnidadAdministrativa.Region">
+            <summary>
+            Catálogo región
+            </summary>
+        </member>
+        <member name="P:SIRF.Objetos.OUnidadAdministrativa.UnidadAdministrativa">
+            <summary>
+            Unidad administrativa
+            </summary>
+        </member>
+        <member name="P:SIRF.Objetos.OUnidadAdministrativa.CodigoPadre">
+            <summary>
+            Codigo padre
+            </summary>
+        </member>
+        <member name="P:SIRF.Objetos.OUnidadAdministrativa.Abreviatura">
+            <summary>
+            Abreviatura
+            </summary>
+        </member>
+        <member name="P:SIRF.Objetos.OUnidadAdministrativa.Activo">
+            <summary>
+            Activo
+            </summary>
+        </member>
+        <member name="T:SIRF.Objetos.OUsuario">
+            <summary>
+            Objeto de tipo OUsuario
+            </summary>
+        </member>
+        <member name="P:SIRF.Objetos.OUsuario.UsuarioID">
+            <summary>
+            Propiedad UsuarioID
+            </summary>
+        </member>
+        <member name="P:SIRF.Objetos.OUsuario.Usuario">
+            <summary>
+            Propiedad Usuario
+            </summary>
+        </member>
+        <member name="P:SIRF.Objetos.OUsuario.Nombre">
+            <summary>
+            Propiedad Nombre
+            </summary>
+        </member>
+        <member name="P:SIRF.Objetos.OUsuario.PrimerApellido">
+            <summary>
+            Propiedad PrimerApellido
+            </summary>
+        </member>
+        <member name="P:SIRF.Objetos.OUsuario.SegundoApellido">
+            <summary>
+            Propiedad SegundoApellido
+            </summary>
+        </member>
+        <member name="P:SIRF.Objetos.OUsuario.Correo">
+            <summary>
+            Propiedad Correo
+            </summary>
+        </member>
+        <member name="P:SIRF.Objetos.OUsuario.CodUA">
+            <summary>
+            Propiedad CodUA
+            </summary>
+        </member>
+        <member name="P:SIRF.Objetos.OUsuario.UnidadAdministrativa">
+            <summary>
+            Propiedad UnidadAdministrativa
+            </summary>
+        </member>
+        <member name="P:SIRF.Objetos.OUsuario.PerfilID">
+            <summary>
+            Propiedad PerfilID
+            </summary>
+        </member>
+        <member name="P:SIRF.Objetos.OUsuario.DescripcionPerfil">
+            <summary>
+            Propiedad DescripcionPerfil
+            </summary>
+        </member>
+        <member name="P:SIRF.Objetos.OUsuario.Expediente">
+            <summary>
+            Propiedad Expediente
+            </summary>
+        </member>
+        <member name="P:SIRF.Objetos.OUsuario.ip">
+            <summary>
+            Propiedad ip
+            </summary>
+        </member>
+        <member name="P:SIRF.Objetos.OUsuario.EstatusLogico">
+            <summary>
+            Propiedad EstatusLogico
+            </summary>
+        </member>
+        <member name="P:SIRF.Objetos.OUsuario.Proceso">
+            <summary>
+            Propiedad Proceso
+            </summary>
+        </member>
+        <member name="P:SIRF.Objetos.OUsuario.RegionID">
+            <summary>
+            Propiedad RegionID
+            </summary>
+        </member>
+        <member name="P:SIRF.Objetos.OUsuario.codCentroDistribucion">
+            <summary>
+            Propiedad codCentroDistribucion
+            </summary>
+        </member>
+        <member name="P:SIRF.Objetos.OUsuario.AreaId">
+            <summary>
+            Propiedad AreaId
+            </summary>
+        </member>
+        <member name="P:SIRF.Objetos.OUsuario.DescripcionArea">
+            <summary>
+            Propiedad DescripcionArea
+            </summary>
+        </member>
+        <member name="P:SIRF.Objetos.OUsuario.RolId">
+            <summary>
+            Propiedad rolId
+            </summary>
+        </member>
+        <member name="P:SIRF.Objetos.OUsuario.DescripcionRol">
+            <summary>
+            Propiedad DescripcionRol
+            </summary>
+        </member>
+        <member name="T:SIRF.Objetos.OucvDocumentos">
+            <summary>
+            Objeto de tipo ucvDocumentos
+            </summary>
+        </member>
+        <member name="P:SIRF.Objetos.OucvDocumentos.Id">
+            <summary>
+            Propiedad Id
+            </summary>
+        </member>
+        <member name="P:SIRF.Objetos.OucvDocumentos.TipoDocumento">
+            <summary>
+            Propiedad TipoDocumento
+            </summary>
+        </member>
+        <member name="P:SIRF.Objetos.OucvDocumentos.FechaAdjunto">
+            <summary>
+            Propiedad FechaAdjunto
+            </summary>
+        </member>
+        <member name="P:SIRF.Objetos.OucvDocumentos.NombreArchivo">
+            <summary>
+            Propiedad NombreArchivo
+            </summary>
+        </member>
+        <member name="P:SIRF.Objetos.OucvDocumentos.TipoDocumentoId">
+            <summary>
+            Propiedad TipoDocumentoId
+            </summary>
+        </member>
+        <member name="P:SIRF.Objetos.OucvDocumentos.prefijo">
+            <summary>
+            Propiedad prefijo
+            </summary>
+        </member>
+        <member name="P:SIRF.Objetos.OucvDocumentos.EstatusSolicitudID">
+            <summary>
+            Propiedad EstatusSolicitudID
+            </summary>
+        </member>
+    </members>
+</doc>

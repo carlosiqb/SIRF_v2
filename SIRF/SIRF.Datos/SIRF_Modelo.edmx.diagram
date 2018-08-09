@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="b7a43828dc274ae1ab15200d712bc603" Name="Diagram1">
+        <EntityTypeShape EntityType="SIRFPROD_v2Model.Agregaduria" Width="1.5" PointX="5.25" PointY="66.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="SIRFPROD_v2Model.Asignacion" Width="1.5" PointX="11.25" PointY="51.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="SIRFPROD_v2Model.Beca" Width="1.5" PointX="8.25" PointY="66.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SIRFPROD_v2Model.Becalos" Width="1.5" PointX="5.25" PointY="70" IsExpanded="true" />
+        <EntityTypeShape EntityType="SIRFPROD_v2Model.Beneficiario" Width="1.5" PointX="6" PointY="56.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SIRFPROD_v2Model.Bitacora" Width="1.5" PointX="14.25" PointY="51.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="SIRFPROD_v2Model.CargaCuotaDiaria" Width="1.5" PointX="8.25" PointY="58.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="SIRFPROD_v2Model.CatAcademia" Width="1.5" PointX="6" PointY="80.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SIRFPROD_v2Model.CatAccion" Width="1.5" PointX="15.75" PointY="29.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="SIRFPROD_v2Model.CatAgenciaAduanal" Width="1.5" PointX="9" PointY="78.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SIRFPROD_v2Model.CatArea" Width="1.5" PointX="4.5" PointY="42.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="SIRFPROD_v2Model.CatBanco" Width="1.5" PointX="9" PointY="45.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="SIRFPROD_v2Model.CatConceptoGasto" Width="1.5" PointX="3" PointY="58.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="SIRFPROD_v2Model.CatConceptoPago" Width="1.5" PointX="9" PointY="75.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SIRFPROD_v2Model.CatCuenta" Width="1.5" PointX="12" PointY="33.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SIRFPROD_v2Model.CatDependiente" Width="1.5" PointX="3.75" PointY="48.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SIRFPROD_v2Model.CatDestino" Width="1.5" PointX="11.25" PointY="30.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="SIRFPROD_v2Model.CatDocumento" Width="1.5" PointX="3" PointY="61.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="SIRFPROD_v2Model.CatEntidadFederativa" Width="1.5" PointX="9" PointY="30" IsExpanded="true" />
+        <EntityTypeShape EntityType="SIRFPROD_v2Model.CatEstatusFactura" Width="1.5" PointX="14.25" PointY="69.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SIRFPROD_v2Model.CatEstatusPago" Width="1.5" PointX="14.25" PointY="60.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SIRFPROD_v2Model.CatEstatusPresion" Width="1.5" PointX="9.75" PointY="88" IsExpanded="true" />
+        <EntityTypeShape EntityType="SIRFPROD_v2Model.CatEstatusSolicitud" Width="1.5" PointX="6.75" PointY="41.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SIRFPROD_v2Model.CatEvento" Width="1.5" PointX="6.75" PointY="34.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="SIRFPROD_v2Model.CatEventoAccion" Width="1.5" PointX="4.5" PointY="31.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SIRFPROD_v2Model.CatFirma" Width="1.5" PointX="15" PointY="38.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SIRFPROD_v2Model.CatFormaComprobacion" Width="1.5" PointX="6.75" PointY="50.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SIRFPROD_v2Model.CatJefeDepto" Width="1.5" PointX="2.75" PointY="4.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SIRFPROD_v2Model.CatModulo" Width="1.5" PointX="4.5" PointY="34.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="SIRFPROD_v2Model.CatMoneda" Width="1.5" PointX="11.25" PointY="41.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="SIRFPROD_v2Model.CatMunicipio" Width="1.5" PointX="11.25" PointY="38.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="SIRFPROD_v2Model.CatPago" Width="1.5" PointX="12" PointY="85.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="SIRFPROD_v2Model.CatPagoPoliza" Width="1.5" PointX="0.75" PointY="1.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="SIRFPROD_v2Model.CatPais" Width="1.5" PointX="6.75" PointY="30.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="SIRFPROD_v2Model.CatPartida" Width="1.5" PointX="3" PointY="64.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SIRFPROD_v2Model.CatPerfil" Width="1.5" PointX="4.5" PointY="37.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SIRFPROD_v2Model.CatPoliza" Width="1.5" PointX="0.75" PointY="5.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="SIRFPROD_v2Model.CatPrioridad" Width="1.5" PointX="6.75" PointY="47" IsExpanded="true" />
+        <EntityTypeShape EntityType="SIRFPROD_v2Model.CatRegion" Width="1.5" PointX="4.5" PointY="77.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="SIRFPROD_v2Model.CatRol" Width="1.5" PointX="9.75" PointY="25.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SIRFPROD_v2Model.CatSolicitud" Width="1.5" PointX="0.75" PointY="57" IsExpanded="true" />
+        <EntityTypeShape EntityType="SIRFPROD_v2Model.CatSubmodulo" Width="1.5" PointX="13.5" PointY="21.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SIRFPROD_v2Model.CatUnidadAdm" Width="1.5" PointX="6.75" PointY="76.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SIRFPROD_v2Model.Clc" Width="1.5" PointX="15" PointY="32.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="SIRFPROD_v2Model.DetalleSolicitudRecurso" Width="1.5" PointX="11.25" PointY="45.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="SIRFPROD_v2Model.Documento" Width="1.5" PointX="8.25" PointY="62" IsExpanded="true" />
+        <EntityTypeShape EntityType="SIRFPROD_v2Model.EstatusAccion" Width="1.5" PointX="18" PointY="42.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="SIRFPROD_v2Model.EstatusMovimiento" Width="1.5" PointX="14.25" PointY="47.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="SIRFPROD_v2Model.EstatusPerfil" Width="1.5" PointX="9" PointY="39.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SIRFPROD_v2Model.Factura" Width="1.5" PointX="16.5" PointY="64.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="SIRFPROD_v2Model.FirmaElectronica" Width="1.5" PointX="11.25" PointY="56.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SIRFPROD_v2Model.GastoAduana" Width="1.5" PointX="11.25" PointY="65.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="SIRFPROD_v2Model.GastoCorriente" Width="1.5" PointX="11.25" PointY="60.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SIRFPROD_v2Model.GastoFunerario" Width="1.5" PointX="11.25" PointY="69.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SIRFPROD_v2Model.Homologado" Width="1.5" PointX="9" PointY="42.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="SIRFPROD_v2Model.ImpuestoSobreNomina" Width="1.5" PointX="8.25" PointY="72.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="SIRFPROD_v2Model.Laudo" Width="1.5" PointX="5.25" PointY="62.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="SIRFPROD_v2Model.LogError" Width="1.5" PointX="14.25" PointY="25.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="SIRFPROD_v2Model.LugarSolicitudRecurso" Width="1.5" PointX="13.5" PointY="41.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="SIRFPROD_v2Model.ModuloSubmodulo" Width="1.5" PointX="15.75" PointY="41.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SIRFPROD_v2Model.MovimientoAdministrativo" Width="1.5" PointX="14.25" PointY="55.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SIRFPROD_v2Model.MovimientoBancario" Width="1.5" PointX="14.25" PointY="17.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SIRFPROD_v2Model.PagoCheque" Width="1.5" PointX="16.5" PointY="56.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="SIRFPROD_v2Model.Parametro" Width="1.5" PointX="6.75" PointY="26.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SIRFPROD_v2Model.PartidaSolicitudRecurso" Width="1.5" PointX="11.25" PointY="72.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SIRFPROD_v2Model.Penalizacion" Width="1.5" PointX="19.5" PointY="65.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="SIRFPROD_v2Model.PerfilModulo" Width="1.5" PointX="9.75" PointY="34.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="SIRFPROD_v2Model.PolizaPago" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="SIRFPROD_v2Model.PresionGasto" Width="1.5" PointX="12" PointY="87.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SIRFPROD_v2Model.PresupuestoClc" Width="1.5" PointX="17.25" PointY="51.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="SIRFPROD_v2Model.Proveedor" Width="1.5" PointX="14.25" PointY="64.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SIRFPROD_v2Model.RegistroContable" Width="1.5" PointX="11.25" PointY="76.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="SIRFPROD_v2Model.RegistroVolante" Width="1.5" PointX="11.25" PointY="79.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SIRFPROD_v2Model.SolicitudCatUnidadAdm" Width="1.5" PointX="3" PointY="54.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SIRFPROD_v2Model.SolicitudFirma" Width="1.5" PointX="17.25" PointY="47.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="SIRFPROD_v2Model.SolicitudRecurso" Width="1.5" PointX="9" PointY="48.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="SIRFPROD_v2Model.sysdiagrams" Width="1.5" PointX="5.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SIRFPROD_v2Model.TipoSolicitudPorArea" Width="1.5" PointX="6" PointY="53.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="SIRFPROD_v2Model.TipoSolicitudPorUA" Width="1.5" PointX="3" PointY="51.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="SIRFPROD_v2Model.TransferenciaBancaria" Width="1.5" PointX="19.5" PointY="56" IsExpanded="true" />
+        <EntityTypeShape EntityType="SIRFPROD_v2Model.Usuario" Width="1.5" PointX="12" PointY="24.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="SIRFPROD_v2Model.UsuarioRegionFiscalizacion" Width="1.5" PointX="20.25" PointY="51" IsExpanded="true" />
+        <EntityTypeShape EntityType="SIRFPROD_v2Model.AreaUnidadAdm" Width="1.5" PointX="17" PointY="60" IsExpanded="true" />
+        <EntityTypeShape EntityType="SIRFPROD_v2Model.TipoJefeDepto" Width="1.5" PointX="5" PointY="5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SIRFPROD_v2Model.vEstatusMovimientoBanco" Width="1.5" PointX="7.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SIRFPROD_v2Model.vwAsistentesEnlace" Width="1.5" PointX="7.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SIRFPROD_v2Model.vwBajaIntegrante" Width="1.5" PointX="7.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SIRFPROD_v2Model.vwCentrosDeDistribucion" Width="1.5" PointX="0.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SIRFPROD_v2Model.vwCuentasIntegrante" Width="1.5" PointX="2.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SIRFPROD_v2Model.vwDatosIntegrante" Width="1.5" PointX="4.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SIRFPROD_v2Model.vwDependientesIntegrante" Width="1.5" PointX="9.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SIRFPROD_v2Model.vwIncidenciasIntegrante" Width="1.5" PointX="9.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SIRFPROD_v2Model.vwTipoDependientesIntegrante" Width="1.5" PointX="9.75" PointY="7.75" IsExpanded="true" />
+        <AssociationConnector Association="SIRFPROD_v2Model.FK_Agregadurias_codPartida" ManuallyRouted="false" />
+        <AssociationConnector Association="SIRFPROD_v2Model.FK_Agregadurias_monedaID" ManuallyRouted="false" />
+        <AssociationConnector Association="SIRFPROD_v2Model.FK_Agregadurias_paisID" ManuallyRouted="false" />
+        <AssociationConnector Association="SIRFPROD_v2Model.FK_Agregadurias_solicitudID" ManuallyRouted="false" />
+        <AssociationConnector Association="SIRFPROD_v2Model.FK_Asignacion_solicitudID" ManuallyRouted="false" />
+        <AssociationConnector Association="SIRFPROD_v2Model.FK_Asignacion_usuarioID" ManuallyRouted="false" />
+        <AssociationConnector Association="SIRFPROD_v2Model.FK_Becas_academiaID" ManuallyRouted="false" />
+        <AssociationConnector Association="SIRFPROD_v2Model.FK_Becas_codPartida" ManuallyRouted="false" />
+        <AssociationConnector Association="SIRFPROD_v2Model.FK_Becas_solicitudID" ManuallyRouted="false" />
+        <AssociationConnector Association="SIRFPROD_v2Model.FK_Becalos_codPartida" ManuallyRouted="false" />
+        <AssociationConnector Association="SIRFPROD_v2Model.FK_Becalos_solicitudID" ManuallyRouted="false" />
+        <AssociationConnector Association="SIRFPROD_v2Model.FK_Beneficiario_CatTipoDependiente" ManuallyRouted="false" />
+        <AssociationConnector Association="SIRFPROD_v2Model.FK_Beneficiarios_tipoSolicitudID" ManuallyRouted="false" />
+        <AssociationConnector Association="SIRFPROD_v2Model.FK_BitacoraMovimiento_estatusID" ManuallyRouted="false" />
+        <AssociationConnector Association="SIRFPROD_v2Model.FK_BitacoraMovimiento_solicitudID" ManuallyRouted="false" />
+        <AssociationConnector Association="SIRFPROD_v2Model.FK_BitacoraMovimiento_usuarioID" ManuallyRouted="false" />
+        <AssociationConnector Association="SIRFPROD_v2Model.FK_CuotasDiarias_conceptoGastosID" ManuallyRouted="false" />
+        <AssociationConnector Association="SIRFPROD_v2Model.FK_CuotasDiarias_solicitudID" ManuallyRouted="false" />
+        <AssociationConnector Association="SIRFPROD_v2Model.FK_EstatusAcciones_accionesID" ManuallyRouted="false" />
+        <AssociationConnector Association="SIRFPROD_v2Model.FK_GastosAduanales_agenciaID" ManuallyRouted="false" />
+        <AssociationConnector Association="SIRFPROD_v2Model.FK_AreaUnidadAdm_CatAreas" ManuallyRouted="false" />
+        <AssociationConnector Association="SIRFPROD_v2Model.FK_CatEstatusSolicitud_areasID" ManuallyRouted="false" />
+        <AssociationConnector Association="SIRFPROD_v2Model.fk_TipoSolPorAreaCatAreas" ManuallyRouted="false" />
+        <AssociationConnector Association="SIRFPROD_v2Model.FK_Viaticos_bancoID" ManuallyRouted="false" />
+        <AssociationConnector Association="SIRFPROD_v2Model.PK_CatCuenta_bancoID" ManuallyRouted="false" />
+        <AssociationConnector Association="SIRFPROD_v2Model.FK_CatConceptoGastos_tipoSolicitudID" ManuallyRouted="false" />
+        <AssociationConnector Association="SIRFPROD_v2Model.FK_Laudos_conceptoGastosID" ManuallyRouted="false" />
+        <AssociationConnector Association="SIRFPROD_v2Model.FK_GastoCorriente_conceptoPagoID" ManuallyRouted="false" />
+        <AssociationConnector Association="SIRFPROD_v2Model.FK_MovimientoAdministrativo_cuentaID" ManuallyRouted="false" />
+        <AssociationConnector Association="SIRFPROD_v2Model.FK_MovimientoBancario_cuentaID" ManuallyRouted="false" />
+        <AssociationConnector Association="SIRFPROD_v2Model.FK_CatDestino_entidadID" ManuallyRouted="false" />
+        <AssociationConnector Association="SIRFPROD_v2Model.FK_GastoCorriente_destinoID" ManuallyRouted="false" />
+        <AssociationConnector Association="SIRFPROD_v2Model.FK_LugarSolicitudRecurso_catDestino" ManuallyRouted="false" />
+        <AssociationConnector Association="SIRFPROD_v2Model.FK_Documento_tipoDocumentoID" ManuallyRouted="false" />
+        <AssociationConnector Association="SIRFPROD_v2Model.FK_TipoDocumentos_tipoSolicitudID" ManuallyRouted="false" />
+        <AssociationConnector Association="SIRFPROD_v2Model.FK_CatEntidadFederativa_paisID" ManuallyRouted="false" />
+        <AssociationConnector Association="SIRFPROD_v2Model.FK_CatMunicipioLocalidad_entidadID" ManuallyRouted="false" />
+        <AssociationConnector Association="SIRFPROD_v2Model.FK_GastoCorriente_entidadID" ManuallyRouted="false" />
+        <AssociationConnector Association="SIRFPROD_v2Model.FK_LugarSolicitudRecurso_catEntidadFederativa" ManuallyRouted="false" />
+        <AssociationConnector Association="SIRFPROD_v2Model.FK_Factura_estatusFacturaID" ManuallyRouted="false" />
+        <AssociationConnector Association="SIRFPROD_v2Model.FK_PagoCheque_estatusPagoID" ManuallyRouted="false" />
+        <AssociationConnector Association="SIRFPROD_v2Model.FK_TransferenciaBancaria_estatusPagoID" ManuallyRouted="false" />
+        <AssociationConnector Association="SIRFPROD_v2Model.FK_PresionGasto_estatusPresionID" ManuallyRouted="false" />
+        <AssociationConnector Association="SIRFPROD_v2Model.FK_EstatusAcciones_estatusID" ManuallyRouted="false" />
+        <AssociationConnector Association="SIRFPROD_v2Model.FK_EstatusPerfil_estatusID" ManuallyRouted="false" />
+        <AssociationConnector Association="SIRFPROD_v2Model.FK_SolicitudRecursos_estatusID" ManuallyRouted="false" />
+        <AssociationConnector Association="SIRFPROD_v2Model.fk_evento_accion" ManuallyRouted="false" />
+        <AssociationConnector Association="SIRFPROD_v2Model.fk_evento_modulo" ManuallyRouted="false" />
+        <AssociationConnector Association="SIRFPROD_v2Model.fk_evento_perfil" ManuallyRouted="false" />
+        <AssociationConnector Association="SIRFPROD_v2Model.fk_evento_solicitud" ManuallyRouted="false" />
+        <AssociationConnector Association="SIRFPROD_v2Model.FK_SolicitudFirma_CatFirma" ManuallyRouted="false" />
+        <AssociationConnector Association="SIRFPROD_v2Model.FK_SolicitudRecurso_CatFormaComprobacion" ManuallyRouted="false" />
+        <AssociationConnector Association="SIRFPROD_v2Model.FK_TipoJefeDepto_CatTipoDependiente" ManuallyRouted="false" />
+        <AssociationConnector Association="SIRFPROD_v2Model.FK__ModuloSub__modul__00AA174D" ManuallyRouted="false" />
+        <AssociationConnector Association="SIRFPROD_v2Model.FK__Parametro__modul__58920452" ManuallyRouted="false" />
+        <AssociationConnector Association="SIRFPROD_v2Model.FK__PerfilMod__modul__10E07F16" ManuallyRouted="false" />
+        <AssociationConnector Association="SIRFPROD_v2Model.FK_Factura_monedaID" ManuallyRouted="false" />
+        <AssociationConnector Association="SIRFPROD_v2Model.FK_LugarSolicitudRecurso_CatMoneda" ManuallyRouted="false" />
+        <AssociationConnector Association="SIRFPROD_v2Model.FK_Penalizaciones_monedaID" ManuallyRouted="false" />
+        <AssociationConnector Association="SIRFPROD_v2Model.FK_Proveedores_monedaID" ManuallyRouted="false" />
+        <AssociationConnector Association="SIRFPROD_v2Model.FK_LugarSolicitudRecurso_catMunicipio" ManuallyRouted="false" />
+        <AssociationConnector Association="SIRFPROD_v2Model.FK_MovimientoAdministrativo_tipoPagoID" ManuallyRouted="false" />
+        <AssociationConnector Association="SIRFPROD_v2Model.PK_PolizaPago_CatTipoPagoPoliza" ManuallyRouted="false" />
+        <AssociationConnector Association="SIRFPROD_v2Model.FK_LugarSolicitudRecurso_CatPais" ManuallyRouted="false" />
+        <AssociationConnector Association="SIRFPROD_v2Model.FK_GastoCorriente_codPartida" ManuallyRouted="false" />
+        <AssociationConnector Association="SIRFPROD_v2Model.FK_GastosAduanales_codPartida" ManuallyRouted="false" />
+        <AssociationConnector Association="SIRFPROD_v2Model.FK_GastosFunerarios_codPartida" ManuallyRouted="false" />
+        <AssociationConnector Association="SIRFPROD_v2Model.FK_ImpuestosSobreNomina_codPartida" ManuallyRouted="false" />
+        <AssociationConnector Association="SIRFPROD_v2Model.FK_Laudos_codPartida" ManuallyRouted="false" />
+        <AssociationConnector Association="SIRFPROD_v2Model.FK_PartidaSolicitudRecurso_CatPartida" ManuallyRouted="false" />
+        <AssociationConnector Association="SIRFPROD_v2Model.FK_Proveedores_codPartida" ManuallyRouted="false" />
+        <AssociationConnector Association="SIRFPROD_v2Model.PK_CatPartida_tipoSolicitudID" ManuallyRouted="false" />
+        <AssociationConnector Association="SIRFPROD_v2Model.FK__PerfilMod__perfi__0FEC5ADD" ManuallyRouted="false" />
+        <AssociationConnector Association="SIRFPROD_v2Model.FK_EstatusPerfil_perfilID" ManuallyRouted="false" />
+        <AssociationConnector Association="SIRFPROD_v2Model.FK_Usuario_CatPerfil" ManuallyRouted="false" />
+        <AssociationConnector Association="SIRFPROD_v2Model.FK_Usuarios_perfilID" ManuallyRouted="false" />
+        <AssociationConnector Association="SIRFPROD_v2Model.FK_PolizaPago_tipoPolizaID" ManuallyRouted="false" />
+        <AssociationConnector Association="SIRFPROD_v2Model.FK_SolicitudRecursos_prioridadID" ManuallyRouted="false" />
+        <AssociationConnector Association="SIRFPROD_v2Model.FK_CatUnidadAdministrativa_regionID" ManuallyRouted="false" />
+        <AssociationConnector Association="SIRFPROD_v2Model.fk_TipoSolPorAreaCatRegion" ManuallyRouted="false" />
+        <AssociationConnector Association="SIRFPROD_v2Model.FK_UsuarioRegionFiscalizacion_CatRegion" ManuallyRouted="false" />
+        <AssociationConnector Association="SIRFPROD_v2Model.FK_Usuario_CatRol" ManuallyRouted="false" />
+        <AssociationConnector Association="SIRFPROD_v2Model.FK_SolicitudCatUnidadAdm_CatSolicitud" ManuallyRouted="false" />
+        <AssociationConnector Association="SIRFPROD_v2Model.FK_SolicitudRecursos_tipoSolicitudID" ManuallyRouted="false" />
+        <AssociationConnector Association="SIRFPROD_v2Model.fk_TipoSolPorAreaCatTipoSol" ManuallyRouted="false" />
+        <AssociationConnector Association="SIRFPROD_v2Model.fk_TipoSolPorUACatTipoSol" ManuallyRouted="false" />
+        <AssociationConnector Association="SIRFPROD_v2Model.FK__ModuloSub__Submo__019E3B86" ManuallyRouted="false" />
+        <AssociationConnector Association="SIRFPROD_v2Model.FK_AreaUnidadAdm_CatUnidadAdministrativa" ManuallyRouted="false" />
+        <AssociationConnector Association="SIRFPROD_v2Model.FK_SolicitudCatUnidadAdm_CatUnidadAdm" ManuallyRouted="false" />
+        <AssociationConnector Association="SIRFPROD_v2Model.FK_SolicitudRecursos_codUA" ManuallyRouted="false" />
+        <AssociationConnector Association="SIRFPROD_v2Model.fk_TipoSolPorUACatUA" ManuallyRouted="false" />
+        <AssociationConnector Association="SIRFPROD_v2Model.FK_Usuarios_codUA" ManuallyRouted="false" />
+        <AssociationConnector Association="SIRFPROD_v2Model.FK_PresupuestoClc_clcID" ManuallyRouted="false" />
+        <AssociationConnector Association="SIRFPROD_v2Model.FK_LugarSolicitudRecurso_DetalleSolicitudRecurso" ManuallyRouted="false" />
+        <AssociationConnector Association="SIRFPROD_v2Model.fk_PartidaSolicitudRecurso_DetalleSolicitudRecurso" ManuallyRouted="false" />
+        <AssociationConnector Association="SIRFPROD_v2Model.FK_Viatico_homologado" ManuallyRouted="false" />
+        <AssociationConnector Association="SIRFPROD_v2Model.FK_Viaticos_SolicitudRecursos" ManuallyRouted="false" />
+        <AssociationConnector Association="SIRFPROD_v2Model.FK_Documento_solicitudID" ManuallyRouted="false" />
+        <AssociationConnector Association="SIRFPROD_v2Model.FK_EstatusMovimiento_solicitudID" ManuallyRouted="false" />
+        <AssociationConnector Association="SIRFPROD_v2Model.FK_EstatusMovimiento_usuarioID" ManuallyRouted="false" />
+        <AssociationConnector Association="SIRFPROD_v2Model.FK_Factura_proveedoresID" ManuallyRouted="false" />
+        <AssociationConnector Association="SIRFPROD_v2Model.FK_firmaElectronica_solicitudID" ManuallyRouted="false" />
+        <AssociationConnector Association="SIRFPROD_v2Model.FK_GastosAduanales_solicitudID" ManuallyRouted="false" />
+        <AssociationConnector Association="SIRFPROD_v2Model.FK_GastoCorriente_solicitudID" ManuallyRouted="false" />
+        <AssociationConnector Association="SIRFPROD_v2Model.FK_GastosFunerarios_solicitudID" ManuallyRouted="false" />
+        <AssociationConnector Association="SIRFPROD_v2Model.FK_ImpuestosSobreNomina_solicitudID" ManuallyRouted="false" />
+        <AssociationConnector Association="SIRFPROD_v2Model.FK_Laudos_solicitudID" ManuallyRouted="false" />
+        <AssociationConnector Association="SIRFPROD_v2Model.FK_LogError_usuarioID" ManuallyRouted="false" />
+        <AssociationConnector Association="SIRFPROD_v2Model.FK_MovimientoAdministrativo_presionGastoID" ManuallyRouted="false" />
+        <AssociationConnector Association="SIRFPROD_v2Model.FK_MovimientoAdministrativo_solicitudID" ManuallyRouted="false" />
+        <AssociationConnector Association="SIRFPROD_v2Model.FK_PagoCheque_movimientoAdmID" ManuallyRouted="false" />
+        <AssociationConnector Association="SIRFPROD_v2Model.FK_TransferenciaBancaria_movimientoAdmID" ManuallyRouted="false" />
+        <AssociationConnector Association="SIRFPROD_v2Model.FK_Penalizaciones_proveedoresID" ManuallyRouted="false" />
+        <AssociationConnector Association="SIRFPROD_v2Model.FK_PresupuestoClc_solicitudID" ManuallyRouted="false" />
+        <AssociationConnector Association="SIRFPROD_v2Model.FK_Proveedores_solicitudID" ManuallyRouted="false" />
+        <AssociationConnector Association="SIRFPROD_v2Model.FK_RegistroContable_SolicitudRecursos" ManuallyRouted="false" />
+        <AssociationConnector Association="SIRFPROD_v2Model.fk_RegVol_SolRec" ManuallyRouted="false" />
+        <AssociationConnector Association="SIRFPROD_v2Model.FK_SolicitudFirma_SolicitudFirma" ManuallyRouted="false" />
+        <AssociationConnector Association="SIRFPROD_v2Model.FK_SolicitudFirma_SolicitudrECURSO" ManuallyRouted="false" />
+        <AssociationConnector Association="SIRFPROD_v2Model.FK_UsuarioRegionFiscalizacion_Usuarios" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

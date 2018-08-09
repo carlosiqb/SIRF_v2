@@ -1,0 +1,420 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{6CE432B2-D409-4322-A5D5-A7254F829460}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SIRF.Persistencia</RootNamespace>
+    <AssemblyName>SIRF.Persistencia</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Agregaduria.cs">
+      <DependentUpon>SIRF_Modelo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AreaUnidadAdm.cs">
+      <DependentUpon>SIRF_Modelo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Asignacion.cs">
+      <DependentUpon>SIRF_Modelo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Beca.cs">
+      <DependentUpon>SIRF_Modelo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Becalos.cs">
+      <DependentUpon>SIRF_Modelo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Beneficiario.cs">
+      <DependentUpon>SIRF_Modelo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Bitacora.cs">
+      <DependentUpon>SIRF_Modelo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CargaCuotaDiaria.cs">
+      <DependentUpon>SIRF_Modelo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CatAcademia.cs">
+      <DependentUpon>SIRF_Modelo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CatAccion.cs">
+      <DependentUpon>SIRF_Modelo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CatAgenciaAduanal.cs">
+      <DependentUpon>SIRF_Modelo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CatArea.cs">
+      <DependentUpon>SIRF_Modelo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CatBanco.cs">
+      <DependentUpon>SIRF_Modelo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CatConceptoGasto.cs">
+      <DependentUpon>SIRF_Modelo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CatConceptoPago.cs">
+      <DependentUpon>SIRF_Modelo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CatCuenta.cs">
+      <DependentUpon>SIRF_Modelo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CatDependiente.cs">
+      <DependentUpon>SIRF_Modelo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CatDestino.cs">
+      <DependentUpon>SIRF_Modelo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CatDocumento.cs">
+      <DependentUpon>SIRF_Modelo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CatEntidadFederativa.cs">
+      <DependentUpon>SIRF_Modelo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CatEstatusFactura.cs">
+      <DependentUpon>SIRF_Modelo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CatEstatusPago.cs">
+      <DependentUpon>SIRF_Modelo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CatEstatusPresion.cs">
+      <DependentUpon>SIRF_Modelo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CatEstatusSolicitud.cs">
+      <DependentUpon>SIRF_Modelo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CatEvento.cs">
+      <DependentUpon>SIRF_Modelo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CatEventoAccion.cs">
+      <DependentUpon>SIRF_Modelo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CatFirma.cs">
+      <DependentUpon>SIRF_Modelo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CatFormaComprobacion.cs">
+      <DependentUpon>SIRF_Modelo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CatJefeDepto.cs">
+      <DependentUpon>SIRF_Modelo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CatModulo.cs">
+      <DependentUpon>SIRF_Modelo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CatMoneda.cs">
+      <DependentUpon>SIRF_Modelo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CatMunicipio.cs">
+      <DependentUpon>SIRF_Modelo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CatPago.cs">
+      <DependentUpon>SIRF_Modelo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CatPagoPoliza.cs">
+      <DependentUpon>SIRF_Modelo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CatPais.cs">
+      <DependentUpon>SIRF_Modelo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CatPartida.cs">
+      <DependentUpon>SIRF_Modelo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CatPerfil.cs">
+      <DependentUpon>SIRF_Modelo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CatPoliza.cs">
+      <DependentUpon>SIRF_Modelo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CatPrioridad.cs">
+      <DependentUpon>SIRF_Modelo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CatRegion.cs">
+      <DependentUpon>SIRF_Modelo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CatRol.cs">
+      <DependentUpon>SIRF_Modelo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CatSolicitud.cs">
+      <DependentUpon>SIRF_Modelo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CatSubmodulo.cs">
+      <DependentUpon>SIRF_Modelo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CatUnidadAdm.cs">
+      <DependentUpon>SIRF_Modelo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Clc.cs">
+      <DependentUpon>SIRF_Modelo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DBancos.cs" />
+    <Compile Include="DDestino.cs" />
+    <Compile Include="DDocumento.cs" />
+    <Compile Include="DEntidadFederativa.cs" />
+    <Compile Include="DEstadoSolicitud.cs" />
+    <Compile Include="DetalleSolicitudRecurso.cs">
+      <DependentUpon>SIRF_Modelo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DExpedienteCuenta.cs" />
+    <Compile Include="DExpedienteDato.cs" />
+    <Compile Include="DFirma.cs" />
+    <Compile Include="DFormaComprobacion.cs" />
+    <Compile Include="DGestionarCuotasDiarias.cs" />
+    <Compile Include="DGestionExpediente.cs" />
+    <Compile Include="DGestionLogError.cs" />
+    <Compile Include="DGestionUsuarios.cs" />
+    <Compile Include="DMoneda.cs" />
+    <Compile Include="DMunicipioLocalidad.cs" />
+    <Compile Include="Documento.cs">
+      <DependentUpon>SIRF_Modelo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DPaises.cs" />
+    <Compile Include="DPartida.cs" />
+    <Compile Include="DRegion.cs" />
+    <Compile Include="DSolicitud.cs" />
+    <Compile Include="DTipoDocumento.cs" />
+    <Compile Include="DTipoPago.cs" />
+    <Compile Include="DTipoSolicitud.cs" />
+    <Compile Include="DucvDocumentos.cs" />
+    <Compile Include="DUnidadAdministrativa.cs" />
+    <Compile Include="EstatusAccion.cs">
+      <DependentUpon>SIRF_Modelo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EstatusMovimiento.cs">
+      <DependentUpon>SIRF_Modelo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EstatusPerfil.cs">
+      <DependentUpon>SIRF_Modelo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Factura.cs">
+      <DependentUpon>SIRF_Modelo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FirmaElectronica.cs">
+      <DependentUpon>SIRF_Modelo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GastoAduana.cs">
+      <DependentUpon>SIRF_Modelo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GastoCorriente.cs">
+      <DependentUpon>SIRF_Modelo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GastoFunerario.cs">
+      <DependentUpon>SIRF_Modelo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Homologado.cs">
+      <DependentUpon>SIRF_Modelo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ImpuestoSobreNomina.cs">
+      <DependentUpon>SIRF_Modelo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Laudo.cs">
+      <DependentUpon>SIRF_Modelo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="LogError.cs">
+      <DependentUpon>SIRF_Modelo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="LugarSolicitudRecurso.cs">
+      <DependentUpon>SIRF_Modelo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ModuloSubmodulo.cs">
+      <DependentUpon>SIRF_Modelo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MovimientoAdministrativo.cs">
+      <DependentUpon>SIRF_Modelo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MovimientoBancario.cs">
+      <DependentUpon>SIRF_Modelo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PagoCheque.cs">
+      <DependentUpon>SIRF_Modelo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Parametro.cs">
+      <DependentUpon>SIRF_Modelo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PartidaSolicitudRecurso.cs">
+      <DependentUpon>SIRF_Modelo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Penalizacion.cs">
+      <DependentUpon>SIRF_Modelo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PerfilModulo.cs">
+      <DependentUpon>SIRF_Modelo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PolizaPago.cs">
+      <DependentUpon>SIRF_Modelo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PresionGasto.cs">
+      <DependentUpon>SIRF_Modelo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PresupuestoClc.cs">
+      <DependentUpon>SIRF_Modelo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Proveedor.cs">
+      <DependentUpon>SIRF_Modelo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="RegistroContable.cs">
+      <DependentUpon>SIRF_Modelo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="RegistroVolante.cs">
+      <DependentUpon>SIRF_Modelo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SIRF_Modelo.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SIRF_Modelo.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SIRF_Modelo.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SIRF_Modelo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SIRF_Modelo.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SIRF_Modelo.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="SolicitudCatUnidadAdm.cs">
+      <DependentUpon>SIRF_Modelo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SolicitudFirma.cs">
+      <DependentUpon>SIRF_Modelo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SolicitudRecurso.cs">
+      <DependentUpon>SIRF_Modelo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sysdiagrams.cs">
+      <DependentUpon>SIRF_Modelo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TipoJefeDepto.cs">
+      <DependentUpon>SIRF_Modelo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TipoSolicitudPorArea.cs">
+      <DependentUpon>SIRF_Modelo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TipoSolicitudPorUA.cs">
+      <DependentUpon>SIRF_Modelo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TransferenciaBancaria.cs">
+      <DependentUpon>SIRF_Modelo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Usuario.cs">
+      <DependentUpon>SIRF_Modelo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="UsuarioRegionFiscalizacion.cs">
+      <DependentUpon>SIRF_Modelo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="vEstatusMovimientoBanco.cs">
+      <DependentUpon>SIRF_Modelo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="vwAsistentesEnlace.cs">
+      <DependentUpon>SIRF_Modelo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="vwBajaIntegrante.cs">
+      <DependentUpon>SIRF_Modelo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="vwCentrosDeDistribucion.cs">
+      <DependentUpon>SIRF_Modelo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="vwCuentasIntegrante.cs">
+      <DependentUpon>SIRF_Modelo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="vwDatosIntegrante.cs">
+      <DependentUpon>SIRF_Modelo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="vwDependientesIntegrante.cs">
+      <DependentUpon>SIRF_Modelo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="vwIncidenciasIntegrante.cs">
+      <DependentUpon>SIRF_Modelo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="vwTipoDependientesIntegrante.cs">
+      <DependentUpon>SIRF_Modelo.tt</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <EntityDeploy Include="SIRF_Modelo.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>SIRF_Modelo.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="packages.config" />
+    <None Include="SIRF_Modelo.edmx.diagram">
+      <DependentUpon>SIRF_Modelo.edmx</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="SIRF_Modelo.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>SIRF_Modelo.edmx</DependentUpon>
+      <LastGenOutput>SIRF_Modelo.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="SIRF_Modelo.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>SIRF_Modelo.edmx</DependentUpon>
+      <LastGenOutput>SIRF_Modelo.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SIRF.Mensajes\SIRF.Mensajes.csproj">
+      <Project>{13889f2d-daba-461a-8b12-f60871bd3857}</Project>
+      <Name>SIRF.Mensajes</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SIRF.Objetos\SIRF.Objetos.csproj">
+      <Project>{7949847f-360e-4cb6-ab2f-d64feb1fb6c1}</Project>
+      <Name>SIRF.Objetos</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SIRF.Utilerias\SIRF.Utilerias.csproj">
+      <Project>{e5da1965-7014-4713-818b-1c8220ad55c9}</Project>
+      <Name>SIRF.Utilerias</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

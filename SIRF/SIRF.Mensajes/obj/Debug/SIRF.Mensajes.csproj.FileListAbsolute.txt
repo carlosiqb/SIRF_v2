@@ -1,0 +1,28 @@
+D:\--- SITIO POLICIA FEDERAL\SIRF_v2\SIRF.Mensajes\bin\Debug\SIRF.Mensajes.dll
+D:\--- SITIO POLICIA FEDERAL\SIRF_v2\SIRF.Mensajes\bin\Debug\SIRF.Mensajes.pdb
+D:\--- SITIO POLICIA FEDERAL\SIRF_v2\SIRF.Mensajes\obj\Debug\SIRF.Mensajes.csprojResolveAssemblyReference.cache
+D:\--- SITIO POLICIA FEDERAL\SIRF_v2\SIRF.Mensajes\obj\Debug\SIRF.Mensajes.dll
+D:\--- SITIO POLICIA FEDERAL\SIRF_v2\SIRF.Mensajes\obj\Debug\SIRF.Mensajes.pdb
+D:\--- SITIO POLICIA FEDERAL\SIRF_v2\SIRF.Mensajes\bin\Debug\SIRF.Mensajes.XML
+C:\Users\luisg.indra\Documents\Ultrasist\SIRF\SIRF_V2.0\SIRF_V2\SIRF.Mensajes\bin\Debug\SIRF.Mensajes.XML
+C:\Users\luisg.indra\Documents\Ultrasist\SIRF\SIRF_V2.0\SIRF_V2\SIRF.Mensajes\bin\Debug\SIRF.Mensajes.dll
+C:\Users\luisg.indra\Documents\Ultrasist\SIRF\SIRF_V2.0\SIRF_V2\SIRF.Mensajes\bin\Debug\SIRF.Mensajes.pdb
+C:\Users\luisg.indra\Documents\Ultrasist\SIRF\SIRF_V2.0\SIRF_V2\SIRF.Mensajes\obj\Debug\SIRF.Mensajes.csproj.CoreCompileInputs.cache
+C:\Users\luisg.indra\Documents\Ultrasist\SIRF\SIRF_V2.0\SIRF_V2\SIRF.Mensajes\obj\Debug\SIRF.Mensajes.dll
+C:\Users\luisg.indra\Documents\Ultrasist\SIRF\SIRF_V2.0\SIRF_V2\SIRF.Mensajes\obj\Debug\SIRF.Mensajes.pdb
+C:\Users\adrianal.ultrasist\Desktop\SIRF_V2\SIRF.Mensajes\bin\Debug\SIRF.Mensajes.XML
+C:\Users\adrianal.ultrasist\Desktop\SIRF_V2\SIRF.Mensajes\bin\Debug\SIRF.Mensajes.dll
+C:\Users\adrianal.ultrasist\Desktop\SIRF_V2\SIRF.Mensajes\bin\Debug\SIRF.Mensajes.pdb
+C:\Users\adrianal.ultrasist\Desktop\SIRF_V2\SIRF.Mensajes\obj\Debug\SIRF.Mensajes.dll
+C:\Users\adrianal.ultrasist\Desktop\SIRF_V2\SIRF.Mensajes\obj\Debug\SIRF.Mensajes.pdb
+C:\Users\adrianal.ultrasist\Desktop\SIRF\SIRF\SIRF.Mensajes\bin\Debug\SIRF.Mensajes.XML
+C:\Users\adrianal.ultrasist\Desktop\SIRF\SIRF\SIRF.Mensajes\bin\Debug\SIRF.Mensajes.dll
+C:\Users\adrianal.ultrasist\Desktop\SIRF\SIRF\SIRF.Mensajes\bin\Debug\SIRF.Mensajes.pdb
+C:\Users\adrianal.ultrasist\Desktop\SIRF\SIRF\SIRF.Mensajes\obj\Debug\SIRF.Mensajes.dll
+C:\Users\adrianal.ultrasist\Desktop\SIRF\SIRF\SIRF.Mensajes\obj\Debug\SIRF.Mensajes.pdb
+C:\Users\adrianal.ultrasist\Desktop\SIRF\SIRF_V3\SIRF\SIRF\SIRF.Mensajes\bin\Debug\SIRF.Mensajes.XML
+C:\Users\adrianal.ultrasist\Desktop\SIRF\SIRF_V3\SIRF\SIRF\SIRF.Mensajes\bin\Debug\SIRF.Mensajes.dll
+C:\Users\adrianal.ultrasist\Desktop\SIRF\SIRF_V3\SIRF\SIRF\SIRF.Mensajes\bin\Debug\SIRF.Mensajes.pdb
+C:\Users\adrianal.ultrasist\Desktop\SIRF\SIRF_V3\SIRF\SIRF\SIRF.Mensajes\obj\Debug\SIRF.Mensajes.dll
+C:\Users\adrianal.ultrasist\Desktop\SIRF\SIRF_V3\SIRF\SIRF\SIRF.Mensajes\obj\Debug\SIRF.Mensajes.pdb
+C:\Users\adrianal.ultrasist\Desktop\SIRF\SIRF_V3\SIRF\SIRF\SIRF.Mensajes\obj\Debug\SIRF.Mensajes.csprojResolveAssemblyReference.cache

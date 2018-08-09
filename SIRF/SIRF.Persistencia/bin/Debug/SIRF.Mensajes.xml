@@ -1,0 +1,2369 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>SIRF.Mensajes</name>
+    </assembly>
+    <members>
+        <member name="T:SIRF.Mensajes.Botones">
+            <summary>
+            Clase correspondiente a los botones para el sistema.
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Botones.Aceptar">
+            <summary>
+            Boton de Aceptar.
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Botones.AceptarSolicitud">
+            <summary>
+            Boton de Aceptar Solicitud.
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Botones.Activar">
+            <summary>
+            Boton de Activar.
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Botones.Actualizar">
+            <summary>
+            Boton de Actulizar.
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Botones.Adjuntar">
+            <summary>
+            Boton de Adjuntar.
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Botones.AgregarCopia">
+            <summary>
+            Boton de Agregar copia.
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Botones.AgregarViatico">
+            <summary>
+            Boton de Agregar Viático.
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Botones.Asignacion">
+            <summary>
+            Boton de Asignación.
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Botones.AsignacionPresupuesto">
+            <summary>
+            Boton de Asignación presupuesto.
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Botones.Asignar">
+            <summary>
+            Boton de Asignar.
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Botones.Autorizar">
+            <summary>
+            Boton de Autorizar.
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Botones.AutorizarSol">
+            <summary>
+            Boton de Autorizar solicitud.
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Botones.BANDEJA">
+            <summary>
+            Boton de Bandeja.
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Botones.Beneficiarios">
+            <summary>
+            Boton de Beneficiarios.
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Botones.Buscar">
+            <summary>
+            Boton de Búscar.
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Botones.Cancelar">
+            <summary>
+            Boton de Cancelar.
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Botones.Consultar">
+            <summary>
+            Boton de Consultar.
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Botones.Desactivar">
+            <summary>
+            Boton de Consultar.
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Botones.Descargar">
+            <summary>
+            Boton de Descargar.
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Botones.Devolver">
+            <summary>
+            Boton de Devolver.
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Botones.Editar">
+            <summary>
+            Boton de Editar.
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Botones.Eliminar">
+            <summary>
+            Boton de Eliminar.
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Botones.Entrar">
+            <summary>
+            Boton de Entrar.
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Botones.EnviarBanco">
+            <summary>
+            Boton de Enviar a banco.
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Botones.EnviarFisca">
+            <summary>
+            Boton de Enviar a fiscalización.
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Botones.Enviar">
+            <summary>
+            Boton de Enviar.
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Botones.EnviarEnlace">
+            <summary>
+            Boton de Enviar Enlace.
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Botones.ExportarExcel">
+            <summary>
+            Boton de Exportar a Excel.
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Botones.FirmaFiel">
+            <summary>
+            Boton de Firma FIEL.
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Botones.GenerarOficio">
+            <summary>
+            Boton de Generar Oficio.
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Botones.Guardar">
+            <summary>
+            Boton de Guardar.
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Botones.Importar">
+            <summary>
+            Boton de Importar.
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Botones.ImportarViatico">
+            <summary>
+            Boton de Importar Viático.
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Botones.Imprimir">
+            <summary>
+            Boton de Imprimir.
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Botones.Iniciar">
+            <summary>
+            Boton de Inicio.
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Botones.VerDetalle">
+            <summary>
+            Boton de Ver detalle.
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Botones.LayoutViaticos">
+            <summary>
+            Boton de Layout Viáticos.
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Botones.Limpiar">
+            <summary>
+            Boton de Layout Viáticos.
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Botones.No">
+            <summary>
+            Boton de No.
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Botones.Observaciones">
+            <summary>
+            Boton de Observaciones.
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Botones.Rechazar">
+            <summary>
+            Boton de Observaciones.
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Botones.RecuperarSolicitud">
+            <summary>
+            Boton de Recuperar una solicitud Solicitud.
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Botones.Regresar">
+            <summary>
+            Boton de Regresar.
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Botones.Reiniciar">
+            <summary>
+            Boton de Reiniciar.
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Botones.Salir">
+            <summary>
+            Boton de Salir.
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Botones.Si">
+            <summary>
+            Boton de Si.
+            </summary>
+        </member>
+        <member name="T:SIRF.Mensajes.Constantes">
+            <summary>
+            Clase correspondiente a las constantes del sistema.
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Constantes.CONINFORMACION">
+            <summary>
+            Constante para el mensaje de obtener informacion.
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Constantes.SININFORMACION">
+            <summary>
+            Constante para el mensaje de no obtener información.
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Constantes.PARAMETROVACIOONULO">
+            <summary>
+            Constante para el mensaje de parametro vacio o nulo.
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Constantes.TitSolicitudRecursos">
+            <summary>
+            Constante para el mensaje de parametro errConfiguracionIP.
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Constantes.ERRCONFIGURACIONIP">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Constantes.AUTENTICACIONCORRECTA">
+            <summary>
+            Constante para el mensaje de autenticaciónCorrecta.
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Constantes.AUTENTICACIONFALLIDA">
+            <summary>
+            Constante para el mensaje de autenticaciónFallida.
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Constantes.lblTipoSolicitud">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Constantes.CVETIPOSOLICITUD">
+            <summary>
+            Clave del tipo de solicitud
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Constantes.DESTIPOSOLICITUD">
+            <summary>
+            Descripcion del tipo de solicitud
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Constantes.A">
+            <summary>
+            Descripcion para cualquier modulo, para el rango de fechas
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Constantes.ACADEMIA">
+            <summary>
+            Descripcion para academia
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Constantes.ACEPTADO">
+            <summary>
+            Descripcion para botones de aceptacion
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Constantes.ACTIVIDAD">
+            <summary>
+            Descripcion indicar la actividad
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Constantes.ADSCRIPCION">
+            <summary>
+            Descripcion para indicar la adsquipcion
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Constantes.AGENCIAADUANAL">
+            <summary>
+            Descripcion para indicar la agencia aduanal
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Constantes.ANALISTA">
+            <summary>
+            Descripcion para seleccionar el analista
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Constantes.ANIOSERVICIO">
+            <summary>
+            Descripcion para el año servicio
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Constantes.ANTICIPO">
+            <summary>
+            Descripcion para seleccion de acticipo
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Constantes.APELLIDOMATERNO">
+            <summary>
+            Descripcion para campo o etiqueta de apellido materno
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Constantes.APELLIDOPATERNO">
+            <summary>
+            Descripcion para campo o etiqueta de apellido paterno
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Constantes.AREA">
+            <summary>
+            Descripcion para campo de area
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Constantes.AVISOREINTEGROCLC">
+            <summary>
+            Descripcion para aviso de reintegacion
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Constantes.BENEFICIARIO">
+            <summary>
+            Descripcion para campo beneficiario
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Constantes.BUSQUEDA">
+            <summary>
+            Descripcion para boton de busqueda
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Constantes.CARGO">
+            <summary>
+            Descripcion para campo cargo
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Constantes.CLABEINTERBANCARIA">
+            <summary>
+            Descripcion para campo clabe interbancaria
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Constantes.CONCEPTOPAGO">
+            <summary>
+            Descripcion para campo concepto de pago
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Constantes.CONTRATO">
+            <summary>
+            Descripcion para campo contrato
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Constantes.COPIAPARA">
+            <summary>
+            Descripcion para indicar si se quiere o no "{copia para}"
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Constantes.CORREOELECTRONICO">
+            <summary>
+            Descripcion para campo email
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Constantes.CUENTABANCARIA">
+            <summary>
+            Descripcion para campo cuenta bancaria
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Constantes.CUOTASDIARIAS">
+            <summary>
+            Descripcion para modulo de cuotas darias
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Constantes.DESTINO">
+            <summary>
+            Descripcion para campo destino de email
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Constantes.DIASCOMPLETOS">
+            <summary>
+            Descripcion para campo y funcion de dias completos
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Constantes.DIASMEDIOS">
+            <summary>
+            Descripcion para campo y funcion de dias medios
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Constantes.EJERCICIOCLC">
+            <summary>
+            Descripcion para ejercicio contable
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Constantes.EJERCICIOFISCAL">
+            <summary>
+            Descripcion para ejercicio fiscal
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Constantes.ELABORO">
+            <summary>
+            Descripcion para campo de quien elaboro
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Constantes.ENTIDADFEDERATIVA">
+            <summary>
+            Descripcion para campo entidad federativa
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Constantes.ESTATUS">
+            <summary>
+            Descripcion para estatus
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Constantes.EXPEDIENTE">
+            <summary>
+            Descripcion para expediente
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Constantes.FECHAPAGO">
+            <summary>
+            Descripcion para campo fecha de pago
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Constantes.FECHAPOLIZA">
+            <summary>
+            Descripcion para campo fecha de poliza
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Constantes.FECHASOLICITUD">
+            <summary>
+            Descripcion para campo fecha de solicitud
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Constantes.FIDEICOMISO">
+            <summary>
+            Descripcion para campo fideicomiso
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Constantes.FILTROESTATUS">
+            <summary>
+            Descripcion para campo filtro de estatus
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Constantes.FILTROFECHAS">
+            <summary>
+            Descripcion para campo filtro de fechas
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Constantes.FILTROFOLIO">
+            <summary>
+            Descripcion para campo filtro de folio
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Constantes.FILTROMODULO">
+            <summary>
+            Descripcion para campo filtro de modulo
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Constantes.FILTROMOSTRARTODOS">
+            <summary>
+            Descripcion para campo filtro mostrar todos
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Constantes.FILTRONOMBRE">
+            <summary>
+            Descripcion para campo filtro de nombre
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Constantes.FILTRONUMEROEXPEDIENTE">
+            <summary>
+            Descripcion para campo filtro de num expediente
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Constantes.FILTROPERFIL">
+            <summary>
+            Descripcion para campo filtro de perfil
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Constantes.FILTROREGION">
+            <summary>
+            Descripcion para campo filtro de region
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Constantes.FILTROTIPOFIRMA">
+            <summary>
+            Descripcion para campo filtro tipo firma
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Constantes.FILTROTIPOSOLICITUD">
+            <summary>
+            Descripcion para campo filtro de tipo de solicitud
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Constantes.FILTROUNIADMINISTRATIVA">
+            <summary>
+            Descripcion para campo filtro de unidad administrativa
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Constantes.FILTROUSUARIOS">
+            <summary>
+            Descripcion para campo filtro de usuario
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Constantes.FIRMARSOLICITUD">
+            <summary>
+            Descripcion para campo  firmar solicitud
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Constantes.FIRMARFIEL">
+            <summary>
+            Descripcion para campo Firmar con firma fiel
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Constantes.FISCALES">
+            <summary>
+            Descripcion para campo fiscales
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Constantes.FOLIO">
+            <summary>
+            Descripcion para campo folio
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Constantes.FOLIOPOLIZA">
+            <summary>
+            Descripcion para campo folio poliza
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Constantes.GENERACION">
+            <summary>
+            Descripcion para campo generacion
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Constantes.GRADO">
+            <summary>
+            Descripcion para campo grado
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Constantes.HEADER_GRID_UNIDAD_ADMINISTRATIVA">
+            <summary>
+            Descripcion para campo unidad administrativa
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Constantes.HOMOLOGAREXPEDIENTE">
+            <summary>
+            Descripcion para campo homologar expediente
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Constantes.IDENTIFICADORRELACION">
+            <summary>
+            Descripcion para campo relacion de info
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Constantes.IMPORTE">
+            <summary>
+            Descripcion para campo importe
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Constantes.IMPORTEAOTORGAR">
+            <summary>
+            Descripcion para campo importe a otorgar
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Constantes.INGRESOSEGRESOS">
+            <summary>
+            Descripcion para campo ingresos y egresos
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Constantes.INSTITUCIONBANCARIA">
+            <summary>
+            Descripcion para campo inst bancaria
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Constantes.INTEGRANTE">
+            <summary>
+            Descripcion para campo integrante
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Constantes.IP">
+            <summary>
+            Descripcion para campo ip
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Constantes.LEYENDA">
+            <summary>
+            Descripcion para campo leyenda
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Constantes.MODULO">
+            <summary>
+            Descripcion para campo modulo
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Constantes.MONEDA">
+            <summary>
+            Descripcion para campo moneda
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Constantes.MONTOAPAGAR">
+            <summary>
+            Descripcion para campo monto a pagar
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Constantes.MONTODEPOSITAR">
+            <summary>
+            Descripcion para campo monto a depositar
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Constantes.MONTOOTORGADO">
+            <summary>
+            Descripcion para campo monto otorgado
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Constantes.MONTOSOLICITADO">
+            <summary>
+            Descripcion para campo monto solicitado
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Constantes.MONTOTOTALSOLICITADO">
+            <summary>
+            Descripcion para campo monto total solicitado
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Constantes.MOTIVO_DEVOLUCION">
+            <summary>
+            Descripcion para campo motivo devolucion
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Constantes.MOTIVOCONCILIACION">
+            <summary>
+            Descripcion para campo motivo conciliacion
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Constantes.MUNICIPIOLOCALIDAD">
+            <summary>
+            Descripcion para campo municipio localidad
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Constantes.NOMBRE">
+            <summary>
+            Descripcion para campo nombre
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Constantes.NOMBREBENEFICIARIO">
+            <summary>
+            Descripcion para campo nombre beneficiario
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Constantes.NOMBREDELOPERATIVO">
+            <summary>
+            Descripcion para campo nombre operativo
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Constantes.NOMBREFIRMANTE">
+            <summary>
+            Descripcion para campo nombre firmante
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Constantes.NUMEROCLC">
+            <summary>
+            Descripcion para campo numero clc
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Constantes.NUMERODEELEMENTOS">
+            <summary>
+            Descripcion para numero de elentos
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Constantes.NUMERODIASEFECTIVOS">
+            <summary>
+            Descripcion para campo numero de dias efectivos
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Constantes.NUMEROEXPEDIENTE">
+            <summary>
+            Descripcion para numero de expediente
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Constantes.NUMEROFALTAS">
+            <summary>
+            Descripcion para campo numero de faltas
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Constantes.NUMERORECIBOPAGO">
+            <summary>
+            Descripcion para campo numero de recibo de pago
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Constantes.OBJETIVODELACOMISION">
+            <summary>
+            Descripcion para campo objetivo de la comision
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Constantes.OBJETODECONTRATO">
+            <summary>
+            Descripcion para campo objeto de contrato
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Constantes.OBSERVACIONES">
+            <summary>
+            Descripcion para campo observaciones
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Constantes.OFICIOLIBINVERSION">
+            <summary>
+            Descripcion para campo libre inversion
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Constantes.OFICIOSOLICITUD">
+            <summary>
+            Descripcion para campo oficio solicitud
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Constantes.OPERACIONESESPECIFICAS">
+            <summary>
+            Descripcion para campo operaciones especificas
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Constantes.PAGOMONEDAEXTRANJERA">
+            <summary>
+            Descripcion para campo opago moneda extranjera
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Constantes.PAGOPESOS">
+            <summary>
+            Descripcion para campo pago en pesos
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Constantes.PAIS">
+            <summary>
+            Descripcion para campo pais
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Constantes.PARTIDA">
+            <summary>
+            Descripcion para campo partida
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Constantes.PENALIZACIONES">
+            <summary>
+            Descripcion para campo penalizaciones
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Constantes.PERFIL">
+            <summary>
+            Descripcion para campo perfil
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Constantes.PERIODO">
+            <summary>
+            Descripcion para campo periodo
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Constantes.PERIODOCOMISION">
+            <summary>
+            Descripcion para campo periodo comision
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Constantes.PERIODOPAGO">
+            <summary>
+            Descripcion para campo periodo pago
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Constantes.PRIORIDAD">
+            <summary>
+            Descripcion para campo prioridad
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Constantes.PROVEEDOR">
+            <summary>
+            Descripcion para campo provedor
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Constantes.PUESTO">
+            <summary>
+            Descripcion para campo puesto
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Constantes.RECHAZO">
+            <summary>
+            Descripcion para campo rechazo
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Constantes.REGION">
+            <summary>
+            Descripcion para campo Region
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Constantes.RFC">
+            <summary>
+            Descripcion para campo R.F.C.
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Constantes.SALDOFINAL">
+            <summary>
+            Descripcion para campo saldo final
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Constantes.SENTIDOAUTORIZACION">
+            <summary>
+            Descripcion para campo sentido autorizacion
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Constantes.SUFICIENCIAPRESUPUESTARIA">
+            <summary>
+            Descripcion para campo suficiencia presupuestal
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Constantes.TIPOBUSQUEDA">
+            <summary>
+            Descripcion para campo tipo de busqueda
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Constantes.TIPOCAMBIOPAGO">
+            <summary>
+            Descripcion para campo tipo de cambio al pago
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Constantes.TIPOCAMBIOREFERENCIAL">
+            <summary>
+            Descripcion para campo tipo cambio preferencial
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Constantes.TIPOCUENTABANCARIA">
+            <summary>
+            Descripcion para campo tipo de cuenta bancaria
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Constantes.TIPODECONTRATO">
+            <summary>
+            Descripcion para campo tipo de contrato
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Constantes.TIPOFIRMA">
+            <summary>
+            Descripcion para campo tipo de firma
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Constantes.TIPOMONEDA">
+            <summary>
+            Descripcion para campo tipo de moneda
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Constantes.TIPOSOLICITUD">
+            <summary>
+            Descripcion para campo tipo de solicitud
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Constantes.TITULARCUENTABANCARIA">
+            <summary>
+            Descripcion para campo titular cuenta bancaria
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Constantes.TITULO">
+            <summary>
+            Descripcion para campo Titulo
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Constantes.TOTALCLC">
+            <summary>
+            Descripcion para campo total contabilidad
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Constantes.UNIDADADMIN">
+            <summary>
+            Descripcion para la unidad administrativa
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Constantes.USUARIO">
+            <summary>
+            Descripcion para campo de usuario
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Constantes.VIGENCIADELCONTRATO">
+            <summary>
+            Descripcion para campo vigencia del contrato
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Constantes.SELECTOPTION">
+            <summary>
+            Para los Dropdownlist, seleccione una opción...
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Constantes.ErrorRangoFechasViaticos">
+            <summary>
+            Error para los días completos seleccionados por viáticos
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Constantes.PASAJES">
+            <summary>
+            Descripción para el drop de pasajes
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Constantes.CANTIDAD">
+            <summary>
+            Cantidad para los pasajes
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Constantes.COMPROBACIONNUMERAL">
+            <summary>
+            Descripcion de comprobacion con el numeral
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Constantes.NUMEROTARJETA">
+            <summary>
+            Numero de tarjeta nomina o crédito
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Constantes.COMPROBANTECUENTA">
+            <summary>
+            Numero de tarjeta nomina o crédito
+            </summary>
+        </member>
+        <member name="T:SIRF.Mensajes.ConstantesTitulos">
+            <summary>
+            Clase correspondiente a las constantes para los títulos que se utilizarán en el sistmea.
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.ConstantesTitulos.SOLICITUD">
+            <summary>
+            Constante correspondiente al título de SOLICITUD.
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.ConstantesTitulos.DETALLE">
+            <summary>
+            Constante correspondiente al título de DETALLE.
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.ConstantesTitulos.DOCUMENTOS">
+            <summary>
+            Constante correspondiente al título de DOCUMENTOS.
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.ConstantesTitulos.CUOTASDIARIAS">
+            <summary>
+            Constante correspondiente al título de CUOTADIARIAS.
+            </summary>
+        </member>
+        <member name="T:SIRF.Mensajes.ConstantesArchivos">
+            <summary>
+            Clase correspondiente a las constantes para los archivos.
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.ConstantesArchivos.SELECCIONETIPODOCUMENTO">
+            <summary>
+            Constante para el mensaje SELECCIONETIPODOCUMENTO.
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.ConstantesArchivos.SELECCIONEDOCUMENTO">
+            <summary>
+            Constate para el mensaje SELECCIONEDOCUMENTO
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.ConstantesArchivos.INFOEXTENSIONARCHIVO">
+            <summary>
+            Constante para el mensaje INFOEXTENSIONARCHIVO.
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.ConstantesArchivos.DIRADJUNTOS">
+            <summary>
+            Constante para el mensaje DIRADJUNTOS.
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.ConstantesArchivos.DOCUMENTOGUARDADO">
+            <summary>
+            Constante para el mensaje DOCUMENTOGUARDADO
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.ConstantesArchivos.DOCUMENTONOGUARDADO">
+            <summary>
+            Constante para el documento DOCUMENTONOGUARDADO
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.ConstantesArchivos.DOCUMENTOELIMINADO">
+            <summary>
+            Constante para el mensaje DOCUMENTOELIMINADO
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.ConstantesArchivos.DOCUMENTONOELIMINADO">
+            <summary>
+            Constante para el documento DOCUMENTONOELIMINADO
+            </summary>
+        </member>
+        <member name="T:SIRF.Mensajes.ConstantesDirectorios">
+            <summary>
+            Clase correspondiente a las constantes para los directorios del sistema.
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.ConstantesDirectorios.DATOSINTEGRANTE">
+            <summary>
+            Descripcion para la autentificacion correcta
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.ConstantesDirectorios.SOLICITUD">
+            <summary>
+            Descripcion para la pestaña solicitud
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.ConstantesDirectorios.DETALLE">
+            <summary>
+            Descripcion para la pestaña Detalle
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.ConstantesDirectorios.DOCUMENTOS">
+            <summary>
+            Descripcion para los documentos
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.ConstantesDirectorios.SELECTOPTION">
+            <summary>
+            Descripcion para la primera opcion de los cuadros de lista
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.ConstantesDirectorios.ErrorRangoFechasViaticos">
+            <summary>
+            Error para los días completos seleccionados por viáticos
+            </summary>
+        </member>
+        <member name="T:SIRF.Mensajes.TipoBusquedaEnum">
+            <summary>
+            Enumeracion para el Tipo de búsqueda 
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.TipoBusquedaEnum.Expediente">
+            <summary>
+            Expediente
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.TipoBusquedaEnum.Folio">
+            <summary>
+            Folio
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.TipoBusquedaEnum.RangoFecha">
+            <summary>
+            RangoFecha
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.TipoBusquedaEnum.Estatus">
+            <summary>
+            Estatus
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.TipoBusquedaEnum.Usuario">
+            <summary>
+            Usuario
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.TipoBusquedaEnum.Nombre">
+            <summary>
+            Nombre
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.TipoBusquedaEnum.Perfil">
+            <summary>
+            Perfil
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.TipoBusquedaEnum.ip">
+            <summary>
+            ip
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.TipoBusquedaEnum.UsuarioID">
+            <summary>
+            UsuarioID
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.TipoBusquedaEnum.TipoSolicitud">
+            <summary>
+            TipoSolicitud
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.TipoBusquedaEnum.Todo">
+            <summary>
+            Todo
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.TipoBusquedaEnum.NoAplica">
+            <summary>
+            NoAplica
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.TipoBusquedaEnum.ListaSolicitudID">
+            <summary>
+            ListaSolicitudID
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.TipoBusquedaEnum.Modulo">
+            <summary>
+            Modulo
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.TipoBusquedaEnum.UnidadAdministrativa">
+            <summary>
+            UnidadAdministrativa
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.TipoBusquedaEnum.Region">
+            <summary>
+            Region
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.TipoBusquedaEnum.TipoFirma">
+            <summary>
+            TipoFirma
+            </summary>
+        </member>
+        <member name="T:SIRF.Mensajes.TipoMensajeEnum">
+            <summary>
+            Enumeración para el tipo de mensaje.
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.TipoMensajeEnum.Exitoso">
+            <summary>
+            Exitoso
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.TipoMensajeEnum.Error">
+            <summary>
+            Error
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.TipoMensajeEnum.Informacion">
+            <summary>
+            Informacion
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.TipoMensajeEnum.Alerta">
+            <summary>
+            Alerta
+            </summary>
+        </member>
+        <member name="T:SIRF.Mensajes.TipoSolicitudEnum">
+            <summary>
+            Enumeracion para el tipo de solicitud
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.TipoSolicitudEnum.NOAPLICA">
+            <summary>
+            No aplica
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.TipoSolicitudEnum.AGREGADURIA">
+            <summary>
+            Agregaduría
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.TipoSolicitudEnum.BECASCADETES">
+            <summary>
+            Becas Cadetes
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.TipoSolicitudEnum.GASTOCORRIENTE">
+            <summary>
+            Gastos Corriente
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.TipoSolicitudEnum.GASTOSFUNERARIOS">
+            <summary>
+            Gastos Funerarios
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.TipoSolicitudEnum.IMPUESTOADUANALES">
+            <summary>
+            Impuestos Aduanales
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.TipoSolicitudEnum.IMPUESTONOMINA">
+            <summary>
+            Impuestos Nómina
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.TipoSolicitudEnum.LAUDO">
+            <summary>
+            Laudos
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.TipoSolicitudEnum.CUOTASDIARIAS">
+            <summary>
+            Cuotas Diarias
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.TipoSolicitudEnum.BECALOS">
+            <summary>
+            Bécalos
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.TipoSolicitudEnum.PROVEEDORES">
+            <summary>
+            Proveedores
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.TipoSolicitudEnum.VIATICOS">
+            <summary>
+            Viáticos
+            </summary>
+        </member>
+        <member name="T:SIRF.Mensajes.ProcesoEnum">
+            <summary>
+            Enumeración para el tipo de procesos.
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.ProcesoEnum.BajaLogica">
+            <summary>
+            BajaLogica
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.ProcesoEnum.Alta">
+            <summary>
+            Alta
+            </summary>
+        </member>
+        <member name="T:SIRF.Mensajes.ModuloEnum">
+            <summary>
+             Enumeración para el tipo de modulo.
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.ModuloEnum.Enlace">
+            <summary>
+            Enlace = 1
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.ModuloEnum.VentanillaUnica">
+            <summary>
+            VentanillaUnica = 2
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.ModuloEnum.Fiscalización">
+            <summary>
+            Fiscalización = 3
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.ModuloEnum.Presupuestos">
+            <summary>
+            Presupuestos = 4
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.ModuloEnum.Bancos">
+            <summary>
+            Bancos = 5
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.ModuloEnum.Contabilidad">
+            <summary>
+            Contabilidad = 6
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.ModuloEnum.Seguridad">
+            <summary>
+            Seguridad = 7
+            </summary>
+        </member>
+        <member name="T:SIRF.Mensajes.CONCEPTO_GASTO">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:SIRF.Mensajes.Mensajes">
+            <summary>
+            Clase correspondiente a las constantes del sistema para todos los mensajes.
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Mensajes.MsgTipoSolicitud">
+            <summary>
+            Constante para el mensaje de obtener informacion.
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Mensajes.advAnioServicio">
+            <summary>
+            Constantes para el mensaje advAnioServicio
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Mensajes.advBeneficiario">
+            <summary>
+            Constantes para el mensaje advBeneficiario
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Mensajes.advCambioReferencial">
+            <summary>
+            Constantes para el mensaje advCambioReferencial
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Mensajes.advCorreoElectronico">
+            <summary>
+            Constantes para el mensaje advCorreoElectronico
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Mensajes.advDestino">
+            <summary>
+            Constantes para el mensaje advDestino
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Mensajes.advEjercicioCLC">
+            <summary>
+            Constantes para el mensaje advEjercicioCLC
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Mensajes.advEjercicioFiscal">
+            <summary>
+            Constantes para el mensaje advEjercicioFiscal
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Mensajes.advIP">
+            <summary>
+            Constantes para el mensaje advIP
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Mensajes.advLongitudIdentificador">
+            <summary>
+            Constantes para el mensaje advLongitudIdentificador
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Mensajes.advMontoADepositar">
+            <summary>
+            Constantes para el mensaje advMontoADepositar
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Mensajes.advMontoOtorgado">
+            <summary>
+            Constantes para el mensaje advMontoOtorgado
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Mensajes.advMontoPagar">
+            <summary>
+            Constantes para el mensaje advMontoPagar
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Mensajes.advMontoSolicitado">
+            <summary>
+            Constantes para el mensaje advMontoSolicitado
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Mensajes.advMunicipio">
+            <summary>
+            Constantes para el mensaje advMunicipio
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Mensajes.advNoHayIdentificacion">
+            <summary>
+            Constantes para el mensaje advNoHayIdentificacion
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Mensajes.advNombre">
+            <summary>
+            Constantes para el mensaje advNombre
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Mensajes.advNumeroClc">
+            <summary>
+            Constantes para el mensaje advNumeroClc
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Mensajes.advNumeroDeDiasEfectivos">
+            <summary>
+            Constantes para el mensaje advNumeroDeDiasEfectivos
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Mensajes.advNumeroExpediente">
+            <summary>
+            Constantes para el mensaje advNumeroExpediente
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Mensajes.advNumeroReciboPago">
+            <summary>
+            Constantes para el mensaje advNumeroReciboPago
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Mensajes.advPagoConPoliza">
+            <summary>
+            Constantes para el mensaje advPagoConPoliza
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Mensajes.advPagoMonedaExtranjera">
+            <summary>
+            Constantes para el mensaje advPagoMonedaExtranjera
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Mensajes.advPagoPesos">
+            <summary>
+            Constantes para el mensaje advPagoPesos
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Mensajes.advPais">
+            <summary>
+            Constantes para el mensaje advPais
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Mensajes.advPrimerApellido">
+            <summary>
+            Constantes para el mensaje advPrimerApellido
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Mensajes.advRangoFechasViatico">
+            <summary>
+            Constantes para el mensaje advRangoFechasViatico
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Mensajes.advRegistroPoliza">
+            <summary>
+            Constantes para el mensaje advRegistroPoliza
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Mensajes.advSaldoFinal">
+            <summary>
+            Constantes para el mensaje advSaldoFinal
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Mensajes.advSegundoApellido">
+            <summary>
+            Constantes para el mensaje advSegundoApellido
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Mensajes.advSuficienciaPresupuestaria">
+            <summary>
+            Constantes para el mensaje advSuficienciaPresupuestaria
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Mensajes.advTipoCambioPago">
+            <summary>
+            Constantes para el mensaje advTipoCambioPago
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Mensajes.advTotalCLC">
+            <summary>
+            Constantes para el mensaje advTotalCLC
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Mensajes.advUsuario">
+            <summary>
+            Constantes para el mensaje advUsuario
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Mensajes.errAcademia">
+            <summary>
+            Constantes para el mensaje errAcademia
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Mensajes.errActividad">
+            <summary>
+            Constantes para el mensaje errActividad
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Mensajes.errAgenciaAduanal">
+            <summary>
+            Constantes para el mensaje errAgenciaAduanal
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Mensajes.errAltaUsuario">
+            <summary>
+            Constantes para el mensaje errAltaUsuario
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Mensajes.errAltaUsuarioLlave">
+            <summary>
+            Constantes para el mensaje errAltaUsuarioLlave
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Mensajes.errAnioServicio">
+            <summary>
+            Constantes para el mensaje errAnioServicio
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Mensajes.errArchivadoRelacion">
+            <summary>
+            Constantes para el mensaje errArchivadoRelacion
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Mensajes.errAsociarPolizaPagos">
+            <summary>
+            Constantes para el mensaje errAsociarPolizaPagos
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Mensajes.errAumentoSaldo">
+            <summary>
+            Constantes para el mensaje errAumentoSaldo
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Mensajes.errAutorizacionComprobante">
+            <summary>
+            Constantes para el mensaje errAutorizacionComprobante
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Mensajes.errAutorizacionLayoutPago">
+            <summary>
+            Constantes para el mensaje errAutorizacionLayoutPago
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Mensajes.errAvisoReintegro">
+            <summary>
+            Constantes para el mensaje errAvisoReintegro
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Mensajes.errBajaIP">
+            <summary>
+            Constantes para el mensaje errBajaIP
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Mensajes.errBanderaActualizaUsuarioIP">
+            <summary>
+            Constantes para el mensaje errBanderaActualizaUsuarioIP
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Mensajes.errBanderaAltaIP">
+            <summary>
+            Constantes para el mensaje errBanderaAltaIP
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Mensajes.errBanderaAltaUsuario">
+            <summary>
+            Constantes para el mensaje errBanderaAltaUsuario
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Mensajes.errBanderaDesactivarIPs">
+            <summary>
+            Constantes para el mensaje errBanderaDesactivarIPs
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Mensajes.errBanderaEditaUsuario">
+            <summary>
+            Constantes para el mensaje errBanderaEditaUsuario
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Mensajes.errBeneficiario">
+            <summary>
+            Constantes para el mensaje errBeneficiario
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Mensajes.errBeneficiarios">
+            <summary>
+            Constantes para el mensaje errBeneficiarios
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Mensajes.errCambioReferencial">
+            <summary>
+            Constantes para el mensaje errCambioReferencial
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Mensajes.errCantRegViaticos">
+            <summary>
+            Constantes para el mensaje errCantRegViaticos
+            </summary> 
+        </member>
+        <member name="F:SIRF.Mensajes.Mensajes.errCapturaDatosPoliza">
+            <summary>
+            Constantes para el mensaje errCapturaDatosPoliza
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Mensajes.errCargarDatosPagos">
+            <summary>
+            Constantes para el mensaje errCargarDatosPagos
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Mensajes.errChequeInfo">
+            <summary>
+            Constantes para el mensaje errChequeInfo
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Mensajes.errClabe">
+            <summary>
+            Constantes para el mensaje errClabe
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Mensajes.errClabeInterbancaria">
+            <summary>
+            Constantes para el mensaje errClabeInterbancaria
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Mensajes.errCodCDExpediente">
+            <summary>
+            Constantes para el mensaje errCodCDExpediente
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Mensajes.errCodDestino">
+            <summary>
+            Constantes para el mensaje errCodDestino
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Mensajes.errCodEntidad">
+            <summary>
+            Constantes para el mensaje errCodEntidad
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Mensajes.errCodExpediente">
+            <summary>
+            Constantes para el mensaje errCodExpediente
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Mensajes.errCodMoneda">
+            <summary>
+            Constantes para el mensaje errCodMoneda
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Mensajes.errCodMunicipio">
+            <summary>
+            Constantes para el mensaje errCodMunicipio
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Mensajes.errCodNoActivoExpediente">
+            <summary>
+            Constantes para el mensaje errCodNoActivoExpediente
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Mensajes.errCodPais">
+            <summary>
+            Constantes para el mensaje errCodPais
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Mensajes.errCodPartida">
+            <summary>
+            Constantes para el mensaje errCodPartida
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Mensajes.errCodTipoCuota">
+            <summary>
+            Constantes para el mensaje errCodTipoCuota
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Mensajes.errComprobantePago">
+            <summary>
+            Constantes para el mensaje errComprobantePago
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Mensajes.errConceptoPago">
+            <summary>
+            Constantes para el mensaje errConceptoPago
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Mensajes.errConfiguracionIP">
+            <summary>
+            Constantes para el mensaje errConfiguracionIP
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Mensajes.errContrato">
+            <summary>
+            Constantes para el mensaje errContrato
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Mensajes.errCorreoElectronico">
+            <summary>
+            Constantes para el mensaje errCorreoElectronico
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Mensajes.errCuentaBancaria">
+            <summary>
+            Constantes para el mensaje errCuentaBancaria
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Mensajes.errCuentaBancariaLongitud">
+            <summary>
+            Constantes para el mensaje errCuentaBancariaLongitud
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Mensajes.errCuentaNoEncontrada">
+            <summary>
+            Constantes para el mensaje errCuentaNoEncontrada
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Mensajes.errCuotaDiarias">
+            <summary>
+            Constantes para el mensaje errCuotaDiarias
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Mensajes.errCuotasDiarias">
+            <summary>
+            Constantes para el mensaje errCuotasDiarias
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Mensajes.errDestino">
+            <summary>
+            Constantes para el mensaje errDestino
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "F:SIRF.Mensajes.Mensajes.errDocumentos" -->
+        <member name="F:SIRF.Mensajes.Mensajes.errEditarUsuario">
+            <summary>
+            Constantes para el mensaje errEditarUsuario
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Mensajes.errEjercicioCLC">
+            <summary>
+            Constantes para el mensaje errEjercicioCLC
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Mensajes.errEjercicioFiscal">
+            <summary>
+            Constantes para el mensaje errEjercicioFiscal
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Mensajes.errEntidadFederativa">
+            <summary>
+            Constantes para el mensaje errEntidadFederativa
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Mensajes.errEstatusActualizado">
+            <summary>
+            Constantes para el mensaje errEstatusActualizado
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Mensajes.errEstatusPago">
+            <summary>
+            Constantes para el mensaje errEstatusPago
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Mensajes.errExcepcionAltaCLC">
+            <summary>
+            Constantes para el mensaje errExcepcionAltaCLC
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Mensajes.errExcepcionAltaUsuario">
+            <summary>
+            Constantes para el mensaje errExcepcionAltaUsuario
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Mensajes.errExcepcionBajaIP">
+            <summary>
+            Constantes para el mensaje errExcepcionBajaIP
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Mensajes.errExcepcionEditarCLC">
+            <summary>
+            Constantes para el mensaje errExcepcionEditarCLC
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Mensajes.errExcepcionEditarUsuario">
+            <summary>
+            Constantes para el mensaje errExcepcionEditarUsuario
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Mensajes.errExistNumeroExpediente">
+            <summary>
+            Constantes para el mensaje errExistNumeroExpediente
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Mensajes.errFechaPago">
+            <summary>
+            Constantes para el mensaje errFechaPago
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Mensajes.errFolioGeneracionIncorrecto">
+            <summary>
+            Constantes para el mensaje errFolioGeneracionIncorrecto
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Mensajes.errFormatoRFC">
+            <summary>
+            Constantes para el mensaje errFormatoRFC
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Mensajes.errGeneracion">
+            <summary>
+            Constantes para el mensaje errGeneracion
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Mensajes.errIdentificadorRelacion">
+            <summary>
+            Constantes para el mensaje errIdentificadorRelacion
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Mensajes.errInstituciónBancaria">
+            <summary>
+            Constantes para el mensaje errInstituciónBancaria
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Mensajes.errIPNoEstaAsignada">
+            <summary>
+            Constantes para el mensaje errIPNoEstaAsignada
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Mensajes.errIPOcupada">
+            <summary>
+            Constantes para el mensaje errIPOcupada
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Mensajes.errlistaPartidasObligatorias">
+            <summary>
+            Constantes para el mensaje errlistaPartidasObligatorias
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Mensajes.errLogin">
+            <summary>
+            Constantes para el mensaje errLogin
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Mensajes.errMoneda">
+            <summary>
+            Constantes para el mensaje errMoneda
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Mensajes.errMontoADepositar">
+            <summary>
+            Constantes para el mensaje errMontoADepositar
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Mensajes.errMontoOtorgado">
+            <summary>
+            Constantes para el mensaje errMontoOtorgado
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Mensajes.errMontoPagar">
+            <summary>
+            Constantes para el mensaje errMontoPagar
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Mensajes.errMontoSolicitado">
+            <summary>
+            Constantes para el mensaje errMontoSolicitado
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Mensajes.errNoDatosCargaMasiva">
+            <summary>
+            Constantes para el mensaje errNoDatosCargaMasiva
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Mensajes.errNombre">
+            <summary>
+            Constantes para el mensaje errNombre
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Mensajes.errNombreBeneficiario">
+            <summary>
+            Constantes para el mensaje errNombreBeneficiario
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Mensajes.errNombreOperativo">
+            <summary>
+            Constantes para el mensaje errNombreOperativo
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Mensajes.errNoTieneLaudos">
+            <summary>
+            Constantes para el mensaje errNoTieneLaudos
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Mensajes.errNumeroClc">
+            <summary>
+            Constantes para el mensaje errNumeroClc
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Mensajes.errNumeroDeDiasEfectivos">
+            <summary>
+            Constantes para el mensaje errNumeroDeDiasEfectivos
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Mensajes.errNumeroExpediente">
+            <summary>
+            Constantes para el mensaje errNumeroExpediente
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Mensajes.errNumeroFaltas">
+            <summary>
+            Constantes para el mensaje errNumeroFaltas
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Mensajes.errNumeroReciboPago">
+            <summary>
+            Constantes para el mensaje errNumeroReciboPago
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Mensajes.errObjetivoComision">
+            <summary>
+            Constantes para el mensaje errObjetivoComision
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Mensajes.errObservaciones">
+            <summary>
+            Constantes para el mensaje errObservaciones
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Mensajes.errOficioSolicitud">
+            <summary>
+            Constantes para el mensaje errOficioSolicitud
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Mensajes.ERRORINSERT">
+            <summary>
+            Constantes para el mensaje ERRORINSERT
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Mensajes.ERRORINSERT1">
+            <summary>
+            Constantes para el mensaje ERRORINSERT1
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Mensajes.errPagoCheque">
+            <summary>
+            Constantes para el mensaje errPagoCheque
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Mensajes.errPagoChequeValidacion">
+            <summary>
+            Constantes para el mensaje errPagoChequeValidacion
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Mensajes.errPagoMonedaExtranjera">
+            <summary>
+            Constantes para el mensaje errPagoMonedaExtranjera
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Mensajes.errPagoPesos">
+            <summary>
+            Constantes para el mensaje errPagoPesos
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Mensajes.errPais">
+            <summary>
+            Constantes para el mensaje errPais
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Mensajes.errPartida">
+            <summary>
+            Constantes para el mensaje errPartida
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Mensajes.errPerfil">
+            <summary>
+            Constantes para el mensaje errPerfil
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Mensajes.errPeriodo">
+            <summary>
+            Constantes para el mensaje errPeriodo
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Mensajes.errPeriodoSolicitud">
+            <summary>
+            Constantes para el mensaje errPeriodoSolicitud
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Mensajes.errPlantillaNoValida">
+            <summary>
+            Constantes para el mensaje errPlantillaNoValida
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Mensajes.errPolizaRepetida">
+            <summary>
+            Constantes para el mensaje errPolizaRepetida
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Mensajes.errPrimerApellido">
+            <summary>
+            Constantes para el mensaje errPrimerApellido
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Mensajes.errProveedor">
+            <summary>
+            Constantes para el mensaje errProveedor
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Mensajes.errRangoFechasTraslapa">
+            <summary>
+            Constantes para el mensaje errRangoFechasTraslapa
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Mensajes.errRegistroPoliza">
+            <summary>
+            Constantes para el mensaje errRegistroPoliza
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Mensajes.errRelacionPoliza">
+            <summary>
+            Constantes para el mensaje errRelacionPoliza
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Mensajes.errRFC">
+            <summary>
+            Constantes para el mensaje errRFC
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Mensajes.errSaldoFinal">
+            <summary>
+            Constantes para el mensaje errSaldoFinal
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Mensajes.errSegundoApellido">
+            <summary>
+            Constantes para el mensaje errSegundoApellido
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Mensajes.errSeleccioneUnRegistroDelGrid">
+            <summary>
+            Constantes para el mensaje errSeleccioneUnRegistroDelGrid
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Mensajes.errSeleccioneUnRegistroDelGridSolicitudes">
+            <summary>
+            Constantes para el mensaje errSeleccioneUnRegistroDelGridSolicitudes
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Mensajes.errSesionCaducadaFirma">
+            <summary>
+            Constantes para el mensaje errSesionCaducadaFirma
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Mensajes.errSuficienciaPresupuestaria">
+            <summary>
+            Constantes para el mensaje errSuficienciaPresupuestaria
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Mensajes.errTipoCambioPago">
+            <summary>
+            Constantes para el mensaje errTipoCambioPago
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Mensajes.errTipoCuentaNoValido">
+            <summary>
+            Constantes para el mensaje errTipoCuentaNoValido
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Mensajes.errTipoSolicitud">
+            <summary>
+            Constantes para el mensaje errTipoSolicitud
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Mensajes.errTitularCuentaBancaria">
+            <summary>
+            Constantes para el mensaje errTitularCuentaBancaria
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Mensajes.errTotalCLC">
+            <summary>
+            Constantes para el mensaje errTotalCLC
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Mensajes.errTransferencias">
+            <summary>
+            Constantes para el mensaje errTransferencias
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Mensajes.errUnidadAdministrativa">
+            <summary>
+            Constantes para el mensaje errUnidadAdministrativa
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Mensajes.errUsuario">
+            <summary>
+            Constantes para el mensaje errUsuario
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Mensajes.errUsuarioActualizarNoExiste">
+            <summary>
+            Constantes para el mensaje errUsuarioActualizarNoExiste
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Mensajes.errUsuarioInactivo">
+            <summary>
+            Constantes para el mensaje errUsuarioInactivo
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Mensajes.errUsuarioNoExiste">
+            <summary>
+            Constantes para el mensaje errUsuarioNoExiste
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Mensajes.errUsuarioSinIPAsignadas">
+            <summary>
+            Constantes para el mensaje errUsuarioSinIPAsignadas
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Mensajes.errValidacionAltaUsuario">
+            <summary>
+            Constantes para el mensaje errValidacionAltaUsuario
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Mensajes.errValidacionEditarUsuario">
+            <summary>
+            Constantes para el mensaje errValidacionEditarUsuario
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Mensajes.errValidacionPoliza">
+            <summary>
+            Constantes para el mensaje errValidacionPoliza
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Mensajes.errViaticos">
+            <summary>
+            Constantes para el mensaje errViaticos
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Mensajes.exiActualizacionUsuarioCorrecta">
+            <summary>
+            Constantes para el mensaje exiActualizacionUsuarioCorrecta
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Mensajes.exiAltaUsuarioCorrecta">
+            <summary>
+            Constantes para el mensaje exiAltaUsuarioCorrecta
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Mensajes.exiArchivadoRelacion">
+            <summary>
+            Constantes para el mensaje exiArchivadoRelacion
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Mensajes.exiAutorizacionComprobante">
+            <summary>
+            Constantes para el mensaje exiAutorizacionComprobante
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Mensajes.exiAutorizacionLayoutPago">
+            <summary>
+            Constantes para el mensaje exiAutorizacionLayoutPago
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Mensajes.exiBajaIP">
+            <summary>
+            Constantes para el mensaje exiBajaIP
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Mensajes.exiComprobantePago">
+            <summary>
+            Constantes para el mensaje exiComprobantePago
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Mensajes.exiEstatusActualizdo">
+            <summary>
+            Constantes para el mensaje exiEstatusActualizdo
+            </summary> 
+        </member>
+        <member name="F:SIRF.Mensajes.Mensajes.exiIPMismoUsuario">
+            <summary>
+            Constantes para el mensaje exiIPMismoUsuario
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Mensajes.exiLayoutRadicacion">
+            <summary>
+            Constantes para el mensaje exiLayoutRadicacion
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Mensajes.exiRegistroPoliza">
+            <summary>
+            Constantes para el mensaje exiRegistroPoliza
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Mensajes.exiRelacionPoliza">
+            <summary>
+            Constantes para el mensaje exiRelacionPoliza
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Mensajes.exiSolicitudesAsociadasCuenta">
+            <summary>
+            Constantes para el mensaje exiSolicitudesAsociadasCuenta
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Mensajes.exiTransferencias">
+            <summary>
+            Constantes para el mensaje exiTransferencias
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Mensajes.exiValidacionPoliza">
+            <summary>
+            Constantes para el mensaje exiValidacionPoliza
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Mensajes.infAumentoSaldo">
+            <summary>
+            Constantes para el mensaje infAumentoSaldo
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Mensajes.infAutorizar">
+            <summary>
+            Constantes para el mensaje infAutorizar
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Mensajes.infAutorizarSolicitud">
+            <summary>
+            Constantes para el mensaje infAutorizarSolicitud
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Mensajes.infAutorizarSolicitudVentanilla">
+            <summary>
+            Constantes para el mensaje infAutorizarSolicitudVentanilla
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Mensajes.infAutorizaSolicitudABancos">
+            <summary>
+            Constantes para el mensaje infAutorizaSolicitudABancos
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Mensajes.infCancelar">
+            <summary>
+            Constantes para el mensaje infCancelar
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Mensajes.infCancelarSolicitud">
+            <summary>
+            Constantes para el mensaje infCancelarSolicitud
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Mensajes.infConfirmarConciliacion">
+            <summary>
+            Constantes para el mensaje infConfirmarConciliacion
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Mensajes.infDescargarReporteErroresCargaMasiva">
+            <summary>
+            Constantes para el mensaje infDescargarReporteErroresCargaMasiva
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Mensajes.infDevolverSolicitud">
+            <summary>
+            Constantes para el mensaje infDevolverSolicitud
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Mensajes.infExtensionArchivo">
+            <summary>
+            Constantes para el mensaje infExtensionArchivo
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Mensajes.infFirmaExitosa">
+            <summary>
+            Constantes para el mensaje infFirmaExitosa
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Mensajes.infFirmarTramite">
+            <summary>
+            Constantes para el mensaje infFirmarTramite
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Mensajes.infMontoADepositar">
+            <summary>
+            Constantes para el mensaje infMontoADepositar
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Mensajes.infMontoOtorgado">
+            <summary>
+            Constantes para el mensaje infMontoOtorgado
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Mensajes.infNoExisteInformacionGrids">
+            <summary>
+            Constantes para el mensaje  infNoExisteInformacionGrids
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Mensajes.infoComprobantePago">
+            <summary>
+            Constantes para el mensaje infoComprobantePago
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Mensajes.infRescatarSolicitud">
+            <summary>
+            Constantes para el mensaje infRescatarSolicitud
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Mensajes.infSeleccionarArchivo">
+            <summary>
+            Constantes para el mensaje infSeleccionarArchivo
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Mensajes.infSinBeneficiarios">
+            <summary>
+            Constantes para el mensaje infSinBeneficiarios
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Mensajes.infSinCLC">
+            <summary>
+            Constantes para el mensaje infSinCLC
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Mensajes.infSinDocumentos">
+            <summary>
+            Constantes para el mensaje infSinDocumentos
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Mensajes.infSinObservaciones">
+            <summary>
+            Constantes para el mensaje infSinObservaciones
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Mensajes.infSolAsignar">
+            <summary>
+            Constantes para el mensaje infSolAsignar
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Mensajes.infSolEdicion">
+            <summary>
+            Constantes para el mensaje infSolEdicion
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Mensajes.infSolRegistro">
+            <summary>
+            Constantes para el mensaje infSolRegistro
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Mensajes.infTamanioArchivo">
+            <summary>
+            Constantes para el mensaje infTamanioArchivo
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Mensajes.infTipoSolicitud">
+            <summary>
+            Constantes para el mensaje infTipoSolicitud
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Mensajes.infTrabDisponible">
+            <summary>
+            Constantes para el mensaje infTrabDisponible
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Mensajes.infValidarConciliaciones">
+            <summary>
+            Constantes para el mensaje infValidarConciliaciones
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.Mensajes.infValidarSolicitud">
+            <summary>
+            Constantes para el mensaje infValidarSolicitud
+            </summary>
+        </member>
+        <member name="T:SIRF.Mensajes.MsnVentanilla">
+            <summary>
+            Clase correspondiente a las constantes del sistema para los mensajes de Ventanilla única
+            </summary>
+        </member>
+        <member name="T:SIRF.Mensajes.TipoEstatus">
+            <summary>
+            Enum para los tipos de estatus.
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.TipoEstatus.Ok">
+            <summary>
+            Estatus Ok con un valor igual a 0
+            </summary>
+        </member>
+        <member name="F:SIRF.Mensajes.TipoEstatus.Error">
+            <summary>
+            Estatus Error con un valor igual a 1
+            </summary>
+        </member>
+    </members>
+</doc>

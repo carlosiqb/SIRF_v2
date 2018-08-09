@@ -1,0 +1,74 @@
+D:\--- SITIO POLICIA FEDERAL\SIRF_v2\SIRF.Datos\bin\Debug\SIRF.Datos.dll
+D:\--- SITIO POLICIA FEDERAL\SIRF_v2\SIRF.Datos\bin\Debug\SIRF.Datos.pdb
+D:\--- SITIO POLICIA FEDERAL\SIRF_v2\SIRF.Datos\bin\Debug\SIRF.Mensajes.dll
+D:\--- SITIO POLICIA FEDERAL\SIRF_v2\SIRF.Datos\bin\Debug\SIRF.Objetos.dll
+D:\--- SITIO POLICIA FEDERAL\SIRF_v2\SIRF.Datos\bin\Debug\SIRF.Mensajes.pdb
+D:\--- SITIO POLICIA FEDERAL\SIRF_v2\SIRF.Datos\bin\Debug\SIRF.Objetos.pdb
+D:\--- SITIO POLICIA FEDERAL\SIRF_v2\SIRF.Datos\obj\Debug\SIRF.Datos.csprojResolveAssemblyReference.cache
+D:\--- SITIO POLICIA FEDERAL\SIRF_v2\SIRF.Datos\obj\Debug\SIRF.Datos.dll
+D:\--- SITIO POLICIA FEDERAL\SIRF_v2\SIRF.Datos\obj\Debug\SIRF.Datos.pdb
+D:\--- SITIO POLICIA FEDERAL\SIRF_v2\SIRF.Datos\bin\Debug\SIRF.Datos.dll.config
+D:\--- SITIO POLICIA FEDERAL\SIRF_v2\SIRF.Datos\bin\Debug\EntityFramework.dll
+D:\--- SITIO POLICIA FEDERAL\SIRF_v2\SIRF.Datos\bin\Debug\EntityFramework.xml
+D:\--- SITIO POLICIA FEDERAL\SIRF_v2\SIRF.Datos\bin\Debug\SIRF.Datos.XML
+D:\--- SITIO POLICIA FEDERAL\SIRF_v2\SIRF.Datos\bin\Debug\SIRF.Mensajes.xml
+D:\--- SITIO POLICIA FEDERAL\SIRF_v2\SIRF.Datos\bin\Debug\SIRF.Objetos.xml
+D:\--- SITIO POLICIA FEDERAL\SIRF_v2\SIRF.Datos\bin\Debug\SIRF.Utilerias.dll
+D:\--- SITIO POLICIA FEDERAL\SIRF_v2\SIRF.Datos\bin\Debug\SIRF.Utilerias.pdb
+D:\--- SITIO POLICIA FEDERAL\SIRF_v2\SIRF.Datos\bin\Debug\SIRF.Utilerias.xml
+C:\Users\luisg.indra\Documents\Ultrasist\SIRF\SIRF_V2.0\SIRF_V2\SIRF.Datos\bin\Debug\SIRF.Datos.dll.config
+C:\Users\luisg.indra\Documents\Ultrasist\SIRF\SIRF_V2.0\SIRF_V2\SIRF.Datos\bin\Debug\SIRF.Datos.XML
+C:\Users\luisg.indra\Documents\Ultrasist\SIRF\SIRF_V2.0\SIRF_V2\SIRF.Datos\bin\Debug\SIRF.Datos.dll
+C:\Users\luisg.indra\Documents\Ultrasist\SIRF\SIRF_V2.0\SIRF_V2\SIRF.Datos\bin\Debug\SIRF.Datos.pdb
+C:\Users\luisg.indra\Documents\Ultrasist\SIRF\SIRF_V2.0\SIRF_V2\SIRF.Datos\bin\Debug\EntityFramework.dll
+C:\Users\luisg.indra\Documents\Ultrasist\SIRF\SIRF_V2.0\SIRF_V2\SIRF.Datos\bin\Debug\SIRF.Mensajes.dll
+C:\Users\luisg.indra\Documents\Ultrasist\SIRF\SIRF_V2.0\SIRF_V2\SIRF.Datos\bin\Debug\SIRF.Objetos.dll
+C:\Users\luisg.indra\Documents\Ultrasist\SIRF\SIRF_V2.0\SIRF_V2\SIRF.Datos\bin\Debug\SIRF.Utilerias.dll
+C:\Users\luisg.indra\Documents\Ultrasist\SIRF\SIRF_V2.0\SIRF_V2\SIRF.Datos\bin\Debug\SIRF.Mensajes.pdb
+C:\Users\luisg.indra\Documents\Ultrasist\SIRF\SIRF_V2.0\SIRF_V2\SIRF.Datos\bin\Debug\SIRF.Mensajes.xml
+C:\Users\luisg.indra\Documents\Ultrasist\SIRF\SIRF_V2.0\SIRF_V2\SIRF.Datos\bin\Debug\SIRF.Objetos.pdb
+C:\Users\luisg.indra\Documents\Ultrasist\SIRF\SIRF_V2.0\SIRF_V2\SIRF.Datos\bin\Debug\SIRF.Objetos.xml
+C:\Users\luisg.indra\Documents\Ultrasist\SIRF\SIRF_V2.0\SIRF_V2\SIRF.Datos\bin\Debug\SIRF.Utilerias.pdb
+C:\Users\luisg.indra\Documents\Ultrasist\SIRF\SIRF_V2.0\SIRF_V2\SIRF.Datos\bin\Debug\SIRF.Utilerias.xml
+C:\Users\luisg.indra\Documents\Ultrasist\SIRF\SIRF_V2.0\SIRF_V2\SIRF.Datos\bin\Debug\EntityFramework.xml
+C:\Users\luisg.indra\Documents\Ultrasist\SIRF\SIRF_V2.0\SIRF_V2\SIRF.Datos\obj\Debug\SIRF.Datos.csprojAssemblyReference.cache
+C:\Users\luisg.indra\Documents\Ultrasist\SIRF\SIRF_V2.0\SIRF_V2\SIRF.Datos\obj\Debug\SIRF.Datos.csproj.CoreCompileInputs.cache
+C:\Users\luisg.indra\Documents\Ultrasist\SIRF\SIRF_V2.0\SIRF_V2\SIRF.Datos\obj\Debug\SIRF.Datos.csproj.CopyComplete
+C:\Users\luisg.indra\Documents\Ultrasist\SIRF\SIRF_V2.0\SIRF_V2\SIRF.Datos\obj\Debug\SIRF.Datos.dll
+C:\Users\luisg.indra\Documents\Ultrasist\SIRF\SIRF_V2.0\SIRF_V2\SIRF.Datos\obj\Debug\SIRF.Datos.pdb
+C:\Users\adrianal.ultrasist\Desktop\SIRF_V2\SIRF.Datos\obj\Debug\SIRF.Datos.csprojResolveAssemblyReference.cache
+C:\Users\adrianal.ultrasist\Desktop\SIRF_V2\SIRF.Datos\obj\Debug\SIRF.Datos.dll
+C:\Users\adrianal.ultrasist\Desktop\SIRF_V2\SIRF.Datos\obj\Debug\SIRF.Datos.pdb
+C:\Users\adrianal.ultrasist\Desktop\SIRF_V2\SIRF.Datos\bin\Debug\SIRF.Datos.dll.config
+C:\Users\adrianal.ultrasist\Desktop\SIRF_V2\SIRF.Datos\bin\Debug\SIRF.Datos.XML
+C:\Users\adrianal.ultrasist\Desktop\SIRF_V2\SIRF.Datos\bin\Debug\SIRF.Datos.dll
+C:\Users\adrianal.ultrasist\Desktop\SIRF_V2\SIRF.Datos\bin\Debug\SIRF.Datos.pdb
+C:\Users\adrianal.ultrasist\Desktop\SIRF_V2\SIRF.Datos\bin\Debug\EntityFramework.dll
+C:\Users\adrianal.ultrasist\Desktop\SIRF_V2\SIRF.Datos\bin\Debug\SIRF.Mensajes.dll
+C:\Users\adrianal.ultrasist\Desktop\SIRF_V2\SIRF.Datos\bin\Debug\SIRF.Objetos.dll
+C:\Users\adrianal.ultrasist\Desktop\SIRF_V2\SIRF.Datos\bin\Debug\SIRF.Utilerias.dll
+C:\Users\adrianal.ultrasist\Desktop\SIRF_V2\SIRF.Datos\bin\Debug\SIRF.Mensajes.pdb
+C:\Users\adrianal.ultrasist\Desktop\SIRF_V2\SIRF.Datos\bin\Debug\SIRF.Mensajes.xml
+C:\Users\adrianal.ultrasist\Desktop\SIRF_V2\SIRF.Datos\bin\Debug\SIRF.Objetos.pdb
+C:\Users\adrianal.ultrasist\Desktop\SIRF_V2\SIRF.Datos\bin\Debug\SIRF.Objetos.xml
+C:\Users\adrianal.ultrasist\Desktop\SIRF_V2\SIRF.Datos\bin\Debug\SIRF.Utilerias.pdb
+C:\Users\adrianal.ultrasist\Desktop\SIRF_V2\SIRF.Datos\bin\Debug\SIRF.Utilerias.xml
+C:\Users\adrianal.ultrasist\Desktop\SIRF_V2\SIRF.Datos\bin\Debug\EntityFramework.xml
+C:\Users\adrianal.ultrasist\Desktop\SIRF\SIRF\SIRF.Datos\bin\Debug\SIRF.Datos.dll.config
+C:\Users\adrianal.ultrasist\Desktop\SIRF\SIRF\SIRF.Datos\bin\Debug\SIRF.Datos.XML
+C:\Users\adrianal.ultrasist\Desktop\SIRF\SIRF\SIRF.Datos\bin\Debug\SIRF.Datos.dll
+C:\Users\adrianal.ultrasist\Desktop\SIRF\SIRF\SIRF.Datos\bin\Debug\SIRF.Datos.pdb
+C:\Users\adrianal.ultrasist\Desktop\SIRF\SIRF\SIRF.Datos\bin\Debug\EntityFramework.dll
+C:\Users\adrianal.ultrasist\Desktop\SIRF\SIRF\SIRF.Datos\bin\Debug\SIRF.Mensajes.dll
+C:\Users\adrianal.ultrasist\Desktop\SIRF\SIRF\SIRF.Datos\bin\Debug\SIRF.Objetos.dll
+C:\Users\adrianal.ultrasist\Desktop\SIRF\SIRF\SIRF.Datos\bin\Debug\SIRF.Utilerias.dll
+C:\Users\adrianal.ultrasist\Desktop\SIRF\SIRF\SIRF.Datos\bin\Debug\SIRF.Mensajes.pdb
+C:\Users\adrianal.ultrasist\Desktop\SIRF\SIRF\SIRF.Datos\bin\Debug\SIRF.Mensajes.xml
+C:\Users\adrianal.ultrasist\Desktop\SIRF\SIRF\SIRF.Datos\bin\Debug\SIRF.Objetos.pdb
+C:\Users\adrianal.ultrasist\Desktop\SIRF\SIRF\SIRF.Datos\bin\Debug\SIRF.Objetos.xml
+C:\Users\adrianal.ultrasist\Desktop\SIRF\SIRF\SIRF.Datos\bin\Debug\SIRF.Utilerias.pdb
+C:\Users\adrianal.ultrasist\Desktop\SIRF\SIRF\SIRF.Datos\bin\Debug\SIRF.Utilerias.xml
+C:\Users\adrianal.ultrasist\Desktop\SIRF\SIRF\SIRF.Datos\bin\Debug\EntityFramework.xml
+C:\Users\adrianal.ultrasist\Desktop\SIRF\SIRF\SIRF.Datos\obj\Debug\SIRF.Datos.csprojResolveAssemblyReference.cache
+C:\Users\adrianal.ultrasist\Desktop\SIRF\SIRF\SIRF.Datos\obj\Debug\SIRF.Datos.dll
+C:\Users\adrianal.ultrasist\Desktop\SIRF\SIRF\SIRF.Datos\obj\Debug\SIRF.Datos.pdb

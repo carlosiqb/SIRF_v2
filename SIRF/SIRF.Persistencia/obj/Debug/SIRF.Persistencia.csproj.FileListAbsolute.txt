@@ -1,0 +1,17 @@
+C:\Users\adrianal.ultrasist\Desktop\SIRF\SIRF_V3\SIRF\SIRF\SIRF.Persistencia\bin\Debug\SIRF.Persistencia.exe.config
+C:\Users\adrianal.ultrasist\Desktop\SIRF\SIRF_V3\SIRF\SIRF\SIRF.Persistencia\bin\Debug\SIRF.Persistencia.exe
+C:\Users\adrianal.ultrasist\Desktop\SIRF\SIRF_V3\SIRF\SIRF\SIRF.Persistencia\bin\Debug\SIRF.Persistencia.pdb
+C:\Users\adrianal.ultrasist\Desktop\SIRF\SIRF_V3\SIRF\SIRF\SIRF.Persistencia\bin\Debug\EntityFramework.dll
+C:\Users\adrianal.ultrasist\Desktop\SIRF\SIRF_V3\SIRF\SIRF\SIRF.Persistencia\bin\Debug\SIRF.Mensajes.dll
+C:\Users\adrianal.ultrasist\Desktop\SIRF\SIRF_V3\SIRF\SIRF\SIRF.Persistencia\bin\Debug\SIRF.Objetos.dll
+C:\Users\adrianal.ultrasist\Desktop\SIRF\SIRF_V3\SIRF\SIRF\SIRF.Persistencia\bin\Debug\SIRF.Utilerias.dll
+C:\Users\adrianal.ultrasist\Desktop\SIRF\SIRF_V3\SIRF\SIRF\SIRF.Persistencia\bin\Debug\SIRF.Mensajes.pdb
+C:\Users\adrianal.ultrasist\Desktop\SIRF\SIRF_V3\SIRF\SIRF\SIRF.Persistencia\bin\Debug\SIRF.Mensajes.xml
+C:\Users\adrianal.ultrasist\Desktop\SIRF\SIRF_V3\SIRF\SIRF\SIRF.Persistencia\bin\Debug\SIRF.Objetos.pdb
+C:\Users\adrianal.ultrasist\Desktop\SIRF\SIRF_V3\SIRF\SIRF\SIRF.Persistencia\bin\Debug\SIRF.Objetos.xml
+C:\Users\adrianal.ultrasist\Desktop\SIRF\SIRF_V3\SIRF\SIRF\SIRF.Persistencia\bin\Debug\SIRF.Utilerias.pdb
+C:\Users\adrianal.ultrasist\Desktop\SIRF\SIRF_V3\SIRF\SIRF\SIRF.Persistencia\bin\Debug\SIRF.Utilerias.xml
+C:\Users\adrianal.ultrasist\Desktop\SIRF\SIRF_V3\SIRF\SIRF\SIRF.Persistencia\bin\Debug\EntityFramework.xml
+C:\Users\adrianal.ultrasist\Desktop\SIRF\SIRF_V3\SIRF\SIRF\SIRF.Persistencia\obj\Debug\SIRF.Persistencia.csprojResolveAssemblyReference.cache
+C:\Users\adrianal.ultrasist\Desktop\SIRF\SIRF_V3\SIRF\SIRF\SIRF.Persistencia\obj\Debug\SIRF.Persistencia.exe
+C:\Users\adrianal.ultrasist\Desktop\SIRF\SIRF_V3\SIRF\SIRF\SIRF.Persistencia\obj\Debug\SIRF.Persistencia.pdb

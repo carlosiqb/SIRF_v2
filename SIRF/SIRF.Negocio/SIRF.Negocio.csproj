@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{20D66D38-585D-445C-8EC0-AEFF67CCE9FC}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SIRF.Negocio</RootNamespace>
+    <AssemblyName>SIRF.Negocio</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Debug\SIRF.Negocio.XML</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="NBancos.cs" />
+    <Compile Include="NDocumento.cs" />
+    <Compile Include="NEstadoSolicitud.cs" />
+    <Compile Include="NFirma.cs" />
+    <Compile Include="NFormaComprobacion.cs" />
+    <Compile Include="NGestionarCuotasDiarias.cs" />
+    <Compile Include="NDestino.cs" />
+    <Compile Include="NEntidadFederativa.cs" />
+    <Compile Include="NExpedienteCuenta.cs" />
+    <Compile Include="NExpedienteDato.cs" />
+    <Compile Include="NGestionAutenticacion.cs" />
+    <Compile Include="NGestionExpediente.cs" />
+    <Compile Include="NGestionLogError.cs" />
+    <Compile Include="NGestionUsuarios.cs" />
+    <Compile Include="NMoneda.cs" />
+    <Compile Include="NMunicipioLocalidad.cs" />
+    <Compile Include="NPaises.cs" />
+    <Compile Include="NPartida.cs" />
+    <Compile Include="NRegion.cs" />
+    <Compile Include="NSolicitud.cs" />
+    <Compile Include="NTipoDocumento.cs" />
+    <Compile Include="NTipoPago.cs" />
+    <Compile Include="NTipoSolicitud.cs" />
+    <Compile Include="NucvDocumentos.cs" />
+    <Compile Include="NUnidadAdministrativa.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SIRF.Mensajes\SIRF.Mensajes.csproj">
+      <Project>{13889f2d-daba-461a-8b12-f60871bd3857}</Project>
+      <Name>SIRF.Mensajes</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SIRF.Objetos\SIRF.Objetos.csproj">
+      <Project>{7949847f-360e-4cb6-ab2f-d64feb1fb6c1}</Project>
+      <Name>SIRF.Objetos</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SIRF.Persistencia\SIRF.Persistencia.csproj">
+      <Project>{6ce432b2-d409-4322-a5d5-a7254f829460}</Project>
+      <Name>SIRF.Persistencia</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SIRF.Utilerias\SIRF.Utilerias.csproj">
+      <Project>{e5da1965-7014-4713-818b-1c8220ad55c9}</Project>
+      <Name>SIRF.Utilerias</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

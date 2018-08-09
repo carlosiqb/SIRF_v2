@@ -1,0 +1,11 @@
+C:\Users\luisg.indra\Documents\Ultrasist\SIRF\SIRF_V2.0\SIRF_V2\SIRF.Utilerias\bin\Release\SIRF.Utilerias.dll
+C:\Users\luisg.indra\Documents\Ultrasist\SIRF\SIRF_V2.0\SIRF_V2\SIRF.Utilerias\bin\Release\SIRF.Utilerias.pdb
+C:\Users\luisg.indra\Documents\Ultrasist\SIRF\SIRF_V2.0\SIRF_V2\SIRF.Utilerias\bin\Release\SIRF.Mensajes.dll
+C:\Users\luisg.indra\Documents\Ultrasist\SIRF\SIRF_V2.0\SIRF_V2\SIRF.Utilerias\bin\Release\SIRF.Mensajes.pdb
+C:\Users\luisg.indra\Documents\Ultrasist\SIRF\SIRF_V2.0\SIRF_V2\SIRF.Utilerias\obj\Release\SIRF.Utilerias.csprojAssemblyReference.cache
+C:\Users\luisg.indra\Documents\Ultrasist\SIRF\SIRF_V2.0\SIRF_V2\SIRF.Utilerias\obj\Release\SIRF.Utilerias.csproj.CoreCompileInputs.cache
+C:\Users\luisg.indra\Documents\Ultrasist\SIRF\SIRF_V2.0\SIRF_V2\SIRF.Utilerias\obj\Release\SIRF.Utilerias.csproj.CopyComplete
+C:\Users\luisg.indra\Documents\Ultrasist\SIRF\SIRF_V2.0\SIRF_V2\SIRF.Utilerias\obj\Release\SIRF.Utilerias.dll
+C:\Users\luisg.indra\Documents\Ultrasist\SIRF\SIRF_V2.0\SIRF_V2\SIRF.Utilerias\obj\Release\SIRF.Utilerias.pdb
+C:\Users\luisg.indra\Documents\Ultrasist\SIRF\SIRF_V2.0\SIRF_V2\SIRF.Utilerias\bin\Release\SIRF.Objetos.dll
+C:\Users\luisg.indra\Documents\Ultrasist\SIRF\SIRF_V2.0\SIRF_V2\SIRF.Utilerias\bin\Release\SIRF.Objetos.pdb

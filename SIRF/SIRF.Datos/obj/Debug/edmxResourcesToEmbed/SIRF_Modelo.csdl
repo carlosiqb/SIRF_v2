@@ -1,0 +1,3322 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="SIRFPROD_v2Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Agregaduria">
+    <Key>
+      <PropertyRef Name="agregaduriaID" />
+    </Key>
+    <Property Name="agregaduriaID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="solicitudRecursoID" Type="Int32" Nullable="false" />
+    <Property Name="catMonedaID" Type="Int32" Nullable="false" />
+    <Property Name="catPaisID" Type="Int32" Nullable="false" />
+    <Property Name="catPartidaID" Type="Int32" Nullable="false" />
+    <Property Name="montoSolicitado" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+    <NavigationProperty Name="CatPartida" Relationship="Self.FK_Agregadurias_codPartida" FromRole="Agregaduria" ToRole="CatPartida" />
+    <NavigationProperty Name="CatMoneda" Relationship="Self.FK_Agregadurias_monedaID" FromRole="Agregaduria" ToRole="CatMoneda" />
+    <NavigationProperty Name="CatPais" Relationship="Self.FK_Agregadurias_paisID" FromRole="Agregaduria" ToRole="CatPais" />
+    <NavigationProperty Name="SolicitudRecurso" Relationship="Self.FK_Agregadurias_solicitudID" FromRole="Agregaduria" ToRole="SolicitudRecurso" />
+  </EntityType>
+  <EntityType Name="Asignacion">
+    <Key>
+      <PropertyRef Name="asignacionID" />
+    </Key>
+    <Property Name="asignacionID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="solicitudRecursoID" Type="Int32" Nullable="false" />
+    <Property Name="usuarioID" Type="Int32" Nullable="false" />
+    <Property Name="estatusLogico" Type="Boolean" />
+    <NavigationProperty Name="SolicitudRecurso" Relationship="Self.FK_Asignacion_solicitudID" FromRole="Asignacion" ToRole="SolicitudRecurso" />
+    <NavigationProperty Name="Usuario" Relationship="Self.FK_Asignacion_usuarioID" FromRole="Asignacion" ToRole="Usuario" />
+  </EntityType>
+  <EntityType Name="Beca">
+    <Key>
+      <PropertyRef Name="BecaID" />
+    </Key>
+    <Property Name="BecaID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="solicitudRecursoID" Type="Int32" Nullable="false" />
+    <Property Name="catAcademiaID" Type="Int32" Nullable="false" />
+    <Property Name="catPartidaID" Type="Int32" Nullable="false" />
+    <Property Name="generacion" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="fechaInicio" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="fechaFin" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="rfc" Type="String" MaxLength="13" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="nombre" Type="String" MaxLength="60" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="numeroFaltas" Type="Int32" Nullable="false" />
+    <Property Name="montoDepositar" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+    <Property Name="institucionBancaria" Type="String" MaxLength="40" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="clabeInterbancaria" Type="String" MaxLength="18" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="cuentaBancaria" Type="String" MaxLength="12" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="estatusLogico" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="CatAcademia" Relationship="Self.FK_Becas_academiaID" FromRole="Beca" ToRole="CatAcademia" />
+    <NavigationProperty Name="CatPartida" Relationship="Self.FK_Becas_codPartida" FromRole="Beca" ToRole="CatPartida" />
+    <NavigationProperty Name="SolicitudRecurso" Relationship="Self.FK_Becas_solicitudID" FromRole="Beca" ToRole="SolicitudRecurso" />
+  </EntityType>
+  <EntityType Name="Becalos">
+    <Key>
+      <PropertyRef Name="becalosID" />
+    </Key>
+    <Property Name="becalosID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="solicitudRecursoID" Type="Int32" Nullable="false" />
+    <Property Name="catPartidaID" Type="Int32" Nullable="false" />
+    <Property Name="montoOtorgado" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+    <Property Name="titularCuentaBan" Type="String" MaxLength="40" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="cuentaBancaria" Type="String" MaxLength="12" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="institucionBancaria" Type="String" MaxLength="40" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="fechaInicio" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="fechaFin" Type="DateTime" Precision="3" />
+    <Property Name="numeroExpediente" Type="String" MaxLength="5" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="clabeInterbancaria" Type="String" MaxLength="18" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="CatPartida" Relationship="Self.FK_Becalos_codPartida" FromRole="Becalos" ToRole="CatPartida" />
+    <NavigationProperty Name="SolicitudRecurso" Relationship="Self.FK_Becalos_solicitudID" FromRole="Becalos" ToRole="SolicitudRecurso" />
+  </EntityType>
+  <EntityType Name="Beneficiario">
+    <Key>
+      <PropertyRef Name="beneficiarioID" />
+    </Key>
+    <Property Name="beneficiarioID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="catSolicitudID" Type="Int32" Nullable="false" />
+    <Property Name="identificadorTipo" Type="Int32" Nullable="false" />
+    <Property Name="dependienteID" Type="Int32" Nullable="false" />
+    <Property Name="catDependienteID" Type="Int16" Nullable="false" />
+    <Property Name="apellidoPaterno" Type="String" MaxLength="40" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="apellidoMaterno" Type="String" MaxLength="40" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="nombre" Type="String" MaxLength="40" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="fechaNacimiento" Type="DateTime" Precision="3" />
+    <Property Name="CURP" Type="String" MaxLength="18" FixedLength="false" Unicode="false" />
+    <Property Name="RFC" Type="String" MaxLength="13" FixedLength="false" Unicode="false" />
+    <Property Name="sexo" Type="String" MaxLength="1" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="estatusLogico" Type="Boolean" Nullable="false" />
+    <Property Name="solicitudRecursoID" Type="Int32" />
+    <NavigationProperty Name="CatDependiente" Relationship="Self.FK_Beneficiario_CatTipoDependiente" FromRole="Beneficiario" ToRole="CatDependiente" />
+    <NavigationProperty Name="CatSolicitud" Relationship="Self.FK_Beneficiarios_tipoSolicitudID" FromRole="Beneficiario" ToRole="CatSolicitud" />
+  </EntityType>
+  <EntityType Name="Bitacora">
+    <Key>
+      <PropertyRef Name="bitacoraID" />
+    </Key>
+    <Property Name="bitacoraID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="solicitudRecursoID" Type="Int32" Nullable="false" />
+    <Property Name="catEstatusSolicitudID" Type="Int16" Nullable="false" />
+    <Property Name="usuarioID" Type="Int32" Nullable="false" />
+    <Property Name="fecha" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="modulo" Type="String" MaxLength="40" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="evento" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="CatEstatusSolicitud" Relationship="Self.FK_BitacoraMovimiento_estatusID" FromRole="Bitacora" ToRole="CatEstatusSolicitud" />
+    <NavigationProperty Name="SolicitudRecurso" Relationship="Self.FK_BitacoraMovimiento_solicitudID" FromRole="Bitacora" ToRole="SolicitudRecurso" />
+    <NavigationProperty Name="Usuario" Relationship="Self.FK_BitacoraMovimiento_usuarioID" FromRole="Bitacora" ToRole="Usuario" />
+  </EntityType>
+  <EntityType Name="CargaCuotaDiaria">
+    <Key>
+      <PropertyRef Name="cargaCuotaDiariaID" />
+    </Key>
+    <Property Name="cargaCuotaDiariaID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="solicitudRecursoID" Type="Int32" Nullable="false" />
+    <Property Name="catConceptoGastoID" Type="Int32" Nullable="false" />
+    <Property Name="estatusLogico" Type="Boolean" />
+    <Property Name="fechaCarga" Type="DateTime" Precision="3" />
+    <Property Name="usuarioID" Type="Int32" />
+    <NavigationProperty Name="CatConceptoGasto" Relationship="Self.FK_CuotasDiarias_conceptoGastosID" FromRole="CargaCuotaDiaria" ToRole="CatConceptoGasto" />
+    <NavigationProperty Name="SolicitudRecurso" Relationship="Self.FK_CuotasDiarias_solicitudID" FromRole="CargaCuotaDiaria" ToRole="SolicitudRecurso" />
+  </EntityType>
+  <EntityType Name="CatAcademia">
+    <Key>
+      <PropertyRef Name="catAcademiaID" />
+    </Key>
+    <Property Name="catAcademiaID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="descripcion" Type="String" MaxLength="80" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="estatusLogico" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="Beca" Relationship="Self.FK_Becas_academiaID" FromRole="CatAcademia" ToRole="Beca" />
+  </EntityType>
+  <EntityType Name="CatAccion">
+    <Key>
+      <PropertyRef Name="catAccionID" />
+    </Key>
+    <Property Name="catAccionID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="descripcion" Type="String" MaxLength="40" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="accion" Type="String" MaxLength="40" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="controlFormulario" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="estatusLogico" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="EstatusAccion" Relationship="Self.FK_EstatusAcciones_accionesID" FromRole="CatAccion" ToRole="EstatusAccion" />
+  </EntityType>
+  <EntityType Name="CatAgenciaAduanal">
+    <Key>
+      <PropertyRef Name="catAgenciaAduanalID" />
+    </Key>
+    <Property Name="catAgenciaAduanalID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="descripcion" Type="String" MaxLength="40" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="estatusLogico" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="GastoAduana" Relationship="Self.FK_GastosAduanales_agenciaID" FromRole="CatAgenciaAduanal" ToRole="GastoAduana" />
+  </EntityType>
+  <EntityType Name="CatArea">
+    <Key>
+      <PropertyRef Name="catAreaID" />
+    </Key>
+    <Property Name="catAreaID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="descripcion" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="estatusLogico" Type="Boolean" Nullable="false" />
+    <Property Name="areaPadre" Type="Int32" />
+    <NavigationProperty Name="AreaUnidadAdm" Relationship="Self.FK_AreaUnidadAdm_CatAreas" FromRole="CatArea" ToRole="AreaUnidadAdm" />
+    <NavigationProperty Name="CatEstatusSolicitud" Relationship="Self.FK_CatEstatusSolicitud_areasID" FromRole="CatArea" ToRole="CatEstatusSolicitud" />
+    <NavigationProperty Name="TipoSolicitudPorArea" Relationship="Self.fk_TipoSolPorAreaCatAreas" FromRole="CatArea" ToRole="TipoSolicitudPorArea" />
+  </EntityType>
+  <EntityType Name="CatBanco">
+    <Key>
+      <PropertyRef Name="catBancoID" />
+    </Key>
+    <Property Name="catBancoID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="descripcion" Type="String" MaxLength="40" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="estatusLogico" Type="Boolean" Nullable="false" />
+    <Property Name="cveBanco" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="DetalleSolicitudRecurso" Relationship="Self.FK_Viaticos_bancoID" FromRole="CatBanco" ToRole="DetalleSolicitudRecurso" />
+    <NavigationProperty Name="CatCuenta" Relationship="Self.PK_CatCuenta_bancoID" FromRole="CatBanco" ToRole="CatCuenta" />
+  </EntityType>
+  <EntityType Name="CatConceptoGasto">
+    <Key>
+      <PropertyRef Name="catConceptoGastoID" />
+    </Key>
+    <Property Name="catConceptoGastoID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="descripcion" Type="String" MaxLength="80" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="catSolicitudID" Type="Int32" Nullable="false" />
+    <Property Name="estatusLogico" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="CargaCuotaDiaria" Relationship="Self.FK_CuotasDiarias_conceptoGastosID" FromRole="CatConceptoGasto" ToRole="CargaCuotaDiaria" />
+    <NavigationProperty Name="CatSolicitud" Relationship="Self.FK_CatConceptoGastos_tipoSolicitudID" FromRole="CatConceptoGasto" ToRole="CatSolicitud" />
+    <NavigationProperty Name="Laudo" Relationship="Self.FK_Laudos_conceptoGastosID" FromRole="CatConceptoGasto" ToRole="Laudo" />
+  </EntityType>
+  <EntityType Name="CatConceptoPago">
+    <Key>
+      <PropertyRef Name="catConceptoPagoID" />
+    </Key>
+    <Property Name="catConceptoPagoID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="descripcion" Type="String" MaxLength="180" FixedLength="false" Unicode="false" />
+    <Property Name="estatusLogico" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="GastoCorriente" Relationship="Self.FK_GastoCorriente_conceptoPagoID" FromRole="CatConceptoPago" ToRole="GastoCorriente" />
+  </EntityType>
+  <EntityType Name="CatCuenta">
+    <Key>
+      <PropertyRef Name="catCuentaID" />
+    </Key>
+    <Property Name="catCuentaID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="catBancoID" Type="Int32" Nullable="false" />
+    <Property Name="descripcion" Type="String" MaxLength="40" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="numeroCuenta" Type="String" MaxLength="12" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="areaBanco" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="anio" Type="Int32" Nullable="false" />
+    <Property Name="estatusLogico" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="CatBanco" Relationship="Self.PK_CatCuenta_bancoID" FromRole="CatCuenta" ToRole="CatBanco" />
+    <NavigationProperty Name="MovimientoAdministrativo" Relationship="Self.FK_MovimientoAdministrativo_cuentaID" FromRole="CatCuenta" ToRole="MovimientoAdministrativo" />
+    <NavigationProperty Name="MovimientoBancario" Relationship="Self.FK_MovimientoBancario_cuentaID" FromRole="CatCuenta" ToRole="MovimientoBancario" />
+  </EntityType>
+  <EntityType Name="CatDependiente">
+    <Key>
+      <PropertyRef Name="catDependienteId" />
+    </Key>
+    <Property Name="catDependienteId" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="catDependienteVistaId" Type="Int16" Nullable="false" />
+    <Property Name="descripcion" Type="String" MaxLength="18" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="estatusLogico" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="Beneficiario" Relationship="Self.FK_Beneficiario_CatTipoDependiente" FromRole="CatDependiente" ToRole="Beneficiario" />
+  </EntityType>
+  <EntityType Name="CatDestino">
+    <Key>
+      <PropertyRef Name="catDestinoID" />
+    </Key>
+    <Property Name="catDestinoID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="catEntidadFederativaID" Type="Int32" Nullable="false" />
+    <Property Name="descripcion" Type="String" MaxLength="80" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="estatusLogico" Type="Boolean" Nullable="false" />
+    <Property Name="orden" Type="Int32" />
+    <NavigationProperty Name="CatEntidadFederativa" Relationship="Self.FK_CatDestino_entidadID" FromRole="CatDestino" ToRole="CatEntidadFederativa" />
+    <NavigationProperty Name="GastoCorriente" Relationship="Self.FK_GastoCorriente_destinoID" FromRole="CatDestino" ToRole="GastoCorriente" />
+    <NavigationProperty Name="LugarSolicitudRecurso" Relationship="Self.FK_LugarSolicitudRecurso_catDestino" FromRole="CatDestino" ToRole="LugarSolicitudRecurso" />
+  </EntityType>
+  <EntityType Name="CatDocumento">
+    <Key>
+      <PropertyRef Name="catDocumentoID" />
+    </Key>
+    <Property Name="catDocumentoID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="catSolicitudID" Type="Int32" Nullable="false" />
+    <Property Name="descripcion" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="prefijo" Type="String" MaxLength="5" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="estatusLogico" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="Documento" Relationship="Self.FK_Documento_tipoDocumentoID" FromRole="CatDocumento" ToRole="Documento" />
+    <NavigationProperty Name="CatSolicitud" Relationship="Self.FK_TipoDocumentos_tipoSolicitudID" FromRole="CatDocumento" ToRole="CatSolicitud" />
+  </EntityType>
+  <EntityType Name="CatEntidadFederativa">
+    <Key>
+      <PropertyRef Name="catEntidadFederativaID" />
+    </Key>
+    <Property Name="catEntidadFederativaID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="catPaisID" Type="Int32" Nullable="false" />
+    <Property Name="descripcion" Type="String" MaxLength="60" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="abreviatura" Type="String" MaxLength="12" FixedLength="false" Unicode="false" />
+    <Property Name="estatusLogico" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="CatDestino" Relationship="Self.FK_CatDestino_entidadID" FromRole="CatEntidadFederativa" ToRole="CatDestino" />
+    <NavigationProperty Name="CatPais" Relationship="Self.FK_CatEntidadFederativa_paisID" FromRole="CatEntidadFederativa" ToRole="CatPais" />
+    <NavigationProperty Name="CatMunicipio" Relationship="Self.FK_CatMunicipioLocalidad_entidadID" FromRole="CatEntidadFederativa" ToRole="CatMunicipio" />
+    <NavigationProperty Name="GastoCorriente" Relationship="Self.FK_GastoCorriente_entidadID" FromRole="CatEntidadFederativa" ToRole="GastoCorriente" />
+    <NavigationProperty Name="LugarSolicitudRecurso" Relationship="Self.FK_LugarSolicitudRecurso_catEntidadFederativa" FromRole="CatEntidadFederativa" ToRole="LugarSolicitudRecurso" />
+  </EntityType>
+  <EntityType Name="CatEstatusFactura">
+    <Key>
+      <PropertyRef Name="catEstatusFacturaID" />
+    </Key>
+    <Property Name="catEstatusFacturaID" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="descripcion" Type="String" MaxLength="28" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="estatusLogico" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="Factura" Relationship="Self.FK_Factura_estatusFacturaID" FromRole="CatEstatusFactura" ToRole="Factura" />
+  </EntityType>
+  <EntityType Name="CatEstatusPago">
+    <Key>
+      <PropertyRef Name="catEstatusPagoID" />
+    </Key>
+    <Property Name="catEstatusPagoID" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="descripcion" Type="String" MaxLength="18" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="estatusLogico" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="PagoCheque" Relationship="Self.FK_PagoCheque_estatusPagoID" FromRole="CatEstatusPago" ToRole="PagoCheque" />
+    <NavigationProperty Name="TransferenciaBancaria" Relationship="Self.FK_TransferenciaBancaria_estatusPagoID" FromRole="CatEstatusPago" ToRole="TransferenciaBancaria" />
+  </EntityType>
+  <EntityType Name="CatEstatusPresion">
+    <Key>
+      <PropertyRef Name="catEstatusPresionID" />
+    </Key>
+    <Property Name="catEstatusPresionID" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="descripcion" Type="String" MaxLength="18" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="estatusLogico" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="PresionGasto" Relationship="Self.FK_PresionGasto_estatusPresionID" FromRole="CatEstatusPresion" ToRole="PresionGasto" />
+  </EntityType>
+  <EntityType Name="CatEstatusSolicitud">
+    <Key>
+      <PropertyRef Name="catEstatusSolicitudID" />
+    </Key>
+    <Property Name="catEstatusSolicitudID" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="descripcion" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="descripcionCorta" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="estatusSiguiente" Type="Int32" />
+    <Property Name="estatusDevolucion" Type="Int32" />
+    <Property Name="estatusAlternativo" Type="Int32" />
+    <Property Name="estatusAltDev" Type="Int32" />
+    <Property Name="estatusLogico" Type="Boolean" Nullable="false" />
+    <Property Name="catAreaID" Type="Int32" />
+    <NavigationProperty Name="Bitacora" Relationship="Self.FK_BitacoraMovimiento_estatusID" FromRole="CatEstatusSolicitud" ToRole="Bitacora" />
+    <NavigationProperty Name="CatArea" Relationship="Self.FK_CatEstatusSolicitud_areasID" FromRole="CatEstatusSolicitud" ToRole="CatArea" />
+    <NavigationProperty Name="EstatusAccion" Relationship="Self.FK_EstatusAcciones_estatusID" FromRole="CatEstatusSolicitud" ToRole="EstatusAccion" />
+    <NavigationProperty Name="EstatusPerfil" Relationship="Self.FK_EstatusPerfil_estatusID" FromRole="CatEstatusSolicitud" ToRole="EstatusPerfil" />
+    <NavigationProperty Name="SolicitudRecurso" Relationship="Self.FK_SolicitudRecursos_estatusID" FromRole="CatEstatusSolicitud" ToRole="SolicitudRecurso" />
+  </EntityType>
+  <EntityType Name="CatEvento">
+    <Key>
+      <PropertyRef Name="catEventoID" />
+    </Key>
+    <Property Name="catEventoID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="cveEvento" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="descripcion" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="descLargaEvento" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="catModuloID" Type="Int32" Nullable="false" />
+    <Property Name="catPerfilID" Type="Int32" Nullable="false" />
+    <Property Name="estatusLogico" Type="Boolean" Nullable="false" />
+    <Property Name="catEventoAccionID" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="CatEventoAccion" Relationship="Self.fk_evento_accion" FromRole="CatEvento" ToRole="CatEventoAccion" />
+    <NavigationProperty Name="CatModulo" Relationship="Self.fk_evento_modulo" FromRole="CatEvento" ToRole="CatModulo" />
+    <NavigationProperty Name="CatPerfil" Relationship="Self.fk_evento_perfil" FromRole="CatEvento" ToRole="CatPerfil" />
+    <NavigationProperty Name="SolicitudRecurso" Relationship="Self.fk_evento_solicitud" FromRole="CatEvento" ToRole="SolicitudRecurso" />
+  </EntityType>
+  <EntityType Name="CatEventoAccion">
+    <Key>
+      <PropertyRef Name="catEventoAccionID" />
+    </Key>
+    <Property Name="catEventoAccionID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="cveEventoAccion" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="descripcion" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="estatusLogico" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="CatEvento" Relationship="Self.fk_evento_accion" FromRole="CatEventoAccion" ToRole="CatEvento" />
+  </EntityType>
+  <EntityType Name="CatFirma">
+    <Key>
+      <PropertyRef Name="catFirmaID" />
+    </Key>
+    <Property Name="catFirmaID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Descripcion" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+    <Property Name="EstadoLogico" Type="Boolean" />
+    <NavigationProperty Name="SolicitudFirma" Relationship="Self.FK_SolicitudFirma_CatFirma" FromRole="CatFirma" ToRole="SolicitudFirma" />
+  </EntityType>
+  <EntityType Name="CatFormaComprobacion">
+    <Key>
+      <PropertyRef Name="catFormaComprobacionID" />
+    </Key>
+    <Property Name="catFormaComprobacionID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FormaComprobacion" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="estatusLogico" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="SolicitudRecurso" Relationship="Self.FK_SolicitudRecurso_CatFormaComprobacion" FromRole="CatFormaComprobacion" ToRole="SolicitudRecurso" />
+  </EntityType>
+  <EntityType Name="CatJefeDepto">
+    <Key>
+      <PropertyRef Name="catJefeDeptoID" />
+    </Key>
+    <Property Name="catJefeDeptoID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="claveTipoJefeDepto" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="descripcionCorta" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="descripcion" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="estatusLogico" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="TipoJefeDepto" Relationship="Self.FK_TipoJefeDepto_CatTipoDependiente" FromRole="CatJefeDepto" ToRole="TipoJefeDepto" />
+  </EntityType>
+  <EntityType Name="CatModulo">
+    <Key>
+      <PropertyRef Name="catModuloID" />
+    </Key>
+    <Property Name="catModuloID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="descripcion" Type="String" MaxLength="25" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="estatusLogico" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="CatEvento" Relationship="Self.fk_evento_modulo" FromRole="CatModulo" ToRole="CatEvento" />
+    <NavigationProperty Name="ModuloSubmodulo" Relationship="Self.FK__ModuloSub__modul__00AA174D" FromRole="CatModulo" ToRole="ModuloSubmodulo" />
+    <NavigationProperty Name="Parametro" Relationship="Self.FK__Parametro__modul__58920452" FromRole="CatModulo" ToRole="Parametro" />
+    <NavigationProperty Name="PerfilModulo" Relationship="Self.FK__PerfilMod__modul__10E07F16" FromRole="CatModulo" ToRole="PerfilModulo" />
+  </EntityType>
+  <EntityType Name="CatMoneda">
+    <Key>
+      <PropertyRef Name="catMonedaID" />
+    </Key>
+    <Property Name="catMonedaID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="descripcion" Type="String" MaxLength="18" FixedLength="true" Unicode="false" />
+    <Property Name="codigo" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="estatusLogico" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="Agregaduria" Relationship="Self.FK_Agregadurias_monedaID" FromRole="CatMoneda" ToRole="Agregaduria" />
+    <NavigationProperty Name="Factura" Relationship="Self.FK_Factura_monedaID" FromRole="CatMoneda" ToRole="Factura" />
+    <NavigationProperty Name="LugarSolicitudRecurso" Relationship="Self.FK_LugarSolicitudRecurso_CatMoneda" FromRole="CatMoneda" ToRole="LugarSolicitudRecurso" />
+    <NavigationProperty Name="Penalizacion" Relationship="Self.FK_Penalizaciones_monedaID" FromRole="CatMoneda" ToRole="Penalizacion" />
+    <NavigationProperty Name="Proveedor" Relationship="Self.FK_Proveedores_monedaID" FromRole="CatMoneda" ToRole="Proveedor" />
+  </EntityType>
+  <EntityType Name="CatMunicipio">
+    <Key>
+      <PropertyRef Name="catMunicipioID" />
+    </Key>
+    <Property Name="catMunicipioID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="catEntidadFederativaID" Type="Int32" Nullable="false" />
+    <Property Name="descripcion" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+    <Property Name="masEconomico" Type="Boolean" Nullable="false" />
+    <Property Name="estatusLogico" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="CatEntidadFederativa" Relationship="Self.FK_CatMunicipioLocalidad_entidadID" FromRole="CatMunicipio" ToRole="CatEntidadFederativa" />
+    <NavigationProperty Name="LugarSolicitudRecurso" Relationship="Self.FK_LugarSolicitudRecurso_catMunicipio" FromRole="CatMunicipio" ToRole="LugarSolicitudRecurso" />
+  </EntityType>
+  <EntityType Name="CatPago">
+    <Key>
+      <PropertyRef Name="catPagoID" />
+    </Key>
+    <Property Name="catPagoID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="descripcion" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="estatusLogico" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="MovimientoAdministrativo" Relationship="Self.FK_MovimientoAdministrativo_tipoPagoID" FromRole="CatPago" ToRole="MovimientoAdministrativo" />
+  </EntityType>
+  <EntityType Name="CatPagoPoliza">
+    <Key>
+      <PropertyRef Name="catPagoPolizaID" />
+    </Key>
+    <Property Name="catPagoPolizaID" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="descripcioon" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="estatusLogico" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="PolizaPago" Relationship="Self.PK_PolizaPago_CatTipoPagoPoliza" FromRole="CatPagoPoliza" ToRole="PolizaPago" />
+  </EntityType>
+  <EntityType Name="CatPais">
+    <Key>
+      <PropertyRef Name="catPaisID" />
+    </Key>
+    <Property Name="catPaisID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="descripcion" Type="String" MaxLength="60" FixedLength="true" Unicode="false" />
+    <Property Name="tipoControl" Type="Byte" />
+    <Property Name="estatusLogico" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="Agregaduria" Relationship="Self.FK_Agregadurias_paisID" FromRole="CatPais" ToRole="Agregaduria" />
+    <NavigationProperty Name="CatEntidadFederativa" Relationship="Self.FK_CatEntidadFederativa_paisID" FromRole="CatPais" ToRole="CatEntidadFederativa" />
+    <NavigationProperty Name="LugarSolicitudRecurso" Relationship="Self.FK_LugarSolicitudRecurso_CatPais" FromRole="CatPais" ToRole="LugarSolicitudRecurso" />
+  </EntityType>
+  <EntityType Name="CatPartida">
+    <Key>
+      <PropertyRef Name="catPartidaID" />
+    </Key>
+    <Property Name="catPartidaID" Type="Int32" Nullable="false" />
+    <Property Name="catSolicitudID" Type="Int32" />
+    <Property Name="capitulo" Type="Int32" Nullable="false" />
+    <Property Name="concepto" Type="Int32" />
+    <Property Name="denominacion" Type="String" MaxLength="180" FixedLength="false" Unicode="false" />
+    <Property Name="descripcion" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="estatusLogico" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="Agregaduria" Relationship="Self.FK_Agregadurias_codPartida" FromRole="CatPartida" ToRole="Agregaduria" />
+    <NavigationProperty Name="Beca" Relationship="Self.FK_Becas_codPartida" FromRole="CatPartida" ToRole="Beca" />
+    <NavigationProperty Name="Becalos" Relationship="Self.FK_Becalos_codPartida" FromRole="CatPartida" ToRole="Becalos" />
+    <NavigationProperty Name="GastoCorriente" Relationship="Self.FK_GastoCorriente_codPartida" FromRole="CatPartida" ToRole="GastoCorriente" />
+    <NavigationProperty Name="GastoAduana" Relationship="Self.FK_GastosAduanales_codPartida" FromRole="CatPartida" ToRole="GastoAduana" />
+    <NavigationProperty Name="GastoFunerario" Relationship="Self.FK_GastosFunerarios_codPartida" FromRole="CatPartida" ToRole="GastoFunerario" />
+    <NavigationProperty Name="ImpuestoSobreNomina" Relationship="Self.FK_ImpuestosSobreNomina_codPartida" FromRole="CatPartida" ToRole="ImpuestoSobreNomina" />
+    <NavigationProperty Name="Laudo" Relationship="Self.FK_Laudos_codPartida" FromRole="CatPartida" ToRole="Laudo" />
+    <NavigationProperty Name="PartidaSolicitudRecurso" Relationship="Self.FK_PartidaSolicitudRecurso_CatPartida" FromRole="CatPartida" ToRole="PartidaSolicitudRecurso" />
+    <NavigationProperty Name="Proveedor" Relationship="Self.FK_Proveedores_codPartida" FromRole="CatPartida" ToRole="Proveedor" />
+    <NavigationProperty Name="CatSolicitud" Relationship="Self.PK_CatPartida_tipoSolicitudID" FromRole="CatPartida" ToRole="CatSolicitud" />
+  </EntityType>
+  <EntityType Name="CatPerfil">
+    <Key>
+      <PropertyRef Name="catPerfilID" />
+    </Key>
+    <Property Name="catPerfilID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="descripcion" Type="String" MaxLength="60" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="descripcionCorta" Type="String" MaxLength="60" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="perfilAnalistaID" Type="Int16" />
+    <Property Name="estatusLogico" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="CatEvento" Relationship="Self.fk_evento_perfil" FromRole="CatPerfil" ToRole="CatEvento" />
+    <NavigationProperty Name="PerfilModulo" Relationship="Self.FK__PerfilMod__perfi__0FEC5ADD" FromRole="CatPerfil" ToRole="PerfilModulo" />
+    <NavigationProperty Name="EstatusPerfil" Relationship="Self.FK_EstatusPerfil_perfilID" FromRole="CatPerfil" ToRole="EstatusPerfil" />
+    <NavigationProperty Name="Usuario" Relationship="Self.FK_Usuario_CatPerfil" FromRole="CatPerfil" ToRole="Usuario" />
+    <NavigationProperty Name="Usuario1" Relationship="Self.FK_Usuarios_perfilID" FromRole="CatPerfil" ToRole="Usuario" />
+  </EntityType>
+  <EntityType Name="CatPoliza">
+    <Key>
+      <PropertyRef Name="catPolizaID" />
+    </Key>
+    <Property Name="catPolizaID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="descripcion" Type="String" MaxLength="40" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="estatusLogico" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="PolizaPago" Relationship="Self.FK_PolizaPago_tipoPolizaID" FromRole="CatPoliza" ToRole="PolizaPago" />
+  </EntityType>
+  <EntityType Name="CatPrioridad">
+    <Key>
+      <PropertyRef Name="catPrioridadID" />
+    </Key>
+    <Property Name="catPrioridadID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="descripcion" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="estatusLogico" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="SolicitudRecurso" Relationship="Self.FK_SolicitudRecursos_prioridadID" FromRole="CatPrioridad" ToRole="SolicitudRecurso" />
+  </EntityType>
+  <EntityType Name="CatRegion">
+    <Key>
+      <PropertyRef Name="regionID" />
+    </Key>
+    <Property Name="regionID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="descripcion" Type="String" MaxLength="12" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="oficioRegion" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="estatusLogico" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="CatUnidadAdm" Relationship="Self.FK_CatUnidadAdministrativa_regionID" FromRole="CatRegion" ToRole="CatUnidadAdm" />
+    <NavigationProperty Name="TipoSolicitudPorArea" Relationship="Self.fk_TipoSolPorAreaCatRegion" FromRole="CatRegion" ToRole="TipoSolicitudPorArea" />
+    <NavigationProperty Name="UsuarioRegionFiscalizacion" Relationship="Self.FK_UsuarioRegionFiscalizacion_CatRegion" FromRole="CatRegion" ToRole="UsuarioRegionFiscalizacion" />
+  </EntityType>
+  <EntityType Name="CatRol">
+    <Key>
+      <PropertyRef Name="catRolID" />
+    </Key>
+    <Property Name="catRolID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="descripcion" Type="String" MaxLength="150" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="estatusLogico" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="Usuario" Relationship="Self.FK_Usuario_CatRol" FromRole="CatRol" ToRole="Usuario" />
+  </EntityType>
+  <EntityType Name="CatSolicitud">
+    <Key>
+      <PropertyRef Name="catSolicitudID" />
+    </Key>
+    <Property Name="catSolicitudID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="tipoSolicitudControlCod" Type="Int32" Nullable="false" />
+    <Property Name="descripcion" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="areaPago" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="estatusLogico" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="Beneficiario" Relationship="Self.FK_Beneficiarios_tipoSolicitudID" FromRole="CatSolicitud" ToRole="Beneficiario" />
+    <NavigationProperty Name="CatConceptoGasto" Relationship="Self.FK_CatConceptoGastos_tipoSolicitudID" FromRole="CatSolicitud" ToRole="CatConceptoGasto" />
+    <NavigationProperty Name="CatDocumento" Relationship="Self.FK_TipoDocumentos_tipoSolicitudID" FromRole="CatSolicitud" ToRole="CatDocumento" />
+    <NavigationProperty Name="CatPartida" Relationship="Self.PK_CatPartida_tipoSolicitudID" FromRole="CatSolicitud" ToRole="CatPartida" />
+    <NavigationProperty Name="SolicitudCatUnidadAdm" Relationship="Self.FK_SolicitudCatUnidadAdm_CatSolicitud" FromRole="CatSolicitud" ToRole="SolicitudCatUnidadAdm" />
+    <NavigationProperty Name="SolicitudRecurso" Relationship="Self.FK_SolicitudRecursos_tipoSolicitudID" FromRole="CatSolicitud" ToRole="SolicitudRecurso" />
+    <NavigationProperty Name="TipoSolicitudPorArea" Relationship="Self.fk_TipoSolPorAreaCatTipoSol" FromRole="CatSolicitud" ToRole="TipoSolicitudPorArea" />
+    <NavigationProperty Name="TipoSolicitudPorUA" Relationship="Self.fk_TipoSolPorUACatTipoSol" FromRole="CatSolicitud" ToRole="TipoSolicitudPorUA" />
+  </EntityType>
+  <EntityType Name="CatSubmodulo">
+    <Key>
+      <PropertyRef Name="catSubmoduloID" />
+    </Key>
+    <Property Name="catSubmoduloID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="descripcion" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="url" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="estatusLogico" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="ModuloSubmodulo" Relationship="Self.FK__ModuloSub__Submo__019E3B86" FromRole="CatSubmodulo" ToRole="ModuloSubmodulo" />
+  </EntityType>
+  <EntityType Name="CatUnidadAdm">
+    <Key>
+      <PropertyRef Name="catUnidadAdmID" />
+    </Key>
+    <Property Name="catUnidadAdmID" Type="Int32" Nullable="false" />
+    <Property Name="catRegionID" Type="Int32" Nullable="false" />
+    <Property Name="descripcion" Type="String" MaxLength="120" FixedLength="false" Unicode="false" />
+    <Property Name="codigoPadre" Type="Int32" />
+    <Property Name="abreviatura" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="estatusLogico" Type="Boolean" Nullable="false" />
+    <Property Name="catTipoUnidadAdmID" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="CatRegion" Relationship="Self.FK_CatUnidadAdministrativa_regionID" FromRole="CatUnidadAdm" ToRole="CatRegion" />
+    <NavigationProperty Name="AreaUnidadAdm" Relationship="Self.FK_AreaUnidadAdm_CatUnidadAdministrativa" FromRole="CatUnidadAdm" ToRole="AreaUnidadAdm" />
+    <NavigationProperty Name="SolicitudCatUnidadAdm" Relationship="Self.FK_SolicitudCatUnidadAdm_CatUnidadAdm" FromRole="CatUnidadAdm" ToRole="SolicitudCatUnidadAdm" />
+    <NavigationProperty Name="SolicitudRecurso" Relationship="Self.FK_SolicitudRecursos_codUA" FromRole="CatUnidadAdm" ToRole="SolicitudRecurso" />
+    <NavigationProperty Name="TipoSolicitudPorUA" Relationship="Self.fk_TipoSolPorUACatUA" FromRole="CatUnidadAdm" ToRole="TipoSolicitudPorUA" />
+    <NavigationProperty Name="Usuario" Relationship="Self.FK_Usuarios_codUA" FromRole="CatUnidadAdm" ToRole="Usuario" />
+  </EntityType>
+  <EntityType Name="Clc">
+    <Key>
+      <PropertyRef Name="clcID" />
+    </Key>
+    <Property Name="clcID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="actividad" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="mesServicio" Type="String" MaxLength="2" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="retencionCincoMillar" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="retencionIVA" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="retencionISR" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="tipoCambioReferencial" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="tipoCambioPago" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="pagoMonedaExtranjera" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="pagoPesos" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="ejercicioFiscal" Type="Int32" Nullable="false" />
+    <Property Name="fechaPago" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="suficienciaPresupuestal" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+    <Property Name="avisoReintegro" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+    <Property Name="anioServicio" Type="Int32" Nullable="false" />
+    <Property Name="totalCLC" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+    <Property Name="numeroClc" Type="String" MaxLength="6" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="saldoFinal" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+    <Property Name="ejercicioCLC" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+    <NavigationProperty Name="PresupuestoClc" Relationship="Self.FK_PresupuestoClc_clcID" FromRole="Clc" ToRole="PresupuestoClc" />
+  </EntityType>
+  <EntityType Name="DetalleSolicitudRecurso">
+    <Key>
+      <PropertyRef Name="detalleSolicitudRecursoID" />
+    </Key>
+    <Property Name="detalleSolicitudRecursoID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="solicitudRecursoID" Type="Int32" Nullable="false" />
+    <Property Name="homologadoID" Type="Int32" />
+    <Property Name="nombreOperativo" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="objetivoComision" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="numeroExpediente" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="estatusHomologado" Type="Boolean" Nullable="false" />
+    <Property Name="clabeInterbancaria" Type="String" MaxLength="18" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="cuentaBancaria" Type="String" MaxLength="12" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="cuenta" Type="Int16" Nullable="false" />
+    <Property Name="estatusLogico" Type="Boolean" Nullable="false" />
+    <Property Name="catBancoID" Type="Int32" Nullable="false" />
+    <Property Name="numeroTarjeta" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="ComprobanteOtraCuenta" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <NavigationProperty Name="CatBanco" Relationship="Self.FK_Viaticos_bancoID" FromRole="DetalleSolicitudRecurso" ToRole="CatBanco" />
+    <NavigationProperty Name="LugarSolicitudRecurso" Relationship="Self.FK_LugarSolicitudRecurso_DetalleSolicitudRecurso" FromRole="DetalleSolicitudRecurso" ToRole="LugarSolicitudRecurso" />
+    <NavigationProperty Name="PartidaSolicitudRecurso" Relationship="Self.fk_PartidaSolicitudRecurso_DetalleSolicitudRecurso" FromRole="DetalleSolicitudRecurso" ToRole="PartidaSolicitudRecurso" />
+    <NavigationProperty Name="Homologado" Relationship="Self.FK_Viatico_homologado" FromRole="DetalleSolicitudRecurso" ToRole="Homologado" />
+    <NavigationProperty Name="SolicitudRecurso" Relationship="Self.FK_Viaticos_SolicitudRecursos" FromRole="DetalleSolicitudRecurso" ToRole="SolicitudRecurso" />
+  </EntityType>
+  <EntityType Name="Documento">
+    <Key>
+      <PropertyRef Name="documentoID" />
+    </Key>
+    <Property Name="documentoID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="solicitudRecursoID" Type="Int32" />
+    <Property Name="catDocumentoID" Type="Int32" />
+    <Property Name="descripcionDocumento" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="anexo" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="fechaRecepcion" Type="DateTime" Precision="3" />
+    <Property Name="estatus" Type="Boolean" Nullable="false" />
+    <Property Name="extensionDocumento" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="contenido" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <NavigationProperty Name="CatDocumento" Relationship="Self.FK_Documento_tipoDocumentoID" FromRole="Documento" ToRole="CatDocumento" />
+    <NavigationProperty Name="SolicitudRecurso" Relationship="Self.FK_Documento_solicitudID" FromRole="Documento" ToRole="SolicitudRecurso" />
+  </EntityType>
+  <EntityType Name="EstatusAccion">
+    <Key>
+      <PropertyRef Name="estatusAccionID" />
+    </Key>
+    <Property Name="estatusAccionID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="catEstatusSolicitudID" Type="Int16" Nullable="false" />
+    <Property Name="catAccionID" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="CatAccion" Relationship="Self.FK_EstatusAcciones_accionesID" FromRole="EstatusAccion" ToRole="CatAccion" />
+    <NavigationProperty Name="CatEstatusSolicitud" Relationship="Self.FK_EstatusAcciones_estatusID" FromRole="EstatusAccion" ToRole="CatEstatusSolicitud" />
+  </EntityType>
+  <EntityType Name="EstatusMovimiento">
+    <Key>
+      <PropertyRef Name="estatusMovimientoID" />
+    </Key>
+    <Property Name="estatusMovimientoID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="solicitudRecursoID" Type="Int32" Nullable="false" />
+    <Property Name="usuarioID" Type="Int32" Nullable="false" />
+    <Property Name="fechaMovimiento" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="observaciones" Type="String" MaxLength="40" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="movimiento" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="modulo" Type="String" MaxLength="40" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="SolicitudRecurso" Relationship="Self.FK_EstatusMovimiento_solicitudID" FromRole="EstatusMovimiento" ToRole="SolicitudRecurso" />
+    <NavigationProperty Name="Usuario" Relationship="Self.FK_EstatusMovimiento_usuarioID" FromRole="EstatusMovimiento" ToRole="Usuario" />
+  </EntityType>
+  <EntityType Name="EstatusPerfil">
+    <Key>
+      <PropertyRef Name="estatusPerfilID" />
+    </Key>
+    <Property Name="estatusPerfilID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="catPerfilID" Type="Int32" Nullable="false" />
+    <Property Name="catEstatusSolicitudID" Type="Int16" Nullable="false" />
+    <NavigationProperty Name="CatEstatusSolicitud" Relationship="Self.FK_EstatusPerfil_estatusID" FromRole="EstatusPerfil" ToRole="CatEstatusSolicitud" />
+    <NavigationProperty Name="CatPerfil" Relationship="Self.FK_EstatusPerfil_perfilID" FromRole="EstatusPerfil" ToRole="CatPerfil" />
+  </EntityType>
+  <EntityType Name="Factura">
+    <Key>
+      <PropertyRef Name="facturaID" />
+    </Key>
+    <Property Name="facturaID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="proveedoresID" Type="Int32" Nullable="false" />
+    <Property Name="monedaID" Type="Int32" Nullable="false" />
+    <Property Name="estatusFacturaID" Type="Int16" Nullable="false" />
+    <Property Name="cuentaProveedorID" Type="Int16" Nullable="false" />
+    <Property Name="descripcionFactura" Type="String" MaxLength="28" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="montoFactura" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+    <Property Name="factura1" Type="String" MaxLength="18" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="concepto" Type="String" MaxLength="18" FixedLength="false" Unicode="false" />
+    <Property Name="fecha" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="subtotal" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+    <Property Name="IVA" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="retencionIVA" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="ISR" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="retencionISR" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="deductiva" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="tipoDeCambio" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="total" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+    <NavigationProperty Name="CatEstatusFactura" Relationship="Self.FK_Factura_estatusFacturaID" FromRole="Factura" ToRole="CatEstatusFactura" />
+    <NavigationProperty Name="CatMoneda" Relationship="Self.FK_Factura_monedaID" FromRole="Factura" ToRole="CatMoneda" />
+    <NavigationProperty Name="Proveedor" Relationship="Self.FK_Factura_proveedoresID" FromRole="Factura" ToRole="Proveedor" />
+  </EntityType>
+  <EntityType Name="FirmaElectronica">
+    <Key>
+      <PropertyRef Name="firmaElectronicaID" />
+    </Key>
+    <Property Name="firmaElectronicaID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="solicitudRecursoID" Type="Int32" Nullable="false" />
+    <Property Name="cadenaOriginalFirma" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="fecha" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="folioTransaccion" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="numeroTransaccion" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="SolicitudRecurso" Relationship="Self.FK_firmaElectronica_solicitudID" FromRole="FirmaElectronica" ToRole="SolicitudRecurso" />
+  </EntityType>
+  <EntityType Name="GastoAduana">
+    <Key>
+      <PropertyRef Name="gastoAduanaID" />
+    </Key>
+    <Property Name="gastoAduanaID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="solicitudRecursoID" Type="Int32" Nullable="false" />
+    <Property Name="catAgenciaAduanalID" Type="Int32" Nullable="false" />
+    <Property Name="catPartidaID" Type="Int32" Nullable="false" />
+    <Property Name="importeSolicitado" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+    <NavigationProperty Name="CatAgenciaAduanal" Relationship="Self.FK_GastosAduanales_agenciaID" FromRole="GastoAduana" ToRole="CatAgenciaAduanal" />
+    <NavigationProperty Name="CatPartida" Relationship="Self.FK_GastosAduanales_codPartida" FromRole="GastoAduana" ToRole="CatPartida" />
+    <NavigationProperty Name="SolicitudRecurso" Relationship="Self.FK_GastosAduanales_solicitudID" FromRole="GastoAduana" ToRole="SolicitudRecurso" />
+  </EntityType>
+  <EntityType Name="GastoCorriente">
+    <Key>
+      <PropertyRef Name="gasCorrienteID" />
+    </Key>
+    <Property Name="gasCorrienteID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="solicitudRecursoID" Type="Int32" Nullable="false" />
+    <Property Name="catConceptoPagoID" Type="Int32" Nullable="false" />
+    <Property Name="catEntidadFederativaID" Type="Int32" />
+    <Property Name="catDetinoID" Type="Int32" />
+    <Property Name="catPartidaID" Type="Int32" Nullable="false" />
+    <Property Name="fechaInicio" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="fechaFin" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="numReciboPago" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="montoSolicitado" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+    <NavigationProperty Name="CatConceptoPago" Relationship="Self.FK_GastoCorriente_conceptoPagoID" FromRole="GastoCorriente" ToRole="CatConceptoPago" />
+    <NavigationProperty Name="CatDestino" Relationship="Self.FK_GastoCorriente_destinoID" FromRole="GastoCorriente" ToRole="CatDestino" />
+    <NavigationProperty Name="CatEntidadFederativa" Relationship="Self.FK_GastoCorriente_entidadID" FromRole="GastoCorriente" ToRole="CatEntidadFederativa" />
+    <NavigationProperty Name="CatPartida" Relationship="Self.FK_GastoCorriente_codPartida" FromRole="GastoCorriente" ToRole="CatPartida" />
+    <NavigationProperty Name="SolicitudRecurso" Relationship="Self.FK_GastoCorriente_solicitudID" FromRole="GastoCorriente" ToRole="SolicitudRecurso" />
+  </EntityType>
+  <EntityType Name="GastoFunerario">
+    <Key>
+      <PropertyRef Name="gastosFunerariosID" />
+    </Key>
+    <Property Name="gastosFunerariosID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="solicitudRecursoID" Type="Int32" Nullable="false" />
+    <Property Name="catPartidaID" Type="Int32" Nullable="false" />
+    <Property Name="monto" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+    <Property Name="numeroExpediente" Type="String" MaxLength="5" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="CatPartida" Relationship="Self.FK_GastosFunerarios_codPartida" FromRole="GastoFunerario" ToRole="CatPartida" />
+    <NavigationProperty Name="SolicitudRecurso" Relationship="Self.FK_GastosFunerarios_solicitudID" FromRole="GastoFunerario" ToRole="SolicitudRecurso" />
+  </EntityType>
+  <EntityType Name="Homologado">
+    <Key>
+      <PropertyRef Name="homologadoID" />
+    </Key>
+    <Property Name="homologadoID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="importeHomologado" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+    <Property Name="numeroExpediente" Type="String" MaxLength="5" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="estatusLogico" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="DetalleSolicitudRecurso" Relationship="Self.FK_Viatico_homologado" FromRole="Homologado" ToRole="DetalleSolicitudRecurso" />
+  </EntityType>
+  <EntityType Name="ImpuestoSobreNomina">
+    <Key>
+      <PropertyRef Name="impuestoSobreNominaID" />
+    </Key>
+    <Property Name="impuestoSobreNominaID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="solicitudRecursoID" Type="Int32" Nullable="false" />
+    <Property Name="catPartidaID" Type="Int32" Nullable="false" />
+    <Property Name="fechaInicio" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="fechaFin" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="importe" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+    <NavigationProperty Name="CatPartida" Relationship="Self.FK_ImpuestosSobreNomina_codPartida" FromRole="ImpuestoSobreNomina" ToRole="CatPartida" />
+    <NavigationProperty Name="SolicitudRecurso" Relationship="Self.FK_ImpuestosSobreNomina_solicitudID" FromRole="ImpuestoSobreNomina" ToRole="SolicitudRecurso" />
+  </EntityType>
+  <EntityType Name="Laudo">
+    <Key>
+      <PropertyRef Name="laudoID" />
+    </Key>
+    <Property Name="laudoID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="solicitudRecursoID" Type="Int32" Nullable="false" />
+    <Property Name="catConceptoGastoID" Type="Int32" Nullable="false" />
+    <Property Name="catPartidaID" Type="Int32" Nullable="false" />
+    <Property Name="numeroExpediente" Type="String" MaxLength="5" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="importe" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+    <Property Name="estatusLogico" Type="Boolean" />
+    <NavigationProperty Name="CatConceptoGasto" Relationship="Self.FK_Laudos_conceptoGastosID" FromRole="Laudo" ToRole="CatConceptoGasto" />
+    <NavigationProperty Name="CatPartida" Relationship="Self.FK_Laudos_codPartida" FromRole="Laudo" ToRole="CatPartida" />
+    <NavigationProperty Name="SolicitudRecurso" Relationship="Self.FK_Laudos_solicitudID" FromRole="Laudo" ToRole="SolicitudRecurso" />
+  </EntityType>
+  <EntityType Name="LogError">
+    <Key>
+      <PropertyRef Name="logErrorID" />
+    </Key>
+    <Property Name="logErrorID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="usuarioID" Type="Int32" />
+    <Property Name="error" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="formulario" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="evento" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="fecha" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="codigoError" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="nombreEquipo" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="ipEquipo" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="stacktrace" Type="String" MaxLength="800" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Usuario" Relationship="Self.FK_LogError_usuarioID" FromRole="LogError" ToRole="Usuario" />
+  </EntityType>
+  <EntityType Name="LugarSolicitudRecurso">
+    <Key>
+      <PropertyRef Name="lugarSolicitudRecursoID" />
+    </Key>
+    <Property Name="lugarSolicitudRecursoID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="detalleSolicitudRecursoID" Type="Int32" Nullable="false" />
+    <Property Name="catMonedaID" Type="Int32" Nullable="false" />
+    <Property Name="catPaisID" Type="Int32" Nullable="false" />
+    <Property Name="catEntidadFederativaID" Type="Int32" />
+    <Property Name="catMunicipioID" Type="Int32" />
+    <Property Name="catDestinoID" Type="Int32" />
+    <Property Name="fechaInicio" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="fechaFin" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="diasCompletos" Type="Int32" Nullable="false" />
+    <Property Name="diasMedios" Type="Int32" Nullable="false" />
+    <Property Name="importeOtorgado" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+    <Property Name="tipoCambio" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+    <NavigationProperty Name="CatDestino" Relationship="Self.FK_LugarSolicitudRecurso_catDestino" FromRole="LugarSolicitudRecurso" ToRole="CatDestino" />
+    <NavigationProperty Name="CatEntidadFederativa" Relationship="Self.FK_LugarSolicitudRecurso_catEntidadFederativa" FromRole="LugarSolicitudRecurso" ToRole="CatEntidadFederativa" />
+    <NavigationProperty Name="CatMoneda" Relationship="Self.FK_LugarSolicitudRecurso_CatMoneda" FromRole="LugarSolicitudRecurso" ToRole="CatMoneda" />
+    <NavigationProperty Name="CatMunicipio" Relationship="Self.FK_LugarSolicitudRecurso_catMunicipio" FromRole="LugarSolicitudRecurso" ToRole="CatMunicipio" />
+    <NavigationProperty Name="CatPais" Relationship="Self.FK_LugarSolicitudRecurso_CatPais" FromRole="LugarSolicitudRecurso" ToRole="CatPais" />
+    <NavigationProperty Name="DetalleSolicitudRecurso" Relationship="Self.FK_LugarSolicitudRecurso_DetalleSolicitudRecurso" FromRole="LugarSolicitudRecurso" ToRole="DetalleSolicitudRecurso" />
+  </EntityType>
+  <EntityType Name="ModuloSubmodulo">
+    <Key>
+      <PropertyRef Name="moduloSubmoduloID" />
+    </Key>
+    <Property Name="moduloSubmoduloID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="catModuloID" Type="Int32" Nullable="false" />
+    <Property Name="catSubmoduloID" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="CatModulo" Relationship="Self.FK__ModuloSub__modul__00AA174D" FromRole="ModuloSubmodulo" ToRole="CatModulo" />
+    <NavigationProperty Name="CatSubmodulo" Relationship="Self.FK__ModuloSub__Submo__019E3B86" FromRole="ModuloSubmodulo" ToRole="CatSubmodulo" />
+  </EntityType>
+  <EntityType Name="MovimientoAdministrativo">
+    <Key>
+      <PropertyRef Name="movimientoAdministrativoID" />
+    </Key>
+    <Property Name="movimientoAdministrativoID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="solicitudRecursoID" Type="Int32" Nullable="false" />
+    <Property Name="catPagoID" Type="Int32" Nullable="false" />
+    <Property Name="presionGastoID" Type="Int32" Nullable="false" />
+    <Property Name="catCuentaID" Type="Int32" Nullable="false" />
+    <Property Name="descripcionPago" Type="String" MaxLength="300" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="montoTotalSolicitud" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+    <Property Name="estatusLogico" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="CatCuenta" Relationship="Self.FK_MovimientoAdministrativo_cuentaID" FromRole="MovimientoAdministrativo" ToRole="CatCuenta" />
+    <NavigationProperty Name="CatPago" Relationship="Self.FK_MovimientoAdministrativo_tipoPagoID" FromRole="MovimientoAdministrativo" ToRole="CatPago" />
+    <NavigationProperty Name="PresionGasto" Relationship="Self.FK_MovimientoAdministrativo_presionGastoID" FromRole="MovimientoAdministrativo" ToRole="PresionGasto" />
+    <NavigationProperty Name="SolicitudRecurso" Relationship="Self.FK_MovimientoAdministrativo_solicitudID" FromRole="MovimientoAdministrativo" ToRole="SolicitudRecurso" />
+    <NavigationProperty Name="PagoCheque" Relationship="Self.FK_PagoCheque_movimientoAdmID" FromRole="MovimientoAdministrativo" ToRole="PagoCheque" />
+    <NavigationProperty Name="TransferenciaBancaria" Relationship="Self.FK_TransferenciaBancaria_movimientoAdmID" FromRole="MovimientoAdministrativo" ToRole="TransferenciaBancaria" />
+  </EntityType>
+  <EntityType Name="MovimientoBancario">
+    <Key>
+      <PropertyRef Name="movimientoBancarioID" />
+    </Key>
+    <Property Name="movimientoBancarioID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="catCuentaID" Type="Int32" Nullable="false" />
+    <Property Name="descripcion" Type="String" MaxLength="300" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="fecha" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ingreso" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="egreso" Type="Decimal" Precision="19" Scale="4" />
+    <NavigationProperty Name="CatCuenta" Relationship="Self.FK_MovimientoBancario_cuentaID" FromRole="MovimientoBancario" ToRole="CatCuenta" />
+  </EntityType>
+  <EntityType Name="PagoCheque">
+    <Key>
+      <PropertyRef Name="pagoChequeID" />
+    </Key>
+    <Property Name="pagoChequeID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="movimientoAdministrativoID" Type="Int32" Nullable="false" />
+    <Property Name="catEstausPagoID" Type="Int16" Nullable="false" />
+    <Property Name="fechaEmision" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="pagueseA" Type="String" MaxLength="60" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="numeroCheque" Type="Int32" Nullable="false" />
+    <Property Name="importe" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+    <Property Name="numeroExpediente" Type="String" MaxLength="5" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="CatEstatusPago" Relationship="Self.FK_PagoCheque_estatusPagoID" FromRole="PagoCheque" ToRole="CatEstatusPago" />
+    <NavigationProperty Name="MovimientoAdministrativo" Relationship="Self.FK_PagoCheque_movimientoAdmID" FromRole="PagoCheque" ToRole="MovimientoAdministrativo" />
+  </EntityType>
+  <EntityType Name="Parametro">
+    <Key>
+      <PropertyRef Name="parametroID" />
+    </Key>
+    <Property Name="parametroID" Type="Int32" Nullable="false" />
+    <Property Name="moduloID" Type="Int32" Nullable="false" />
+    <Property Name="parametro1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="descripcion" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="valorInt" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="CatModulo" Relationship="Self.FK__Parametro__modul__58920452" FromRole="Parametro" ToRole="CatModulo" />
+  </EntityType>
+  <EntityType Name="PartidaSolicitudRecurso">
+    <Key>
+      <PropertyRef Name="partidaSolicitudRecursoID" />
+    </Key>
+    <Property Name="partidaSolicitudRecursoID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="detalleSolicitudRecursoID" Type="Int32" Nullable="false" />
+    <Property Name="catPartidaID" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="CatPartida" Relationship="Self.FK_PartidaSolicitudRecurso_CatPartida" FromRole="PartidaSolicitudRecurso" ToRole="CatPartida" />
+    <NavigationProperty Name="DetalleSolicitudRecurso" Relationship="Self.fk_PartidaSolicitudRecurso_DetalleSolicitudRecurso" FromRole="PartidaSolicitudRecurso" ToRole="DetalleSolicitudRecurso" />
+  </EntityType>
+  <EntityType Name="Penalizacion">
+    <Key>
+      <PropertyRef Name="penalizacionID" />
+    </Key>
+    <Property Name="penalizacionID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="proveedorID" Type="Int32" Nullable="false" />
+    <Property Name="catMonedaID" Type="Int32" Nullable="false" />
+    <Property Name="importe" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="IVA" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="retIVA" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="tipoDeCambio" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+    <Property Name="total" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="aplica" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="CatMoneda" Relationship="Self.FK_Penalizaciones_monedaID" FromRole="Penalizacion" ToRole="CatMoneda" />
+    <NavigationProperty Name="Proveedor" Relationship="Self.FK_Penalizaciones_proveedoresID" FromRole="Penalizacion" ToRole="Proveedor" />
+  </EntityType>
+  <EntityType Name="PerfilModulo">
+    <Key>
+      <PropertyRef Name="perfilModuloID" />
+    </Key>
+    <Property Name="perfilModuloID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="catPerfilID" Type="Int32" Nullable="false" />
+    <Property Name="catModuloID" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="CatModulo" Relationship="Self.FK__PerfilMod__modul__10E07F16" FromRole="PerfilModulo" ToRole="CatModulo" />
+    <NavigationProperty Name="CatPerfil" Relationship="Self.FK__PerfilMod__perfi__0FEC5ADD" FromRole="PerfilModulo" ToRole="CatPerfil" />
+  </EntityType>
+  <EntityType Name="PolizaPago">
+    <Key>
+      <PropertyRef Name="polizaPagoID" />
+    </Key>
+    <Property Name="polizaPagoID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="catPolizaID" Type="Int32" Nullable="false" />
+    <Property Name="catPagoPolizaID" Type="Int16" Nullable="false" />
+    <Property Name="pagoIdentificador" Type="Int32" Nullable="false" />
+    <Property Name="numeroPoliza" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="fechaPoliza" Type="DateTime" Nullable="false" Precision="3" />
+    <NavigationProperty Name="CatPagoPoliza" Relationship="Self.PK_PolizaPago_CatTipoPagoPoliza" FromRole="PolizaPago" ToRole="CatPagoPoliza" />
+    <NavigationProperty Name="CatPoliza" Relationship="Self.FK_PolizaPago_tipoPolizaID" FromRole="PolizaPago" ToRole="CatPoliza" />
+  </EntityType>
+  <EntityType Name="PresionGasto">
+    <Key>
+      <PropertyRef Name="presionGastoID" />
+    </Key>
+    <Property Name="presionGastoID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="catEstausPresionID" Type="Int16" Nullable="false" />
+    <Property Name="folioPresion" Type="Int32" Nullable="false" />
+    <Property Name="fechaPresion" Type="DateTime" Nullable="false" Precision="3" />
+    <NavigationProperty Name="CatEstatusPresion" Relationship="Self.FK_PresionGasto_estatusPresionID" FromRole="PresionGasto" ToRole="CatEstatusPresion" />
+    <NavigationProperty Name="MovimientoAdministrativo" Relationship="Self.FK_MovimientoAdministrativo_presionGastoID" FromRole="PresionGasto" ToRole="MovimientoAdministrativo" />
+  </EntityType>
+  <EntityType Name="PresupuestoClc">
+    <Key>
+      <PropertyRef Name="presupuestoClcID" />
+    </Key>
+    <Property Name="presupuestoClcID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="solicitudRecursoID" Type="Int32" />
+    <Property Name="clcID" Type="Int32" />
+    <Property Name="montoClc" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+    <NavigationProperty Name="Clc" Relationship="Self.FK_PresupuestoClc_clcID" FromRole="PresupuestoClc" ToRole="Clc" />
+    <NavigationProperty Name="SolicitudRecurso" Relationship="Self.FK_PresupuestoClc_solicitudID" FromRole="PresupuestoClc" ToRole="SolicitudRecurso" />
+  </EntityType>
+  <EntityType Name="Proveedor">
+    <Key>
+      <PropertyRef Name="proveedorID" />
+    </Key>
+    <Property Name="proveedorID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="solicitudRecursoID" Type="Int32" Nullable="false" />
+    <Property Name="catPartidaID" Type="Int32" Nullable="false" />
+    <Property Name="catMonedaID" Type="Int32" Nullable="false" />
+    <Property Name="suficienciaPresupuestalID" Type="Int32" Nullable="false" />
+    <Property Name="oficioRM" Type="String" MaxLength="18" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="importe" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+    <Property Name="tipoDeCambio" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="total" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="anticipo" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="CatMoneda" Relationship="Self.FK_Proveedores_monedaID" FromRole="Proveedor" ToRole="CatMoneda" />
+    <NavigationProperty Name="CatPartida" Relationship="Self.FK_Proveedores_codPartida" FromRole="Proveedor" ToRole="CatPartida" />
+    <NavigationProperty Name="Factura" Relationship="Self.FK_Factura_proveedoresID" FromRole="Proveedor" ToRole="Factura" />
+    <NavigationProperty Name="Penalizacion" Relationship="Self.FK_Penalizaciones_proveedoresID" FromRole="Proveedor" ToRole="Penalizacion" />
+    <NavigationProperty Name="SolicitudRecurso" Relationship="Self.FK_Proveedores_solicitudID" FromRole="Proveedor" ToRole="SolicitudRecurso" />
+  </EntityType>
+  <EntityType Name="RegistroContable">
+    <Key>
+      <PropertyRef Name="registroContableID" />
+    </Key>
+    <Property Name="registroContableID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="solicitudRecursoID" Type="Int32" Nullable="false" />
+    <Property Name="catTipoPolizaID" Type="Int32" Nullable="false" />
+    <Property Name="consecutivo" Type="Int32" Nullable="false" />
+    <Property Name="mes" Type="String" MaxLength="3" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="fechaEmision" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="anio" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="SolicitudRecurso" Relationship="Self.FK_RegistroContable_SolicitudRecursos" FromRole="RegistroContable" ToRole="SolicitudRecurso" />
+  </EntityType>
+  <EntityType Name="RegistroVolante">
+    <Key>
+      <PropertyRef Name="registroVolanteID" />
+    </Key>
+    <Property Name="registroVolanteID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="solicitudRecursoID" Type="Int32" Nullable="false" />
+    <Property Name="area" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="tipoDeGasto" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="importeDevuelto" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="fechaRecepcion" Type="String" MaxLength="11" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="fechaElaboracion" Type="String" MaxLength="11" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="tipoMoneda" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="numeroVolante" Type="Int32" Nullable="false" />
+    <Property Name="folio" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="oficio" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="motivoDevolucion" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="tipoDeCambio" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="anioComprobado" Type="Int32" Nullable="false" />
+    <Property Name="fechaGeneracionVolante" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="estatusLogico" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="SolicitudRecurso" Relationship="Self.fk_RegVol_SolRec" FromRole="RegistroVolante" ToRole="SolicitudRecurso" />
+  </EntityType>
+  <EntityType Name="SolicitudCatUnidadAdm">
+    <Key>
+      <PropertyRef Name="solicitudCatUnidadAdmID" />
+    </Key>
+    <Property Name="solicitudCatUnidadAdmID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="catUnidadAdmID" Type="Int32" Nullable="false" />
+    <Property Name="catSolicitudID" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="CatSolicitud" Relationship="Self.FK_SolicitudCatUnidadAdm_CatSolicitud" FromRole="SolicitudCatUnidadAdm" ToRole="CatSolicitud" />
+    <NavigationProperty Name="CatUnidadAdm" Relationship="Self.FK_SolicitudCatUnidadAdm_CatUnidadAdm" FromRole="SolicitudCatUnidadAdm" ToRole="CatUnidadAdm" />
+  </EntityType>
+  <EntityType Name="SolicitudFirma">
+    <Key>
+      <PropertyRef Name="solicitudFirmaID" />
+    </Key>
+    <Property Name="solicitudFirmaID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="solicitudRecursoID" Type="Int32" Nullable="false" />
+    <Property Name="catFirmaID" Type="Int32" Nullable="false" />
+    <Property Name="estatusID" Type="Int32" Nullable="false" />
+    <Property Name="FechaFirma" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="EstatusLogico" Type="Boolean" />
+    <NavigationProperty Name="CatFirma" Relationship="Self.FK_SolicitudFirma_CatFirma" FromRole="SolicitudFirma" ToRole="CatFirma" />
+    <NavigationProperty Name="SolicitudFirma1" Relationship="Self.FK_SolicitudFirma_SolicitudFirma" FromRole="SolicitudFirma" ToRole="SolicitudFirma1" />
+    <NavigationProperty Name="SolicitudFirma2" Relationship="Self.FK_SolicitudFirma_SolicitudFirma" FromRole="SolicitudFirma1" ToRole="SolicitudFirma" />
+    <NavigationProperty Name="SolicitudRecurso" Relationship="Self.FK_SolicitudFirma_SolicitudrECURSO" FromRole="SolicitudFirma" ToRole="SolicitudRecurso" />
+  </EntityType>
+  <EntityType Name="SolicitudRecurso">
+    <Key>
+      <PropertyRef Name="solicitudRecursoID" />
+    </Key>
+    <Property Name="solicitudRecursoID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="catSolicitudID" Type="Int32" Nullable="false" />
+    <Property Name="catPrioridadID" Type="Int32" Nullable="false" />
+    <Property Name="catUnidadAdmID" Type="Int32" Nullable="false" />
+    <Property Name="catEstatusSolicitudID" Type="Int16" Nullable="false" />
+    <Property Name="fechaSolicitud" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="observaciones" Type="String" MaxLength="500" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="oficioSolicitud" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="fechaControl" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="fechaActualizacion" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="catEventoID" Type="Int32" />
+    <Property Name="folioSolicitud" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="catFormaComprobacionID" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Agregaduria" Relationship="Self.FK_Agregadurias_solicitudID" FromRole="SolicitudRecurso" ToRole="Agregaduria" />
+    <NavigationProperty Name="Asignacion" Relationship="Self.FK_Asignacion_solicitudID" FromRole="SolicitudRecurso" ToRole="Asignacion" />
+    <NavigationProperty Name="Beca" Relationship="Self.FK_Becas_solicitudID" FromRole="SolicitudRecurso" ToRole="Beca" />
+    <NavigationProperty Name="Becalos" Relationship="Self.FK_Becalos_solicitudID" FromRole="SolicitudRecurso" ToRole="Becalos" />
+    <NavigationProperty Name="Bitacora" Relationship="Self.FK_BitacoraMovimiento_solicitudID" FromRole="SolicitudRecurso" ToRole="Bitacora" />
+    <NavigationProperty Name="CargaCuotaDiaria" Relationship="Self.FK_CuotasDiarias_solicitudID" FromRole="SolicitudRecurso" ToRole="CargaCuotaDiaria" />
+    <NavigationProperty Name="CatEstatusSolicitud" Relationship="Self.FK_SolicitudRecursos_estatusID" FromRole="SolicitudRecurso" ToRole="CatEstatusSolicitud" />
+    <NavigationProperty Name="CatEvento" Relationship="Self.fk_evento_solicitud" FromRole="SolicitudRecurso" ToRole="CatEvento" />
+    <NavigationProperty Name="CatFormaComprobacion" Relationship="Self.FK_SolicitudRecurso_CatFormaComprobacion" FromRole="SolicitudRecurso" ToRole="CatFormaComprobacion" />
+    <NavigationProperty Name="CatPrioridad" Relationship="Self.FK_SolicitudRecursos_prioridadID" FromRole="SolicitudRecurso" ToRole="CatPrioridad" />
+    <NavigationProperty Name="CatSolicitud" Relationship="Self.FK_SolicitudRecursos_tipoSolicitudID" FromRole="SolicitudRecurso" ToRole="CatSolicitud" />
+    <NavigationProperty Name="CatUnidadAdm" Relationship="Self.FK_SolicitudRecursos_codUA" FromRole="SolicitudRecurso" ToRole="CatUnidadAdm" />
+    <NavigationProperty Name="DetalleSolicitudRecurso" Relationship="Self.FK_Viaticos_SolicitudRecursos" FromRole="SolicitudRecurso" ToRole="DetalleSolicitudRecurso" />
+    <NavigationProperty Name="Documento" Relationship="Self.FK_Documento_solicitudID" FromRole="SolicitudRecurso" ToRole="Documento" />
+    <NavigationProperty Name="EstatusMovimiento" Relationship="Self.FK_EstatusMovimiento_solicitudID" FromRole="SolicitudRecurso" ToRole="EstatusMovimiento" />
+    <NavigationProperty Name="FirmaElectronica" Relationship="Self.FK_firmaElectronica_solicitudID" FromRole="SolicitudRecurso" ToRole="FirmaElectronica" />
+    <NavigationProperty Name="GastoAduana" Relationship="Self.FK_GastosAduanales_solicitudID" FromRole="SolicitudRecurso" ToRole="GastoAduana" />
+    <NavigationProperty Name="GastoCorriente" Relationship="Self.FK_GastoCorriente_solicitudID" FromRole="SolicitudRecurso" ToRole="GastoCorriente" />
+    <NavigationProperty Name="GastoFunerario" Relationship="Self.FK_GastosFunerarios_solicitudID" FromRole="SolicitudRecurso" ToRole="GastoFunerario" />
+    <NavigationProperty Name="ImpuestoSobreNomina" Relationship="Self.FK_ImpuestosSobreNomina_solicitudID" FromRole="SolicitudRecurso" ToRole="ImpuestoSobreNomina" />
+    <NavigationProperty Name="Laudo" Relationship="Self.FK_Laudos_solicitudID" FromRole="SolicitudRecurso" ToRole="Laudo" />
+    <NavigationProperty Name="MovimientoAdministrativo" Relationship="Self.FK_MovimientoAdministrativo_solicitudID" FromRole="SolicitudRecurso" ToRole="MovimientoAdministrativo" />
+    <NavigationProperty Name="PresupuestoClc" Relationship="Self.FK_PresupuestoClc_solicitudID" FromRole="SolicitudRecurso" ToRole="PresupuestoClc" />
+    <NavigationProperty Name="Proveedor" Relationship="Self.FK_Proveedores_solicitudID" FromRole="SolicitudRecurso" ToRole="Proveedor" />
+    <NavigationProperty Name="RegistroContable" Relationship="Self.FK_RegistroContable_SolicitudRecursos" FromRole="SolicitudRecurso" ToRole="RegistroContable" />
+    <NavigationProperty Name="RegistroVolante" Relationship="Self.fk_RegVol_SolRec" FromRole="SolicitudRecurso" ToRole="RegistroVolante" />
+    <NavigationProperty Name="SolicitudFirma" Relationship="Self.FK_SolicitudFirma_SolicitudrECURSO" FromRole="SolicitudRecurso" ToRole="SolicitudFirma" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="TipoSolicitudPorArea">
+    <Key>
+      <PropertyRef Name="tipoSolicitudPorAreaConfigID" />
+    </Key>
+    <Property Name="tipoSolicitudPorAreaConfigID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="catAreaID" Type="Int32" Nullable="false" />
+    <Property Name="catSolicitudID" Type="Int32" Nullable="false" />
+    <Property Name="catRegionID" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="CatArea" Relationship="Self.fk_TipoSolPorAreaCatAreas" FromRole="TipoSolicitudPorArea" ToRole="CatArea" />
+    <NavigationProperty Name="CatRegion" Relationship="Self.fk_TipoSolPorAreaCatRegion" FromRole="TipoSolicitudPorArea" ToRole="CatRegion" />
+    <NavigationProperty Name="CatSolicitud" Relationship="Self.fk_TipoSolPorAreaCatTipoSol" FromRole="TipoSolicitudPorArea" ToRole="CatSolicitud" />
+  </EntityType>
+  <EntityType Name="TipoSolicitudPorUA">
+    <Key>
+      <PropertyRef Name="tipoSolicitudPorUAID" />
+    </Key>
+    <Property Name="tipoSolicitudPorUAID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="catSolicitudID" Type="Int32" Nullable="false" />
+    <Property Name="catUnidadAdmID" Type="Int32" Nullable="false" />
+    <Property Name="estatusLogico" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="CatSolicitud" Relationship="Self.fk_TipoSolPorUACatTipoSol" FromRole="TipoSolicitudPorUA" ToRole="CatSolicitud" />
+    <NavigationProperty Name="CatUnidadAdm" Relationship="Self.fk_TipoSolPorUACatUA" FromRole="TipoSolicitudPorUA" ToRole="CatUnidadAdm" />
+  </EntityType>
+  <EntityType Name="TransferenciaBancaria">
+    <Key>
+      <PropertyRef Name="transferenciaBancariaID" />
+    </Key>
+    <Property Name="transferenciaBancariaID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="movimientoAdministrativoID" Type="Int32" Nullable="false" />
+    <Property Name="catEstatusPagoID" Type="Int16" Nullable="false" />
+    <Property Name="fechaPago" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="beneficiario" Type="String" MaxLength="60" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="cuentaClabe" Type="String" MaxLength="18" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="montoPago" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+    <Property Name="banco" Type="String" MaxLength="40" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="numeroTransferencia" Type="String" MaxLength="18" FixedLength="false" Unicode="false" />
+    <Property Name="concepto" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="numeroExpediente" Type="String" MaxLength="5" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="CatEstatusPago" Relationship="Self.FK_TransferenciaBancaria_estatusPagoID" FromRole="TransferenciaBancaria" ToRole="CatEstatusPago" />
+    <NavigationProperty Name="MovimientoAdministrativo" Relationship="Self.FK_TransferenciaBancaria_movimientoAdmID" FromRole="TransferenciaBancaria" ToRole="MovimientoAdministrativo" />
+  </EntityType>
+  <EntityType Name="Usuario">
+    <Key>
+      <PropertyRef Name="usuarioID" />
+    </Key>
+    <Property Name="usuarioID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="catUnidadAdmID" Type="Int32" Nullable="false" />
+    <Property Name="catPerfilID" Type="Int32" Nullable="false" />
+    <Property Name="cuenta" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="correo" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="numeroExpediente" Type="Int32" Nullable="false" />
+    <Property Name="estatusLogico" Type="Boolean" Nullable="false" />
+    <Property Name="catRolID" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Asignacion" Relationship="Self.FK_Asignacion_usuarioID" FromRole="Usuario" ToRole="Asignacion" />
+    <NavigationProperty Name="Bitacora" Relationship="Self.FK_BitacoraMovimiento_usuarioID" FromRole="Usuario" ToRole="Bitacora" />
+    <NavigationProperty Name="CatPerfil" Relationship="Self.FK_Usuario_CatPerfil" FromRole="Usuario" ToRole="CatPerfil" />
+    <NavigationProperty Name="CatPerfil1" Relationship="Self.FK_Usuarios_perfilID" FromRole="Usuario" ToRole="CatPerfil" />
+    <NavigationProperty Name="CatRol" Relationship="Self.FK_Usuario_CatRol" FromRole="Usuario" ToRole="CatRol" />
+    <NavigationProperty Name="CatUnidadAdm" Relationship="Self.FK_Usuarios_codUA" FromRole="Usuario" ToRole="CatUnidadAdm" />
+    <NavigationProperty Name="EstatusMovimiento" Relationship="Self.FK_EstatusMovimiento_usuarioID" FromRole="Usuario" ToRole="EstatusMovimiento" />
+    <NavigationProperty Name="LogError" Relationship="Self.FK_LogError_usuarioID" FromRole="Usuario" ToRole="LogError" />
+    <NavigationProperty Name="UsuarioRegionFiscalizacion" Relationship="Self.FK_UsuarioRegionFiscalizacion_Usuarios" FromRole="Usuario" ToRole="UsuarioRegionFiscalizacion" />
+  </EntityType>
+  <EntityType Name="UsuarioRegionFiscalizacion">
+    <Key>
+      <PropertyRef Name="usuarioRegionFiscalizacionID" />
+    </Key>
+    <Property Name="usuarioID" Type="Int32" Nullable="false" />
+    <Property Name="catRegionID" Type="Int32" Nullable="false" />
+    <Property Name="estatusLogico" Type="Boolean" Nullable="false" />
+    <Property Name="usuarioRegionFiscalizacionID" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="CatRegion" Relationship="Self.FK_UsuarioRegionFiscalizacion_CatRegion" FromRole="UsuarioRegionFiscalizacion" ToRole="CatRegion" />
+    <NavigationProperty Name="Usuario" Relationship="Self.FK_UsuarioRegionFiscalizacion_Usuarios" FromRole="UsuarioRegionFiscalizacion" ToRole="Usuario" />
+  </EntityType>
+  <EntityType Name="AreaUnidadAdm">
+    <Key>
+      <PropertyRef Name="relacionAreaUA" />
+      <PropertyRef Name="catAreaID" />
+      <PropertyRef Name="catUnidadAdmID" />
+      <PropertyRef Name="estatusLogico" />
+    </Key>
+    <Property Name="relacionAreaUA" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="catAreaID" Type="Int32" Nullable="false" />
+    <Property Name="catUnidadAdmID" Type="Int32" Nullable="false" />
+    <Property Name="estatusLogico" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="CatArea" Relationship="Self.FK_AreaUnidadAdm_CatAreas" FromRole="AreaUnidadAdm" ToRole="CatArea" />
+    <NavigationProperty Name="CatUnidadAdm" Relationship="Self.FK_AreaUnidadAdm_CatUnidadAdministrativa" FromRole="AreaUnidadAdm" ToRole="CatUnidadAdm" />
+  </EntityType>
+  <EntityType Name="TipoJefeDepto">
+    <Key>
+      <PropertyRef Name="TipoJefeDeptoID" />
+      <PropertyRef Name="usuarioID" />
+      <PropertyRef Name="catJefeDeptoID" />
+      <PropertyRef Name="estatusLogico" />
+    </Key>
+    <Property Name="TipoJefeDeptoID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="usuarioID" Type="Int32" Nullable="false" />
+    <Property Name="catJefeDeptoID" Type="Int32" Nullable="false" />
+    <Property Name="estatusLogico" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="CatJefeDepto" Relationship="Self.FK_TipoJefeDepto_CatTipoDependiente" FromRole="TipoJefeDepto" ToRole="CatJefeDepto" />
+  </EntityType>
+  <EntityType Name="vEstatusMovimientoBanco">
+    <Key>
+      <PropertyRef Name="codPartida" />
+      <PropertyRef Name="estatusBanco" />
+    </Key>
+    <Property Name="codPartida" Type="Int32" Nullable="false" />
+    <Property Name="estatusBanco" Type="String" MaxLength="1" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="vwAsistentesEnlace">
+    <Key>
+      <PropertyRef Name="enlaceID" />
+      <PropertyRef Name="expediente" />
+    </Key>
+    <Property Name="enlaceID" Type="String" MaxLength="5" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="expediente" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="vwBajaIntegrante">
+    <Key>
+      <PropertyRef Name="expediente" />
+      <PropertyRef Name="grado" />
+      <PropertyRef Name="cargo" />
+      <PropertyRef Name="Adscripcion" />
+      <PropertyRef Name="codEstatusIntegrante" />
+      <PropertyRef Name="descripcionEstatusIntregrante" />
+      <PropertyRef Name="movimiento" />
+    </Key>
+    <Property Name="expediente" Type="Int32" Nullable="false" />
+    <Property Name="nombre" Type="String" MaxLength="93" FixedLength="false" Unicode="false" />
+    <Property Name="RFC" Type="String" MaxLength="13" FixedLength="true" Unicode="false" />
+    <Property Name="grado" Type="String" MaxLength="2" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="cargo" Type="String" MaxLength="4" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="Adscripcion" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="codEstatusIntegrante" Type="Int32" Nullable="false" />
+    <Property Name="descripcionEstatusIntregrante" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="movimiento" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="vwCentrosDeDistribucion">
+    <Key>
+      <PropertyRef Name="codCentroDistribucion" />
+    </Key>
+    <Property Name="codCentroDistribucion" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="enlaceID" Type="String" MaxLength="5" FixedLength="true" Unicode="false" />
+  </EntityType>
+  <EntityType Name="vwCuentasIntegrante">
+    <Key>
+      <PropertyRef Name="cuentaIntegranteID" />
+      <PropertyRef Name="descripcion" />
+      <PropertyRef Name="tipoCuentaID" />
+      <PropertyRef Name="descripcionTipoCuenta" />
+    </Key>
+    <Property Name="cuentaIntegranteID" Type="Int32" Nullable="false" />
+    <Property Name="expediente" Type="Int32" />
+    <Property Name="descripcionCuenta" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="clabeInterbancaria" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="descripcion" Type="String" MaxLength="40" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="tipoCuentaID" Type="Byte" Nullable="false" />
+    <Property Name="descripcionTipoCuenta" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="estatusLogico" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="vwDatosIntegrante">
+    <Key>
+      <PropertyRef Name="expediente" />
+      <PropertyRef Name="grado" />
+      <PropertyRef Name="codAdscripcion" />
+      <PropertyRef Name="Adscripcion" />
+      <PropertyRef Name="codCentroDistribucion" />
+      <PropertyRef Name="enlaceID" />
+      <PropertyRef Name="codEstatusIntegrante" />
+    </Key>
+    <Property Name="expediente" Type="Int32" Nullable="false" />
+    <Property Name="grado" Type="String" MaxLength="2" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="cargo" Type="String" MaxLength="4" FixedLength="true" Unicode="false" />
+    <Property Name="nombre" Type="String" MaxLength="93" FixedLength="false" Unicode="false" />
+    <Property Name="RFC" Type="String" MaxLength="14" FixedLength="false" Unicode="false" />
+    <Property Name="codAdscripcion" Type="Int32" Nullable="false" />
+    <Property Name="Adscripcion" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="codCentroDistribucion" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="enlaceID" Type="String" MaxLength="5" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="codEstatusIntegrante" Type="Int32" Nullable="false" />
+    <Property Name="descripcionEstatusIntegrante" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="vwDependientesIntegrante">
+    <Key>
+      <PropertyRef Name="dependienteID" />
+      <PropertyRef Name="tipoDependienteID" />
+      <PropertyRef Name="descripcionTipoDependiente" />
+      <PropertyRef Name="nombre" />
+      <PropertyRef Name="sexo" />
+    </Key>
+    <Property Name="dependienteID" Type="Int32" Nullable="false" />
+    <Property Name="expediente" Type="Int32" />
+    <Property Name="tipoDependienteID" Type="Int16" Nullable="false" />
+    <Property Name="descripcionTipoDependiente" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="apellidoPaterno" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="apellidoMaterno" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="nombre" Type="String" MaxLength="80" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="fechaNacimiento" Type="DateTime" Precision="3" />
+    <Property Name="CURP" Type="String" MaxLength="18" FixedLength="true" Unicode="false" />
+    <Property Name="RFC" Type="String" MaxLength="13" FixedLength="true" Unicode="false" />
+    <Property Name="sexo" Type="String" MaxLength="1" FixedLength="true" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="vwIncidenciasIntegrante">
+    <Key>
+      <PropertyRef Name="tipoIncidencia" />
+    </Key>
+    <Property Name="expediente" Type="Int32" />
+    <Property Name="tipoIncidencia" Type="String" MaxLength="23" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="fechaInicial" Type="DateTime" Precision="3" />
+    <Property Name="fechaFinal" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="vwTipoDependientesIntegrante">
+    <Key>
+      <PropertyRef Name="tipoDepID" />
+      <PropertyRef Name="tipoSNSPID" />
+      <PropertyRef Name="descripcionTipoDependiente" />
+      <PropertyRef Name="estatusLogico" />
+    </Key>
+    <Property Name="tipoDepID" Type="Int16" Nullable="false" />
+    <Property Name="tipoSNSPID" Type="Int16" Nullable="false" />
+    <Property Name="descripcionTipoDependiente" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="estatusLogico" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_Agregadurias_codPartida">
+    <End Role="CatPartida" Type="Self.CatPartida" Multiplicity="1" />
+    <End Role="Agregaduria" Type="Self.Agregaduria" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CatPartida">
+        <PropertyRef Name="catPartidaID" />
+      </Principal>
+      <Dependent Role="Agregaduria">
+        <PropertyRef Name="catPartidaID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Agregadurias_monedaID">
+    <End Role="CatMoneda" Type="Self.CatMoneda" Multiplicity="1" />
+    <End Role="Agregaduria" Type="Self.Agregaduria" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CatMoneda">
+        <PropertyRef Name="catMonedaID" />
+      </Principal>
+      <Dependent Role="Agregaduria">
+        <PropertyRef Name="catMonedaID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Agregadurias_paisID">
+    <End Role="CatPais" Type="Self.CatPais" Multiplicity="1" />
+    <End Role="Agregaduria" Type="Self.Agregaduria" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CatPais">
+        <PropertyRef Name="catPaisID" />
+      </Principal>
+      <Dependent Role="Agregaduria">
+        <PropertyRef Name="catPaisID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Agregadurias_solicitudID">
+    <End Role="SolicitudRecurso" Type="Self.SolicitudRecurso" Multiplicity="1" />
+    <End Role="Agregaduria" Type="Self.Agregaduria" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SolicitudRecurso">
+        <PropertyRef Name="solicitudRecursoID" />
+      </Principal>
+      <Dependent Role="Agregaduria">
+        <PropertyRef Name="solicitudRecursoID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Asignacion_solicitudID">
+    <End Role="SolicitudRecurso" Type="Self.SolicitudRecurso" Multiplicity="1" />
+    <End Role="Asignacion" Type="Self.Asignacion" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SolicitudRecurso">
+        <PropertyRef Name="solicitudRecursoID" />
+      </Principal>
+      <Dependent Role="Asignacion">
+        <PropertyRef Name="solicitudRecursoID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Asignacion_usuarioID">
+    <End Role="Usuario" Type="Self.Usuario" Multiplicity="1" />
+    <End Role="Asignacion" Type="Self.Asignacion" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="usuarioID" />
+      </Principal>
+      <Dependent Role="Asignacion">
+        <PropertyRef Name="usuarioID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Becas_academiaID">
+    <End Role="CatAcademia" Type="Self.CatAcademia" Multiplicity="1" />
+    <End Role="Beca" Type="Self.Beca" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CatAcademia">
+        <PropertyRef Name="catAcademiaID" />
+      </Principal>
+      <Dependent Role="Beca">
+        <PropertyRef Name="catAcademiaID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Becas_codPartida">
+    <End Role="CatPartida" Type="Self.CatPartida" Multiplicity="1" />
+    <End Role="Beca" Type="Self.Beca" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CatPartida">
+        <PropertyRef Name="catPartidaID" />
+      </Principal>
+      <Dependent Role="Beca">
+        <PropertyRef Name="catPartidaID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Becas_solicitudID">
+    <End Role="SolicitudRecurso" Type="Self.SolicitudRecurso" Multiplicity="1" />
+    <End Role="Beca" Type="Self.Beca" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SolicitudRecurso">
+        <PropertyRef Name="solicitudRecursoID" />
+      </Principal>
+      <Dependent Role="Beca">
+        <PropertyRef Name="solicitudRecursoID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Becalos_codPartida">
+    <End Role="CatPartida" Type="Self.CatPartida" Multiplicity="1" />
+    <End Role="Becalos" Type="Self.Becalos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CatPartida">
+        <PropertyRef Name="catPartidaID" />
+      </Principal>
+      <Dependent Role="Becalos">
+        <PropertyRef Name="catPartidaID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Becalos_solicitudID">
+    <End Role="SolicitudRecurso" Type="Self.SolicitudRecurso" Multiplicity="1" />
+    <End Role="Becalos" Type="Self.Becalos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SolicitudRecurso">
+        <PropertyRef Name="solicitudRecursoID" />
+      </Principal>
+      <Dependent Role="Becalos">
+        <PropertyRef Name="solicitudRecursoID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Beneficiario_CatTipoDependiente">
+    <End Role="CatDependiente" Type="Self.CatDependiente" Multiplicity="1" />
+    <End Role="Beneficiario" Type="Self.Beneficiario" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CatDependiente">
+        <PropertyRef Name="catDependienteId" />
+      </Principal>
+      <Dependent Role="Beneficiario">
+        <PropertyRef Name="catDependienteID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Beneficiarios_tipoSolicitudID">
+    <End Role="CatSolicitud" Type="Self.CatSolicitud" Multiplicity="1" />
+    <End Role="Beneficiario" Type="Self.Beneficiario" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CatSolicitud">
+        <PropertyRef Name="catSolicitudID" />
+      </Principal>
+      <Dependent Role="Beneficiario">
+        <PropertyRef Name="catSolicitudID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_BitacoraMovimiento_estatusID">
+    <End Role="CatEstatusSolicitud" Type="Self.CatEstatusSolicitud" Multiplicity="1" />
+    <End Role="Bitacora" Type="Self.Bitacora" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CatEstatusSolicitud">
+        <PropertyRef Name="catEstatusSolicitudID" />
+      </Principal>
+      <Dependent Role="Bitacora">
+        <PropertyRef Name="catEstatusSolicitudID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_BitacoraMovimiento_solicitudID">
+    <End Role="SolicitudRecurso" Type="Self.SolicitudRecurso" Multiplicity="1" />
+    <End Role="Bitacora" Type="Self.Bitacora" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SolicitudRecurso">
+        <PropertyRef Name="solicitudRecursoID" />
+      </Principal>
+      <Dependent Role="Bitacora">
+        <PropertyRef Name="solicitudRecursoID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_BitacoraMovimiento_usuarioID">
+    <End Role="Usuario" Type="Self.Usuario" Multiplicity="1" />
+    <End Role="Bitacora" Type="Self.Bitacora" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="usuarioID" />
+      </Principal>
+      <Dependent Role="Bitacora">
+        <PropertyRef Name="usuarioID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CuotasDiarias_conceptoGastosID">
+    <End Role="CatConceptoGasto" Type="Self.CatConceptoGasto" Multiplicity="1" />
+    <End Role="CargaCuotaDiaria" Type="Self.CargaCuotaDiaria" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CatConceptoGasto">
+        <PropertyRef Name="catConceptoGastoID" />
+      </Principal>
+      <Dependent Role="CargaCuotaDiaria">
+        <PropertyRef Name="catConceptoGastoID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CuotasDiarias_solicitudID">
+    <End Role="SolicitudRecurso" Type="Self.SolicitudRecurso" Multiplicity="1" />
+    <End Role="CargaCuotaDiaria" Type="Self.CargaCuotaDiaria" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SolicitudRecurso">
+        <PropertyRef Name="solicitudRecursoID" />
+      </Principal>
+      <Dependent Role="CargaCuotaDiaria">
+        <PropertyRef Name="solicitudRecursoID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EstatusAcciones_accionesID">
+    <End Role="CatAccion" Type="Self.CatAccion" Multiplicity="1" />
+    <End Role="EstatusAccion" Type="Self.EstatusAccion" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CatAccion">
+        <PropertyRef Name="catAccionID" />
+      </Principal>
+      <Dependent Role="EstatusAccion">
+        <PropertyRef Name="catAccionID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_GastosAduanales_agenciaID">
+    <End Role="CatAgenciaAduanal" Type="Self.CatAgenciaAduanal" Multiplicity="1" />
+    <End Role="GastoAduana" Type="Self.GastoAduana" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CatAgenciaAduanal">
+        <PropertyRef Name="catAgenciaAduanalID" />
+      </Principal>
+      <Dependent Role="GastoAduana">
+        <PropertyRef Name="catAgenciaAduanalID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_AreaUnidadAdm_CatAreas">
+    <End Role="CatArea" Type="Self.CatArea" Multiplicity="1" />
+    <End Role="AreaUnidadAdm" Type="Self.AreaUnidadAdm" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CatArea">
+        <PropertyRef Name="catAreaID" />
+      </Principal>
+      <Dependent Role="AreaUnidadAdm">
+        <PropertyRef Name="catAreaID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CatEstatusSolicitud_areasID">
+    <End Role="CatArea" Type="Self.CatArea" Multiplicity="0..1" />
+    <End Role="CatEstatusSolicitud" Type="Self.CatEstatusSolicitud" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CatArea">
+        <PropertyRef Name="catAreaID" />
+      </Principal>
+      <Dependent Role="CatEstatusSolicitud">
+        <PropertyRef Name="catAreaID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_TipoSolPorAreaCatAreas">
+    <End Role="CatArea" Type="Self.CatArea" Multiplicity="1" />
+    <End Role="TipoSolicitudPorArea" Type="Self.TipoSolicitudPorArea" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CatArea">
+        <PropertyRef Name="catAreaID" />
+      </Principal>
+      <Dependent Role="TipoSolicitudPorArea">
+        <PropertyRef Name="catAreaID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Viaticos_bancoID">
+    <End Role="CatBanco" Type="Self.CatBanco" Multiplicity="1" />
+    <End Role="DetalleSolicitudRecurso" Type="Self.DetalleSolicitudRecurso" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CatBanco">
+        <PropertyRef Name="catBancoID" />
+      </Principal>
+      <Dependent Role="DetalleSolicitudRecurso">
+        <PropertyRef Name="catBancoID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="PK_CatCuenta_bancoID">
+    <End Role="CatBanco" Type="Self.CatBanco" Multiplicity="1" />
+    <End Role="CatCuenta" Type="Self.CatCuenta" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CatBanco">
+        <PropertyRef Name="catBancoID" />
+      </Principal>
+      <Dependent Role="CatCuenta">
+        <PropertyRef Name="catBancoID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CatConceptoGastos_tipoSolicitudID">
+    <End Role="CatSolicitud" Type="Self.CatSolicitud" Multiplicity="1" />
+    <End Role="CatConceptoGasto" Type="Self.CatConceptoGasto" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CatSolicitud">
+        <PropertyRef Name="catSolicitudID" />
+      </Principal>
+      <Dependent Role="CatConceptoGasto">
+        <PropertyRef Name="catSolicitudID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Laudos_conceptoGastosID">
+    <End Role="CatConceptoGasto" Type="Self.CatConceptoGasto" Multiplicity="1" />
+    <End Role="Laudo" Type="Self.Laudo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CatConceptoGasto">
+        <PropertyRef Name="catConceptoGastoID" />
+      </Principal>
+      <Dependent Role="Laudo">
+        <PropertyRef Name="catConceptoGastoID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_GastoCorriente_conceptoPagoID">
+    <End Role="CatConceptoPago" Type="Self.CatConceptoPago" Multiplicity="1" />
+    <End Role="GastoCorriente" Type="Self.GastoCorriente" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CatConceptoPago">
+        <PropertyRef Name="catConceptoPagoID" />
+      </Principal>
+      <Dependent Role="GastoCorriente">
+        <PropertyRef Name="catConceptoPagoID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_MovimientoAdministrativo_cuentaID">
+    <End Role="CatCuenta" Type="Self.CatCuenta" Multiplicity="1" />
+    <End Role="MovimientoAdministrativo" Type="Self.MovimientoAdministrativo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CatCuenta">
+        <PropertyRef Name="catCuentaID" />
+      </Principal>
+      <Dependent Role="MovimientoAdministrativo">
+        <PropertyRef Name="catCuentaID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_MovimientoBancario_cuentaID">
+    <End Role="CatCuenta" Type="Self.CatCuenta" Multiplicity="1" />
+    <End Role="MovimientoBancario" Type="Self.MovimientoBancario" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CatCuenta">
+        <PropertyRef Name="catCuentaID" />
+      </Principal>
+      <Dependent Role="MovimientoBancario">
+        <PropertyRef Name="catCuentaID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CatDestino_entidadID">
+    <End Role="CatEntidadFederativa" Type="Self.CatEntidadFederativa" Multiplicity="1" />
+    <End Role="CatDestino" Type="Self.CatDestino" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CatEntidadFederativa">
+        <PropertyRef Name="catEntidadFederativaID" />
+      </Principal>
+      <Dependent Role="CatDestino">
+        <PropertyRef Name="catEntidadFederativaID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_GastoCorriente_destinoID">
+    <End Role="CatDestino" Type="Self.CatDestino" Multiplicity="0..1" />
+    <End Role="GastoCorriente" Type="Self.GastoCorriente" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CatDestino">
+        <PropertyRef Name="catDestinoID" />
+      </Principal>
+      <Dependent Role="GastoCorriente">
+        <PropertyRef Name="catDetinoID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_LugarSolicitudRecurso_catDestino">
+    <End Role="CatDestino" Type="Self.CatDestino" Multiplicity="0..1" />
+    <End Role="LugarSolicitudRecurso" Type="Self.LugarSolicitudRecurso" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CatDestino">
+        <PropertyRef Name="catDestinoID" />
+      </Principal>
+      <Dependent Role="LugarSolicitudRecurso">
+        <PropertyRef Name="catDestinoID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Documento_tipoDocumentoID">
+    <End Role="CatDocumento" Type="Self.CatDocumento" Multiplicity="0..1" />
+    <End Role="Documento" Type="Self.Documento" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CatDocumento">
+        <PropertyRef Name="catDocumentoID" />
+      </Principal>
+      <Dependent Role="Documento">
+        <PropertyRef Name="catDocumentoID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TipoDocumentos_tipoSolicitudID">
+    <End Role="CatSolicitud" Type="Self.CatSolicitud" Multiplicity="1" />
+    <End Role="CatDocumento" Type="Self.CatDocumento" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CatSolicitud">
+        <PropertyRef Name="catSolicitudID" />
+      </Principal>
+      <Dependent Role="CatDocumento">
+        <PropertyRef Name="catSolicitudID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CatEntidadFederativa_paisID">
+    <End Role="CatPais" Type="Self.CatPais" Multiplicity="1" />
+    <End Role="CatEntidadFederativa" Type="Self.CatEntidadFederativa" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CatPais">
+        <PropertyRef Name="catPaisID" />
+      </Principal>
+      <Dependent Role="CatEntidadFederativa">
+        <PropertyRef Name="catPaisID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CatMunicipioLocalidad_entidadID">
+    <End Role="CatEntidadFederativa" Type="Self.CatEntidadFederativa" Multiplicity="1" />
+    <End Role="CatMunicipio" Type="Self.CatMunicipio" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CatEntidadFederativa">
+        <PropertyRef Name="catEntidadFederativaID" />
+      </Principal>
+      <Dependent Role="CatMunicipio">
+        <PropertyRef Name="catEntidadFederativaID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_GastoCorriente_entidadID">
+    <End Role="CatEntidadFederativa" Type="Self.CatEntidadFederativa" Multiplicity="0..1" />
+    <End Role="GastoCorriente" Type="Self.GastoCorriente" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CatEntidadFederativa">
+        <PropertyRef Name="catEntidadFederativaID" />
+      </Principal>
+      <Dependent Role="GastoCorriente">
+        <PropertyRef Name="catEntidadFederativaID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_LugarSolicitudRecurso_catEntidadFederativa">
+    <End Role="CatEntidadFederativa" Type="Self.CatEntidadFederativa" Multiplicity="0..1" />
+    <End Role="LugarSolicitudRecurso" Type="Self.LugarSolicitudRecurso" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CatEntidadFederativa">
+        <PropertyRef Name="catEntidadFederativaID" />
+      </Principal>
+      <Dependent Role="LugarSolicitudRecurso">
+        <PropertyRef Name="catEntidadFederativaID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Factura_estatusFacturaID">
+    <End Role="CatEstatusFactura" Type="Self.CatEstatusFactura" Multiplicity="1" />
+    <End Role="Factura" Type="Self.Factura" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CatEstatusFactura">
+        <PropertyRef Name="catEstatusFacturaID" />
+      </Principal>
+      <Dependent Role="Factura">
+        <PropertyRef Name="estatusFacturaID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PagoCheque_estatusPagoID">
+    <End Role="CatEstatusPago" Type="Self.CatEstatusPago" Multiplicity="1" />
+    <End Role="PagoCheque" Type="Self.PagoCheque" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CatEstatusPago">
+        <PropertyRef Name="catEstatusPagoID" />
+      </Principal>
+      <Dependent Role="PagoCheque">
+        <PropertyRef Name="catEstausPagoID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TransferenciaBancaria_estatusPagoID">
+    <End Role="CatEstatusPago" Type="Self.CatEstatusPago" Multiplicity="1" />
+    <End Role="TransferenciaBancaria" Type="Self.TransferenciaBancaria" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CatEstatusPago">
+        <PropertyRef Name="catEstatusPagoID" />
+      </Principal>
+      <Dependent Role="TransferenciaBancaria">
+        <PropertyRef Name="catEstatusPagoID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PresionGasto_estatusPresionID">
+    <End Role="CatEstatusPresion" Type="Self.CatEstatusPresion" Multiplicity="1" />
+    <End Role="PresionGasto" Type="Self.PresionGasto" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CatEstatusPresion">
+        <PropertyRef Name="catEstatusPresionID" />
+      </Principal>
+      <Dependent Role="PresionGasto">
+        <PropertyRef Name="catEstausPresionID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EstatusAcciones_estatusID">
+    <End Role="CatEstatusSolicitud" Type="Self.CatEstatusSolicitud" Multiplicity="1" />
+    <End Role="EstatusAccion" Type="Self.EstatusAccion" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CatEstatusSolicitud">
+        <PropertyRef Name="catEstatusSolicitudID" />
+      </Principal>
+      <Dependent Role="EstatusAccion">
+        <PropertyRef Name="catEstatusSolicitudID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EstatusPerfil_estatusID">
+    <End Role="CatEstatusSolicitud" Type="Self.CatEstatusSolicitud" Multiplicity="1" />
+    <End Role="EstatusPerfil" Type="Self.EstatusPerfil" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CatEstatusSolicitud">
+        <PropertyRef Name="catEstatusSolicitudID" />
+      </Principal>
+      <Dependent Role="EstatusPerfil">
+        <PropertyRef Name="catEstatusSolicitudID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SolicitudRecursos_estatusID">
+    <End Role="CatEstatusSolicitud" Type="Self.CatEstatusSolicitud" Multiplicity="1" />
+    <End Role="SolicitudRecurso" Type="Self.SolicitudRecurso" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CatEstatusSolicitud">
+        <PropertyRef Name="catEstatusSolicitudID" />
+      </Principal>
+      <Dependent Role="SolicitudRecurso">
+        <PropertyRef Name="catEstatusSolicitudID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_evento_accion">
+    <End Role="CatEventoAccion" Type="Self.CatEventoAccion" Multiplicity="1" />
+    <End Role="CatEvento" Type="Self.CatEvento" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CatEventoAccion">
+        <PropertyRef Name="catEventoAccionID" />
+      </Principal>
+      <Dependent Role="CatEvento">
+        <PropertyRef Name="catEventoAccionID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_evento_modulo">
+    <End Role="CatModulo" Type="Self.CatModulo" Multiplicity="1" />
+    <End Role="CatEvento" Type="Self.CatEvento" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CatModulo">
+        <PropertyRef Name="catModuloID" />
+      </Principal>
+      <Dependent Role="CatEvento">
+        <PropertyRef Name="catModuloID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_evento_perfil">
+    <End Role="CatPerfil" Type="Self.CatPerfil" Multiplicity="1" />
+    <End Role="CatEvento" Type="Self.CatEvento" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CatPerfil">
+        <PropertyRef Name="catPerfilID" />
+      </Principal>
+      <Dependent Role="CatEvento">
+        <PropertyRef Name="catPerfilID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_evento_solicitud">
+    <End Role="CatEvento" Type="Self.CatEvento" Multiplicity="0..1" />
+    <End Role="SolicitudRecurso" Type="Self.SolicitudRecurso" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CatEvento">
+        <PropertyRef Name="catEventoID" />
+      </Principal>
+      <Dependent Role="SolicitudRecurso">
+        <PropertyRef Name="catEventoID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SolicitudFirma_CatFirma">
+    <End Role="CatFirma" Type="Self.CatFirma" Multiplicity="1" />
+    <End Role="SolicitudFirma" Type="Self.SolicitudFirma" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CatFirma">
+        <PropertyRef Name="catFirmaID" />
+      </Principal>
+      <Dependent Role="SolicitudFirma">
+        <PropertyRef Name="catFirmaID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SolicitudRecurso_CatFormaComprobacion">
+    <End Role="CatFormaComprobacion" Type="Self.CatFormaComprobacion" Multiplicity="1" />
+    <End Role="SolicitudRecurso" Type="Self.SolicitudRecurso" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CatFormaComprobacion">
+        <PropertyRef Name="catFormaComprobacionID" />
+      </Principal>
+      <Dependent Role="SolicitudRecurso">
+        <PropertyRef Name="catFormaComprobacionID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TipoJefeDepto_CatTipoDependiente">
+    <End Role="CatJefeDepto" Type="Self.CatJefeDepto" Multiplicity="1" />
+    <End Role="TipoJefeDepto" Type="Self.TipoJefeDepto" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CatJefeDepto">
+        <PropertyRef Name="catJefeDeptoID" />
+      </Principal>
+      <Dependent Role="TipoJefeDepto">
+        <PropertyRef Name="catJefeDeptoID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__ModuloSub__modul__00AA174D">
+    <End Role="CatModulo" Type="Self.CatModulo" Multiplicity="1" />
+    <End Role="ModuloSubmodulo" Type="Self.ModuloSubmodulo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CatModulo">
+        <PropertyRef Name="catModuloID" />
+      </Principal>
+      <Dependent Role="ModuloSubmodulo">
+        <PropertyRef Name="catModuloID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Parametro__modul__58920452">
+    <End Role="CatModulo" Type="Self.CatModulo" Multiplicity="1" />
+    <End Role="Parametro" Type="Self.Parametro" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CatModulo">
+        <PropertyRef Name="catModuloID" />
+      </Principal>
+      <Dependent Role="Parametro">
+        <PropertyRef Name="moduloID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__PerfilMod__modul__10E07F16">
+    <End Role="CatModulo" Type="Self.CatModulo" Multiplicity="1" />
+    <End Role="PerfilModulo" Type="Self.PerfilModulo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CatModulo">
+        <PropertyRef Name="catModuloID" />
+      </Principal>
+      <Dependent Role="PerfilModulo">
+        <PropertyRef Name="catModuloID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Factura_monedaID">
+    <End Role="CatMoneda" Type="Self.CatMoneda" Multiplicity="1" />
+    <End Role="Factura" Type="Self.Factura" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CatMoneda">
+        <PropertyRef Name="catMonedaID" />
+      </Principal>
+      <Dependent Role="Factura">
+        <PropertyRef Name="monedaID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_LugarSolicitudRecurso_CatMoneda">
+    <End Role="CatMoneda" Type="Self.CatMoneda" Multiplicity="1" />
+    <End Role="LugarSolicitudRecurso" Type="Self.LugarSolicitudRecurso" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CatMoneda">
+        <PropertyRef Name="catMonedaID" />
+      </Principal>
+      <Dependent Role="LugarSolicitudRecurso">
+        <PropertyRef Name="catMonedaID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Penalizaciones_monedaID">
+    <End Role="CatMoneda" Type="Self.CatMoneda" Multiplicity="1" />
+    <End Role="Penalizacion" Type="Self.Penalizacion" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CatMoneda">
+        <PropertyRef Name="catMonedaID" />
+      </Principal>
+      <Dependent Role="Penalizacion">
+        <PropertyRef Name="catMonedaID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Proveedores_monedaID">
+    <End Role="CatMoneda" Type="Self.CatMoneda" Multiplicity="1" />
+    <End Role="Proveedor" Type="Self.Proveedor" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CatMoneda">
+        <PropertyRef Name="catMonedaID" />
+      </Principal>
+      <Dependent Role="Proveedor">
+        <PropertyRef Name="catMonedaID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_LugarSolicitudRecurso_catMunicipio">
+    <End Role="CatMunicipio" Type="Self.CatMunicipio" Multiplicity="0..1" />
+    <End Role="LugarSolicitudRecurso" Type="Self.LugarSolicitudRecurso" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CatMunicipio">
+        <PropertyRef Name="catMunicipioID" />
+      </Principal>
+      <Dependent Role="LugarSolicitudRecurso">
+        <PropertyRef Name="catMunicipioID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_MovimientoAdministrativo_tipoPagoID">
+    <End Role="CatPago" Type="Self.CatPago" Multiplicity="1" />
+    <End Role="MovimientoAdministrativo" Type="Self.MovimientoAdministrativo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CatPago">
+        <PropertyRef Name="catPagoID" />
+      </Principal>
+      <Dependent Role="MovimientoAdministrativo">
+        <PropertyRef Name="catPagoID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="PK_PolizaPago_CatTipoPagoPoliza">
+    <End Role="CatPagoPoliza" Type="Self.CatPagoPoliza" Multiplicity="1" />
+    <End Role="PolizaPago" Type="Self.PolizaPago" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CatPagoPoliza">
+        <PropertyRef Name="catPagoPolizaID" />
+      </Principal>
+      <Dependent Role="PolizaPago">
+        <PropertyRef Name="catPagoPolizaID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_LugarSolicitudRecurso_CatPais">
+    <End Role="CatPais" Type="Self.CatPais" Multiplicity="1" />
+    <End Role="LugarSolicitudRecurso" Type="Self.LugarSolicitudRecurso" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CatPais">
+        <PropertyRef Name="catPaisID" />
+      </Principal>
+      <Dependent Role="LugarSolicitudRecurso">
+        <PropertyRef Name="catPaisID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_GastoCorriente_codPartida">
+    <End Role="CatPartida" Type="Self.CatPartida" Multiplicity="1" />
+    <End Role="GastoCorriente" Type="Self.GastoCorriente" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CatPartida">
+        <PropertyRef Name="catPartidaID" />
+      </Principal>
+      <Dependent Role="GastoCorriente">
+        <PropertyRef Name="catPartidaID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_GastosAduanales_codPartida">
+    <End Role="CatPartida" Type="Self.CatPartida" Multiplicity="1" />
+    <End Role="GastoAduana" Type="Self.GastoAduana" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CatPartida">
+        <PropertyRef Name="catPartidaID" />
+      </Principal>
+      <Dependent Role="GastoAduana">
+        <PropertyRef Name="catPartidaID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_GastosFunerarios_codPartida">
+    <End Role="CatPartida" Type="Self.CatPartida" Multiplicity="1" />
+    <End Role="GastoFunerario" Type="Self.GastoFunerario" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CatPartida">
+        <PropertyRef Name="catPartidaID" />
+      </Principal>
+      <Dependent Role="GastoFunerario">
+        <PropertyRef Name="catPartidaID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ImpuestosSobreNomina_codPartida">
+    <End Role="CatPartida" Type="Self.CatPartida" Multiplicity="1" />
+    <End Role="ImpuestoSobreNomina" Type="Self.ImpuestoSobreNomina" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CatPartida">
+        <PropertyRef Name="catPartidaID" />
+      </Principal>
+      <Dependent Role="ImpuestoSobreNomina">
+        <PropertyRef Name="catPartidaID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Laudos_codPartida">
+    <End Role="CatPartida" Type="Self.CatPartida" Multiplicity="1" />
+    <End Role="Laudo" Type="Self.Laudo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CatPartida">
+        <PropertyRef Name="catPartidaID" />
+      </Principal>
+      <Dependent Role="Laudo">
+        <PropertyRef Name="catPartidaID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PartidaSolicitudRecurso_CatPartida">
+    <End Role="CatPartida" Type="Self.CatPartida" Multiplicity="1" />
+    <End Role="PartidaSolicitudRecurso" Type="Self.PartidaSolicitudRecurso" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CatPartida">
+        <PropertyRef Name="catPartidaID" />
+      </Principal>
+      <Dependent Role="PartidaSolicitudRecurso">
+        <PropertyRef Name="catPartidaID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Proveedores_codPartida">
+    <End Role="CatPartida" Type="Self.CatPartida" Multiplicity="1" />
+    <End Role="Proveedor" Type="Self.Proveedor" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CatPartida">
+        <PropertyRef Name="catPartidaID" />
+      </Principal>
+      <Dependent Role="Proveedor">
+        <PropertyRef Name="catPartidaID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="PK_CatPartida_tipoSolicitudID">
+    <End Role="CatSolicitud" Type="Self.CatSolicitud" Multiplicity="0..1" />
+    <End Role="CatPartida" Type="Self.CatPartida" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CatSolicitud">
+        <PropertyRef Name="catSolicitudID" />
+      </Principal>
+      <Dependent Role="CatPartida">
+        <PropertyRef Name="catSolicitudID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__PerfilMod__perfi__0FEC5ADD">
+    <End Role="CatPerfil" Type="Self.CatPerfil" Multiplicity="1" />
+    <End Role="PerfilModulo" Type="Self.PerfilModulo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CatPerfil">
+        <PropertyRef Name="catPerfilID" />
+      </Principal>
+      <Dependent Role="PerfilModulo">
+        <PropertyRef Name="catPerfilID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EstatusPerfil_perfilID">
+    <End Role="CatPerfil" Type="Self.CatPerfil" Multiplicity="1" />
+    <End Role="EstatusPerfil" Type="Self.EstatusPerfil" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CatPerfil">
+        <PropertyRef Name="catPerfilID" />
+      </Principal>
+      <Dependent Role="EstatusPerfil">
+        <PropertyRef Name="catPerfilID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Usuario_CatPerfil">
+    <End Role="CatPerfil" Type="Self.CatPerfil" Multiplicity="1" />
+    <End Role="Usuario" Type="Self.Usuario" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CatPerfil">
+        <PropertyRef Name="catPerfilID" />
+      </Principal>
+      <Dependent Role="Usuario">
+        <PropertyRef Name="catPerfilID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Usuarios_perfilID">
+    <End Role="CatPerfil" Type="Self.CatPerfil" Multiplicity="1" />
+    <End Role="Usuario" Type="Self.Usuario" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CatPerfil">
+        <PropertyRef Name="catPerfilID" />
+      </Principal>
+      <Dependent Role="Usuario">
+        <PropertyRef Name="catPerfilID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PolizaPago_tipoPolizaID">
+    <End Role="CatPoliza" Type="Self.CatPoliza" Multiplicity="1" />
+    <End Role="PolizaPago" Type="Self.PolizaPago" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CatPoliza">
+        <PropertyRef Name="catPolizaID" />
+      </Principal>
+      <Dependent Role="PolizaPago">
+        <PropertyRef Name="catPolizaID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SolicitudRecursos_prioridadID">
+    <End Role="CatPrioridad" Type="Self.CatPrioridad" Multiplicity="1" />
+    <End Role="SolicitudRecurso" Type="Self.SolicitudRecurso" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CatPrioridad">
+        <PropertyRef Name="catPrioridadID" />
+      </Principal>
+      <Dependent Role="SolicitudRecurso">
+        <PropertyRef Name="catPrioridadID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CatUnidadAdministrativa_regionID">
+    <End Role="CatRegion" Type="Self.CatRegion" Multiplicity="1" />
+    <End Role="CatUnidadAdm" Type="Self.CatUnidadAdm" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CatRegion">
+        <PropertyRef Name="regionID" />
+      </Principal>
+      <Dependent Role="CatUnidadAdm">
+        <PropertyRef Name="catRegionID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_TipoSolPorAreaCatRegion">
+    <End Role="CatRegion" Type="Self.CatRegion" Multiplicity="1" />
+    <End Role="TipoSolicitudPorArea" Type="Self.TipoSolicitudPorArea" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CatRegion">
+        <PropertyRef Name="regionID" />
+      </Principal>
+      <Dependent Role="TipoSolicitudPorArea">
+        <PropertyRef Name="catRegionID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UsuarioRegionFiscalizacion_CatRegion">
+    <End Role="CatRegion" Type="Self.CatRegion" Multiplicity="1" />
+    <End Role="UsuarioRegionFiscalizacion" Type="Self.UsuarioRegionFiscalizacion" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CatRegion">
+        <PropertyRef Name="regionID" />
+      </Principal>
+      <Dependent Role="UsuarioRegionFiscalizacion">
+        <PropertyRef Name="catRegionID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Usuario_CatRol">
+    <End Role="CatRol" Type="Self.CatRol" Multiplicity="1" />
+    <End Role="Usuario" Type="Self.Usuario" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CatRol">
+        <PropertyRef Name="catRolID" />
+      </Principal>
+      <Dependent Role="Usuario">
+        <PropertyRef Name="catRolID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SolicitudCatUnidadAdm_CatSolicitud">
+    <End Role="CatSolicitud" Type="Self.CatSolicitud" Multiplicity="1" />
+    <End Role="SolicitudCatUnidadAdm" Type="Self.SolicitudCatUnidadAdm" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CatSolicitud">
+        <PropertyRef Name="catSolicitudID" />
+      </Principal>
+      <Dependent Role="SolicitudCatUnidadAdm">
+        <PropertyRef Name="catSolicitudID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SolicitudRecursos_tipoSolicitudID">
+    <End Role="CatSolicitud" Type="Self.CatSolicitud" Multiplicity="1" />
+    <End Role="SolicitudRecurso" Type="Self.SolicitudRecurso" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CatSolicitud">
+        <PropertyRef Name="catSolicitudID" />
+      </Principal>
+      <Dependent Role="SolicitudRecurso">
+        <PropertyRef Name="catSolicitudID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_TipoSolPorAreaCatTipoSol">
+    <End Role="CatSolicitud" Type="Self.CatSolicitud" Multiplicity="1" />
+    <End Role="TipoSolicitudPorArea" Type="Self.TipoSolicitudPorArea" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CatSolicitud">
+        <PropertyRef Name="catSolicitudID" />
+      </Principal>
+      <Dependent Role="TipoSolicitudPorArea">
+        <PropertyRef Name="catSolicitudID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_TipoSolPorUACatTipoSol">
+    <End Role="CatSolicitud" Type="Self.CatSolicitud" Multiplicity="1" />
+    <End Role="TipoSolicitudPorUA" Type="Self.TipoSolicitudPorUA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CatSolicitud">
+        <PropertyRef Name="catSolicitudID" />
+      </Principal>
+      <Dependent Role="TipoSolicitudPorUA">
+        <PropertyRef Name="catSolicitudID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__ModuloSub__Submo__019E3B86">
+    <End Role="CatSubmodulo" Type="Self.CatSubmodulo" Multiplicity="1" />
+    <End Role="ModuloSubmodulo" Type="Self.ModuloSubmodulo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CatSubmodulo">
+        <PropertyRef Name="catSubmoduloID" />
+      </Principal>
+      <Dependent Role="ModuloSubmodulo">
+        <PropertyRef Name="catSubmoduloID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_AreaUnidadAdm_CatUnidadAdministrativa">
+    <End Role="CatUnidadAdm" Type="Self.CatUnidadAdm" Multiplicity="1" />
+    <End Role="AreaUnidadAdm" Type="Self.AreaUnidadAdm" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CatUnidadAdm">
+        <PropertyRef Name="catUnidadAdmID" />
+      </Principal>
+      <Dependent Role="AreaUnidadAdm">
+        <PropertyRef Name="catUnidadAdmID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SolicitudCatUnidadAdm_CatUnidadAdm">
+    <End Role="CatUnidadAdm" Type="Self.CatUnidadAdm" Multiplicity="1" />
+    <End Role="SolicitudCatUnidadAdm" Type="Self.SolicitudCatUnidadAdm" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CatUnidadAdm">
+        <PropertyRef Name="catUnidadAdmID" />
+      </Principal>
+      <Dependent Role="SolicitudCatUnidadAdm">
+        <PropertyRef Name="catUnidadAdmID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SolicitudRecursos_codUA">
+    <End Role="CatUnidadAdm" Type="Self.CatUnidadAdm" Multiplicity="1" />
+    <End Role="SolicitudRecurso" Type="Self.SolicitudRecurso" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CatUnidadAdm">
+        <PropertyRef Name="catUnidadAdmID" />
+      </Principal>
+      <Dependent Role="SolicitudRecurso">
+        <PropertyRef Name="catUnidadAdmID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_TipoSolPorUACatUA">
+    <End Role="CatUnidadAdm" Type="Self.CatUnidadAdm" Multiplicity="1" />
+    <End Role="TipoSolicitudPorUA" Type="Self.TipoSolicitudPorUA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CatUnidadAdm">
+        <PropertyRef Name="catUnidadAdmID" />
+      </Principal>
+      <Dependent Role="TipoSolicitudPorUA">
+        <PropertyRef Name="catUnidadAdmID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Usuarios_codUA">
+    <End Role="CatUnidadAdm" Type="Self.CatUnidadAdm" Multiplicity="1" />
+    <End Role="Usuario" Type="Self.Usuario" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CatUnidadAdm">
+        <PropertyRef Name="catUnidadAdmID" />
+      </Principal>
+      <Dependent Role="Usuario">
+        <PropertyRef Name="catUnidadAdmID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PresupuestoClc_clcID">
+    <End Role="Clc" Type="Self.Clc" Multiplicity="0..1" />
+    <End Role="PresupuestoClc" Type="Self.PresupuestoClc" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Clc">
+        <PropertyRef Name="clcID" />
+      </Principal>
+      <Dependent Role="PresupuestoClc">
+        <PropertyRef Name="clcID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_LugarSolicitudRecurso_DetalleSolicitudRecurso">
+    <End Role="DetalleSolicitudRecurso" Type="Self.DetalleSolicitudRecurso" Multiplicity="1" />
+    <End Role="LugarSolicitudRecurso" Type="Self.LugarSolicitudRecurso" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DetalleSolicitudRecurso">
+        <PropertyRef Name="detalleSolicitudRecursoID" />
+      </Principal>
+      <Dependent Role="LugarSolicitudRecurso">
+        <PropertyRef Name="detalleSolicitudRecursoID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_PartidaSolicitudRecurso_DetalleSolicitudRecurso">
+    <End Role="DetalleSolicitudRecurso" Type="Self.DetalleSolicitudRecurso" Multiplicity="1" />
+    <End Role="PartidaSolicitudRecurso" Type="Self.PartidaSolicitudRecurso" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DetalleSolicitudRecurso">
+        <PropertyRef Name="detalleSolicitudRecursoID" />
+      </Principal>
+      <Dependent Role="PartidaSolicitudRecurso">
+        <PropertyRef Name="detalleSolicitudRecursoID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Viatico_homologado">
+    <End Role="Homologado" Type="Self.Homologado" Multiplicity="0..1" />
+    <End Role="DetalleSolicitudRecurso" Type="Self.DetalleSolicitudRecurso" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Homologado">
+        <PropertyRef Name="homologadoID" />
+      </Principal>
+      <Dependent Role="DetalleSolicitudRecurso">
+        <PropertyRef Name="homologadoID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Viaticos_SolicitudRecursos">
+    <End Role="SolicitudRecurso" Type="Self.SolicitudRecurso" Multiplicity="1" />
+    <End Role="DetalleSolicitudRecurso" Type="Self.DetalleSolicitudRecurso" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SolicitudRecurso">
+        <PropertyRef Name="solicitudRecursoID" />
+      </Principal>
+      <Dependent Role="DetalleSolicitudRecurso">
+        <PropertyRef Name="solicitudRecursoID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Documento_solicitudID">
+    <End Role="SolicitudRecurso" Type="Self.SolicitudRecurso" Multiplicity="0..1" />
+    <End Role="Documento" Type="Self.Documento" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SolicitudRecurso">
+        <PropertyRef Name="solicitudRecursoID" />
+      </Principal>
+      <Dependent Role="Documento">
+        <PropertyRef Name="solicitudRecursoID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EstatusMovimiento_solicitudID">
+    <End Role="SolicitudRecurso" Type="Self.SolicitudRecurso" Multiplicity="1" />
+    <End Role="EstatusMovimiento" Type="Self.EstatusMovimiento" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SolicitudRecurso">
+        <PropertyRef Name="solicitudRecursoID" />
+      </Principal>
+      <Dependent Role="EstatusMovimiento">
+        <PropertyRef Name="solicitudRecursoID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EstatusMovimiento_usuarioID">
+    <End Role="Usuario" Type="Self.Usuario" Multiplicity="1" />
+    <End Role="EstatusMovimiento" Type="Self.EstatusMovimiento" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="usuarioID" />
+      </Principal>
+      <Dependent Role="EstatusMovimiento">
+        <PropertyRef Name="usuarioID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Factura_proveedoresID">
+    <End Role="Proveedor" Type="Self.Proveedor" Multiplicity="1" />
+    <End Role="Factura" Type="Self.Factura" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Proveedor">
+        <PropertyRef Name="proveedorID" />
+      </Principal>
+      <Dependent Role="Factura">
+        <PropertyRef Name="proveedoresID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_firmaElectronica_solicitudID">
+    <End Role="SolicitudRecurso" Type="Self.SolicitudRecurso" Multiplicity="1" />
+    <End Role="FirmaElectronica" Type="Self.FirmaElectronica" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SolicitudRecurso">
+        <PropertyRef Name="solicitudRecursoID" />
+      </Principal>
+      <Dependent Role="FirmaElectronica">
+        <PropertyRef Name="solicitudRecursoID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_GastosAduanales_solicitudID">
+    <End Role="SolicitudRecurso" Type="Self.SolicitudRecurso" Multiplicity="1" />
+    <End Role="GastoAduana" Type="Self.GastoAduana" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SolicitudRecurso">
+        <PropertyRef Name="solicitudRecursoID" />
+      </Principal>
+      <Dependent Role="GastoAduana">
+        <PropertyRef Name="solicitudRecursoID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_GastoCorriente_solicitudID">
+    <End Role="SolicitudRecurso" Type="Self.SolicitudRecurso" Multiplicity="1" />
+    <End Role="GastoCorriente" Type="Self.GastoCorriente" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SolicitudRecurso">
+        <PropertyRef Name="solicitudRecursoID" />
+      </Principal>
+      <Dependent Role="GastoCorriente">
+        <PropertyRef Name="solicitudRecursoID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_GastosFunerarios_solicitudID">
+    <End Role="SolicitudRecurso" Type="Self.SolicitudRecurso" Multiplicity="1" />
+    <End Role="GastoFunerario" Type="Self.GastoFunerario" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SolicitudRecurso">
+        <PropertyRef Name="solicitudRecursoID" />
+      </Principal>
+      <Dependent Role="GastoFunerario">
+        <PropertyRef Name="solicitudRecursoID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ImpuestosSobreNomina_solicitudID">
+    <End Role="SolicitudRecurso" Type="Self.SolicitudRecurso" Multiplicity="1" />
+    <End Role="ImpuestoSobreNomina" Type="Self.ImpuestoSobreNomina" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SolicitudRecurso">
+        <PropertyRef Name="solicitudRecursoID" />
+      </Principal>
+      <Dependent Role="ImpuestoSobreNomina">
+        <PropertyRef Name="solicitudRecursoID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Laudos_solicitudID">
+    <End Role="SolicitudRecurso" Type="Self.SolicitudRecurso" Multiplicity="1" />
+    <End Role="Laudo" Type="Self.Laudo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SolicitudRecurso">
+        <PropertyRef Name="solicitudRecursoID" />
+      </Principal>
+      <Dependent Role="Laudo">
+        <PropertyRef Name="solicitudRecursoID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_LogError_usuarioID">
+    <End Role="Usuario" Type="Self.Usuario" Multiplicity="0..1" />
+    <End Role="LogError" Type="Self.LogError" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="usuarioID" />
+      </Principal>
+      <Dependent Role="LogError">
+        <PropertyRef Name="usuarioID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_MovimientoAdministrativo_presionGastoID">
+    <End Role="PresionGasto" Type="Self.PresionGasto" Multiplicity="1" />
+    <End Role="MovimientoAdministrativo" Type="Self.MovimientoAdministrativo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PresionGasto">
+        <PropertyRef Name="presionGastoID" />
+      </Principal>
+      <Dependent Role="MovimientoAdministrativo">
+        <PropertyRef Name="presionGastoID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_MovimientoAdministrativo_solicitudID">
+    <End Role="SolicitudRecurso" Type="Self.SolicitudRecurso" Multiplicity="1" />
+    <End Role="MovimientoAdministrativo" Type="Self.MovimientoAdministrativo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SolicitudRecurso">
+        <PropertyRef Name="solicitudRecursoID" />
+      </Principal>
+      <Dependent Role="MovimientoAdministrativo">
+        <PropertyRef Name="solicitudRecursoID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PagoCheque_movimientoAdmID">
+    <End Role="MovimientoAdministrativo" Type="Self.MovimientoAdministrativo" Multiplicity="1" />
+    <End Role="PagoCheque" Type="Self.PagoCheque" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MovimientoAdministrativo">
+        <PropertyRef Name="movimientoAdministrativoID" />
+      </Principal>
+      <Dependent Role="PagoCheque">
+        <PropertyRef Name="movimientoAdministrativoID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TransferenciaBancaria_movimientoAdmID">
+    <End Role="MovimientoAdministrativo" Type="Self.MovimientoAdministrativo" Multiplicity="1" />
+    <End Role="TransferenciaBancaria" Type="Self.TransferenciaBancaria" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MovimientoAdministrativo">
+        <PropertyRef Name="movimientoAdministrativoID" />
+      </Principal>
+      <Dependent Role="TransferenciaBancaria">
+        <PropertyRef Name="movimientoAdministrativoID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Penalizaciones_proveedoresID">
+    <End Role="Proveedor" Type="Self.Proveedor" Multiplicity="1" />
+    <End Role="Penalizacion" Type="Self.Penalizacion" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Proveedor">
+        <PropertyRef Name="proveedorID" />
+      </Principal>
+      <Dependent Role="Penalizacion">
+        <PropertyRef Name="proveedorID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PresupuestoClc_solicitudID">
+    <End Role="SolicitudRecurso" Type="Self.SolicitudRecurso" Multiplicity="0..1" />
+    <End Role="PresupuestoClc" Type="Self.PresupuestoClc" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SolicitudRecurso">
+        <PropertyRef Name="solicitudRecursoID" />
+      </Principal>
+      <Dependent Role="PresupuestoClc">
+        <PropertyRef Name="solicitudRecursoID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Proveedores_solicitudID">
+    <End Role="SolicitudRecurso" Type="Self.SolicitudRecurso" Multiplicity="1" />
+    <End Role="Proveedor" Type="Self.Proveedor" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SolicitudRecurso">
+        <PropertyRef Name="solicitudRecursoID" />
+      </Principal>
+      <Dependent Role="Proveedor">
+        <PropertyRef Name="solicitudRecursoID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RegistroContable_SolicitudRecursos">
+    <End Role="SolicitudRecurso" Type="Self.SolicitudRecurso" Multiplicity="1" />
+    <End Role="RegistroContable" Type="Self.RegistroContable" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SolicitudRecurso">
+        <PropertyRef Name="solicitudRecursoID" />
+      </Principal>
+      <Dependent Role="RegistroContable">
+        <PropertyRef Name="solicitudRecursoID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_RegVol_SolRec">
+    <End Role="SolicitudRecurso" Type="Self.SolicitudRecurso" Multiplicity="1" />
+    <End Role="RegistroVolante" Type="Self.RegistroVolante" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SolicitudRecurso">
+        <PropertyRef Name="solicitudRecursoID" />
+      </Principal>
+      <Dependent Role="RegistroVolante">
+        <PropertyRef Name="solicitudRecursoID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SolicitudFirma_SolicitudFirma">
+    <End Role="SolicitudFirma" Type="Self.SolicitudFirma" Multiplicity="1" />
+    <End Role="SolicitudFirma1" Type="Self.SolicitudFirma" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="SolicitudFirma">
+        <PropertyRef Name="solicitudFirmaID" />
+      </Principal>
+      <Dependent Role="SolicitudFirma1">
+        <PropertyRef Name="solicitudFirmaID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SolicitudFirma_SolicitudrECURSO">
+    <End Role="SolicitudRecurso" Type="Self.SolicitudRecurso" Multiplicity="1" />
+    <End Role="SolicitudFirma" Type="Self.SolicitudFirma" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SolicitudRecurso">
+        <PropertyRef Name="solicitudRecursoID" />
+      </Principal>
+      <Dependent Role="SolicitudFirma">
+        <PropertyRef Name="solicitudRecursoID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UsuarioRegionFiscalizacion_Usuarios">
+    <End Role="Usuario" Type="Self.Usuario" Multiplicity="1" />
+    <End Role="UsuarioRegionFiscalizacion" Type="Self.UsuarioRegionFiscalizacion" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="usuarioID" />
+      </Principal>
+      <Dependent Role="UsuarioRegionFiscalizacion">
+        <PropertyRef Name="usuarioID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="SIRFPROD_v2Entities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Agregaduria" EntityType="Self.Agregaduria" />
+    <EntitySet Name="Asignacion" EntityType="Self.Asignacion" />
+    <EntitySet Name="Beca" EntityType="Self.Beca" />
+    <EntitySet Name="Becalos" EntityType="Self.Becalos" />
+    <EntitySet Name="Beneficiario" EntityType="Self.Beneficiario" />
+    <EntitySet Name="Bitacora" EntityType="Self.Bitacora" />
+    <EntitySet Name="CargaCuotaDiaria" EntityType="Self.CargaCuotaDiaria" />
+    <EntitySet Name="CatAcademia" EntityType="Self.CatAcademia" />
+    <EntitySet Name="CatAccion" EntityType="Self.CatAccion" />
+    <EntitySet Name="CatAgenciaAduanal" EntityType="Self.CatAgenciaAduanal" />
+    <EntitySet Name="CatArea" EntityType="Self.CatArea" />
+    <EntitySet Name="CatBanco" EntityType="Self.CatBanco" />
+    <EntitySet Name="CatConceptoGasto" EntityType="Self.CatConceptoGasto" />
+    <EntitySet Name="CatConceptoPago" EntityType="Self.CatConceptoPago" />
+    <EntitySet Name="CatCuenta" EntityType="Self.CatCuenta" />
+    <EntitySet Name="CatDependiente" EntityType="Self.CatDependiente" />
+    <EntitySet Name="CatDestino" EntityType="Self.CatDestino" />
+    <EntitySet Name="CatDocumento" EntityType="Self.CatDocumento" />
+    <EntitySet Name="CatEntidadFederativa" EntityType="Self.CatEntidadFederativa" />
+    <EntitySet Name="CatEstatusFactura" EntityType="Self.CatEstatusFactura" />
+    <EntitySet Name="CatEstatusPago" EntityType="Self.CatEstatusPago" />
+    <EntitySet Name="CatEstatusPresion" EntityType="Self.CatEstatusPresion" />
+    <EntitySet Name="CatEstatusSolicitud" EntityType="Self.CatEstatusSolicitud" />
+    <EntitySet Name="CatEvento" EntityType="Self.CatEvento" />
+    <EntitySet Name="CatEventoAccion" EntityType="Self.CatEventoAccion" />
+    <EntitySet Name="CatFirma" EntityType="Self.CatFirma" />
+    <EntitySet Name="CatFormaComprobacion" EntityType="Self.CatFormaComprobacion" />
+    <EntitySet Name="CatJefeDepto" EntityType="Self.CatJefeDepto" />
+    <EntitySet Name="CatModulo" EntityType="Self.CatModulo" />
+    <EntitySet Name="CatMoneda" EntityType="Self.CatMoneda" />
+    <EntitySet Name="CatMunicipio" EntityType="Self.CatMunicipio" />
+    <EntitySet Name="CatPago" EntityType="Self.CatPago" />
+    <EntitySet Name="CatPagoPoliza" EntityType="Self.CatPagoPoliza" />
+    <EntitySet Name="CatPais" EntityType="Self.CatPais" />
+    <EntitySet Name="CatPartida" EntityType="Self.CatPartida" />
+    <EntitySet Name="CatPerfil" EntityType="Self.CatPerfil" />
+    <EntitySet Name="CatPoliza" EntityType="Self.CatPoliza" />
+    <EntitySet Name="CatPrioridad" EntityType="Self.CatPrioridad" />
+    <EntitySet Name="CatRegion" EntityType="Self.CatRegion" />
+    <EntitySet Name="CatRol" EntityType="Self.CatRol" />
+    <EntitySet Name="CatSolicitud" EntityType="Self.CatSolicitud" />
+    <EntitySet Name="CatSubmodulo" EntityType="Self.CatSubmodulo" />
+    <EntitySet Name="CatUnidadAdm" EntityType="Self.CatUnidadAdm" />
+    <EntitySet Name="Clc" EntityType="Self.Clc" />
+    <EntitySet Name="DetalleSolicitudRecurso" EntityType="Self.DetalleSolicitudRecurso" />
+    <EntitySet Name="Documento" EntityType="Self.Documento" />
+    <EntitySet Name="EstatusAccion" EntityType="Self.EstatusAccion" />
+    <EntitySet Name="EstatusMovimiento" EntityType="Self.EstatusMovimiento" />
+    <EntitySet Name="EstatusPerfil" EntityType="Self.EstatusPerfil" />
+    <EntitySet Name="Factura" EntityType="Self.Factura" />
+    <EntitySet Name="FirmaElectronica" EntityType="Self.FirmaElectronica" />
+    <EntitySet Name="GastoAduana" EntityType="Self.GastoAduana" />
+    <EntitySet Name="GastoCorriente" EntityType="Self.GastoCorriente" />
+    <EntitySet Name="GastoFunerario" EntityType="Self.GastoFunerario" />
+    <EntitySet Name="Homologado" EntityType="Self.Homologado" />
+    <EntitySet Name="ImpuestoSobreNomina" EntityType="Self.ImpuestoSobreNomina" />
+    <EntitySet Name="Laudo" EntityType="Self.Laudo" />
+    <EntitySet Name="LogError" EntityType="Self.LogError" />
+    <EntitySet Name="LugarSolicitudRecurso" EntityType="Self.LugarSolicitudRecurso" />
+    <EntitySet Name="ModuloSubmodulo" EntityType="Self.ModuloSubmodulo" />
+    <EntitySet Name="MovimientoAdministrativo" EntityType="Self.MovimientoAdministrativo" />
+    <EntitySet Name="MovimientoBancario" EntityType="Self.MovimientoBancario" />
+    <EntitySet Name="PagoCheque" EntityType="Self.PagoCheque" />
+    <EntitySet Name="Parametro" EntityType="Self.Parametro" />
+    <EntitySet Name="PartidaSolicitudRecurso" EntityType="Self.PartidaSolicitudRecurso" />
+    <EntitySet Name="Penalizacion" EntityType="Self.Penalizacion" />
+    <EntitySet Name="PerfilModulo" EntityType="Self.PerfilModulo" />
+    <EntitySet Name="PolizaPago" EntityType="Self.PolizaPago" />
+    <EntitySet Name="PresionGasto" EntityType="Self.PresionGasto" />
+    <EntitySet Name="PresupuestoClc" EntityType="Self.PresupuestoClc" />
+    <EntitySet Name="Proveedor" EntityType="Self.Proveedor" />
+    <EntitySet Name="RegistroContable" EntityType="Self.RegistroContable" />
+    <EntitySet Name="RegistroVolante" EntityType="Self.RegistroVolante" />
+    <EntitySet Name="SolicitudCatUnidadAdm" EntityType="Self.SolicitudCatUnidadAdm" />
+    <EntitySet Name="SolicitudFirma" EntityType="Self.SolicitudFirma" />
+    <EntitySet Name="SolicitudRecurso" EntityType="Self.SolicitudRecurso" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
+    <EntitySet Name="TipoSolicitudPorArea" EntityType="Self.TipoSolicitudPorArea" />
+    <EntitySet Name="TipoSolicitudPorUA" EntityType="Self.TipoSolicitudPorUA" />
+    <EntitySet Name="TransferenciaBancaria" EntityType="Self.TransferenciaBancaria" />
+    <EntitySet Name="Usuario" EntityType="Self.Usuario" />
+    <EntitySet Name="UsuarioRegionFiscalizacion" EntityType="Self.UsuarioRegionFiscalizacion" />
+    <EntitySet Name="AreaUnidadAdm" EntityType="Self.AreaUnidadAdm" />
+    <EntitySet Name="TipoJefeDepto" EntityType="Self.TipoJefeDepto" />
+    <EntitySet Name="vEstatusMovimientoBanco" EntityType="Self.vEstatusMovimientoBanco" />
+    <EntitySet Name="vwAsistentesEnlace" EntityType="Self.vwAsistentesEnlace" />
+    <EntitySet Name="vwBajaIntegrante" EntityType="Self.vwBajaIntegrante" />
+    <EntitySet Name="vwCentrosDeDistribucion" EntityType="Self.vwCentrosDeDistribucion" />
+    <EntitySet Name="vwCuentasIntegrante" EntityType="Self.vwCuentasIntegrante" />
+    <EntitySet Name="vwDatosIntegrante" EntityType="Self.vwDatosIntegrante" />
+    <EntitySet Name="vwDependientesIntegrante" EntityType="Self.vwDependientesIntegrante" />
+    <EntitySet Name="vwIncidenciasIntegrante" EntityType="Self.vwIncidenciasIntegrante" />
+    <EntitySet Name="vwTipoDependientesIntegrante" EntityType="Self.vwTipoDependientesIntegrante" />
+    <AssociationSet Name="FK_Agregadurias_codPartida" Association="Self.FK_Agregadurias_codPartida">
+      <End Role="CatPartida" EntitySet="CatPartida" />
+      <End Role="Agregaduria" EntitySet="Agregaduria" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Agregadurias_monedaID" Association="Self.FK_Agregadurias_monedaID">
+      <End Role="CatMoneda" EntitySet="CatMoneda" />
+      <End Role="Agregaduria" EntitySet="Agregaduria" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Agregadurias_paisID" Association="Self.FK_Agregadurias_paisID">
+      <End Role="CatPais" EntitySet="CatPais" />
+      <End Role="Agregaduria" EntitySet="Agregaduria" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Agregadurias_solicitudID" Association="Self.FK_Agregadurias_solicitudID">
+      <End Role="SolicitudRecurso" EntitySet="SolicitudRecurso" />
+      <End Role="Agregaduria" EntitySet="Agregaduria" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Asignacion_solicitudID" Association="Self.FK_Asignacion_solicitudID">
+      <End Role="SolicitudRecurso" EntitySet="SolicitudRecurso" />
+      <End Role="Asignacion" EntitySet="Asignacion" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Asignacion_usuarioID" Association="Self.FK_Asignacion_usuarioID">
+      <End Role="Usuario" EntitySet="Usuario" />
+      <End Role="Asignacion" EntitySet="Asignacion" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Becas_academiaID" Association="Self.FK_Becas_academiaID">
+      <End Role="CatAcademia" EntitySet="CatAcademia" />
+      <End Role="Beca" EntitySet="Beca" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Becas_codPartida" Association="Self.FK_Becas_codPartida">
+      <End Role="CatPartida" EntitySet="CatPartida" />
+      <End Role="Beca" EntitySet="Beca" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Becas_solicitudID" Association="Self.FK_Becas_solicitudID">
+      <End Role="SolicitudRecurso" EntitySet="SolicitudRecurso" />
+      <End Role="Beca" EntitySet="Beca" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Becalos_codPartida" Association="Self.FK_Becalos_codPartida">
+      <End Role="CatPartida" EntitySet="CatPartida" />
+      <End Role="Becalos" EntitySet="Becalos" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Becalos_solicitudID" Association="Self.FK_Becalos_solicitudID">
+      <End Role="SolicitudRecurso" EntitySet="SolicitudRecurso" />
+      <End Role="Becalos" EntitySet="Becalos" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Beneficiario_CatTipoDependiente" Association="Self.FK_Beneficiario_CatTipoDependiente">
+      <End Role="CatDependiente" EntitySet="CatDependiente" />
+      <End Role="Beneficiario" EntitySet="Beneficiario" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Beneficiarios_tipoSolicitudID" Association="Self.FK_Beneficiarios_tipoSolicitudID">
+      <End Role="CatSolicitud" EntitySet="CatSolicitud" />
+      <End Role="Beneficiario" EntitySet="Beneficiario" />
+    </AssociationSet>
+    <AssociationSet Name="FK_BitacoraMovimiento_estatusID" Association="Self.FK_BitacoraMovimiento_estatusID">
+      <End Role="CatEstatusSolicitud" EntitySet="CatEstatusSolicitud" />
+      <End Role="Bitacora" EntitySet="Bitacora" />
+    </AssociationSet>
+    <AssociationSet Name="FK_BitacoraMovimiento_solicitudID" Association="Self.FK_BitacoraMovimiento_solicitudID">
+      <End Role="SolicitudRecurso" EntitySet="SolicitudRecurso" />
+      <End Role="Bitacora" EntitySet="Bitacora" />
+    </AssociationSet>
+    <AssociationSet Name="FK_BitacoraMovimiento_usuarioID" Association="Self.FK_BitacoraMovimiento_usuarioID">
+      <End Role="Usuario" EntitySet="Usuario" />
+      <End Role="Bitacora" EntitySet="Bitacora" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CuotasDiarias_conceptoGastosID" Association="Self.FK_CuotasDiarias_conceptoGastosID">
+      <End Role="CatConceptoGasto" EntitySet="CatConceptoGasto" />
+      <End Role="CargaCuotaDiaria" EntitySet="CargaCuotaDiaria" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CuotasDiarias_solicitudID" Association="Self.FK_CuotasDiarias_solicitudID">
+      <End Role="SolicitudRecurso" EntitySet="SolicitudRecurso" />
+      <End Role="CargaCuotaDiaria" EntitySet="CargaCuotaDiaria" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EstatusAcciones_accionesID" Association="Self.FK_EstatusAcciones_accionesID">
+      <End Role="CatAccion" EntitySet="CatAccion" />
+      <End Role="EstatusAccion" EntitySet="EstatusAccion" />
+    </AssociationSet>
+    <AssociationSet Name="FK_GastosAduanales_agenciaID" Association="Self.FK_GastosAduanales_agenciaID">
+      <End Role="CatAgenciaAduanal" EntitySet="CatAgenciaAduanal" />
+      <End Role="GastoAduana" EntitySet="GastoAduana" />
+    </AssociationSet>
+    <AssociationSet Name="FK_AreaUnidadAdm_CatAreas" Association="Self.FK_AreaUnidadAdm_CatAreas">
+      <End Role="CatArea" EntitySet="CatArea" />
+      <End Role="AreaUnidadAdm" EntitySet="AreaUnidadAdm" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CatEstatusSolicitud_areasID" Association="Self.FK_CatEstatusSolicitud_areasID">
+      <End Role="CatArea" EntitySet="CatArea" />
+      <End Role="CatEstatusSolicitud" EntitySet="CatEstatusSolicitud" />
+    </AssociationSet>
+    <AssociationSet Name="fk_TipoSolPorAreaCatAreas" Association="Self.fk_TipoSolPorAreaCatAreas">
+      <End Role="CatArea" EntitySet="CatArea" />
+      <End Role="TipoSolicitudPorArea" EntitySet="TipoSolicitudPorArea" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Viaticos_bancoID" Association="Self.FK_Viaticos_bancoID">
+      <End Role="CatBanco" EntitySet="CatBanco" />
+      <End Role="DetalleSolicitudRecurso" EntitySet="DetalleSolicitudRecurso" />
+    </AssociationSet>
+    <AssociationSet Name="PK_CatCuenta_bancoID" Association="Self.PK_CatCuenta_bancoID">
+      <End Role="CatBanco" EntitySet="CatBanco" />
+      <End Role="CatCuenta" EntitySet="CatCuenta" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CatConceptoGastos_tipoSolicitudID" Association="Self.FK_CatConceptoGastos_tipoSolicitudID">
+      <End Role="CatSolicitud" EntitySet="CatSolicitud" />
+      <End Role="CatConceptoGasto" EntitySet="CatConceptoGasto" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Laudos_conceptoGastosID" Association="Self.FK_Laudos_conceptoGastosID">
+      <End Role="CatConceptoGasto" EntitySet="CatConceptoGasto" />
+      <End Role="Laudo" EntitySet="Laudo" />
+    </AssociationSet>
+    <AssociationSet Name="FK_GastoCorriente_conceptoPagoID" Association="Self.FK_GastoCorriente_conceptoPagoID">
+      <End Role="CatConceptoPago" EntitySet="CatConceptoPago" />
+      <End Role="GastoCorriente" EntitySet="GastoCorriente" />
+    </AssociationSet>
+    <AssociationSet Name="FK_MovimientoAdministrativo_cuentaID" Association="Self.FK_MovimientoAdministrativo_cuentaID">
+      <End Role="CatCuenta" EntitySet="CatCuenta" />
+      <End Role="MovimientoAdministrativo" EntitySet="MovimientoAdministrativo" />
+    </AssociationSet>
+    <AssociationSet Name="FK_MovimientoBancario_cuentaID" Association="Self.FK_MovimientoBancario_cuentaID">
+      <End Role="CatCuenta" EntitySet="CatCuenta" />
+      <End Role="MovimientoBancario" EntitySet="MovimientoBancario" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CatDestino_entidadID" Association="Self.FK_CatDestino_entidadID">
+      <End Role="CatEntidadFederativa" EntitySet="CatEntidadFederativa" />
+      <End Role="CatDestino" EntitySet="CatDestino" />
+    </AssociationSet>
+    <AssociationSet Name="FK_GastoCorriente_destinoID" Association="Self.FK_GastoCorriente_destinoID">
+      <End Role="CatDestino" EntitySet="CatDestino" />
+      <End Role="GastoCorriente" EntitySet="GastoCorriente" />
+    </AssociationSet>
+    <AssociationSet Name="FK_LugarSolicitudRecurso_catDestino" Association="Self.FK_LugarSolicitudRecurso_catDestino">
+      <End Role="CatDestino" EntitySet="CatDestino" />
+      <End Role="LugarSolicitudRecurso" EntitySet="LugarSolicitudRecurso" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Documento_tipoDocumentoID" Association="Self.FK_Documento_tipoDocumentoID">
+      <End Role="CatDocumento" EntitySet="CatDocumento" />
+      <End Role="Documento" EntitySet="Documento" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TipoDocumentos_tipoSolicitudID" Association="Self.FK_TipoDocumentos_tipoSolicitudID">
+      <End Role="CatSolicitud" EntitySet="CatSolicitud" />
+      <End Role="CatDocumento" EntitySet="CatDocumento" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CatEntidadFederativa_paisID" Association="Self.FK_CatEntidadFederativa_paisID">
+      <End Role="CatPais" EntitySet="CatPais" />
+      <End Role="CatEntidadFederativa" EntitySet="CatEntidadFederativa" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CatMunicipioLocalidad_entidadID" Association="Self.FK_CatMunicipioLocalidad_entidadID">
+      <End Role="CatEntidadFederativa" EntitySet="CatEntidadFederativa" />
+      <End Role="CatMunicipio" EntitySet="CatMunicipio" />
+    </AssociationSet>
+    <AssociationSet Name="FK_GastoCorriente_entidadID" Association="Self.FK_GastoCorriente_entidadID">
+      <End Role="CatEntidadFederativa" EntitySet="CatEntidadFederativa" />
+      <End Role="GastoCorriente" EntitySet="GastoCorriente" />
+    </AssociationSet>
+    <AssociationSet Name="FK_LugarSolicitudRecurso_catEntidadFederativa" Association="Self.FK_LugarSolicitudRecurso_catEntidadFederativa">
+      <End Role="CatEntidadFederativa" EntitySet="CatEntidadFederativa" />
+      <End Role="LugarSolicitudRecurso" EntitySet="LugarSolicitudRecurso" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Factura_estatusFacturaID" Association="Self.FK_Factura_estatusFacturaID">
+      <End Role="CatEstatusFactura" EntitySet="CatEstatusFactura" />
+      <End Role="Factura" EntitySet="Factura" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PagoCheque_estatusPagoID" Association="Self.FK_PagoCheque_estatusPagoID">
+      <End Role="CatEstatusPago" EntitySet="CatEstatusPago" />
+      <End Role="PagoCheque" EntitySet="PagoCheque" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TransferenciaBancaria_estatusPagoID" Association="Self.FK_TransferenciaBancaria_estatusPagoID">
+      <End Role="CatEstatusPago" EntitySet="CatEstatusPago" />
+      <End Role="TransferenciaBancaria" EntitySet="TransferenciaBancaria" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PresionGasto_estatusPresionID" Association="Self.FK_PresionGasto_estatusPresionID">
+      <End Role="CatEstatusPresion" EntitySet="CatEstatusPresion" />
+      <End Role="PresionGasto" EntitySet="PresionGasto" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EstatusAcciones_estatusID" Association="Self.FK_EstatusAcciones_estatusID">
+      <End Role="CatEstatusSolicitud" EntitySet="CatEstatusSolicitud" />
+      <End Role="EstatusAccion" EntitySet="EstatusAccion" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EstatusPerfil_estatusID" Association="Self.FK_EstatusPerfil_estatusID">
+      <End Role="CatEstatusSolicitud" EntitySet="CatEstatusSolicitud" />
+      <End Role="EstatusPerfil" EntitySet="EstatusPerfil" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SolicitudRecursos_estatusID" Association="Self.FK_SolicitudRecursos_estatusID">
+      <End Role="CatEstatusSolicitud" EntitySet="CatEstatusSolicitud" />
+      <End Role="SolicitudRecurso" EntitySet="SolicitudRecurso" />
+    </AssociationSet>
+    <AssociationSet Name="fk_evento_accion" Association="Self.fk_evento_accion">
+      <End Role="CatEventoAccion" EntitySet="CatEventoAccion" />
+      <End Role="CatEvento" EntitySet="CatEvento" />
+    </AssociationSet>
+    <AssociationSet Name="fk_evento_modulo" Association="Self.fk_evento_modulo">
+      <End Role="CatModulo" EntitySet="CatModulo" />
+      <End Role="CatEvento" EntitySet="CatEvento" />
+    </AssociationSet>
+    <AssociationSet Name="fk_evento_perfil" Association="Self.fk_evento_perfil">
+      <End Role="CatPerfil" EntitySet="CatPerfil" />
+      <End Role="CatEvento" EntitySet="CatEvento" />
+    </AssociationSet>
+    <AssociationSet Name="fk_evento_solicitud" Association="Self.fk_evento_solicitud">
+      <End Role="CatEvento" EntitySet="CatEvento" />
+      <End Role="SolicitudRecurso" EntitySet="SolicitudRecurso" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SolicitudFirma_CatFirma" Association="Self.FK_SolicitudFirma_CatFirma">
+      <End Role="CatFirma" EntitySet="CatFirma" />
+      <End Role="SolicitudFirma" EntitySet="SolicitudFirma" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SolicitudRecurso_CatFormaComprobacion" Association="Self.FK_SolicitudRecurso_CatFormaComprobacion">
+      <End Role="CatFormaComprobacion" EntitySet="CatFormaComprobacion" />
+      <End Role="SolicitudRecurso" EntitySet="SolicitudRecurso" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TipoJefeDepto_CatTipoDependiente" Association="Self.FK_TipoJefeDepto_CatTipoDependiente">
+      <End Role="CatJefeDepto" EntitySet="CatJefeDepto" />
+      <End Role="TipoJefeDepto" EntitySet="TipoJefeDepto" />
+    </AssociationSet>
+    <AssociationSet Name="FK__ModuloSub__modul__00AA174D" Association="Self.FK__ModuloSub__modul__00AA174D">
+      <End Role="CatModulo" EntitySet="CatModulo" />
+      <End Role="ModuloSubmodulo" EntitySet="ModuloSubmodulo" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Parametro__modul__58920452" Association="Self.FK__Parametro__modul__58920452">
+      <End Role="CatModulo" EntitySet="CatModulo" />
+      <End Role="Parametro" EntitySet="Parametro" />
+    </AssociationSet>
+    <AssociationSet Name="FK__PerfilMod__modul__10E07F16" Association="Self.FK__PerfilMod__modul__10E07F16">
+      <End Role="CatModulo" EntitySet="CatModulo" />
+      <End Role="PerfilModulo" EntitySet="PerfilModulo" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Factura_monedaID" Association="Self.FK_Factura_monedaID">
+      <End Role="CatMoneda" EntitySet="CatMoneda" />
+      <End Role="Factura" EntitySet="Factura" />
+    </AssociationSet>
+    <AssociationSet Name="FK_LugarSolicitudRecurso_CatMoneda" Association="Self.FK_LugarSolicitudRecurso_CatMoneda">
+      <End Role="CatMoneda" EntitySet="CatMoneda" />
+      <End Role="LugarSolicitudRecurso" EntitySet="LugarSolicitudRecurso" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Penalizaciones_monedaID" Association="Self.FK_Penalizaciones_monedaID">
+      <End Role="CatMoneda" EntitySet="CatMoneda" />
+      <End Role="Penalizacion" EntitySet="Penalizacion" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Proveedores_monedaID" Association="Self.FK_Proveedores_monedaID">
+      <End Role="CatMoneda" EntitySet="CatMoneda" />
+      <End Role="Proveedor" EntitySet="Proveedor" />
+    </AssociationSet>
+    <AssociationSet Name="FK_LugarSolicitudRecurso_catMunicipio" Association="Self.FK_LugarSolicitudRecurso_catMunicipio">
+      <End Role="CatMunicipio" EntitySet="CatMunicipio" />
+      <End Role="LugarSolicitudRecurso" EntitySet="LugarSolicitudRecurso" />
+    </AssociationSet>
+    <AssociationSet Name="FK_MovimientoAdministrativo_tipoPagoID" Association="Self.FK_MovimientoAdministrativo_tipoPagoID">
+      <End Role="CatPago" EntitySet="CatPago" />
+      <End Role="MovimientoAdministrativo" EntitySet="MovimientoAdministrativo" />
+    </AssociationSet>
+    <AssociationSet Name="PK_PolizaPago_CatTipoPagoPoliza" Association="Self.PK_PolizaPago_CatTipoPagoPoliza">
+      <End Role="CatPagoPoliza" EntitySet="CatPagoPoliza" />
+      <End Role="PolizaPago" EntitySet="PolizaPago" />
+    </AssociationSet>
+    <AssociationSet Name="FK_LugarSolicitudRecurso_CatPais" Association="Self.FK_LugarSolicitudRecurso_CatPais">
+      <End Role="CatPais" EntitySet="CatPais" />
+      <End Role="LugarSolicitudRecurso" EntitySet="LugarSolicitudRecurso" />
+    </AssociationSet>
+    <AssociationSet Name="FK_GastoCorriente_codPartida" Association="Self.FK_GastoCorriente_codPartida">
+      <End Role="CatPartida" EntitySet="CatPartida" />
+      <End Role="GastoCorriente" EntitySet="GastoCorriente" />
+    </AssociationSet>
+    <AssociationSet Name="FK_GastosAduanales_codPartida" Association="Self.FK_GastosAduanales_codPartida">
+      <End Role="CatPartida" EntitySet="CatPartida" />
+      <End Role="GastoAduana" EntitySet="GastoAduana" />
+    </AssociationSet>
+    <AssociationSet Name="FK_GastosFunerarios_codPartida" Association="Self.FK_GastosFunerarios_codPartida">
+      <End Role="CatPartida" EntitySet="CatPartida" />
+      <End Role="GastoFunerario" EntitySet="GastoFunerario" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ImpuestosSobreNomina_codPartida" Association="Self.FK_ImpuestosSobreNomina_codPartida">
+      <End Role="CatPartida" EntitySet="CatPartida" />
+      <End Role="ImpuestoSobreNomina" EntitySet="ImpuestoSobreNomina" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Laudos_codPartida" Association="Self.FK_Laudos_codPartida">
+      <End Role="CatPartida" EntitySet="CatPartida" />
+      <End Role="Laudo" EntitySet="Laudo" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PartidaSolicitudRecurso_CatPartida" Association="Self.FK_PartidaSolicitudRecurso_CatPartida">
+      <End Role="CatPartida" EntitySet="CatPartida" />
+      <End Role="PartidaSolicitudRecurso" EntitySet="PartidaSolicitudRecurso" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Proveedores_codPartida" Association="Self.FK_Proveedores_codPartida">
+      <End Role="CatPartida" EntitySet="CatPartida" />
+      <End Role="Proveedor" EntitySet="Proveedor" />
+    </AssociationSet>
+    <AssociationSet Name="PK_CatPartida_tipoSolicitudID" Association="Self.PK_CatPartida_tipoSolicitudID">
+      <End Role="CatSolicitud" EntitySet="CatSolicitud" />
+      <End Role="CatPartida" EntitySet="CatPartida" />
+    </AssociationSet>
+    <AssociationSet Name="FK__PerfilMod__perfi__0FEC5ADD" Association="Self.FK__PerfilMod__perfi__0FEC5ADD">
+      <End Role="CatPerfil" EntitySet="CatPerfil" />
+      <End Role="PerfilModulo" EntitySet="PerfilModulo" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EstatusPerfil_perfilID" Association="Self.FK_EstatusPerfil_perfilID">
+      <End Role="CatPerfil" EntitySet="CatPerfil" />
+      <End Role="EstatusPerfil" EntitySet="EstatusPerfil" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Usuario_CatPerfil" Association="Self.FK_Usuario_CatPerfil">
+      <End Role="CatPerfil" EntitySet="CatPerfil" />
+      <End Role="Usuario" EntitySet="Usuario" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Usuarios_perfilID" Association="Self.FK_Usuarios_perfilID">
+      <End Role="CatPerfil" EntitySet="CatPerfil" />
+      <End Role="Usuario" EntitySet="Usuario" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PolizaPago_tipoPolizaID" Association="Self.FK_PolizaPago_tipoPolizaID">
+      <End Role="CatPoliza" EntitySet="CatPoliza" />
+      <End Role="PolizaPago" EntitySet="PolizaPago" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SolicitudRecursos_prioridadID" Association="Self.FK_SolicitudRecursos_prioridadID">
+      <End Role="CatPrioridad" EntitySet="CatPrioridad" />
+      <End Role="SolicitudRecurso" EntitySet="SolicitudRecurso" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CatUnidadAdministrativa_regionID" Association="Self.FK_CatUnidadAdministrativa_regionID">
+      <End Role="CatRegion" EntitySet="CatRegion" />
+      <End Role="CatUnidadAdm" EntitySet="CatUnidadAdm" />
+    </AssociationSet>
+    <AssociationSet Name="fk_TipoSolPorAreaCatRegion" Association="Self.fk_TipoSolPorAreaCatRegion">
+      <End Role="CatRegion" EntitySet="CatRegion" />
+      <End Role="TipoSolicitudPorArea" EntitySet="TipoSolicitudPorArea" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UsuarioRegionFiscalizacion_CatRegion" Association="Self.FK_UsuarioRegionFiscalizacion_CatRegion">
+      <End Role="CatRegion" EntitySet="CatRegion" />
+      <End Role="UsuarioRegionFiscalizacion" EntitySet="UsuarioRegionFiscalizacion" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Usuario_CatRol" Association="Self.FK_Usuario_CatRol">
+      <End Role="CatRol" EntitySet="CatRol" />
+      <End Role="Usuario" EntitySet="Usuario" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SolicitudCatUnidadAdm_CatSolicitud" Association="Self.FK_SolicitudCatUnidadAdm_CatSolicitud">
+      <End Role="CatSolicitud" EntitySet="CatSolicitud" />
+      <End Role="SolicitudCatUnidadAdm" EntitySet="SolicitudCatUnidadAdm" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SolicitudRecursos_tipoSolicitudID" Association="Self.FK_SolicitudRecursos_tipoSolicitudID">
+      <End Role="CatSolicitud" EntitySet="CatSolicitud" />
+      <End Role="SolicitudRecurso" EntitySet="SolicitudRecurso" />
+    </AssociationSet>
+    <AssociationSet Name="fk_TipoSolPorAreaCatTipoSol" Association="Self.fk_TipoSolPorAreaCatTipoSol">
+      <End Role="CatSolicitud" EntitySet="CatSolicitud" />
+      <End Role="TipoSolicitudPorArea" EntitySet="TipoSolicitudPorArea" />
+    </AssociationSet>
+    <AssociationSet Name="fk_TipoSolPorUACatTipoSol" Association="Self.fk_TipoSolPorUACatTipoSol">
+      <End Role="CatSolicitud" EntitySet="CatSolicitud" />
+      <End Role="TipoSolicitudPorUA" EntitySet="TipoSolicitudPorUA" />
+    </AssociationSet>
+    <AssociationSet Name="FK__ModuloSub__Submo__019E3B86" Association="Self.FK__ModuloSub__Submo__019E3B86">
+      <End Role="CatSubmodulo" EntitySet="CatSubmodulo" />
+      <End Role="ModuloSubmodulo" EntitySet="ModuloSubmodulo" />
+    </AssociationSet>
+    <AssociationSet Name="FK_AreaUnidadAdm_CatUnidadAdministrativa" Association="Self.FK_AreaUnidadAdm_CatUnidadAdministrativa">
+      <End Role="CatUnidadAdm" EntitySet="CatUnidadAdm" />
+      <End Role="AreaUnidadAdm" EntitySet="AreaUnidadAdm" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SolicitudCatUnidadAdm_CatUnidadAdm" Association="Self.FK_SolicitudCatUnidadAdm_CatUnidadAdm">
+      <End Role="CatUnidadAdm" EntitySet="CatUnidadAdm" />
+      <End Role="SolicitudCatUnidadAdm" EntitySet="SolicitudCatUnidadAdm" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SolicitudRecursos_codUA" Association="Self.FK_SolicitudRecursos_codUA">
+      <End Role="CatUnidadAdm" EntitySet="CatUnidadAdm" />
+      <End Role="SolicitudRecurso" EntitySet="SolicitudRecurso" />
+    </AssociationSet>
+    <AssociationSet Name="fk_TipoSolPorUACatUA" Association="Self.fk_TipoSolPorUACatUA">
+      <End Role="CatUnidadAdm" EntitySet="CatUnidadAdm" />
+      <End Role="TipoSolicitudPorUA" EntitySet="TipoSolicitudPorUA" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Usuarios_codUA" Association="Self.FK_Usuarios_codUA">
+      <End Role="CatUnidadAdm" EntitySet="CatUnidadAdm" />
+      <End Role="Usuario" EntitySet="Usuario" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PresupuestoClc_clcID" Association="Self.FK_PresupuestoClc_clcID">
+      <End Role="Clc" EntitySet="Clc" />
+      <End Role="PresupuestoClc" EntitySet="PresupuestoClc" />
+    </AssociationSet>
+    <AssociationSet Name="FK_LugarSolicitudRecurso_DetalleSolicitudRecurso" Association="Self.FK_LugarSolicitudRecurso_DetalleSolicitudRecurso">
+      <End Role="DetalleSolicitudRecurso" EntitySet="DetalleSolicitudRecurso" />
+      <End Role="LugarSolicitudRecurso" EntitySet="LugarSolicitudRecurso" />
+    </AssociationSet>
+    <AssociationSet Name="fk_PartidaSolicitudRecurso_DetalleSolicitudRecurso" Association="Self.fk_PartidaSolicitudRecurso_DetalleSolicitudRecurso">
+      <End Role="DetalleSolicitudRecurso" EntitySet="DetalleSolicitudRecurso" />
+      <End Role="PartidaSolicitudRecurso" EntitySet="PartidaSolicitudRecurso" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Viatico_homologado" Association="Self.FK_Viatico_homologado">
+      <End Role="Homologado" EntitySet="Homologado" />
+      <End Role="DetalleSolicitudRecurso" EntitySet="DetalleSolicitudRecurso" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Viaticos_SolicitudRecursos" Association="Self.FK_Viaticos_SolicitudRecursos">
+      <End Role="SolicitudRecurso" EntitySet="SolicitudRecurso" />
+      <End Role="DetalleSolicitudRecurso" EntitySet="DetalleSolicitudRecurso" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Documento_solicitudID" Association="Self.FK_Documento_solicitudID">
+      <End Role="SolicitudRecurso" EntitySet="SolicitudRecurso" />
+      <End Role="Documento" EntitySet="Documento" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EstatusMovimiento_solicitudID" Association="Self.FK_EstatusMovimiento_solicitudID">
+      <End Role="SolicitudRecurso" EntitySet="SolicitudRecurso" />
+      <End Role="EstatusMovimiento" EntitySet="EstatusMovimiento" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EstatusMovimiento_usuarioID" Association="Self.FK_EstatusMovimiento_usuarioID">
+      <End Role="Usuario" EntitySet="Usuario" />
+      <End Role="EstatusMovimiento" EntitySet="EstatusMovimiento" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Factura_proveedoresID" Association="Self.FK_Factura_proveedoresID">
+      <End Role="Proveedor" EntitySet="Proveedor" />
+      <End Role="Factura" EntitySet="Factura" />
+    </AssociationSet>
+    <AssociationSet Name="FK_firmaElectronica_solicitudID" Association="Self.FK_firmaElectronica_solicitudID">
+      <End Role="SolicitudRecurso" EntitySet="SolicitudRecurso" />
+      <End Role="FirmaElectronica" EntitySet="FirmaElectronica" />
+    </AssociationSet>
+    <AssociationSet Name="FK_GastosAduanales_solicitudID" Association="Self.FK_GastosAduanales_solicitudID">
+      <End Role="SolicitudRecurso" EntitySet="SolicitudRecurso" />
+      <End Role="GastoAduana" EntitySet="GastoAduana" />
+    </AssociationSet>
+    <AssociationSet Name="FK_GastoCorriente_solicitudID" Association="Self.FK_GastoCorriente_solicitudID">
+      <End Role="SolicitudRecurso" EntitySet="SolicitudRecurso" />
+      <End Role="GastoCorriente" EntitySet="GastoCorriente" />
+    </AssociationSet>
+    <AssociationSet Name="FK_GastosFunerarios_solicitudID" Association="Self.FK_GastosFunerarios_solicitudID">
+      <End Role="SolicitudRecurso" EntitySet="SolicitudRecurso" />
+      <End Role="GastoFunerario" EntitySet="GastoFunerario" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ImpuestosSobreNomina_solicitudID" Association="Self.FK_ImpuestosSobreNomina_solicitudID">
+      <End Role="SolicitudRecurso" EntitySet="SolicitudRecurso" />
+      <End Role="ImpuestoSobreNomina" EntitySet="ImpuestoSobreNomina" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Laudos_solicitudID" Association="Self.FK_Laudos_solicitudID">
+      <End Role="SolicitudRecurso" EntitySet="SolicitudRecurso" />
+      <End Role="Laudo" EntitySet="Laudo" />
+    </AssociationSet>
+    <AssociationSet Name="FK_LogError_usuarioID" Association="Self.FK_LogError_usuarioID">
+      <End Role="Usuario" EntitySet="Usuario" />
+      <End Role="LogError" EntitySet="LogError" />
+    </AssociationSet>
+    <AssociationSet Name="FK_MovimientoAdministrativo_presionGastoID" Association="Self.FK_MovimientoAdministrativo_presionGastoID">
+      <End Role="PresionGasto" EntitySet="PresionGasto" />
+      <End Role="MovimientoAdministrativo" EntitySet="MovimientoAdministrativo" />
+    </AssociationSet>
+    <AssociationSet Name="FK_MovimientoAdministrativo_solicitudID" Association="Self.FK_MovimientoAdministrativo_solicitudID">
+      <End Role="SolicitudRecurso" EntitySet="SolicitudRecurso" />
+      <End Role="MovimientoAdministrativo" EntitySet="MovimientoAdministrativo" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PagoCheque_movimientoAdmID" Association="Self.FK_PagoCheque_movimientoAdmID">
+      <End Role="MovimientoAdministrativo" EntitySet="MovimientoAdministrativo" />
+      <End Role="PagoCheque" EntitySet="PagoCheque" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TransferenciaBancaria_movimientoAdmID" Association="Self.FK_TransferenciaBancaria_movimientoAdmID">
+      <End Role="MovimientoAdministrativo" EntitySet="MovimientoAdministrativo" />
+      <End Role="TransferenciaBancaria" EntitySet="TransferenciaBancaria" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Penalizaciones_proveedoresID" Association="Self.FK_Penalizaciones_proveedoresID">
+      <End Role="Proveedor" EntitySet="Proveedor" />
+      <End Role="Penalizacion" EntitySet="Penalizacion" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PresupuestoClc_solicitudID" Association="Self.FK_PresupuestoClc_solicitudID">
+      <End Role="SolicitudRecurso" EntitySet="SolicitudRecurso" />
+      <End Role="PresupuestoClc" EntitySet="PresupuestoClc" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Proveedores_solicitudID" Association="Self.FK_Proveedores_solicitudID">
+      <End Role="SolicitudRecurso" EntitySet="SolicitudRecurso" />
+      <End Role="Proveedor" EntitySet="Proveedor" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RegistroContable_SolicitudRecursos" Association="Self.FK_RegistroContable_SolicitudRecursos">
+      <End Role="SolicitudRecurso" EntitySet="SolicitudRecurso" />
+      <End Role="RegistroContable" EntitySet="RegistroContable" />
+    </AssociationSet>
+    <AssociationSet Name="fk_RegVol_SolRec" Association="Self.fk_RegVol_SolRec">
+      <End Role="SolicitudRecurso" EntitySet="SolicitudRecurso" />
+      <End Role="RegistroVolante" EntitySet="RegistroVolante" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SolicitudFirma_SolicitudFirma" Association="Self.FK_SolicitudFirma_SolicitudFirma">
+      <End Role="SolicitudFirma" EntitySet="SolicitudFirma" />
+      <End Role="SolicitudFirma1" EntitySet="SolicitudFirma" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SolicitudFirma_SolicitudrECURSO" Association="Self.FK_SolicitudFirma_SolicitudrECURSO">
+      <End Role="SolicitudRecurso" EntitySet="SolicitudRecurso" />
+      <End Role="SolicitudFirma" EntitySet="SolicitudFirma" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UsuarioRegionFiscalizacion_Usuarios" Association="Self.FK_UsuarioRegionFiscalizacion_Usuarios">
+      <End Role="Usuario" EntitySet="Usuario" />
+      <End Role="UsuarioRegionFiscalizacion" EntitySet="UsuarioRegionFiscalizacion" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

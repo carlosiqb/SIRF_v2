@@ -1,0 +1,3627 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="SIRFModelo.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Agregadurias">
+    <Key>
+      <PropertyRef Name="agregaduriasID" />
+    </Key>
+    <Property Name="agregaduriasID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="solicitudID" Type="int" Nullable="false" />
+    <Property Name="monedaID" Type="int" Nullable="false" />
+    <Property Name="paisID" Type="int" Nullable="false" />
+    <Property Name="codPartida" Type="int" Nullable="false" />
+    <Property Name="montoSolicitado" Type="money" Nullable="false" />
+  </EntityType>
+  <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'DesaSIRF.dbo.AreaUnidadAdm' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
+  <EntityType Name="AreaUnidadAdm">
+    <Key>
+      <PropertyRef Name="relacionAreaUA" />
+      <PropertyRef Name="areasID" />
+      <PropertyRef Name="codUA" />
+      <PropertyRef Name="estatusLogico" />
+    </Key>
+    <Property Name="relacionAreaUA" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="areasID" Type="int" Nullable="false" />
+    <Property Name="codUA" Type="int" Nullable="false" />
+    <Property Name="estatusLogico" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Asignacion">
+    <Key>
+      <PropertyRef Name="asignacionID" />
+    </Key>
+    <Property Name="asignacionID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="solicitudID" Type="int" Nullable="false" />
+    <Property Name="usuarioID" Type="int" Nullable="false" />
+    <Property Name="estatusLogico" Type="bit" />
+  </EntityType>
+  <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'DesaSIRF.dbo.AuditUsuario' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
+  <EntityType Name="AuditUsuario">
+    <Key>
+      <PropertyRef Name="auditID" />
+    </Key>
+    <Property Name="auditID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TipoTrn" Type="char" MaxLength="1" />
+    <Property Name="Tabla" Type="varchar" MaxLength="128" />
+    <Property Name="PK" Type="varchar" MaxLength="1000" />
+    <Property Name="Campo" Type="varchar" MaxLength="128" />
+    <Property Name="ValorOriginal" Type="varchar" MaxLength="1000" />
+    <Property Name="ValorNuevo" Type="varchar" MaxLength="1000" />
+    <Property Name="FechaTrn" Type="datetime" />
+    <Property Name="Usuario" Type="varchar" MaxLength="128" />
+  </EntityType>
+  <EntityType Name="Becalos">
+    <Key>
+      <PropertyRef Name="becalosID" />
+    </Key>
+    <Property Name="becalosID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="solicitudID" Type="int" Nullable="false" />
+    <Property Name="codPartida" Type="int" Nullable="false" />
+    <Property Name="montoOtorgado" Type="money" Nullable="false" />
+    <Property Name="titularCuentaBan" Type="varchar" MaxLength="40" Nullable="false" />
+    <Property Name="cuentaBancaria" Type="varchar" MaxLength="12" Nullable="false" />
+    <Property Name="institucionBancaria" Type="varchar" MaxLength="40" Nullable="false" />
+    <Property Name="fechaInicio" Type="datetime" Nullable="false" />
+    <Property Name="fechaFin" Type="datetime" />
+    <Property Name="numeroExpediente" Type="varchar" MaxLength="5" Nullable="false" />
+    <Property Name="clabeInterbancaria" Type="varchar" MaxLength="18" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Becas">
+    <Key>
+      <PropertyRef Name="becasID" />
+    </Key>
+    <Property Name="becasID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="solicitudID" Type="int" Nullable="false" />
+    <Property Name="academiaID" Type="int" Nullable="false" />
+    <Property Name="codPartida" Type="int" Nullable="false" />
+    <Property Name="generacion" Type="varchar" MaxLength="250" Nullable="false" />
+    <Property Name="fechaInicio" Type="datetime" Nullable="false" />
+    <Property Name="fechaFin" Type="datetime" Nullable="false" />
+    <Property Name="rfc" Type="varchar" MaxLength="13" Nullable="false" />
+    <Property Name="nombre" Type="varchar" MaxLength="60" Nullable="false" />
+    <Property Name="numeroFaltas" Type="int" Nullable="false" />
+    <Property Name="montoDepositar" Type="money" Nullable="false" />
+    <Property Name="institucionBancaria" Type="varchar" MaxLength="40" Nullable="false" />
+    <Property Name="clabeInterbancaria" Type="varchar" MaxLength="18" Nullable="false" />
+    <Property Name="cuentaBancaria" Type="varchar" MaxLength="12" Nullable="false" />
+    <Property Name="estatusLogico" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Beneficiarios">
+    <Key>
+      <PropertyRef Name="beneficiariosID" />
+    </Key>
+    <Property Name="beneficiariosID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="tipoSolicitudID" Type="int" Nullable="false" />
+    <Property Name="identificadorTipo" Type="int" Nullable="false" />
+    <Property Name="dependienteID" Type="int" Nullable="false" />
+    <Property Name="tipoDependienteID" Type="int" Nullable="false" />
+    <Property Name="descripcionTipoDependiente" Type="varchar" MaxLength="18" Nullable="false" />
+    <Property Name="apellidoPaterno" Type="varchar" MaxLength="40" Nullable="false" />
+    <Property Name="apellidoMaterno" Type="varchar" MaxLength="40" Nullable="false" />
+    <Property Name="nombre" Type="varchar" MaxLength="40" Nullable="false" />
+    <Property Name="fechaNacimiento" Type="datetime" />
+    <Property Name="CURP" Type="varchar" MaxLength="18" />
+    <Property Name="RFC" Type="varchar" MaxLength="13" />
+    <Property Name="sexo" Type="varchar" MaxLength="1" Nullable="false" />
+    <Property Name="estatusLogico" Type="bit" Nullable="false" />
+    <Property Name="solicitudID" Type="int" />
+  </EntityType>
+  <EntityType Name="BitacoraMovimiento">
+    <Key>
+      <PropertyRef Name="bitacoraID" />
+    </Key>
+    <Property Name="bitacoraID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="solicitudID" Type="int" Nullable="false" />
+    <Property Name="estatusID" Type="smallint" Nullable="false" />
+    <Property Name="usuarioID" Type="int" Nullable="false" />
+    <Property Name="fecha" Type="datetime" Nullable="false" />
+    <Property Name="modulo" Type="varchar" MaxLength="40" Nullable="false" />
+    <Property Name="evento" Type="varchar" MaxLength="100" Nullable="false" />
+  </EntityType>
+  <EntityType Name="BitacoraUsuarios">
+    <Key>
+      <PropertyRef Name="bitacoraID" />
+    </Key>
+    <Property Name="bitacoraID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="dhcpID" Type="int" Nullable="false" />
+    <Property Name="usuarioMod" Type="varchar" MaxLength="14" Nullable="false" />
+    <Property Name="fecha" Type="datetime" Nullable="false" />
+    <Property Name="usuarioActual" Type="varchar" MaxLength="14" Nullable="false" />
+    <Property Name="usuarioNuevo" Type="varchar" MaxLength="14" Nullable="false" />
+  </EntityType>
+  <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'DesaSIRF.dbo.cargaMasivaCuotasDiarias' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
+  <EntityType Name="cargaMasivaCuotasDiarias">
+    <Key>
+      <PropertyRef Name="archivoCargado" />
+      <PropertyRef Name="fechaCarga" />
+      <PropertyRef Name="usuarioID" />
+    </Key>
+    <Property Name="archivoCargado" Type="varchar(max)" Nullable="false" />
+    <Property Name="fechaCarga" Type="datetime" Nullable="false" />
+    <Property Name="usuarioID" Type="int" Nullable="false" />
+    <Property Name="LoadSessionId" Type="varchar(max)" />
+    <Property Name="solicitudID" Type="int" />
+    <Property Name="numRegistro" Type="int" />
+    <Property Name="NumeroExpediente" Type="varchar(max)" />
+    <Property Name="CuotasDiarias" Type="varchar(max)" />
+    <Property Name="FechaInicio" Type="varchar(max)" />
+    <Property Name="FechaFin" Type="varchar(max)" />
+    <Property Name="DiasEfectivos" Type="varchar(max)" />
+    <Property Name="MontoAPagar" Type="varchar(max)" />
+    <Property Name="TipoCuentaBancaria" Type="varchar(max)" />
+    <Property Name="CuentaBancaria" Type="varchar(max)" />
+    <Property Name="InstitucionBancaria" Type="varchar(max)" />
+    <Property Name="CLABEInterbancaria" Type="varchar(max)" />
+    <Property Name="Partida" Type="varchar(max)" />
+  </EntityType>
+  <EntityType Name="CatAcademia">
+    <Key>
+      <PropertyRef Name="academiaID" />
+    </Key>
+    <Property Name="academiaID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="descripcionAcademia" Type="char" MaxLength="80" Nullable="false" />
+    <Property Name="estatusLogico" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CatAcciones">
+    <Key>
+      <PropertyRef Name="accionesID" />
+    </Key>
+    <Property Name="accionesID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="descripcionAccion" Type="varchar" MaxLength="40" Nullable="false" />
+    <Property Name="accion" Type="varchar" MaxLength="40" Nullable="false" />
+    <Property Name="controlFormulario" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="estatusLogico" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CatAgenciaAduanal">
+    <Key>
+      <PropertyRef Name="agenciaID" />
+    </Key>
+    <Property Name="agenciaID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="descripcionAgencia" Type="varchar" MaxLength="40" Nullable="false" />
+    <Property Name="estatusLogico" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CatAreaFirmas">
+    <Key>
+      <PropertyRef Name="areaFirmasID" />
+    </Key>
+    <Property Name="areaFirmasID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="descripcionAreasFirmas" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="descripcionSubareasFirmas" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="estatusLogico" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CatAreas">
+    <Key>
+      <PropertyRef Name="areaID" />
+    </Key>
+    <Property Name="areaID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="descripcionArea" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="areaPadreID" Type="tinyint" />
+    <Property Name="codUA" Type="int" />
+    <Property Name="estatusLogico" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CatBanco">
+    <Key>
+      <PropertyRef Name="bancoID" />
+    </Key>
+    <Property Name="bancoID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="descripcionBanco" Type="varchar" MaxLength="40" Nullable="false" />
+    <Property Name="estatusLogico" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CatCargoFirmas">
+    <Key>
+      <PropertyRef Name="cargoFirmasId" />
+    </Key>
+    <Property Name="cargoFirmasId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="descripcionCargoFirmas" Type="varchar" MaxLength="250" Nullable="false" />
+    <Property Name="estatusLogico" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CatComentarioAnualFirmas">
+    <Key>
+      <PropertyRef Name="comentarioAnualFirmasID" />
+    </Key>
+    <Property Name="comentarioAnualFirmasID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="anio" Type="int" Nullable="false" />
+    <Property Name="comentarioTitulo" Type="varchar" MaxLength="250" Nullable="false" />
+    <Property Name="comentarioFirma" Type="varchar" MaxLength="250" Nullable="false" />
+    <Property Name="estatusLogico" Type="bit" Nullable="false" />
+  </EntityType>
+  <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'DesaSIRF.dbo.CatComentarioConocimientoFirmas' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
+  <EntityType Name="CatComentarioConocimientoFirmas">
+    <Key>
+      <PropertyRef Name="comentarioConocimientoFirmasID" />
+      <PropertyRef Name="comentarioTitulo" />
+      <PropertyRef Name="estatusLogico" />
+    </Key>
+    <Property Name="comentarioConocimientoFirmasID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="comentarioTitulo" Type="varchar" MaxLength="250" Nullable="false" />
+    <Property Name="estatusLogico" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CatConceptoGastos">
+    <Key>
+      <PropertyRef Name="conceptoGastosID" />
+    </Key>
+    <Property Name="conceptoGastosID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="descripcionConceptoGasto" Type="char" MaxLength="80" Nullable="false" />
+    <Property Name="tipoSolicitudID" Type="int" Nullable="false" />
+    <Property Name="estatusLogico" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CatConceptoPago">
+    <Key>
+      <PropertyRef Name="conceptoPagoID" />
+    </Key>
+    <Property Name="conceptoPagoID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="descripcionConcepto" Type="varchar" MaxLength="180" />
+    <Property Name="estatusLogico" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CatCuenta">
+    <Key>
+      <PropertyRef Name="cuentaID" />
+    </Key>
+    <Property Name="cuentaID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="bancoID" Type="int" Nullable="false" />
+    <Property Name="descripcionCuenta" Type="varchar" MaxLength="40" Nullable="false" />
+    <Property Name="numeroCuenta" Type="varchar" MaxLength="12" Nullable="false" />
+    <Property Name="areaBanco" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="anio" Type="int" Nullable="false" />
+    <Property Name="estatusLogico" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CatCuentaCargo">
+    <Key>
+      <PropertyRef Name="cuentaCargoID" />
+    </Key>
+    <Property Name="cuentaCargoID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="descripcionCuentaCargo" Type="varchar" MaxLength="40" Nullable="false" />
+    <Property Name="estatusLogico" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CatDestino">
+    <Key>
+      <PropertyRef Name="destinoID" />
+    </Key>
+    <Property Name="destinoID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="entidadID" Type="int" Nullable="false" />
+    <Property Name="descripcionDestino" Type="varchar" MaxLength="80" Nullable="false" />
+    <Property Name="estatusLogico" Type="bit" Nullable="false" />
+    <Property Name="orden" Type="int" />
+  </EntityType>
+  <EntityType Name="CatEntidadFederativa">
+    <Key>
+      <PropertyRef Name="entidadID" />
+    </Key>
+    <Property Name="entidadID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="paisID" Type="int" Nullable="false" />
+    <Property Name="descripcionEntidad" Type="char" MaxLength="60" Nullable="false" />
+    <Property Name="abreviatura" Type="varchar" MaxLength="12" />
+    <Property Name="codUA" Type="int" />
+    <Property Name="estatusLogico" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CatEstatusFactura">
+    <Key>
+      <PropertyRef Name="estatusFacturaID" />
+    </Key>
+    <Property Name="estatusFacturaID" Type="smallint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="descripcionEstatusFactura" Type="varchar" MaxLength="28" Nullable="false" />
+    <Property Name="estatusLogico" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CatEstatusPago">
+    <Key>
+      <PropertyRef Name="estatusPagoID" />
+    </Key>
+    <Property Name="estatusPagoID" Type="smallint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="descripcionEstatusPago" Type="varchar" MaxLength="18" Nullable="false" />
+    <Property Name="estatusLogico" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CatEstatusPresion">
+    <Key>
+      <PropertyRef Name="estatusPresionID" />
+    </Key>
+    <Property Name="estatusPresionID" Type="smallint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="descripcionEstatusPresion" Type="varchar" MaxLength="18" Nullable="false" />
+    <Property Name="estatusLogico" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CatEstatusSolicitud">
+    <Key>
+      <PropertyRef Name="estatusID" />
+    </Key>
+    <Property Name="estatusID" Type="smallint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="descripcionEstatus" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="descripcionCorta" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="estatusSiguiente" Type="int" />
+    <Property Name="estatusDevolucion" Type="int" />
+    <Property Name="estatusAlternativo" Type="int" />
+    <Property Name="estatusAltDev" Type="int" />
+    <Property Name="estatusLogico" Type="bit" Nullable="false" />
+    <Property Name="areasID" Type="int" />
+  </EntityType>
+  <EntityType Name="CatEvento">
+    <Key>
+      <PropertyRef Name="eventoId" />
+    </Key>
+    <Property Name="eventoId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="cveEvento" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="descEvento" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="descLargaEvento" Type="varchar" MaxLength="250" Nullable="false" />
+    <Property Name="moduloId" Type="int" Nullable="false" />
+    <Property Name="perfilId" Type="int" Nullable="false" />
+    <Property Name="estatusLogico" Type="bit" Nullable="false" />
+    <Property Name="eventoAccionId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CatEventoAccion">
+    <Key>
+      <PropertyRef Name="eventoAccionId" />
+    </Key>
+    <Property Name="eventoAccionId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="cveEventoAccion" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="descEventoAccion" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="estatusLogico" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CatFirma">
+    <Key>
+      <PropertyRef Name="FirmaID" />
+    </Key>
+    <Property Name="FirmaID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Descripcion" Type="nchar" MaxLength="50" />
+    <Property Name="EstadoLogico" Type="bit" />
+  </EntityType>
+  <EntityType Name="CatGradoFirmas">
+    <Key>
+      <PropertyRef Name="GradoFirmasId" />
+    </Key>
+    <Property Name="GradoFirmasId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="descripcionGradoFirmas" Type="varchar" MaxLength="150" Nullable="false" />
+    <Property Name="jerarquia" Type="int" />
+    <Property Name="estatusLogico" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CatLeyendaFirmas">
+    <Key>
+      <PropertyRef Name="leyendaFirmasID" />
+    </Key>
+    <Property Name="leyendaFirmasID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DescripcionLeyendaFirmas" Type="varchar" MaxLength="250" Nullable="false" />
+    <Property Name="estatusLogico" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CatModulo">
+    <Key>
+      <PropertyRef Name="moduloID" />
+    </Key>
+    <Property Name="moduloID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="descripcionModulo" Type="varchar" MaxLength="25" Nullable="false" />
+    <Property Name="estatusLogico" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CatMoneda">
+    <Key>
+      <PropertyRef Name="monedaID" />
+    </Key>
+    <Property Name="monedaID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="descripcionMoneda" Type="char" MaxLength="18" />
+    <Property Name="codigo" Type="char" MaxLength="3" Nullable="false" />
+    <Property Name="estatusLogico" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CatMunicipioLocalidad">
+    <Key>
+      <PropertyRef Name="municipioID" />
+    </Key>
+    <Property Name="municipioID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="entidadID" Type="int" Nullable="false" />
+    <Property Name="descripcionMunicipio" Type="varchar" MaxLength="60" />
+    <Property Name="masEconomico" Type="bit" Nullable="false" />
+    <Property Name="estatusLogico" Type="bit" Nullable="false" />
+  </EntityType>
+  <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'DesaSIRF.dbo.CatMunicipioLocalidadTemporal' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
+  <EntityType Name="CatMunicipioLocalidadTemporal">
+    <Key>
+      <PropertyRef Name="municipioID" />
+      <PropertyRef Name="entidadID" />
+      <PropertyRef Name="masEconomico" />
+      <PropertyRef Name="estatusLogico" />
+    </Key>
+    <Property Name="municipioID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="entidadID" Type="int" Nullable="false" />
+    <Property Name="descripcionMunicipio" Type="varchar" MaxLength="60" />
+    <Property Name="masEconomico" Type="bit" Nullable="false" />
+    <Property Name="estatusLogico" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CatPais">
+    <Key>
+      <PropertyRef Name="paisID" />
+    </Key>
+    <Property Name="paisID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="descripcionPais" Type="char" MaxLength="60" />
+    <Property Name="tipoControl" Type="tinyint" />
+    <Property Name="estatusLogico" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CatPartida">
+    <Key>
+      <PropertyRef Name="codPartida" />
+    </Key>
+    <Property Name="codPartida" Type="int" Nullable="false" />
+    <Property Name="tipoSolicitudID" Type="int" />
+    <Property Name="capitulo" Type="int" Nullable="false" />
+    <Property Name="concepto" Type="int" />
+    <Property Name="denominacion" Type="varchar" MaxLength="180" />
+    <Property Name="descripcionPartida" Type="varchar(max)" />
+    <Property Name="estatusLogico" Type="bit" Nullable="false" />
+  </EntityType>
+  <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'DesaSIRF.dbo.CatPartida_tmp' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
+  <EntityType Name="CatPartida_tmp">
+    <Key>
+      <PropertyRef Name="codPartida" />
+      <PropertyRef Name="capitulo" />
+      <PropertyRef Name="estatusLogico" />
+    </Key>
+    <Property Name="codPartida" Type="int" Nullable="false" />
+    <Property Name="capitulo" Type="int" Nullable="false" />
+    <Property Name="concepto" Type="int" />
+    <Property Name="denominacion" Type="varchar" MaxLength="180" />
+    <Property Name="descripcionPartida" Type="varchar(max)" />
+    <Property Name="estatusLogico" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CatPartidaObligatoria">
+    <Key>
+      <PropertyRef Name="catPartidaObligatoriaID" />
+    </Key>
+    <Property Name="catPartidaObligatoriaID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="codPartida" Type="int" Nullable="false" />
+    <Property Name="estatusLogico" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CatPerfil">
+    <Key>
+      <PropertyRef Name="perfilID" />
+    </Key>
+    <Property Name="perfilID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="descripcionPerfil" Type="varchar" MaxLength="60" Nullable="false" />
+    <Property Name="estatusLogico" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CatPrioridad">
+    <Key>
+      <PropertyRef Name="prioridadID" />
+    </Key>
+    <Property Name="prioridadID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="descripcionPrioridad" Type="char" MaxLength="10" Nullable="false" />
+    <Property Name="estatusLogico" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CatRegion">
+    <Key>
+      <PropertyRef Name="regionID" />
+    </Key>
+    <Property Name="regionID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="descripcionRegion" Type="varchar" MaxLength="12" Nullable="false" />
+    <Property Name="estatusLogico" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CatRol">
+    <Key>
+      <PropertyRef Name="rolID" />
+    </Key>
+    <Property Name="rolID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="descripcionRol" Type="varchar" MaxLength="150" Nullable="false" />
+    <Property Name="estatusLogico" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CatSaludosFirmas">
+    <Key>
+      <PropertyRef Name="saludosFirmasID" />
+    </Key>
+    <Property Name="saludosFirmasID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="descripcionSaludosFirma" Type="varchar" MaxLength="150" Nullable="false" />
+    <Property Name="estatusLogico" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CatSubmodulo">
+    <Key>
+      <PropertyRef Name="SubmoduloID" />
+    </Key>
+    <Property Name="SubmoduloID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="descripcionSubModulo" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="url" Type="varchar" MaxLength="100" />
+    <Property Name="estatusLogico" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CatTabuladorViaticos">
+    <Key>
+      <PropertyRef Name="tabuladorID" />
+    </Key>
+    <Property Name="tabuladorID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="codCargo" Type="varchar" MaxLength="4" Nullable="false" />
+    <Property Name="masEconomico" Type="bit" Nullable="false" />
+    <Property Name="cuotaMediodia" Type="int" Nullable="false" />
+    <Property Name="cuotaDiacompleto" Type="int" Nullable="false" />
+    <Property Name="estatusLogico" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CatTipoDocumento">
+    <Key>
+      <PropertyRef Name="tipoDocumentoID" />
+    </Key>
+    <Property Name="tipoDocumentoID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="tipoSolicitudID" Type="int" Nullable="false" />
+    <Property Name="descripcionTipoDoc" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="prefijo" Type="varchar" MaxLength="5" Nullable="false" />
+    <Property Name="estatusLogico" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CatTipoJefeDepto">
+    <Key>
+      <PropertyRef Name="tipoJefeDeptoID" />
+    </Key>
+    <Property Name="tipoJefeDeptoID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="claveTipoJefeDepto" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="descripcionCorta" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="descripcionLarga" Type="varchar" MaxLength="250" Nullable="false" />
+    <Property Name="estatusLogico" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CatTipoPago">
+    <Key>
+      <PropertyRef Name="tipoPagoID" />
+    </Key>
+    <Property Name="tipoPagoID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="descripcionTipoPago" Type="varchar" MaxLength="20" />
+    <Property Name="tipoSolicitudControlCod" Type="int" Nullable="false" />
+    <Property Name="estatusLogico" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CatTipoPagoPoliza">
+    <Key>
+      <PropertyRef Name="tipoPagoPolizaID" />
+    </Key>
+    <Property Name="tipoPagoPolizaID" Type="smallint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="descripcionTipoPago" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="estatusLogico" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CatTipoPoliza">
+    <Key>
+      <PropertyRef Name="tipoPolizaID" />
+    </Key>
+    <Property Name="tipoPolizaID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="descripcionTipoPoliza" Type="varchar" MaxLength="40" Nullable="false" />
+    <Property Name="estatusLogico" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CatTipoSolicitud">
+    <Key>
+      <PropertyRef Name="tipoSolicitudID" />
+    </Key>
+    <Property Name="tipoSolicitudID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="tipoSolicitudControlCod" Type="int" Nullable="false" />
+    <Property Name="descripcionSolicitud" Type="char" MaxLength="40" Nullable="false" />
+    <Property Name="regionID" Type="int" Nullable="false" />
+    <Property Name="areaPago" Type="varchar" MaxLength="100" />
+    <Property Name="estatusLogico" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CatTipoUnidadAdministrativa">
+    <Key>
+      <PropertyRef Name="tipoUAID" />
+    </Key>
+    <Property Name="tipoUAID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="descripciontipoUA" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="estatusLogico" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CatTituloFirmas">
+    <Key>
+      <PropertyRef Name="TituloFirmasId" />
+    </Key>
+    <Property Name="TituloFirmasId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="descripcionTituloFirmas" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="estatusLogico" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CatUnidadAdministrativa">
+    <Key>
+      <PropertyRef Name="codUA" />
+    </Key>
+    <Property Name="codUA" Type="int" Nullable="false" />
+    <Property Name="regionID" Type="int" Nullable="false" />
+    <Property Name="unidadAdministrativa" Type="varchar" MaxLength="120" />
+    <Property Name="codigoPadre" Type="int" />
+    <Property Name="abreviatura" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="estatusLogico" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Clc">
+    <Key>
+      <PropertyRef Name="clcID" />
+    </Key>
+    <Property Name="clcID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="actividad" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="mesServicio" Type="varchar" MaxLength="2" Nullable="false" />
+    <Property Name="retencionCincoMillar" Type="money" />
+    <Property Name="retencionIVA" Type="money" />
+    <Property Name="retencionISR" Type="money" />
+    <Property Name="tipoCambioReferencial" Type="money" />
+    <Property Name="tipoCambioPago" Type="money" />
+    <Property Name="pagoMonedaExtranjera" Type="money" />
+    <Property Name="pagoPesos" Type="money" />
+    <Property Name="ejercicioFiscal" Type="int" Nullable="false" />
+    <Property Name="fechaPago" Type="datetime" Nullable="false" />
+    <Property Name="suficienciaPresupuestal" Type="money" Nullable="false" />
+    <Property Name="avisoReintegro" Type="money" Nullable="false" />
+    <Property Name="anioServicio" Type="int" Nullable="false" />
+    <Property Name="totalCLC" Type="money" Nullable="false" />
+    <Property Name="numeroClc" Type="varchar" MaxLength="6" Nullable="false" />
+    <Property Name="saldoFinal" Type="money" Nullable="false" />
+    <Property Name="ejercicioCLC" Type="money" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CuotasDiarias">
+    <Key>
+      <PropertyRef Name="CuotasID" />
+    </Key>
+    <Property Name="CuotasID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="solicitudID" Type="int" Nullable="false" />
+    <Property Name="conceptoGastosID" Type="int" Nullable="false" />
+    <Property Name="codPartida" Type="int" Nullable="false" />
+    <Property Name="numeroDiasEfectivos" Type="int" Nullable="false" />
+    <Property Name="montoPagar" Type="money" Nullable="false" />
+    <Property Name="numeroExpediente" Type="varchar" MaxLength="5" Nullable="false" />
+    <Property Name="fechaInicio" Type="datetime" Nullable="false" />
+    <Property Name="fechaFin" Type="datetime" Nullable="false" />
+    <Property Name="institucionBancaria" Type="varchar" MaxLength="40" Nullable="false" />
+    <Property Name="cuentaBancaria" Type="varchar" MaxLength="12" Nullable="false" />
+    <Property Name="clabeInterbancaria" Type="varchar" MaxLength="18" Nullable="false" />
+    <Property Name="cuenta" Type="smallint" Nullable="false" />
+    <Property Name="estatusLogico" Type="bit" />
+    <Property Name="archivoCargado" Type="varchar(max)" />
+    <Property Name="fechaCarga" Type="datetime" />
+    <Property Name="usuarioID" Type="int" />
+  </EntityType>
+  <EntityType Name="Documento">
+    <Key>
+      <PropertyRef Name="documentoID" />
+    </Key>
+    <Property Name="documentoID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="solicitudID" Type="int" />
+    <Property Name="tipoDocumentoID" Type="int" />
+    <Property Name="descripcionDocumento" Type="varchar" MaxLength="100" />
+    <Property Name="anexo" Type="varchar" MaxLength="40" />
+    <Property Name="ruta" Type="varchar" MaxLength="80" />
+    <Property Name="equipo" Type="varchar" MaxLength="18" />
+    <Property Name="fechaRecepcion" Type="datetime" />
+    <Property Name="estatusLogico" Type="bit" Nullable="false" />
+    <Property Name="extensionDocumento" Type="varchar" MaxLength="10" />
+    <Property Name="documento" Type="varbinary(max)" />
+  </EntityType>
+  <EntityType Name="EstatusAcciones">
+    <Key>
+      <PropertyRef Name="estatusAccionesID" />
+    </Key>
+    <Property Name="estatusAccionesID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="estatusID" Type="smallint" Nullable="false" />
+    <Property Name="accionesID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="EstatusMovimiento">
+    <Key>
+      <PropertyRef Name="estatusMovimientoID" />
+    </Key>
+    <Property Name="estatusMovimientoID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="solicitudID" Type="int" Nullable="false" />
+    <Property Name="usuarioID" Type="int" Nullable="false" />
+    <Property Name="fechaMovimiento" Type="datetime" Nullable="false" />
+    <Property Name="observaciones" Type="varchar" MaxLength="40" Nullable="false" />
+    <Property Name="movimiento" Type="varchar" MaxLength="50" />
+    <Property Name="modulo" Type="varchar" MaxLength="40" Nullable="false" />
+  </EntityType>
+  <EntityType Name="EstatusPerfil">
+    <Key>
+      <PropertyRef Name="EstatusPerfilID" />
+    </Key>
+    <Property Name="EstatusPerfilID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="perfilID" Type="int" Nullable="false" />
+    <Property Name="estatusID" Type="smallint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Factura">
+    <Key>
+      <PropertyRef Name="facturaID" />
+    </Key>
+    <Property Name="facturaID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="proveedoresID" Type="int" Nullable="false" />
+    <Property Name="monedaID" Type="int" Nullable="false" />
+    <Property Name="estatusFacturaID" Type="smallint" Nullable="false" />
+    <Property Name="contratoID" Type="int" Nullable="false" />
+    <Property Name="cuentaProveedorID" Type="smallint" Nullable="false" />
+    <Property Name="descripcionFactura" Type="char" MaxLength="28" Nullable="false" />
+    <Property Name="montoFactura" Type="money" Nullable="false" />
+    <Property Name="factura" Type="varchar" MaxLength="18" Nullable="false" />
+    <Property Name="concepto" Type="varchar" MaxLength="18" />
+    <Property Name="fecha" Type="datetime" Nullable="false" />
+    <Property Name="subtotal" Type="money" Nullable="false" />
+    <Property Name="IVA" Type="money" />
+    <Property Name="retencionIVA" Type="money" />
+    <Property Name="ISR" Type="money" />
+    <Property Name="retencionISR" Type="money" />
+    <Property Name="deductiva" Type="money" />
+    <Property Name="tipoDeCambio" Type="money" />
+    <Property Name="total" Type="money" Nullable="false" />
+  </EntityType>
+  <EntityType Name="firmaElectronica">
+    <Key>
+      <PropertyRef Name="firmaElectronicaID" />
+    </Key>
+    <Property Name="firmaElectronicaID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="solicitudID" Type="int" Nullable="false" />
+    <Property Name="cadenaOriginalFirma" Type="varchar" MaxLength="500" />
+    <Property Name="fecha" Type="datetime" Nullable="false" />
+    <Property Name="folioTransaccion" Type="varchar" MaxLength="40" />
+    <Property Name="numeroTransaccion" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="GastoCorriente">
+    <Key>
+      <PropertyRef Name="gasCorrienteID" />
+    </Key>
+    <Property Name="gasCorrienteID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="solicitudID" Type="int" Nullable="false" />
+    <Property Name="conceptoPagoID" Type="int" Nullable="false" />
+    <Property Name="entidadID" Type="int" />
+    <Property Name="destinoID" Type="int" />
+    <Property Name="codPartida" Type="int" Nullable="false" />
+    <Property Name="fechaInicio" Type="datetime" Nullable="false" />
+    <Property Name="fechaFin" Type="datetime" Nullable="false" />
+    <Property Name="numReciboPago" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="montoSolicitado" Type="money" Nullable="false" />
+  </EntityType>
+  <EntityType Name="GastosAduanales">
+    <Key>
+      <PropertyRef Name="gasAduanalesID" />
+    </Key>
+    <Property Name="gasAduanalesID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="solicitudID" Type="int" Nullable="false" />
+    <Property Name="agenciaID" Type="int" Nullable="false" />
+    <Property Name="codPartida" Type="int" Nullable="false" />
+    <Property Name="importeSolicitado" Type="money" Nullable="false" />
+  </EntityType>
+  <EntityType Name="GastosFunerarios">
+    <Key>
+      <PropertyRef Name="gastosFunerariosID" />
+    </Key>
+    <Property Name="gastosFunerariosID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="solicitudID" Type="int" Nullable="false" />
+    <Property Name="codPartida" Type="int" Nullable="false" />
+    <Property Name="monto" Type="money" Nullable="false" />
+    <Property Name="numeroExpediente" Type="varchar" MaxLength="5" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Homologado">
+    <Key>
+      <PropertyRef Name="homologadoID" />
+    </Key>
+    <Property Name="homologadoID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="importeHomologado" Type="money" Nullable="false" />
+    <Property Name="numeroExpediente" Type="varchar" MaxLength="5" Nullable="false" />
+    <Property Name="estatusLogico" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ImpuestosSobreNomina">
+    <Key>
+      <PropertyRef Name="impuestosID" />
+    </Key>
+    <Property Name="impuestosID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="solicitudID" Type="int" Nullable="false" />
+    <Property Name="codPartida" Type="int" Nullable="false" />
+    <Property Name="fechaInicio" Type="datetime" Nullable="false" />
+    <Property Name="fechaFin" Type="datetime" Nullable="false" />
+    <Property Name="importe" Type="money" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Ipv4">
+    <Key>
+      <PropertyRef Name="ipv4ID" />
+    </Key>
+    <Property Name="ipv4ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="usuarioID" Type="int" Nullable="false" />
+    <Property Name="ip" Type="varchar" MaxLength="15" Nullable="false" />
+    <Property Name="estatusLogico" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Laudos">
+    <Key>
+      <PropertyRef Name="laudosID" />
+    </Key>
+    <Property Name="laudosID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="solicitudID" Type="int" Nullable="false" />
+    <Property Name="conceptoGastosID" Type="int" Nullable="false" />
+    <Property Name="codPartida" Type="int" Nullable="false" />
+    <Property Name="numeroExpediente" Type="varchar" MaxLength="5" Nullable="false" />
+    <Property Name="importe" Type="money" Nullable="false" />
+    <Property Name="estatusLogico" Type="bit" />
+  </EntityType>
+  <EntityType Name="LogError">
+    <Key>
+      <PropertyRef Name="logErrorID" />
+    </Key>
+    <Property Name="logErrorID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="usuarioID" Type="int" Nullable="false" />
+    <Property Name="error" Type="varchar(max)" Nullable="false" />
+    <Property Name="formulario" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="evento" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="fecha" Type="datetime" Nullable="false" />
+    <Property Name="codigoError" Type="varchar" MaxLength="15" />
+    <Property Name="ipEquipo" Type="varchar" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="ModuloSubmodulo">
+    <Key>
+      <PropertyRef Name="moduloSubmoduloID" />
+    </Key>
+    <Property Name="moduloSubmoduloID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="moduloID" Type="int" Nullable="false" />
+    <Property Name="SubmoduloID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="MovDirigidoFirmas">
+    <Key>
+      <PropertyRef Name="dirigidoID" />
+    </Key>
+    <Property Name="dirigidoID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="GradoFirmasId" Type="int" />
+    <Property Name="codUA" Type="int" />
+    <Property Name="nombre" Type="varchar" MaxLength="250" />
+    <Property Name="apellidoPaterno" Type="varchar" MaxLength="250" />
+    <Property Name="apellidoMaterno" Type="varchar" MaxLength="250" />
+    <Property Name="titulo" Type="varchar" MaxLength="250" />
+    <Property Name="puesto" Type="varchar" MaxLength="250" />
+    <Property Name="gradoDescripcion" Type="varchar" MaxLength="250" />
+    <Property Name="estatusLogico" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="MovimientoAdministrativo">
+    <Key>
+      <PropertyRef Name="movimientoAdmID" />
+    </Key>
+    <Property Name="movimientoAdmID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="solicitudID" Type="int" Nullable="false" />
+    <Property Name="tipoPagoID" Type="int" Nullable="false" />
+    <Property Name="presionGastoID" Type="int" Nullable="false" />
+    <Property Name="cuentaID" Type="int" Nullable="false" />
+    <Property Name="descripcionPago" Type="varchar" MaxLength="300" Nullable="false" />
+    <Property Name="montoTotalSolicitud" Type="money" Nullable="false" />
+    <Property Name="estatusLogico" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="MovimientoBancario">
+    <Key>
+      <PropertyRef Name="movimientoID" />
+    </Key>
+    <Property Name="movimientoID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="cuentaID" Type="int" Nullable="false" />
+    <Property Name="descripcionMovimiento" Type="varchar" MaxLength="300" Nullable="false" />
+    <Property Name="fecha" Type="datetime" Nullable="false" />
+    <Property Name="ingreso" Type="money" />
+    <Property Name="egreso" Type="money" />
+  </EntityType>
+  <EntityType Name="MovimientoCcpFirmas">
+    <Key>
+      <PropertyRef Name="CcpID" />
+    </Key>
+    <Property Name="CcpID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="movimientosFirmasID" Type="int" Nullable="false" />
+    <Property Name="NombreCcpID" Type="int" Nullable="false" />
+    <Property Name="comentarioConocimientoID" Type="int" Nullable="false" />
+    <Property Name="estatusLogico" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="MovimientoFirmas">
+    <Key>
+      <PropertyRef Name="movimientosFirmasID" />
+    </Key>
+    <Property Name="movimientosFirmasID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="solicitudID" Type="int" Nullable="false" />
+    <Property Name="comentarioAnualFirmasID" Type="int" Nullable="false" />
+    <Property Name="areaFirmasID" Type="int" Nullable="false" />
+    <Property Name="dirigidoID" Type="int" Nullable="false" />
+    <Property Name="nombreFirmasID" Type="int" Nullable="false" />
+    <Property Name="saludosFirmasID" Type="int" Nullable="false" />
+    <Property Name="leyendaFirmasID" Type="int" Nullable="false" />
+    <Property Name="Elabora" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="FechaCreación" Type="datetime" Nullable="false" />
+    <Property Name="UsuarioCreacion" Type="int" Nullable="false" />
+    <Property Name="estatusLogico" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="MovNombreCcpFirmas">
+    <Key>
+      <PropertyRef Name="NombreCcpID" />
+    </Key>
+    <Property Name="NombreCcpID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="GradoFirmasId" Type="int" />
+    <Property Name="codUA" Type="int" />
+    <Property Name="nombre" Type="varchar" MaxLength="250" />
+    <Property Name="apellidoPaterno" Type="varchar" MaxLength="250" />
+    <Property Name="apellidoMaterno" Type="varchar" MaxLength="250" />
+    <Property Name="titulo" Type="varchar" MaxLength="250" />
+    <Property Name="puesto" Type="varchar" MaxLength="250" />
+    <Property Name="gradoDescripcion" Type="varchar" MaxLength="250" />
+    <Property Name="estatusLogico" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="MovNombreFirmas">
+    <Key>
+      <PropertyRef Name="nombreFirmasID" />
+    </Key>
+    <Property Name="nombreFirmasID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="GradoFirmasId" Type="int" />
+    <Property Name="codUA" Type="int" />
+    <Property Name="nombre" Type="varchar" MaxLength="250" />
+    <Property Name="apellidoPaterno" Type="varchar" MaxLength="250" />
+    <Property Name="apellidoMaterno" Type="varchar" MaxLength="250" />
+    <Property Name="titulo" Type="varchar" MaxLength="250" />
+    <Property Name="puesto" Type="varchar" MaxLength="250" />
+    <Property Name="gradoDescripcion" Type="varchar" MaxLength="250" />
+    <Property Name="estatusLogico" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="PagoCheque">
+    <Key>
+      <PropertyRef Name="pagoChequeID" />
+    </Key>
+    <Property Name="pagoChequeID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="movimientoAdmID" Type="int" Nullable="false" />
+    <Property Name="estatusPagoID" Type="smallint" Nullable="false" />
+    <Property Name="fechaEmision" Type="datetime" Nullable="false" />
+    <Property Name="pagueseA" Type="varchar" MaxLength="60" Nullable="false" />
+    <Property Name="numeroCheque" Type="int" Nullable="false" />
+    <Property Name="importe" Type="money" Nullable="false" />
+    <Property Name="numeroExpediente" Type="varchar" MaxLength="5" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Parametros">
+    <Key>
+      <PropertyRef Name="parametroID" />
+    </Key>
+    <Property Name="parametroID" Type="int" Nullable="false" />
+    <Property Name="moduloID" Type="int" Nullable="false" />
+    <Property Name="parametro" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="descripcion" Type="varchar" MaxLength="200" Nullable="false" />
+    <Property Name="valorInt" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Penalizaciones">
+    <Key>
+      <PropertyRef Name="penalizacionID" />
+    </Key>
+    <Property Name="penalizacionID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="proveedoresID" Type="int" Nullable="false" />
+    <Property Name="monedaID" Type="int" Nullable="false" />
+    <Property Name="importe" Type="money" />
+    <Property Name="IVA" Type="money" />
+    <Property Name="retIVA" Type="money" />
+    <Property Name="tipoDeCambio" Type="money" Nullable="false" />
+    <Property Name="total" Type="money" />
+    <Property Name="aplica" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="PerfilModulo">
+    <Key>
+      <PropertyRef Name="perfilModuloID" />
+    </Key>
+    <Property Name="perfilModuloID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="perfilID" Type="int" Nullable="false" />
+    <Property Name="moduloID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="PolizaPago">
+    <Key>
+      <PropertyRef Name="polizaPagoID" />
+    </Key>
+    <Property Name="polizaPagoID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="tipoPolizaID" Type="int" Nullable="false" />
+    <Property Name="tipoPagoPolizaID" Type="smallint" Nullable="false" />
+    <Property Name="pagoIdentificador" Type="int" Nullable="false" />
+    <Property Name="numeroPoliza" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="fechaPoliza" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="PresionGasto">
+    <Key>
+      <PropertyRef Name="presionGastoID" />
+    </Key>
+    <Property Name="presionGastoID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="estatusPresionID" Type="smallint" Nullable="false" />
+    <Property Name="folioPresion" Type="int" Nullable="false" />
+    <Property Name="fechaPresion" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="PresupuestoClc">
+    <Key>
+      <PropertyRef Name="presupuestoClcID" />
+    </Key>
+    <Property Name="presupuestoClcID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="solicitudID" Type="int" />
+    <Property Name="clcID" Type="int" />
+    <Property Name="montoClc" Type="money" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Proveedores">
+    <Key>
+      <PropertyRef Name="proveedoresID" />
+    </Key>
+    <Property Name="proveedoresID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="solicitudID" Type="int" Nullable="false" />
+    <Property Name="codPartida" Type="int" Nullable="false" />
+    <Property Name="monedaID" Type="int" Nullable="false" />
+    <Property Name="contratoID" Type="int" />
+    <Property Name="proveedorID" Type="int" />
+    <Property Name="suficienciaPresupuestalID" Type="int" Nullable="false" />
+    <Property Name="oficioRM" Type="varchar" MaxLength="18" Nullable="false" />
+    <Property Name="importe" Type="money" Nullable="false" />
+    <Property Name="tipoDeCambio" Type="money" />
+    <Property Name="total" Type="money" />
+    <Property Name="anticipo" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="RegistroContable">
+    <Key>
+      <PropertyRef Name="contabilidadID" />
+    </Key>
+    <Property Name="contabilidadID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="solicitudID" Type="int" Nullable="false" />
+    <Property Name="tipoPolizaID" Type="int" Nullable="false" />
+    <Property Name="consecutivo" Type="int" Nullable="false" />
+    <Property Name="mes" Type="char" MaxLength="3" Nullable="false" />
+    <Property Name="fechaEmision" Type="datetime" Nullable="false" />
+    <Property Name="anio" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="RegistroVolante">
+    <Key>
+      <PropertyRef Name="registroVolanteID" />
+    </Key>
+    <Property Name="registroVolanteID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="solicitudID" Type="int" Nullable="false" />
+    <Property Name="area" Type="varchar" MaxLength="250" Nullable="false" />
+    <Property Name="tipoDeGasto" Type="varchar" MaxLength="250" Nullable="false" />
+    <Property Name="importeDevuelto" Type="money" />
+    <Property Name="fechaRecepcion" Type="varchar" MaxLength="11" Nullable="false" />
+    <Property Name="fechaElaboracion" Type="varchar" MaxLength="11" Nullable="false" />
+    <Property Name="tipoMoneda" Type="varchar" MaxLength="50" />
+    <Property Name="numeroVolante" Type="int" Nullable="false" />
+    <Property Name="folio" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="oficio" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="motivoDevolucion" Type="varchar" MaxLength="50" />
+    <Property Name="tipoDeCambio" Type="money" />
+    <Property Name="anioComprobado" Type="int" Nullable="false" />
+    <Property Name="fechaGeneracionVolante" Type="datetime" Nullable="false" />
+    <Property Name="estatusLogico" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="SolicitudFirma">
+    <Key>
+      <PropertyRef Name="SolFirmaID" />
+    </Key>
+    <Property Name="SolFirmaID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SolicitudID" Type="int" Nullable="false" />
+    <Property Name="FirmaID" Type="int" Nullable="false" />
+    <Property Name="estatusID" Type="int" Nullable="false" />
+    <Property Name="FechaFirma" Type="datetime" />
+    <Property Name="EstatusLogico" Type="bit" />
+  </EntityType>
+  <EntityType Name="SolicitudRecursos">
+    <Key>
+      <PropertyRef Name="solicitudID" />
+    </Key>
+    <Property Name="solicitudID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="anio" Type="int" Nullable="false" />
+    <Property Name="tipoSolicitudID" Type="int" Nullable="false" />
+    <Property Name="prioridadID" Type="int" Nullable="false" />
+    <Property Name="codUA" Type="int" Nullable="false" />
+    <Property Name="estatusID" Type="smallint" Nullable="false" />
+    <Property Name="fechaSolicitud" Type="datetime" Nullable="false" />
+    <Property Name="observaciones" Type="varchar" MaxLength="500" Nullable="false" />
+    <Property Name="oficioSolicitud" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="fechaControl" Type="datetime" Nullable="false" />
+    <Property Name="consecutivo" Type="int" Nullable="false" />
+    <Property Name="fechaActualizacion" Type="datetime" Nullable="false" />
+    <Property Name="eventoId" Type="int" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'DesaSIRF.dbo.TipoJefeDeptoConfig' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
+  <EntityType Name="TipoJefeDeptoConfig">
+    <Key>
+      <PropertyRef Name="tipoJefeDeptoConfigID" />
+      <PropertyRef Name="usuarioID" />
+      <PropertyRef Name="tipoJefeDeptoID" />
+      <PropertyRef Name="estatusLogico" />
+    </Key>
+    <Property Name="tipoJefeDeptoConfigID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="usuarioID" Type="int" Nullable="false" />
+    <Property Name="tipoJefeDeptoID" Type="int" Nullable="false" />
+    <Property Name="estatusLogico" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TipoSolicitudPorAreaConfig">
+    <Key>
+      <PropertyRef Name="tipoSolicitudPorAreaID" />
+    </Key>
+    <Property Name="tipoSolicitudPorAreaID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="areasID" Type="int" Nullable="false" />
+    <Property Name="tipoSolicitudID" Type="int" Nullable="false" />
+    <Property Name="regionID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TipoSolicitudPorUAConfig">
+    <Key>
+      <PropertyRef Name="tipoSolicitudPorUAID" />
+    </Key>
+    <Property Name="tipoSolicitudPorUAID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="tipoSolicitudID" Type="int" Nullable="false" />
+    <Property Name="codUA" Type="int" Nullable="false" />
+    <Property Name="regionID" Type="int" Nullable="false" />
+    <Property Name="estatusLogico" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TransferenciaBancaria">
+    <Key>
+      <PropertyRef Name="pagoTransBancariaID" />
+    </Key>
+    <Property Name="pagoTransBancariaID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="movimientoAdmID" Type="int" Nullable="false" />
+    <Property Name="estatusPagoID" Type="smallint" Nullable="false" />
+    <Property Name="fechaPago" Type="datetime" Nullable="false" />
+    <Property Name="beneficiario" Type="varchar" MaxLength="60" Nullable="false" />
+    <Property Name="cuentaClabe" Type="varchar" MaxLength="18" Nullable="false" />
+    <Property Name="montoPago" Type="money" Nullable="false" />
+    <Property Name="banco" Type="varchar" MaxLength="40" Nullable="false" />
+    <Property Name="numeroTransferencia" Type="varchar" MaxLength="18" />
+    <Property Name="concepto" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="numeroExpediente" Type="varchar" MaxLength="5" Nullable="false" />
+  </EntityType>
+  <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'DesaSIRF.dbo.UsuarioRegionFiscalizacion' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
+  <EntityType Name="UsuarioRegionFiscalizacion">
+    <Key>
+      <PropertyRef Name="usuarioID" />
+      <PropertyRef Name="regionID" />
+      <PropertyRef Name="estatusLogico" />
+    </Key>
+    <Property Name="usuarioID" Type="int" Nullable="false" />
+    <Property Name="regionID" Type="int" Nullable="false" />
+    <Property Name="estatusLogico" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Usuarios">
+    <Key>
+      <PropertyRef Name="usuarioID" />
+    </Key>
+    <Property Name="usuarioID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="usuario" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="numeroExpediente" Type="int" Nullable="false" />
+    <Property Name="codUA" Type="int" Nullable="false" />
+    <Property Name="areaId" Type="int" />
+    <Property Name="perfilID" Type="int" />
+    <Property Name="rolID" Type="int" Nullable="false" />
+    <Property Name="correo" Type="varchar" MaxLength="30" />
+    <Property Name="estatusLogico" Type="bit" Nullable="false" />
+  </EntityType>
+  <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'DesaSIRF.dbo.Viaticos' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
+  <EntityType Name="Viaticos">
+    <Key>
+      <PropertyRef Name="viaticosID" />
+      <PropertyRef Name="solicitudID" />
+      <PropertyRef Name="monedaID" />
+      <PropertyRef Name="paisID" />
+      <PropertyRef Name="codPartida" />
+      <PropertyRef Name="nombreOperativo" />
+      <PropertyRef Name="objetivoComision" />
+      <PropertyRef Name="fechaInicio" />
+      <PropertyRef Name="fechaFin" />
+      <PropertyRef Name="diasCompletos" />
+      <PropertyRef Name="diasMedios" />
+      <PropertyRef Name="importeOtorgado" />
+      <PropertyRef Name="tipoCambio" />
+      <PropertyRef Name="estatusHomologado" />
+      <PropertyRef Name="clabeInterbancaria" />
+      <PropertyRef Name="cuentaBancaria" />
+      <PropertyRef Name="cuenta" />
+      <PropertyRef Name="estatusLogico" />
+      <PropertyRef Name="bancoID" />
+    </Key>
+    <Property Name="viaticosID" Type="int" Nullable="false" />
+    <Property Name="solicitudID" Type="int" Nullable="false" />
+    <Property Name="monedaID" Type="int" Nullable="false" />
+    <Property Name="paisID" Type="int" Nullable="false" />
+    <Property Name="entidadID" Type="int" />
+    <Property Name="municipioID" Type="int" />
+    <Property Name="homologadoID" Type="int" />
+    <Property Name="codPartida" Type="int" Nullable="false" />
+    <Property Name="destinoID" Type="int" />
+    <Property Name="nombreOperativo" Type="varchar" MaxLength="250" Nullable="false" />
+    <Property Name="objetivoComision" Type="varchar" MaxLength="250" Nullable="false" />
+    <Property Name="fechaInicio" Type="smalldatetime" Nullable="false" />
+    <Property Name="fechaFin" Type="smalldatetime" Nullable="false" />
+    <Property Name="diasCompletos" Type="int" Nullable="false" />
+    <Property Name="diasMedios" Type="int" Nullable="false" />
+    <Property Name="importeOtorgado" Type="money" Nullable="false" />
+    <Property Name="tipoCambio" Type="money" Nullable="false" />
+    <Property Name="numeroExpediente" Type="varchar" MaxLength="5" />
+    <Property Name="estatusHomologado" Type="bit" Nullable="false" />
+    <Property Name="clabeInterbancaria" Type="varchar" MaxLength="18" Nullable="false" />
+    <Property Name="cuentaBancaria" Type="varchar" MaxLength="12" Nullable="false" />
+    <Property Name="cuenta" Type="smallint" Nullable="false" />
+    <Property Name="estatusLogico" Type="bit" Nullable="false" />
+    <Property Name="bancoID" Type="int" Nullable="false" />
+  </EntityType>
+  <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'DesaSIRF.dbo.vEstatusMovimientoBanco' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
+  <EntityType Name="vEstatusMovimientoBanco">
+    <Key>
+      <PropertyRef Name="codPartida" />
+      <PropertyRef Name="estatusBanco" />
+    </Key>
+    <Property Name="codPartida" Type="int" Nullable="false" />
+    <Property Name="estatusBanco" Type="varchar" MaxLength="1" Nullable="false" />
+  </EntityType>
+  <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'DesaSIRF.dbo.vwAsistentesEnlace' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
+  <EntityType Name="vwAsistentesEnlace">
+    <Key>
+      <PropertyRef Name="enlaceID" />
+      <PropertyRef Name="expediente" />
+    </Key>
+    <Property Name="enlaceID" Type="char" MaxLength="5" Nullable="false" />
+    <Property Name="expediente" Type="int" Nullable="false" />
+  </EntityType>
+  <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'DesaSIRF.dbo.vwBajaIntegrante' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
+  <EntityType Name="vwBajaIntegrante">
+    <Key>
+      <PropertyRef Name="expediente" />
+      <PropertyRef Name="grado" />
+      <PropertyRef Name="cargo" />
+      <PropertyRef Name="Adscripcion" />
+      <PropertyRef Name="codEstatusIntegrante" />
+      <PropertyRef Name="descripcionEstatusIntregrante" />
+      <PropertyRef Name="movimiento" />
+    </Key>
+    <Property Name="expediente" Type="int" Nullable="false" />
+    <Property Name="nombre" Type="varchar" MaxLength="93" />
+    <Property Name="RFC" Type="char" MaxLength="13" />
+    <Property Name="grado" Type="char" MaxLength="2" Nullable="false" />
+    <Property Name="cargo" Type="char" MaxLength="4" Nullable="false" />
+    <Property Name="Adscripcion" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="codEstatusIntegrante" Type="int" Nullable="false" />
+    <Property Name="descripcionEstatusIntregrante" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="movimiento" Type="varchar" MaxLength="100" Nullable="false" />
+  </EntityType>
+  <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'DesaSIRF.dbo.vwCentrosDeDistribucion' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
+  <EntityType Name="vwCentrosDeDistribucion">
+    <Key>
+      <PropertyRef Name="codCentroDistribucion" />
+    </Key>
+    <Property Name="codCentroDistribucion" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="enlaceID" Type="char" MaxLength="5" />
+  </EntityType>
+  <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'DesaSIRF.dbo.vwCuentasIntegrante' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
+  <EntityType Name="vwCuentasIntegrante">
+    <Key>
+      <PropertyRef Name="cuentaIntegranteID" />
+      <PropertyRef Name="descripcionBanco" />
+      <PropertyRef Name="tipoCuentaID" />
+      <PropertyRef Name="descripcionTipoCuenta" />
+    </Key>
+    <Property Name="cuentaIntegranteID" Type="int" Nullable="false" />
+    <Property Name="expediente" Type="int" />
+    <Property Name="descripcionCuenta" Type="varchar" MaxLength="30" />
+    <Property Name="clabeInterbancaria" Type="varchar" MaxLength="50" />
+    <Property Name="descripcionBanco" Type="varchar" MaxLength="40" Nullable="false" />
+    <Property Name="tipoCuentaID" Type="tinyint" Nullable="false" />
+    <Property Name="descripcionTipoCuenta" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="estatusLogico" Type="bit" />
+  </EntityType>
+  <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'DesaSIRF.dbo.vwDatosIntegrante' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
+  <EntityType Name="vwDatosIntegrante">
+    <Key>
+      <PropertyRef Name="expediente" />
+      <PropertyRef Name="grado" />
+      <PropertyRef Name="codAdscripcion" />
+      <PropertyRef Name="Adscripcion" />
+      <PropertyRef Name="codCentroDistribucion" />
+      <PropertyRef Name="enlaceID" />
+      <PropertyRef Name="codEstatusIntegrante" />
+    </Key>
+    <Property Name="expediente" Type="int" Nullable="false" />
+    <Property Name="grado" Type="char" MaxLength="2" Nullable="false" />
+    <Property Name="cargo" Type="char" MaxLength="4" />
+    <Property Name="nombre" Type="varchar" MaxLength="93" />
+    <Property Name="RFC" Type="varchar" MaxLength="14" />
+    <Property Name="codAdscripcion" Type="int" Nullable="false" />
+    <Property Name="Adscripcion" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="codCentroDistribucion" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="enlaceID" Type="char" MaxLength="5" Nullable="false" />
+    <Property Name="codEstatusIntegrante" Type="int" Nullable="false" />
+    <Property Name="descripcionEstatusIntegrante" Type="varchar" MaxLength="40" />
+  </EntityType>
+  <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'DesaSIRF.dbo.vwDependientesIntegrante' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
+  <EntityType Name="vwDependientesIntegrante">
+    <Key>
+      <PropertyRef Name="dependienteID" />
+      <PropertyRef Name="tipoDependienteID" />
+      <PropertyRef Name="nombre" />
+      <PropertyRef Name="sexo" />
+    </Key>
+    <Property Name="dependienteID" Type="int" Nullable="false" />
+    <Property Name="expediente" Type="int" />
+    <Property Name="tipoDependienteID" Type="smallint" Nullable="false" />
+    <Property Name="descripcionTipoDependiente" Type="varchar" MaxLength="50" />
+    <Property Name="apellidoPaterno" Type="varchar" MaxLength="40" />
+    <Property Name="apellidoMaterno" Type="varchar" MaxLength="40" />
+    <Property Name="nombre" Type="varchar" MaxLength="80" Nullable="false" />
+    <Property Name="fechaNacimiento" Type="datetime" />
+    <Property Name="CURP" Type="char" MaxLength="18" />
+    <Property Name="RFC" Type="char" MaxLength="13" />
+    <Property Name="sexo" Type="char" MaxLength="1" Nullable="false" />
+  </EntityType>
+  <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'DesaSIRF.dbo.vwFaltasIntegrante' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
+  <EntityType Name="vwFaltasIntegrante">
+    <Key>
+      <PropertyRef Name="incidenciaID" />
+      <PropertyRef Name="expediente" />
+      <PropertyRef Name="tipoIncidencia" />
+      <PropertyRef Name="fechaInicidencia" />
+    </Key>
+    <Property Name="incidenciaID" Type="int" Nullable="false" />
+    <Property Name="expediente" Type="int" Nullable="false" />
+    <Property Name="tipoIncidencia" Type="varchar" MaxLength="40" Nullable="false" />
+    <Property Name="fechaInicidencia" Type="datetime" Nullable="false" />
+  </EntityType>
+  <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'DesaSIRF.dbo.vwIncidenciasIntegrante' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
+  <EntityType Name="vwIncidenciasIntegrante">
+    <Key>
+      <PropertyRef Name="tipoIncidencia" />
+    </Key>
+    <Property Name="expediente" Type="int" />
+    <Property Name="tipoIncidencia" Type="varchar" MaxLength="23" Nullable="false" />
+    <Property Name="fechaInicial" Type="datetime" />
+    <Property Name="fechaFinal" Type="datetime" />
+  </EntityType>
+  <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'DesaSIRF.dbo.vwTipoDependientesIntegrante' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
+  <EntityType Name="vwTipoDependientesIntegrante">
+    <Key>
+      <PropertyRef Name="tipoDepID" />
+    </Key>
+    <Property Name="tipoDepID" Type="smallint" Nullable="false" />
+    <Property Name="tipoSNSPID" Type="smallint" />
+    <Property Name="descripcionTipoDependiente" Type="varchar" MaxLength="50" />
+    <Property Name="estatusLogico" Type="bit" />
+  </EntityType>
+  <Association Name="FK__ModuloSub__modul__00AA174D">
+    <End Role="CatModulo" Type="Self.CatModulo" Multiplicity="1" />
+    <End Role="ModuloSubmodulo" Type="Self.ModuloSubmodulo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CatModulo">
+        <PropertyRef Name="moduloID" />
+      </Principal>
+      <Dependent Role="ModuloSubmodulo">
+        <PropertyRef Name="moduloID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__ModuloSub__Submo__019E3B86">
+    <End Role="CatSubmodulo" Type="Self.CatSubmodulo" Multiplicity="1" />
+    <End Role="ModuloSubmodulo" Type="Self.ModuloSubmodulo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CatSubmodulo">
+        <PropertyRef Name="SubmoduloID" />
+      </Principal>
+      <Dependent Role="ModuloSubmodulo">
+        <PropertyRef Name="SubmoduloID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Parametro__modul__2C29722F">
+    <End Role="CatModulo" Type="Self.CatModulo" Multiplicity="1" />
+    <End Role="Parametros" Type="Self.Parametros" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CatModulo">
+        <PropertyRef Name="moduloID" />
+      </Principal>
+      <Dependent Role="Parametros">
+        <PropertyRef Name="moduloID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__PerfilMod__modul__10E07F16">
+    <End Role="CatModulo" Type="Self.CatModulo" Multiplicity="1" />
+    <End Role="PerfilModulo" Type="Self.PerfilModulo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CatModulo">
+        <PropertyRef Name="moduloID" />
+      </Principal>
+      <Dependent Role="PerfilModulo">
+        <PropertyRef Name="moduloID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__PerfilMod__perfi__0FEC5ADD">
+    <End Role="CatPerfil" Type="Self.CatPerfil" Multiplicity="1" />
+    <End Role="PerfilModulo" Type="Self.PerfilModulo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CatPerfil">
+        <PropertyRef Name="perfilID" />
+      </Principal>
+      <Dependent Role="PerfilModulo">
+        <PropertyRef Name="perfilID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Agregadurias_codPartida">
+    <End Role="CatPartida" Type="Self.CatPartida" Multiplicity="1" />
+    <End Role="Agregadurias" Type="Self.Agregadurias" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CatPartida">
+        <PropertyRef Name="codPartida" />
+      </Principal>
+      <Dependent Role="Agregadurias">
+        <PropertyRef Name="codPartida" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Agregadurias_monedaID">
+    <End Role="CatMoneda" Type="Self.CatMoneda" Multiplicity="1" />
+    <End Role="Agregadurias" Type="Self.Agregadurias" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CatMoneda">
+        <PropertyRef Name="monedaID" />
+      </Principal>
+      <Dependent Role="Agregadurias">
+        <PropertyRef Name="monedaID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Agregadurias_paisID">
+    <End Role="CatPais" Type="Self.CatPais" Multiplicity="1" />
+    <End Role="Agregadurias" Type="Self.Agregadurias" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CatPais">
+        <PropertyRef Name="paisID" />
+      </Principal>
+      <Dependent Role="Agregadurias">
+        <PropertyRef Name="paisID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Agregadurias_solicitudID">
+    <End Role="SolicitudRecursos" Type="Self.SolicitudRecursos" Multiplicity="1" />
+    <End Role="Agregadurias" Type="Self.Agregadurias" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SolicitudRecursos">
+        <PropertyRef Name="solicitudID" />
+      </Principal>
+      <Dependent Role="Agregadurias">
+        <PropertyRef Name="solicitudID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_AreaUnidadAdm_CatAreas">
+    <End Role="CatAreas" Type="Self.CatAreas" Multiplicity="1" />
+    <End Role="AreaUnidadAdm" Type="Self.AreaUnidadAdm" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CatAreas">
+        <PropertyRef Name="areaID" />
+      </Principal>
+      <Dependent Role="AreaUnidadAdm">
+        <PropertyRef Name="areasID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_AreaUnidadAdm_CatUnidadAdministrativa">
+    <End Role="CatUnidadAdministrativa" Type="Self.CatUnidadAdministrativa" Multiplicity="1" />
+    <End Role="AreaUnidadAdm" Type="Self.AreaUnidadAdm" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CatUnidadAdministrativa">
+        <PropertyRef Name="codUA" />
+      </Principal>
+      <Dependent Role="AreaUnidadAdm">
+        <PropertyRef Name="codUA" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Asignacion_solicitudID">
+    <End Role="SolicitudRecursos" Type="Self.SolicitudRecursos" Multiplicity="1" />
+    <End Role="Asignacion" Type="Self.Asignacion" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SolicitudRecursos">
+        <PropertyRef Name="solicitudID" />
+      </Principal>
+      <Dependent Role="Asignacion">
+        <PropertyRef Name="solicitudID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Asignacion_usuarioID">
+    <End Role="Usuarios" Type="Self.Usuarios" Multiplicity="1" />
+    <End Role="Asignacion" Type="Self.Asignacion" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuarios">
+        <PropertyRef Name="usuarioID" />
+      </Principal>
+      <Dependent Role="Asignacion">
+        <PropertyRef Name="usuarioID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Becalos_codPartida">
+    <End Role="CatPartida" Type="Self.CatPartida" Multiplicity="1" />
+    <End Role="Becalos" Type="Self.Becalos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CatPartida">
+        <PropertyRef Name="codPartida" />
+      </Principal>
+      <Dependent Role="Becalos">
+        <PropertyRef Name="codPartida" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Becalos_solicitudID">
+    <End Role="SolicitudRecursos" Type="Self.SolicitudRecursos" Multiplicity="1" />
+    <End Role="Becalos" Type="Self.Becalos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SolicitudRecursos">
+        <PropertyRef Name="solicitudID" />
+      </Principal>
+      <Dependent Role="Becalos">
+        <PropertyRef Name="solicitudID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Becas_academiaID">
+    <End Role="CatAcademia" Type="Self.CatAcademia" Multiplicity="1" />
+    <End Role="Becas" Type="Self.Becas" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CatAcademia">
+        <PropertyRef Name="academiaID" />
+      </Principal>
+      <Dependent Role="Becas">
+        <PropertyRef Name="academiaID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Becas_codPartida">
+    <End Role="CatPartida" Type="Self.CatPartida" Multiplicity="1" />
+    <End Role="Becas" Type="Self.Becas" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CatPartida">
+        <PropertyRef Name="codPartida" />
+      </Principal>
+      <Dependent Role="Becas">
+        <PropertyRef Name="codPartida" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Becas_solicitudID">
+    <End Role="SolicitudRecursos" Type="Self.SolicitudRecursos" Multiplicity="1" />
+    <End Role="Becas" Type="Self.Becas" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SolicitudRecursos">
+        <PropertyRef Name="solicitudID" />
+      </Principal>
+      <Dependent Role="Becas">
+        <PropertyRef Name="solicitudID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Beneficiarios_tipoSolicitudID">
+    <End Role="CatTipoSolicitud" Type="Self.CatTipoSolicitud" Multiplicity="1" />
+    <End Role="Beneficiarios" Type="Self.Beneficiarios" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CatTipoSolicitud">
+        <PropertyRef Name="tipoSolicitudID" />
+      </Principal>
+      <Dependent Role="Beneficiarios">
+        <PropertyRef Name="tipoSolicitudID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_BitacoraMovimiento_estatusID">
+    <End Role="CatEstatusSolicitud" Type="Self.CatEstatusSolicitud" Multiplicity="1" />
+    <End Role="BitacoraMovimiento" Type="Self.BitacoraMovimiento" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CatEstatusSolicitud">
+        <PropertyRef Name="estatusID" />
+      </Principal>
+      <Dependent Role="BitacoraMovimiento">
+        <PropertyRef Name="estatusID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_BitacoraMovimiento_solicitudID">
+    <End Role="SolicitudRecursos" Type="Self.SolicitudRecursos" Multiplicity="1" />
+    <End Role="BitacoraMovimiento" Type="Self.BitacoraMovimiento" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SolicitudRecursos">
+        <PropertyRef Name="solicitudID" />
+      </Principal>
+      <Dependent Role="BitacoraMovimiento">
+        <PropertyRef Name="solicitudID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_BitacoraMovimiento_usuarioID">
+    <End Role="Usuarios" Type="Self.Usuarios" Multiplicity="1" />
+    <End Role="BitacoraMovimiento" Type="Self.BitacoraMovimiento" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuarios">
+        <PropertyRef Name="usuarioID" />
+      </Principal>
+      <Dependent Role="BitacoraMovimiento">
+        <PropertyRef Name="usuarioID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_BitacoraUsuarios_dhcpID">
+    <End Role="Ipv4" Type="Self.Ipv4" Multiplicity="1" />
+    <End Role="BitacoraUsuarios" Type="Self.BitacoraUsuarios" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Ipv4">
+        <PropertyRef Name="ipv4ID" />
+      </Principal>
+      <Dependent Role="BitacoraUsuarios">
+        <PropertyRef Name="dhcpID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CatConceptoGastos_tipoSolicitudID">
+    <End Role="CatTipoSolicitud" Type="Self.CatTipoSolicitud" Multiplicity="1" />
+    <End Role="CatConceptoGastos" Type="Self.CatConceptoGastos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CatTipoSolicitud">
+        <PropertyRef Name="tipoSolicitudID" />
+      </Principal>
+      <Dependent Role="CatConceptoGastos">
+        <PropertyRef Name="tipoSolicitudID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CatDestino_entidadID">
+    <End Role="CatEntidadFederativa" Type="Self.CatEntidadFederativa" Multiplicity="1" />
+    <End Role="CatDestino" Type="Self.CatDestino" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CatEntidadFederativa">
+        <PropertyRef Name="entidadID" />
+      </Principal>
+      <Dependent Role="CatDestino">
+        <PropertyRef Name="entidadID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CatEntidadFederativa_codUA">
+    <End Role="CatUnidadAdministrativa" Type="Self.CatUnidadAdministrativa" Multiplicity="0..1" />
+    <End Role="CatEntidadFederativa" Type="Self.CatEntidadFederativa" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CatUnidadAdministrativa">
+        <PropertyRef Name="codUA" />
+      </Principal>
+      <Dependent Role="CatEntidadFederativa">
+        <PropertyRef Name="codUA" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CatEntidadFederativa_paisID">
+    <End Role="CatPais" Type="Self.CatPais" Multiplicity="1" />
+    <End Role="CatEntidadFederativa" Type="Self.CatEntidadFederativa" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CatPais">
+        <PropertyRef Name="paisID" />
+      </Principal>
+      <Dependent Role="CatEntidadFederativa">
+        <PropertyRef Name="paisID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CatEstatusSolicitud_areasID">
+    <End Role="CatAreas" Type="Self.CatAreas" Multiplicity="0..1" />
+    <End Role="CatEstatusSolicitud" Type="Self.CatEstatusSolicitud" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CatAreas">
+        <PropertyRef Name="areaID" />
+      </Principal>
+      <Dependent Role="CatEstatusSolicitud">
+        <PropertyRef Name="areasID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CatMunicipioLocalidad_entidadID">
+    <End Role="CatEntidadFederativa" Type="Self.CatEntidadFederativa" Multiplicity="1" />
+    <End Role="CatMunicipioLocalidad" Type="Self.CatMunicipioLocalidad" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CatEntidadFederativa">
+        <PropertyRef Name="entidadID" />
+      </Principal>
+      <Dependent Role="CatMunicipioLocalidad">
+        <PropertyRef Name="entidadID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_CatPartidaObligatoria">
+    <End Role="CatPartida" Type="Self.CatPartida" Multiplicity="1" />
+    <End Role="CatPartidaObligatoria" Type="Self.CatPartidaObligatoria" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CatPartida">
+        <PropertyRef Name="codPartida" />
+      </Principal>
+      <Dependent Role="CatPartidaObligatoria">
+        <PropertyRef Name="codPartida" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CatUnidadAdministrativa_regionID">
+    <End Role="CatRegion" Type="Self.CatRegion" Multiplicity="1" />
+    <End Role="CatUnidadAdministrativa" Type="Self.CatUnidadAdministrativa" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CatRegion">
+        <PropertyRef Name="regionID" />
+      </Principal>
+      <Dependent Role="CatUnidadAdministrativa">
+        <PropertyRef Name="regionID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CuotasDiarias_codPartida">
+    <End Role="CatPartida" Type="Self.CatPartida" Multiplicity="1" />
+    <End Role="CuotasDiarias" Type="Self.CuotasDiarias" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CatPartida">
+        <PropertyRef Name="codPartida" />
+      </Principal>
+      <Dependent Role="CuotasDiarias">
+        <PropertyRef Name="codPartida" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CuotasDiarias_conceptoGastosID">
+    <End Role="CatConceptoGastos" Type="Self.CatConceptoGastos" Multiplicity="1" />
+    <End Role="CuotasDiarias" Type="Self.CuotasDiarias" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CatConceptoGastos">
+        <PropertyRef Name="conceptoGastosID" />
+      </Principal>
+      <Dependent Role="CuotasDiarias">
+        <PropertyRef Name="conceptoGastosID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CuotasDiarias_solicitudID">
+    <End Role="SolicitudRecursos" Type="Self.SolicitudRecursos" Multiplicity="1" />
+    <End Role="CuotasDiarias" Type="Self.CuotasDiarias" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SolicitudRecursos">
+        <PropertyRef Name="solicitudID" />
+      </Principal>
+      <Dependent Role="CuotasDiarias">
+        <PropertyRef Name="solicitudID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Documento_solicitudID">
+    <End Role="SolicitudRecursos" Type="Self.SolicitudRecursos" Multiplicity="0..1" />
+    <End Role="Documento" Type="Self.Documento" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SolicitudRecursos">
+        <PropertyRef Name="solicitudID" />
+      </Principal>
+      <Dependent Role="Documento">
+        <PropertyRef Name="solicitudID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Documento_tipoDocumentoID">
+    <End Role="CatTipoDocumento" Type="Self.CatTipoDocumento" Multiplicity="0..1" />
+    <End Role="Documento" Type="Self.Documento" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CatTipoDocumento">
+        <PropertyRef Name="tipoDocumentoID" />
+      </Principal>
+      <Dependent Role="Documento">
+        <PropertyRef Name="tipoDocumentoID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EstatusAcciones_accionesID">
+    <End Role="CatAcciones" Type="Self.CatAcciones" Multiplicity="1" />
+    <End Role="EstatusAcciones" Type="Self.EstatusAcciones" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CatAcciones">
+        <PropertyRef Name="accionesID" />
+      </Principal>
+      <Dependent Role="EstatusAcciones">
+        <PropertyRef Name="accionesID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EstatusAcciones_estatusID">
+    <End Role="CatEstatusSolicitud" Type="Self.CatEstatusSolicitud" Multiplicity="1" />
+    <End Role="EstatusAcciones" Type="Self.EstatusAcciones" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CatEstatusSolicitud">
+        <PropertyRef Name="estatusID" />
+      </Principal>
+      <Dependent Role="EstatusAcciones">
+        <PropertyRef Name="estatusID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EstatusMovimiento_solicitudID">
+    <End Role="SolicitudRecursos" Type="Self.SolicitudRecursos" Multiplicity="1" />
+    <End Role="EstatusMovimiento" Type="Self.EstatusMovimiento" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SolicitudRecursos">
+        <PropertyRef Name="solicitudID" />
+      </Principal>
+      <Dependent Role="EstatusMovimiento">
+        <PropertyRef Name="solicitudID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EstatusMovimiento_usuarioID">
+    <End Role="Usuarios" Type="Self.Usuarios" Multiplicity="1" />
+    <End Role="EstatusMovimiento" Type="Self.EstatusMovimiento" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuarios">
+        <PropertyRef Name="usuarioID" />
+      </Principal>
+      <Dependent Role="EstatusMovimiento">
+        <PropertyRef Name="usuarioID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EstatusPerfil_estatusID">
+    <End Role="CatEstatusSolicitud" Type="Self.CatEstatusSolicitud" Multiplicity="1" />
+    <End Role="EstatusPerfil" Type="Self.EstatusPerfil" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CatEstatusSolicitud">
+        <PropertyRef Name="estatusID" />
+      </Principal>
+      <Dependent Role="EstatusPerfil">
+        <PropertyRef Name="estatusID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EstatusPerfil_perfilID">
+    <End Role="CatPerfil" Type="Self.CatPerfil" Multiplicity="1" />
+    <End Role="EstatusPerfil" Type="Self.EstatusPerfil" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CatPerfil">
+        <PropertyRef Name="perfilID" />
+      </Principal>
+      <Dependent Role="EstatusPerfil">
+        <PropertyRef Name="perfilID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_evento_accion">
+    <End Role="CatEventoAccion" Type="Self.CatEventoAccion" Multiplicity="1" />
+    <End Role="CatEvento" Type="Self.CatEvento" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CatEventoAccion">
+        <PropertyRef Name="eventoAccionId" />
+      </Principal>
+      <Dependent Role="CatEvento">
+        <PropertyRef Name="eventoAccionId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_evento_modulo">
+    <End Role="CatModulo" Type="Self.CatModulo" Multiplicity="1" />
+    <End Role="CatEvento" Type="Self.CatEvento" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CatModulo">
+        <PropertyRef Name="moduloID" />
+      </Principal>
+      <Dependent Role="CatEvento">
+        <PropertyRef Name="moduloId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_evento_perfil">
+    <End Role="CatPerfil" Type="Self.CatPerfil" Multiplicity="1" />
+    <End Role="CatEvento" Type="Self.CatEvento" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CatPerfil">
+        <PropertyRef Name="perfilID" />
+      </Principal>
+      <Dependent Role="CatEvento">
+        <PropertyRef Name="perfilId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_evento_solicitud">
+    <End Role="CatEvento" Type="Self.CatEvento" Multiplicity="0..1" />
+    <End Role="SolicitudRecursos" Type="Self.SolicitudRecursos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CatEvento">
+        <PropertyRef Name="eventoId" />
+      </Principal>
+      <Dependent Role="SolicitudRecursos">
+        <PropertyRef Name="eventoId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Factura_estatusFacturaID">
+    <End Role="CatEstatusFactura" Type="Self.CatEstatusFactura" Multiplicity="1" />
+    <End Role="Factura" Type="Self.Factura" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CatEstatusFactura">
+        <PropertyRef Name="estatusFacturaID" />
+      </Principal>
+      <Dependent Role="Factura">
+        <PropertyRef Name="estatusFacturaID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Factura_monedaID">
+    <End Role="CatMoneda" Type="Self.CatMoneda" Multiplicity="1" />
+    <End Role="Factura" Type="Self.Factura" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CatMoneda">
+        <PropertyRef Name="monedaID" />
+      </Principal>
+      <Dependent Role="Factura">
+        <PropertyRef Name="monedaID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Factura_proveedoresID">
+    <End Role="Proveedores" Type="Self.Proveedores" Multiplicity="1" />
+    <End Role="Factura" Type="Self.Factura" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Proveedores">
+        <PropertyRef Name="proveedoresID" />
+      </Principal>
+      <Dependent Role="Factura">
+        <PropertyRef Name="proveedoresID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_firmaElectronica_solicitudID">
+    <End Role="SolicitudRecursos" Type="Self.SolicitudRecursos" Multiplicity="1" />
+    <End Role="firmaElectronica" Type="Self.firmaElectronica" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SolicitudRecursos">
+        <PropertyRef Name="solicitudID" />
+      </Principal>
+      <Dependent Role="firmaElectronica">
+        <PropertyRef Name="solicitudID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_GastoCorriente_codPartida">
+    <End Role="CatPartida" Type="Self.CatPartida" Multiplicity="1" />
+    <End Role="GastoCorriente" Type="Self.GastoCorriente" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CatPartida">
+        <PropertyRef Name="codPartida" />
+      </Principal>
+      <Dependent Role="GastoCorriente">
+        <PropertyRef Name="codPartida" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_GastoCorriente_conceptoPagoID">
+    <End Role="CatConceptoPago" Type="Self.CatConceptoPago" Multiplicity="1" />
+    <End Role="GastoCorriente" Type="Self.GastoCorriente" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CatConceptoPago">
+        <PropertyRef Name="conceptoPagoID" />
+      </Principal>
+      <Dependent Role="GastoCorriente">
+        <PropertyRef Name="conceptoPagoID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_GastoCorriente_destinoID">
+    <End Role="CatDestino" Type="Self.CatDestino" Multiplicity="0..1" />
+    <End Role="GastoCorriente" Type="Self.GastoCorriente" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CatDestino">
+        <PropertyRef Name="destinoID" />
+      </Principal>
+      <Dependent Role="GastoCorriente">
+        <PropertyRef Name="destinoID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_GastoCorriente_entidadID">
+    <End Role="CatEntidadFederativa" Type="Self.CatEntidadFederativa" Multiplicity="0..1" />
+    <End Role="GastoCorriente" Type="Self.GastoCorriente" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CatEntidadFederativa">
+        <PropertyRef Name="entidadID" />
+      </Principal>
+      <Dependent Role="GastoCorriente">
+        <PropertyRef Name="entidadID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_GastoCorriente_solicitudID">
+    <End Role="SolicitudRecursos" Type="Self.SolicitudRecursos" Multiplicity="1" />
+    <End Role="GastoCorriente" Type="Self.GastoCorriente" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SolicitudRecursos">
+        <PropertyRef Name="solicitudID" />
+      </Principal>
+      <Dependent Role="GastoCorriente">
+        <PropertyRef Name="solicitudID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_GastosAduanales_agenciaID">
+    <End Role="CatAgenciaAduanal" Type="Self.CatAgenciaAduanal" Multiplicity="1" />
+    <End Role="GastosAduanales" Type="Self.GastosAduanales" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CatAgenciaAduanal">
+        <PropertyRef Name="agenciaID" />
+      </Principal>
+      <Dependent Role="GastosAduanales">
+        <PropertyRef Name="agenciaID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_GastosAduanales_codPartida">
+    <End Role="CatPartida" Type="Self.CatPartida" Multiplicity="1" />
+    <End Role="GastosAduanales" Type="Self.GastosAduanales" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CatPartida">
+        <PropertyRef Name="codPartida" />
+      </Principal>
+      <Dependent Role="GastosAduanales">
+        <PropertyRef Name="codPartida" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_GastosAduanales_solicitudID">
+    <End Role="SolicitudRecursos" Type="Self.SolicitudRecursos" Multiplicity="1" />
+    <End Role="GastosAduanales" Type="Self.GastosAduanales" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SolicitudRecursos">
+        <PropertyRef Name="solicitudID" />
+      </Principal>
+      <Dependent Role="GastosAduanales">
+        <PropertyRef Name="solicitudID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_GastosFunerarios_codPartida">
+    <End Role="CatPartida" Type="Self.CatPartida" Multiplicity="1" />
+    <End Role="GastosFunerarios" Type="Self.GastosFunerarios" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CatPartida">
+        <PropertyRef Name="codPartida" />
+      </Principal>
+      <Dependent Role="GastosFunerarios">
+        <PropertyRef Name="codPartida" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_GastosFunerarios_solicitudID">
+    <End Role="SolicitudRecursos" Type="Self.SolicitudRecursos" Multiplicity="1" />
+    <End Role="GastosFunerarios" Type="Self.GastosFunerarios" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SolicitudRecursos">
+        <PropertyRef Name="solicitudID" />
+      </Principal>
+      <Dependent Role="GastosFunerarios">
+        <PropertyRef Name="solicitudID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ImpuestosSobreNomina_codPartida">
+    <End Role="CatPartida" Type="Self.CatPartida" Multiplicity="1" />
+    <End Role="ImpuestosSobreNomina" Type="Self.ImpuestosSobreNomina" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CatPartida">
+        <PropertyRef Name="codPartida" />
+      </Principal>
+      <Dependent Role="ImpuestosSobreNomina">
+        <PropertyRef Name="codPartida" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ImpuestosSobreNomina_solicitudID">
+    <End Role="SolicitudRecursos" Type="Self.SolicitudRecursos" Multiplicity="1" />
+    <End Role="ImpuestosSobreNomina" Type="Self.ImpuestosSobreNomina" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SolicitudRecursos">
+        <PropertyRef Name="solicitudID" />
+      </Principal>
+      <Dependent Role="ImpuestosSobreNomina">
+        <PropertyRef Name="solicitudID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Ipv4_usuarioID">
+    <End Role="Usuarios" Type="Self.Usuarios" Multiplicity="1" />
+    <End Role="Ipv4" Type="Self.Ipv4" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuarios">
+        <PropertyRef Name="usuarioID" />
+      </Principal>
+      <Dependent Role="Ipv4">
+        <PropertyRef Name="usuarioID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Laudos_codPartida">
+    <End Role="CatPartida" Type="Self.CatPartida" Multiplicity="1" />
+    <End Role="Laudos" Type="Self.Laudos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CatPartida">
+        <PropertyRef Name="codPartida" />
+      </Principal>
+      <Dependent Role="Laudos">
+        <PropertyRef Name="codPartida" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Laudos_conceptoGastosID">
+    <End Role="CatConceptoGastos" Type="Self.CatConceptoGastos" Multiplicity="1" />
+    <End Role="Laudos" Type="Self.Laudos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CatConceptoGastos">
+        <PropertyRef Name="conceptoGastosID" />
+      </Principal>
+      <Dependent Role="Laudos">
+        <PropertyRef Name="conceptoGastosID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Laudos_solicitudID">
+    <End Role="SolicitudRecursos" Type="Self.SolicitudRecursos" Multiplicity="1" />
+    <End Role="Laudos" Type="Self.Laudos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SolicitudRecursos">
+        <PropertyRef Name="solicitudID" />
+      </Principal>
+      <Dependent Role="Laudos">
+        <PropertyRef Name="solicitudID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_LogError_usuarioID">
+    <End Role="Usuarios" Type="Self.Usuarios" Multiplicity="1" />
+    <End Role="LogError" Type="Self.LogError" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuarios">
+        <PropertyRef Name="usuarioID" />
+      </Principal>
+      <Dependent Role="LogError">
+        <PropertyRef Name="usuarioID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_MovimientoAdministrativo_cuentaID">
+    <End Role="CatCuenta" Type="Self.CatCuenta" Multiplicity="1" />
+    <End Role="MovimientoAdministrativo" Type="Self.MovimientoAdministrativo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CatCuenta">
+        <PropertyRef Name="cuentaID" />
+      </Principal>
+      <Dependent Role="MovimientoAdministrativo">
+        <PropertyRef Name="cuentaID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_MovimientoAdministrativo_presionGastoID">
+    <End Role="PresionGasto" Type="Self.PresionGasto" Multiplicity="1" />
+    <End Role="MovimientoAdministrativo" Type="Self.MovimientoAdministrativo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PresionGasto">
+        <PropertyRef Name="presionGastoID" />
+      </Principal>
+      <Dependent Role="MovimientoAdministrativo">
+        <PropertyRef Name="presionGastoID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_MovimientoAdministrativo_solicitudID">
+    <End Role="SolicitudRecursos" Type="Self.SolicitudRecursos" Multiplicity="1" />
+    <End Role="MovimientoAdministrativo" Type="Self.MovimientoAdministrativo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SolicitudRecursos">
+        <PropertyRef Name="solicitudID" />
+      </Principal>
+      <Dependent Role="MovimientoAdministrativo">
+        <PropertyRef Name="solicitudID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_MovimientoBancario_cuentaID">
+    <End Role="CatCuenta" Type="Self.CatCuenta" Multiplicity="1" />
+    <End Role="MovimientoBancario" Type="Self.MovimientoBancario" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CatCuenta">
+        <PropertyRef Name="cuentaID" />
+      </Principal>
+      <Dependent Role="MovimientoBancario">
+        <PropertyRef Name="cuentaID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PagoCheque_estatusPagoID">
+    <End Role="CatEstatusPago" Type="Self.CatEstatusPago" Multiplicity="1" />
+    <End Role="PagoCheque" Type="Self.PagoCheque" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CatEstatusPago">
+        <PropertyRef Name="estatusPagoID" />
+      </Principal>
+      <Dependent Role="PagoCheque">
+        <PropertyRef Name="estatusPagoID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PagoCheque_movimientoAdmID">
+    <End Role="MovimientoAdministrativo" Type="Self.MovimientoAdministrativo" Multiplicity="1" />
+    <End Role="PagoCheque" Type="Self.PagoCheque" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MovimientoAdministrativo">
+        <PropertyRef Name="movimientoAdmID" />
+      </Principal>
+      <Dependent Role="PagoCheque">
+        <PropertyRef Name="movimientoAdmID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Penalizaciones_monedaID">
+    <End Role="CatMoneda" Type="Self.CatMoneda" Multiplicity="1" />
+    <End Role="Penalizaciones" Type="Self.Penalizaciones" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CatMoneda">
+        <PropertyRef Name="monedaID" />
+      </Principal>
+      <Dependent Role="Penalizaciones">
+        <PropertyRef Name="monedaID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Penalizaciones_proveedoresID">
+    <End Role="Proveedores" Type="Self.Proveedores" Multiplicity="1" />
+    <End Role="Penalizaciones" Type="Self.Penalizaciones" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Proveedores">
+        <PropertyRef Name="proveedoresID" />
+      </Principal>
+      <Dependent Role="Penalizaciones">
+        <PropertyRef Name="proveedoresID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PolizaPago_tipoPolizaID">
+    <End Role="CatTipoPoliza" Type="Self.CatTipoPoliza" Multiplicity="1" />
+    <End Role="PolizaPago" Type="Self.PolizaPago" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CatTipoPoliza">
+        <PropertyRef Name="tipoPolizaID" />
+      </Principal>
+      <Dependent Role="PolizaPago">
+        <PropertyRef Name="tipoPolizaID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PresionGasto_estatusPresionID">
+    <End Role="CatEstatusPresion" Type="Self.CatEstatusPresion" Multiplicity="1" />
+    <End Role="PresionGasto" Type="Self.PresionGasto" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CatEstatusPresion">
+        <PropertyRef Name="estatusPresionID" />
+      </Principal>
+      <Dependent Role="PresionGasto">
+        <PropertyRef Name="estatusPresionID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PresupuestoClc_clcID">
+    <End Role="Clc" Type="Self.Clc" Multiplicity="0..1" />
+    <End Role="PresupuestoClc" Type="Self.PresupuestoClc" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Clc">
+        <PropertyRef Name="clcID" />
+      </Principal>
+      <Dependent Role="PresupuestoClc">
+        <PropertyRef Name="clcID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PresupuestoClc_solicitudID">
+    <End Role="SolicitudRecursos" Type="Self.SolicitudRecursos" Multiplicity="0..1" />
+    <End Role="PresupuestoClc" Type="Self.PresupuestoClc" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SolicitudRecursos">
+        <PropertyRef Name="solicitudID" />
+      </Principal>
+      <Dependent Role="PresupuestoClc">
+        <PropertyRef Name="solicitudID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Proveedores_codPartida">
+    <End Role="CatPartida" Type="Self.CatPartida" Multiplicity="1" />
+    <End Role="Proveedores" Type="Self.Proveedores" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CatPartida">
+        <PropertyRef Name="codPartida" />
+      </Principal>
+      <Dependent Role="Proveedores">
+        <PropertyRef Name="codPartida" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Proveedores_monedaID">
+    <End Role="CatMoneda" Type="Self.CatMoneda" Multiplicity="1" />
+    <End Role="Proveedores" Type="Self.Proveedores" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CatMoneda">
+        <PropertyRef Name="monedaID" />
+      </Principal>
+      <Dependent Role="Proveedores">
+        <PropertyRef Name="monedaID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Proveedores_solicitudID">
+    <End Role="SolicitudRecursos" Type="Self.SolicitudRecursos" Multiplicity="1" />
+    <End Role="Proveedores" Type="Self.Proveedores" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SolicitudRecursos">
+        <PropertyRef Name="solicitudID" />
+      </Principal>
+      <Dependent Role="Proveedores">
+        <PropertyRef Name="solicitudID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RegistroContable_SolicitudRecursos">
+    <End Role="SolicitudRecursos" Type="Self.SolicitudRecursos" Multiplicity="1" />
+    <End Role="RegistroContable" Type="Self.RegistroContable" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SolicitudRecursos">
+        <PropertyRef Name="solicitudID" />
+      </Principal>
+      <Dependent Role="RegistroContable">
+        <PropertyRef Name="solicitudID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_RegVol_SolRec">
+    <End Role="SolicitudRecursos" Type="Self.SolicitudRecursos" Multiplicity="1" />
+    <End Role="RegistroVolante" Type="Self.RegistroVolante" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SolicitudRecursos">
+        <PropertyRef Name="solicitudID" />
+      </Principal>
+      <Dependent Role="RegistroVolante">
+        <PropertyRef Name="solicitudID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SolicitudFirma_SolicitudFirma">
+    <End Role="SolicitudFirma" Type="Self.SolicitudFirma" Multiplicity="1" />
+    <End Role="SolicitudFirma1" Type="Self.SolicitudFirma" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="SolicitudFirma">
+        <PropertyRef Name="SolFirmaID" />
+      </Principal>
+      <Dependent Role="SolicitudFirma1">
+        <PropertyRef Name="SolFirmaID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SolicitudRecursos_codUA">
+    <End Role="CatUnidadAdministrativa" Type="Self.CatUnidadAdministrativa" Multiplicity="1" />
+    <End Role="SolicitudRecursos" Type="Self.SolicitudRecursos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CatUnidadAdministrativa">
+        <PropertyRef Name="codUA" />
+      </Principal>
+      <Dependent Role="SolicitudRecursos">
+        <PropertyRef Name="codUA" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SolicitudRecursos_estatusID">
+    <End Role="CatEstatusSolicitud" Type="Self.CatEstatusSolicitud" Multiplicity="1" />
+    <End Role="SolicitudRecursos" Type="Self.SolicitudRecursos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CatEstatusSolicitud">
+        <PropertyRef Name="estatusID" />
+      </Principal>
+      <Dependent Role="SolicitudRecursos">
+        <PropertyRef Name="estatusID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SolicitudRecursos_prioridadID">
+    <End Role="CatPrioridad" Type="Self.CatPrioridad" Multiplicity="1" />
+    <End Role="SolicitudRecursos" Type="Self.SolicitudRecursos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CatPrioridad">
+        <PropertyRef Name="prioridadID" />
+      </Principal>
+      <Dependent Role="SolicitudRecursos">
+        <PropertyRef Name="prioridadID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SolicitudRecursos_tipoSolicitudID">
+    <End Role="CatTipoSolicitud" Type="Self.CatTipoSolicitud" Multiplicity="1" />
+    <End Role="SolicitudRecursos" Type="Self.SolicitudRecursos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CatTipoSolicitud">
+        <PropertyRef Name="tipoSolicitudID" />
+      </Principal>
+      <Dependent Role="SolicitudRecursos">
+        <PropertyRef Name="tipoSolicitudID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TipoDocumentos_tipoSolicitudID">
+    <End Role="CatTipoSolicitud" Type="Self.CatTipoSolicitud" Multiplicity="1" />
+    <End Role="CatTipoDocumento" Type="Self.CatTipoDocumento" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CatTipoSolicitud">
+        <PropertyRef Name="tipoSolicitudID" />
+      </Principal>
+      <Dependent Role="CatTipoDocumento">
+        <PropertyRef Name="tipoSolicitudID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_TipoJDConfig_CatTipoJD">
+    <End Role="CatTipoJefeDepto" Type="Self.CatTipoJefeDepto" Multiplicity="1" />
+    <End Role="TipoJefeDeptoConfig" Type="Self.TipoJefeDeptoConfig" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CatTipoJefeDepto">
+        <PropertyRef Name="tipoJefeDeptoID" />
+      </Principal>
+      <Dependent Role="TipoJefeDeptoConfig">
+        <PropertyRef Name="tipoJefeDeptoID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_TipoJDConfig_Usr">
+    <End Role="Usuarios" Type="Self.Usuarios" Multiplicity="1" />
+    <End Role="TipoJefeDeptoConfig" Type="Self.TipoJefeDeptoConfig" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuarios">
+        <PropertyRef Name="usuarioID" />
+      </Principal>
+      <Dependent Role="TipoJefeDeptoConfig">
+        <PropertyRef Name="usuarioID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_TipoSolPorAreaCatAreas">
+    <End Role="CatAreas" Type="Self.CatAreas" Multiplicity="1" />
+    <End Role="TipoSolicitudPorAreaConfig" Type="Self.TipoSolicitudPorAreaConfig" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CatAreas">
+        <PropertyRef Name="areaID" />
+      </Principal>
+      <Dependent Role="TipoSolicitudPorAreaConfig">
+        <PropertyRef Name="areasID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_TipoSolPorAreaCatRegion">
+    <End Role="CatRegion" Type="Self.CatRegion" Multiplicity="1" />
+    <End Role="TipoSolicitudPorAreaConfig" Type="Self.TipoSolicitudPorAreaConfig" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CatRegion">
+        <PropertyRef Name="regionID" />
+      </Principal>
+      <Dependent Role="TipoSolicitudPorAreaConfig">
+        <PropertyRef Name="regionID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_TipoSolPorAreaCatTipoSol">
+    <End Role="CatTipoSolicitud" Type="Self.CatTipoSolicitud" Multiplicity="1" />
+    <End Role="TipoSolicitudPorAreaConfig" Type="Self.TipoSolicitudPorAreaConfig" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CatTipoSolicitud">
+        <PropertyRef Name="tipoSolicitudID" />
+      </Principal>
+      <Dependent Role="TipoSolicitudPorAreaConfig">
+        <PropertyRef Name="tipoSolicitudID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_TipoSolPorUACatRegion">
+    <End Role="CatRegion" Type="Self.CatRegion" Multiplicity="1" />
+    <End Role="TipoSolicitudPorUAConfig" Type="Self.TipoSolicitudPorUAConfig" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CatRegion">
+        <PropertyRef Name="regionID" />
+      </Principal>
+      <Dependent Role="TipoSolicitudPorUAConfig">
+        <PropertyRef Name="regionID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_TipoSolPorUACatTipoSol">
+    <End Role="CatTipoSolicitud" Type="Self.CatTipoSolicitud" Multiplicity="1" />
+    <End Role="TipoSolicitudPorUAConfig" Type="Self.TipoSolicitudPorUAConfig" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CatTipoSolicitud">
+        <PropertyRef Name="tipoSolicitudID" />
+      </Principal>
+      <Dependent Role="TipoSolicitudPorUAConfig">
+        <PropertyRef Name="tipoSolicitudID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_TipoSolPorUACatUA">
+    <End Role="CatUnidadAdministrativa" Type="Self.CatUnidadAdministrativa" Multiplicity="1" />
+    <End Role="TipoSolicitudPorUAConfig" Type="Self.TipoSolicitudPorUAConfig" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CatUnidadAdministrativa">
+        <PropertyRef Name="codUA" />
+      </Principal>
+      <Dependent Role="TipoSolicitudPorUAConfig">
+        <PropertyRef Name="codUA" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TransferenciaBancaria_estatusPagoID">
+    <End Role="CatEstatusPago" Type="Self.CatEstatusPago" Multiplicity="1" />
+    <End Role="TransferenciaBancaria" Type="Self.TransferenciaBancaria" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CatEstatusPago">
+        <PropertyRef Name="estatusPagoID" />
+      </Principal>
+      <Dependent Role="TransferenciaBancaria">
+        <PropertyRef Name="estatusPagoID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TransferenciaBancaria_movimientoAdmID">
+    <End Role="MovimientoAdministrativo" Type="Self.MovimientoAdministrativo" Multiplicity="1" />
+    <End Role="TransferenciaBancaria" Type="Self.TransferenciaBancaria" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MovimientoAdministrativo">
+        <PropertyRef Name="movimientoAdmID" />
+      </Principal>
+      <Dependent Role="TransferenciaBancaria">
+        <PropertyRef Name="movimientoAdmID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UsuarioRegionFiscalizacion_CatRegion">
+    <End Role="CatRegion" Type="Self.CatRegion" Multiplicity="1" />
+    <End Role="UsuarioRegionFiscalizacion" Type="Self.UsuarioRegionFiscalizacion" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CatRegion">
+        <PropertyRef Name="regionID" />
+      </Principal>
+      <Dependent Role="UsuarioRegionFiscalizacion">
+        <PropertyRef Name="regionID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UsuarioRegionFiscalizacion_Usuarios">
+    <End Role="Usuarios" Type="Self.Usuarios" Multiplicity="1" />
+    <End Role="UsuarioRegionFiscalizacion" Type="Self.UsuarioRegionFiscalizacion" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuarios">
+        <PropertyRef Name="usuarioID" />
+      </Principal>
+      <Dependent Role="UsuarioRegionFiscalizacion">
+        <PropertyRef Name="usuarioID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Usuarios_areadId">
+    <End Role="CatAreas" Type="Self.CatAreas" Multiplicity="0..1" />
+    <End Role="Usuarios" Type="Self.Usuarios" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CatAreas">
+        <PropertyRef Name="areaID" />
+      </Principal>
+      <Dependent Role="Usuarios">
+        <PropertyRef Name="areaId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Usuarios_codUA">
+    <End Role="CatUnidadAdministrativa" Type="Self.CatUnidadAdministrativa" Multiplicity="1" />
+    <End Role="Usuarios" Type="Self.Usuarios" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CatUnidadAdministrativa">
+        <PropertyRef Name="codUA" />
+      </Principal>
+      <Dependent Role="Usuarios">
+        <PropertyRef Name="codUA" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Usuarios_perfilID">
+    <End Role="CatPerfil" Type="Self.CatPerfil" Multiplicity="0..1" />
+    <End Role="Usuarios" Type="Self.Usuarios" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CatPerfil">
+        <PropertyRef Name="perfilID" />
+      </Principal>
+      <Dependent Role="Usuarios">
+        <PropertyRef Name="perfilID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Usuarios_rolID">
+    <End Role="CatRol" Type="Self.CatRol" Multiplicity="1" />
+    <End Role="Usuarios" Type="Self.Usuarios" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CatRol">
+        <PropertyRef Name="rolID" />
+      </Principal>
+      <Dependent Role="Usuarios">
+        <PropertyRef Name="rolID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="PK_CatCuenta_bancoID">
+    <End Role="CatBanco" Type="Self.CatBanco" Multiplicity="1" />
+    <End Role="CatCuenta" Type="Self.CatCuenta" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CatBanco">
+        <PropertyRef Name="bancoID" />
+      </Principal>
+      <Dependent Role="CatCuenta">
+        <PropertyRef Name="bancoID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="PK_CatPartida_tipoSolicitudID">
+    <End Role="CatTipoSolicitud" Type="Self.CatTipoSolicitud" Multiplicity="0..1" />
+    <End Role="CatPartida" Type="Self.CatPartida" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CatTipoSolicitud">
+        <PropertyRef Name="tipoSolicitudID" />
+      </Principal>
+      <Dependent Role="CatPartida">
+        <PropertyRef Name="tipoSolicitudID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="PK_PolizaPago_CatTipoPagoPoliza">
+    <End Role="CatTipoPagoPoliza" Type="Self.CatTipoPagoPoliza" Multiplicity="1" />
+    <End Role="PolizaPago" Type="Self.PolizaPago" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CatTipoPagoPoliza">
+        <PropertyRef Name="tipoPagoPolizaID" />
+      </Principal>
+      <Dependent Role="PolizaPago">
+        <PropertyRef Name="tipoPagoPolizaID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Function Name="funImporte" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="money">
+    <Parameter Name="solicitudID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="Monto_Por_TipoSolicitud_Y_Id_Solicitud" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="decimal">
+    <Parameter Name="tipoSolicitud" Type="int" Mode="In" />
+    <Parameter Name="solicitudId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="ObtenerSolicitudesVentanillaUnicaPorFiltro" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="QryParameter" Type="varchar" Mode="InOut" />
+    <Parameter Name="SolicitudID" Type="int" Mode="In" />
+    <Parameter Name="TipoFiltro" Type="int" Mode="In" />
+    <Parameter Name="TipoSolicitud" Type="int" Mode="In" />
+    <Parameter Name="PerfilID" Type="int" Mode="In" />
+    <Parameter Name="EstatusSolicitud" Type="int" Mode="In" />
+    <Parameter Name="FechaInicial" Type="varchar" Mode="In" />
+    <Parameter Name="FechaFinal" Type="varchar" Mode="In" />
+    <Parameter Name="Anio" Type="int" Mode="In" />
+    <Parameter Name="Consecutivo" Type="int" Mode="In" />
+    <Parameter Name="TipoRegionParam" Type="int" Mode="In" />
+    <Parameter Name="TipoFirmaParam" Type="int" Mode="In" />
+    <Parameter Name="TipoUnidadAdministrativaParam" Type="int" Mode="In" />
+  </Function>
+  <Function Name="paCatMoneda_Create" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="descripcionMoneda" Type="char" Mode="In" />
+    <Parameter Name="codigo" Type="char" Mode="In" />
+    <Parameter Name="estatusLogico" Type="bit" Mode="In" />
+  </Function>
+  <Function Name="paCatMoneda_Read" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="monedaID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="paCatMoneda_Update" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="monedaID" Type="int" Mode="In" />
+    <Parameter Name="descripcionMoneda" Type="char" Mode="In" />
+    <Parameter Name="codigo" Type="char" Mode="In" />
+    <Parameter Name="estatusLogico" Type="bit" Mode="In" />
+  </Function>
+  <Function Name="paCatPartida_Read" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="codPartida" Type="int" Mode="In" />
+    <Parameter Name="capitulo" Type="int" Mode="In" />
+    <Parameter Name="denominacion" Type="varchar" Mode="In" />
+    <Parameter Name="estatusLogico" Type="bit" Mode="In" />
+  </Function>
+  <Function Name="paCatUnidadAdministrativa_Read" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="codUA" Type="int" Mode="In" />
+    <Parameter Name="regionID" Type="int" Mode="In" />
+    <Parameter Name="codigoPadre" Type="int" Mode="In" />
+    <Parameter Name="estatusLogico" Type="bit" Mode="In" />
+  </Function>
+  <Function Name="paChequesSolicitudRepPropPresGast_Read" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="listSolicitudesDet" Type="varchar(max)" Mode="In" />
+  </Function>
+  <Function Name="paCuentasRepPresGastDir_Read" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="listSolicitudesHeader" Type="varchar(max)" Mode="In" />
+    <Parameter Name="ejercicio" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="paCuentasRepPropPresGast_Read" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="areaBancoHeaderI" Type="int" Mode="In" />
+    <Parameter Name="listSolicitudesHeader" Type="varchar(max)" Mode="In" />
+    <Parameter Name="ejercicio" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="paCuentasRepPropPresGastFooter_Read" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="areaBancoFooterI" Type="int" Mode="In" />
+    <Parameter Name="ejercicio" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="paCuentasRepPropPresGastHeader_Read" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="areaBancoHeaderI" Type="int" Mode="In" />
+    <Parameter Name="listSolicitudesHeader" Type="varchar(max)" Mode="In" />
+    <Parameter Name="ejercicio" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="paRegistroVolanteInsertSelect" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="solicitudId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="Partida_Por_TipoSolicitud_Y_Id_Solicitud" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="varchar(max)">
+    <Parameter Name="tipoSolicitud" Type="int" Mode="In" />
+    <Parameter Name="solicitudId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="paSolicitudesRepPresGastDirFooter_Read" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="listSolicitudesDet" Type="varchar(max)" Mode="In" />
+  </Function>
+  <Function Name="paSolicitudesRepPropPresGastFooter_Read" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="listSolicitudesDet" Type="varchar(max)" Mode="In" />
+    <Parameter Name="areaBancoFooterI" Type="int" Mode="In" />
+  </Function>
+  <Function Name="paSolicitudRecursosSelectPorFiltro" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="QryParameter" Type="varchar" Mode="InOut" />
+    <Parameter Name="SolicitudID" Type="int" Mode="In" />
+    <Parameter Name="TipoFiltro" Type="int" Mode="In" />
+    <Parameter Name="SegundoFiltro" Type="int" Mode="In" />
+    <Parameter Name="TipoSolicitud" Type="int" Mode="In" />
+    <Parameter Name="PerfilID" Type="int" Mode="In" />
+    <Parameter Name="EstatusSolicitud" Type="int" Mode="In" />
+    <Parameter Name="FechaInicial" Type="varchar" Mode="In" />
+    <Parameter Name="FechaFinal" Type="varchar" Mode="In" />
+    <Parameter Name="Anio" Type="int" Mode="In" />
+    <Parameter Name="Consecutivo" Type="int" Mode="In" />
+    <Parameter Name="usrId" Type="int" Mode="In" />
+    <Parameter Name="areaId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="paSuficienciaPresupuestal_Create" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="importeAutorizado" Type="money" Mode="In" />
+    <Parameter Name="usuarioRegistro" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="PoblarBancosTMP" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="sp_alterdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+    <Parameter Name="version" Type="int" Mode="In" />
+    <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+  </Function>
+  <Function Name="SP_ConsultaCargaMasivaCuotasDiarias" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="LoadSessionId" Type="varchar(max)" Mode="In" />
+    <Parameter Name="solicitudID" Type="varchar(max)" Mode="In" />
+  </Function>
+  <Function Name="sp_creatediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+    <Parameter Name="version" Type="int" Mode="In" />
+    <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+  </Function>
+  <Function Name="sp_dropdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="SP_EliminaArchivoPorLoadSessionId" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="loadSessionId" Type="varchar(max)" Mode="In" />
+  </Function>
+  <Function Name="SP_EliminaArchivoPorSolicitudIdYArchivoUniqueId" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="solicitudId" Type="int" Mode="In" />
+    <Parameter Name="archivoUniqueId" Type="varchar(max)" Mode="In" />
+  </Function>
+  <Function Name="SP_GuardarSolicitudCargaMasiva" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="solicitudID" Type="int" Mode="In" />
+    <Parameter Name="anio" Type="int" Mode="In" />
+    <Parameter Name="tipoSolicitudID" Type="int" Mode="In" />
+    <Parameter Name="prioridadID" Type="int" Mode="In" />
+    <Parameter Name="codUA" Type="int" Mode="In" />
+    <Parameter Name="estatusID" Type="int" Mode="In" />
+    <Parameter Name="consecutivo" Type="int" Mode="In" />
+    <Parameter Name="fechaSolicitud" Type="varchar(max)" Mode="In" />
+    <Parameter Name="observaciones" Type="varchar(max)" Mode="In" />
+    <Parameter Name="oficioSolicitud" Type="varchar(max)" Mode="In" />
+    <Parameter Name="LoadSessionId" Type="varchar(max)" Mode="In" />
+  </Function>
+  <Function Name="SP_GuardaTransferenciasBancarias" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="movimientoAdmID" Type="int" Mode="In" />
+    <Parameter Name="solicitudId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_helpdiagramdefinition" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_helpdiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="SP_JOB_CANCELA_SOL_5_DIAS_VU" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="sp_renamediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+    <Parameter Name="new_diagramname" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="sp_upgraddiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="SP_ValidaCargaMasivaCuotasDiarias" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="archivoCargado" Type="varchar(max)" Mode="In" />
+  </Function>
+  <Function Name="spCCP" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="solicitudID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spDirigidoOficioImpresion" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="solicitudID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spInsCatLeyendaFirmas" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="DescripcionLeyendaFirmas" Type="varchar" Mode="In" />
+    <Parameter Name="estatusLogico" Type="bit" Mode="In" />
+    <Parameter Name="solicitudID" Type="int" Mode="In" />
+    <Parameter Name="comentarioAnualFirmasID" Type="int" Mode="In" />
+    <Parameter Name="areaFirmasID" Type="int" Mode="In" />
+    <Parameter Name="dirigidoID" Type="int" Mode="In" />
+    <Parameter Name="nombreFirmasID" Type="int" Mode="In" />
+    <Parameter Name="saludosFirmasID" Type="int" Mode="In" />
+    <Parameter Name="Elabora" Type="varchar" Mode="In" />
+    <Parameter Name="UsuarioCreacion" Type="int" Mode="In" />
+    <Parameter Name="NombreCcpID" Type="int" Mode="In" />
+    <Parameter Name="comentarioConocimientoID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spNombreFirmaOficioImpresion" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="solicitudID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spObtieneCuotasDiariasPorArea" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="listSolicitudesHeader" Type="varchar(max)" Mode="In" />
+  </Function>
+  <Function Name="spObtieneTotalesSolicitudesReporteDirector" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="listSolicitudesHeader" Type="varchar(max)" Mode="In" />
+  </Function>
+  <Function Name="spObtieneViaticosCentralesAnioActual" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="listSolicitudesHeader" Type="varchar(max)" Mode="In" />
+  </Function>
+  <Function Name="spObtieneViaticosCentralesAnioAnterior" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="spObtieneViaticosPorRegion" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Region" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spObtieneViaticosPorRegionAnioActual" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="listSolicitudesHeader" Type="varchar(max)" Mode="In" />
+  </Function>
+  <Function Name="spObtieneViaticosPorRegionAnioAnterior" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="spOficioSolicitudImpresion" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="solicitudID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="TRY_CAST_2008" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="pExpression" Type="varchar" Mode="In" />
+    <Parameter Name="pData_Type" Type="varchar" Mode="In" />
+  </Function>
+  <EntityContainer Name="SIRFModeloStoreContainer">
+    <EntitySet Name="Agregadurias" EntityType="Self.Agregadurias" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Asignacion" EntityType="Self.Asignacion" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Becalos" EntityType="Self.Becalos" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Becas" EntityType="Self.Becas" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Beneficiarios" EntityType="Self.Beneficiarios" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="BitacoraMovimiento" EntityType="Self.BitacoraMovimiento" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="BitacoraUsuarios" EntityType="Self.BitacoraUsuarios" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CatAcademia" EntityType="Self.CatAcademia" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CatAcciones" EntityType="Self.CatAcciones" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CatAgenciaAduanal" EntityType="Self.CatAgenciaAduanal" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CatAreaFirmas" EntityType="Self.CatAreaFirmas" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CatAreas" EntityType="Self.CatAreas" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CatBanco" EntityType="Self.CatBanco" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CatCargoFirmas" EntityType="Self.CatCargoFirmas" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CatComentarioAnualFirmas" EntityType="Self.CatComentarioAnualFirmas" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CatConceptoGastos" EntityType="Self.CatConceptoGastos" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CatConceptoPago" EntityType="Self.CatConceptoPago" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CatCuenta" EntityType="Self.CatCuenta" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CatCuentaCargo" EntityType="Self.CatCuentaCargo" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CatDestino" EntityType="Self.CatDestino" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CatEntidadFederativa" EntityType="Self.CatEntidadFederativa" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CatEstatusFactura" EntityType="Self.CatEstatusFactura" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CatEstatusPago" EntityType="Self.CatEstatusPago" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CatEstatusPresion" EntityType="Self.CatEstatusPresion" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CatEstatusSolicitud" EntityType="Self.CatEstatusSolicitud" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CatEvento" EntityType="Self.CatEvento" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CatEventoAccion" EntityType="Self.CatEventoAccion" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CatFirma" EntityType="Self.CatFirma" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CatGradoFirmas" EntityType="Self.CatGradoFirmas" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CatLeyendaFirmas" EntityType="Self.CatLeyendaFirmas" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CatModulo" EntityType="Self.CatModulo" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CatMoneda" EntityType="Self.CatMoneda" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CatMunicipioLocalidad" EntityType="Self.CatMunicipioLocalidad" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CatPais" EntityType="Self.CatPais" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CatPartida" EntityType="Self.CatPartida" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CatPartidaObligatoria" EntityType="Self.CatPartidaObligatoria" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CatPerfil" EntityType="Self.CatPerfil" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CatPrioridad" EntityType="Self.CatPrioridad" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CatRegion" EntityType="Self.CatRegion" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CatRol" EntityType="Self.CatRol" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CatSaludosFirmas" EntityType="Self.CatSaludosFirmas" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CatSubmodulo" EntityType="Self.CatSubmodulo" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CatTabuladorViaticos" EntityType="Self.CatTabuladorViaticos" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CatTipoDocumento" EntityType="Self.CatTipoDocumento" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CatTipoJefeDepto" EntityType="Self.CatTipoJefeDepto" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CatTipoPago" EntityType="Self.CatTipoPago" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CatTipoPagoPoliza" EntityType="Self.CatTipoPagoPoliza" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CatTipoPoliza" EntityType="Self.CatTipoPoliza" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CatTipoSolicitud" EntityType="Self.CatTipoSolicitud" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CatTipoUnidadAdministrativa" EntityType="Self.CatTipoUnidadAdministrativa" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CatTituloFirmas" EntityType="Self.CatTituloFirmas" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CatUnidadAdministrativa" EntityType="Self.CatUnidadAdministrativa" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Clc" EntityType="Self.Clc" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CuotasDiarias" EntityType="Self.CuotasDiarias" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Documento" EntityType="Self.Documento" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="EstatusAcciones" EntityType="Self.EstatusAcciones" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="EstatusMovimiento" EntityType="Self.EstatusMovimiento" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="EstatusPerfil" EntityType="Self.EstatusPerfil" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Factura" EntityType="Self.Factura" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="firmaElectronica" EntityType="Self.firmaElectronica" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="GastoCorriente" EntityType="Self.GastoCorriente" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="GastosAduanales" EntityType="Self.GastosAduanales" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="GastosFunerarios" EntityType="Self.GastosFunerarios" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Homologado" EntityType="Self.Homologado" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ImpuestosSobreNomina" EntityType="Self.ImpuestosSobreNomina" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Ipv4" EntityType="Self.Ipv4" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Laudos" EntityType="Self.Laudos" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="LogError" EntityType="Self.LogError" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ModuloSubmodulo" EntityType="Self.ModuloSubmodulo" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MovDirigidoFirmas" EntityType="Self.MovDirigidoFirmas" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MovimientoAdministrativo" EntityType="Self.MovimientoAdministrativo" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MovimientoBancario" EntityType="Self.MovimientoBancario" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MovimientoCcpFirmas" EntityType="Self.MovimientoCcpFirmas" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MovimientoFirmas" EntityType="Self.MovimientoFirmas" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MovNombreCcpFirmas" EntityType="Self.MovNombreCcpFirmas" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MovNombreFirmas" EntityType="Self.MovNombreFirmas" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PagoCheque" EntityType="Self.PagoCheque" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Parametros" EntityType="Self.Parametros" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Penalizaciones" EntityType="Self.Penalizaciones" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PerfilModulo" EntityType="Self.PerfilModulo" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PolizaPago" EntityType="Self.PolizaPago" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PresionGasto" EntityType="Self.PresionGasto" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PresupuestoClc" EntityType="Self.PresupuestoClc" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Proveedores" EntityType="Self.Proveedores" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="RegistroContable" EntityType="Self.RegistroContable" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="RegistroVolante" EntityType="Self.RegistroVolante" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SolicitudFirma" EntityType="Self.SolicitudFirma" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SolicitudRecursos" EntityType="Self.SolicitudRecursos" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TipoSolicitudPorAreaConfig" EntityType="Self.TipoSolicitudPorAreaConfig" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TipoSolicitudPorUAConfig" EntityType="Self.TipoSolicitudPorUAConfig" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TransferenciaBancaria" EntityType="Self.TransferenciaBancaria" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Usuarios" EntityType="Self.Usuarios" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AreaUnidadAdm" EntityType="Self.AreaUnidadAdm" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[AreaUnidadAdm].[relacionAreaUA] AS [relacionAreaUA], 
+[AreaUnidadAdm].[areasID] AS [areasID], 
+[AreaUnidadAdm].[codUA] AS [codUA], 
+[AreaUnidadAdm].[estatusLogico] AS [estatusLogico]
+FROM [dbo].[AreaUnidadAdm] AS [AreaUnidadAdm]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="AuditUsuario" EntityType="Self.AuditUsuario" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[AuditUsuario].[auditID] AS [auditID], 
+[AuditUsuario].[TipoTrn] AS [TipoTrn], 
+[AuditUsuario].[Tabla] AS [Tabla], 
+[AuditUsuario].[PK] AS [PK], 
+[AuditUsuario].[Campo] AS [Campo], 
+[AuditUsuario].[ValorOriginal] AS [ValorOriginal], 
+[AuditUsuario].[ValorNuevo] AS [ValorNuevo], 
+[AuditUsuario].[FechaTrn] AS [FechaTrn], 
+[AuditUsuario].[Usuario] AS [Usuario]
+FROM [dbo].[AuditUsuario] AS [AuditUsuario]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="cargaMasivaCuotasDiarias" EntityType="Self.cargaMasivaCuotasDiarias" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[cargaMasivaCuotasDiarias].[archivoCargado] AS [archivoCargado], 
+[cargaMasivaCuotasDiarias].[fechaCarga] AS [fechaCarga], 
+[cargaMasivaCuotasDiarias].[usuarioID] AS [usuarioID], 
+[cargaMasivaCuotasDiarias].[LoadSessionId] AS [LoadSessionId], 
+[cargaMasivaCuotasDiarias].[solicitudID] AS [solicitudID], 
+[cargaMasivaCuotasDiarias].[numRegistro] AS [numRegistro], 
+[cargaMasivaCuotasDiarias].[NumeroExpediente] AS [NumeroExpediente], 
+[cargaMasivaCuotasDiarias].[CuotasDiarias] AS [CuotasDiarias], 
+[cargaMasivaCuotasDiarias].[FechaInicio] AS [FechaInicio], 
+[cargaMasivaCuotasDiarias].[FechaFin] AS [FechaFin], 
+[cargaMasivaCuotasDiarias].[DiasEfectivos] AS [DiasEfectivos], 
+[cargaMasivaCuotasDiarias].[MontoAPagar] AS [MontoAPagar], 
+[cargaMasivaCuotasDiarias].[TipoCuentaBancaria] AS [TipoCuentaBancaria], 
+[cargaMasivaCuotasDiarias].[CuentaBancaria] AS [CuentaBancaria], 
+[cargaMasivaCuotasDiarias].[InstitucionBancaria] AS [InstitucionBancaria], 
+[cargaMasivaCuotasDiarias].[CLABEInterbancaria] AS [CLABEInterbancaria], 
+[cargaMasivaCuotasDiarias].[Partida] AS [Partida]
+FROM [dbo].[cargaMasivaCuotasDiarias] AS [cargaMasivaCuotasDiarias]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="CatComentarioConocimientoFirmas" EntityType="Self.CatComentarioConocimientoFirmas" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[CatComentarioConocimientoFirmas].[comentarioConocimientoFirmasID] AS [comentarioConocimientoFirmasID], 
+[CatComentarioConocimientoFirmas].[comentarioTitulo] AS [comentarioTitulo], 
+[CatComentarioConocimientoFirmas].[estatusLogico] AS [estatusLogico]
+FROM [dbo].[CatComentarioConocimientoFirmas] AS [CatComentarioConocimientoFirmas]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="CatMunicipioLocalidadTemporal" EntityType="Self.CatMunicipioLocalidadTemporal" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[CatMunicipioLocalidadTemporal].[municipioID] AS [municipioID], 
+[CatMunicipioLocalidadTemporal].[entidadID] AS [entidadID], 
+[CatMunicipioLocalidadTemporal].[descripcionMunicipio] AS [descripcionMunicipio], 
+[CatMunicipioLocalidadTemporal].[masEconomico] AS [masEconomico], 
+[CatMunicipioLocalidadTemporal].[estatusLogico] AS [estatusLogico]
+FROM [dbo].[CatMunicipioLocalidadTemporal] AS [CatMunicipioLocalidadTemporal]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="CatPartida_tmp" EntityType="Self.CatPartida_tmp" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[CatPartida_tmp].[codPartida] AS [codPartida], 
+[CatPartida_tmp].[capitulo] AS [capitulo], 
+[CatPartida_tmp].[concepto] AS [concepto], 
+[CatPartida_tmp].[denominacion] AS [denominacion], 
+[CatPartida_tmp].[descripcionPartida] AS [descripcionPartida], 
+[CatPartida_tmp].[estatusLogico] AS [estatusLogico]
+FROM [dbo].[CatPartida_tmp] AS [CatPartida_tmp]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="TipoJefeDeptoConfig" EntityType="Self.TipoJefeDeptoConfig" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[TipoJefeDeptoConfig].[tipoJefeDeptoConfigID] AS [tipoJefeDeptoConfigID], 
+[TipoJefeDeptoConfig].[usuarioID] AS [usuarioID], 
+[TipoJefeDeptoConfig].[tipoJefeDeptoID] AS [tipoJefeDeptoID], 
+[TipoJefeDeptoConfig].[estatusLogico] AS [estatusLogico]
+FROM [dbo].[TipoJefeDeptoConfig] AS [TipoJefeDeptoConfig]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="UsuarioRegionFiscalizacion" EntityType="Self.UsuarioRegionFiscalizacion" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[UsuarioRegionFiscalizacion].[usuarioID] AS [usuarioID], 
+[UsuarioRegionFiscalizacion].[regionID] AS [regionID], 
+[UsuarioRegionFiscalizacion].[estatusLogico] AS [estatusLogico]
+FROM [dbo].[UsuarioRegionFiscalizacion] AS [UsuarioRegionFiscalizacion]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="Viaticos" EntityType="Self.Viaticos" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[Viaticos].[viaticosID] AS [viaticosID], 
+[Viaticos].[solicitudID] AS [solicitudID], 
+[Viaticos].[monedaID] AS [monedaID], 
+[Viaticos].[paisID] AS [paisID], 
+[Viaticos].[entidadID] AS [entidadID], 
+[Viaticos].[municipioID] AS [municipioID], 
+[Viaticos].[homologadoID] AS [homologadoID], 
+[Viaticos].[codPartida] AS [codPartida], 
+[Viaticos].[destinoID] AS [destinoID], 
+[Viaticos].[nombreOperativo] AS [nombreOperativo], 
+[Viaticos].[objetivoComision] AS [objetivoComision], 
+[Viaticos].[fechaInicio] AS [fechaInicio], 
+[Viaticos].[fechaFin] AS [fechaFin], 
+[Viaticos].[diasCompletos] AS [diasCompletos], 
+[Viaticos].[diasMedios] AS [diasMedios], 
+[Viaticos].[importeOtorgado] AS [importeOtorgado], 
+[Viaticos].[tipoCambio] AS [tipoCambio], 
+[Viaticos].[numeroExpediente] AS [numeroExpediente], 
+[Viaticos].[estatusHomologado] AS [estatusHomologado], 
+[Viaticos].[clabeInterbancaria] AS [clabeInterbancaria], 
+[Viaticos].[cuentaBancaria] AS [cuentaBancaria], 
+[Viaticos].[cuenta] AS [cuenta], 
+[Viaticos].[estatusLogico] AS [estatusLogico], 
+[Viaticos].[bancoID] AS [bancoID]
+FROM [dbo].[Viaticos] AS [Viaticos]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="vEstatusMovimientoBanco" EntityType="Self.vEstatusMovimientoBanco" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[vEstatusMovimientoBanco].[codPartida] AS [codPartida], 
+[vEstatusMovimientoBanco].[estatusBanco] AS [estatusBanco]
+FROM [dbo].[vEstatusMovimientoBanco] AS [vEstatusMovimientoBanco]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="vwAsistentesEnlace" EntityType="Self.vwAsistentesEnlace" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[vwAsistentesEnlace].[enlaceID] AS [enlaceID], 
+[vwAsistentesEnlace].[expediente] AS [expediente]
+FROM [dbo].[vwAsistentesEnlace] AS [vwAsistentesEnlace]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="vwBajaIntegrante" EntityType="Self.vwBajaIntegrante" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[vwBajaIntegrante].[expediente] AS [expediente], 
+[vwBajaIntegrante].[nombre] AS [nombre], 
+[vwBajaIntegrante].[RFC] AS [RFC], 
+[vwBajaIntegrante].[grado] AS [grado], 
+[vwBajaIntegrante].[cargo] AS [cargo], 
+[vwBajaIntegrante].[Adscripcion] AS [Adscripcion], 
+[vwBajaIntegrante].[codEstatusIntegrante] AS [codEstatusIntegrante], 
+[vwBajaIntegrante].[descripcionEstatusIntregrante] AS [descripcionEstatusIntregrante], 
+[vwBajaIntegrante].[movimiento] AS [movimiento]
+FROM [dbo].[vwBajaIntegrante] AS [vwBajaIntegrante]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="vwCentrosDeDistribucion" EntityType="Self.vwCentrosDeDistribucion" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[vwCentrosDeDistribucion].[codCentroDistribucion] AS [codCentroDistribucion], 
+[vwCentrosDeDistribucion].[enlaceID] AS [enlaceID]
+FROM [dbo].[vwCentrosDeDistribucion] AS [vwCentrosDeDistribucion]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="vwCuentasIntegrante" EntityType="Self.vwCuentasIntegrante" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[vwCuentasIntegrante].[cuentaIntegranteID] AS [cuentaIntegranteID], 
+[vwCuentasIntegrante].[expediente] AS [expediente], 
+[vwCuentasIntegrante].[descripcionCuenta] AS [descripcionCuenta], 
+[vwCuentasIntegrante].[clabeInterbancaria] AS [clabeInterbancaria], 
+[vwCuentasIntegrante].[descripcionBanco] AS [descripcionBanco], 
+[vwCuentasIntegrante].[tipoCuentaID] AS [tipoCuentaID], 
+[vwCuentasIntegrante].[descripcionTipoCuenta] AS [descripcionTipoCuenta], 
+[vwCuentasIntegrante].[estatusLogico] AS [estatusLogico]
+FROM [dbo].[vwCuentasIntegrante] AS [vwCuentasIntegrante]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="vwDatosIntegrante" EntityType="Self.vwDatosIntegrante" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[vwDatosIntegrante].[expediente] AS [expediente], 
+[vwDatosIntegrante].[grado] AS [grado], 
+[vwDatosIntegrante].[cargo] AS [cargo], 
+[vwDatosIntegrante].[nombre] AS [nombre], 
+[vwDatosIntegrante].[RFC] AS [RFC], 
+[vwDatosIntegrante].[codAdscripcion] AS [codAdscripcion], 
+[vwDatosIntegrante].[Adscripcion] AS [Adscripcion], 
+[vwDatosIntegrante].[codCentroDistribucion] AS [codCentroDistribucion], 
+[vwDatosIntegrante].[enlaceID] AS [enlaceID], 
+[vwDatosIntegrante].[codEstatusIntegrante] AS [codEstatusIntegrante], 
+[vwDatosIntegrante].[descripcionEstatusIntegrante] AS [descripcionEstatusIntegrante]
+FROM [dbo].[vwDatosIntegrante] AS [vwDatosIntegrante]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="vwDependientesIntegrante" EntityType="Self.vwDependientesIntegrante" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[vwDependientesIntegrante].[dependienteID] AS [dependienteID], 
+[vwDependientesIntegrante].[expediente] AS [expediente], 
+[vwDependientesIntegrante].[tipoDependienteID] AS [tipoDependienteID], 
+[vwDependientesIntegrante].[descripcionTipoDependiente] AS [descripcionTipoDependiente], 
+[vwDependientesIntegrante].[apellidoPaterno] AS [apellidoPaterno], 
+[vwDependientesIntegrante].[apellidoMaterno] AS [apellidoMaterno], 
+[vwDependientesIntegrante].[nombre] AS [nombre], 
+[vwDependientesIntegrante].[fechaNacimiento] AS [fechaNacimiento], 
+[vwDependientesIntegrante].[CURP] AS [CURP], 
+[vwDependientesIntegrante].[RFC] AS [RFC], 
+[vwDependientesIntegrante].[sexo] AS [sexo]
+FROM [dbo].[vwDependientesIntegrante] AS [vwDependientesIntegrante]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="vwFaltasIntegrante" EntityType="Self.vwFaltasIntegrante" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[vwFaltasIntegrante].[incidenciaID] AS [incidenciaID], 
+[vwFaltasIntegrante].[expediente] AS [expediente], 
+[vwFaltasIntegrante].[tipoIncidencia] AS [tipoIncidencia], 
+[vwFaltasIntegrante].[fechaInicidencia] AS [fechaInicidencia]
+FROM [dbo].[vwFaltasIntegrante] AS [vwFaltasIntegrante]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="vwIncidenciasIntegrante" EntityType="Self.vwIncidenciasIntegrante" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[vwIncidenciasIntegrante].[expediente] AS [expediente], 
+[vwIncidenciasIntegrante].[tipoIncidencia] AS [tipoIncidencia], 
+[vwIncidenciasIntegrante].[fechaInicial] AS [fechaInicial], 
+[vwIncidenciasIntegrante].[fechaFinal] AS [fechaFinal]
+FROM [dbo].[vwIncidenciasIntegrante] AS [vwIncidenciasIntegrante]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="vwTipoDependientesIntegrante" EntityType="Self.vwTipoDependientesIntegrante" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[vwTipoDependientesIntegrante].[tipoDepID] AS [tipoDepID], 
+[vwTipoDependientesIntegrante].[tipoSNSPID] AS [tipoSNSPID], 
+[vwTipoDependientesIntegrante].[descripcionTipoDependiente] AS [descripcionTipoDependiente], 
+[vwTipoDependientesIntegrante].[estatusLogico] AS [estatusLogico]
+FROM [dbo].[vwTipoDependientesIntegrante] AS [vwTipoDependientesIntegrante]</DefiningQuery>
+    </EntitySet>
+    <AssociationSet Name="FK__ModuloSub__modul__00AA174D" Association="Self.FK__ModuloSub__modul__00AA174D">
+      <End Role="CatModulo" EntitySet="CatModulo" />
+      <End Role="ModuloSubmodulo" EntitySet="ModuloSubmodulo" />
+    </AssociationSet>
+    <AssociationSet Name="FK__ModuloSub__Submo__019E3B86" Association="Self.FK__ModuloSub__Submo__019E3B86">
+      <End Role="CatSubmodulo" EntitySet="CatSubmodulo" />
+      <End Role="ModuloSubmodulo" EntitySet="ModuloSubmodulo" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Parametro__modul__2C29722F" Association="Self.FK__Parametro__modul__2C29722F">
+      <End Role="CatModulo" EntitySet="CatModulo" />
+      <End Role="Parametros" EntitySet="Parametros" />
+    </AssociationSet>
+    <AssociationSet Name="FK__PerfilMod__modul__10E07F16" Association="Self.FK__PerfilMod__modul__10E07F16">
+      <End Role="CatModulo" EntitySet="CatModulo" />
+      <End Role="PerfilModulo" EntitySet="PerfilModulo" />
+    </AssociationSet>
+    <AssociationSet Name="FK__PerfilMod__perfi__0FEC5ADD" Association="Self.FK__PerfilMod__perfi__0FEC5ADD">
+      <End Role="CatPerfil" EntitySet="CatPerfil" />
+      <End Role="PerfilModulo" EntitySet="PerfilModulo" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Agregadurias_codPartida" Association="Self.FK_Agregadurias_codPartida">
+      <End Role="CatPartida" EntitySet="CatPartida" />
+      <End Role="Agregadurias" EntitySet="Agregadurias" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Agregadurias_monedaID" Association="Self.FK_Agregadurias_monedaID">
+      <End Role="CatMoneda" EntitySet="CatMoneda" />
+      <End Role="Agregadurias" EntitySet="Agregadurias" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Agregadurias_paisID" Association="Self.FK_Agregadurias_paisID">
+      <End Role="CatPais" EntitySet="CatPais" />
+      <End Role="Agregadurias" EntitySet="Agregadurias" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Agregadurias_solicitudID" Association="Self.FK_Agregadurias_solicitudID">
+      <End Role="SolicitudRecursos" EntitySet="SolicitudRecursos" />
+      <End Role="Agregadurias" EntitySet="Agregadurias" />
+    </AssociationSet>
+    <AssociationSet Name="FK_AreaUnidadAdm_CatAreas" Association="Self.FK_AreaUnidadAdm_CatAreas">
+      <End Role="CatAreas" EntitySet="CatAreas" />
+      <End Role="AreaUnidadAdm" EntitySet="AreaUnidadAdm" />
+    </AssociationSet>
+    <AssociationSet Name="FK_AreaUnidadAdm_CatUnidadAdministrativa" Association="Self.FK_AreaUnidadAdm_CatUnidadAdministrativa">
+      <End Role="CatUnidadAdministrativa" EntitySet="CatUnidadAdministrativa" />
+      <End Role="AreaUnidadAdm" EntitySet="AreaUnidadAdm" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Asignacion_solicitudID" Association="Self.FK_Asignacion_solicitudID">
+      <End Role="SolicitudRecursos" EntitySet="SolicitudRecursos" />
+      <End Role="Asignacion" EntitySet="Asignacion" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Asignacion_usuarioID" Association="Self.FK_Asignacion_usuarioID">
+      <End Role="Usuarios" EntitySet="Usuarios" />
+      <End Role="Asignacion" EntitySet="Asignacion" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Becalos_codPartida" Association="Self.FK_Becalos_codPartida">
+      <End Role="CatPartida" EntitySet="CatPartida" />
+      <End Role="Becalos" EntitySet="Becalos" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Becalos_solicitudID" Association="Self.FK_Becalos_solicitudID">
+      <End Role="SolicitudRecursos" EntitySet="SolicitudRecursos" />
+      <End Role="Becalos" EntitySet="Becalos" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Becas_academiaID" Association="Self.FK_Becas_academiaID">
+      <End Role="CatAcademia" EntitySet="CatAcademia" />
+      <End Role="Becas" EntitySet="Becas" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Becas_codPartida" Association="Self.FK_Becas_codPartida">
+      <End Role="CatPartida" EntitySet="CatPartida" />
+      <End Role="Becas" EntitySet="Becas" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Becas_solicitudID" Association="Self.FK_Becas_solicitudID">
+      <End Role="SolicitudRecursos" EntitySet="SolicitudRecursos" />
+      <End Role="Becas" EntitySet="Becas" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Beneficiarios_tipoSolicitudID" Association="Self.FK_Beneficiarios_tipoSolicitudID">
+      <End Role="CatTipoSolicitud" EntitySet="CatTipoSolicitud" />
+      <End Role="Beneficiarios" EntitySet="Beneficiarios" />
+    </AssociationSet>
+    <AssociationSet Name="FK_BitacoraMovimiento_estatusID" Association="Self.FK_BitacoraMovimiento_estatusID">
+      <End Role="CatEstatusSolicitud" EntitySet="CatEstatusSolicitud" />
+      <End Role="BitacoraMovimiento" EntitySet="BitacoraMovimiento" />
+    </AssociationSet>
+    <AssociationSet Name="FK_BitacoraMovimiento_solicitudID" Association="Self.FK_BitacoraMovimiento_solicitudID">
+      <End Role="SolicitudRecursos" EntitySet="SolicitudRecursos" />
+      <End Role="BitacoraMovimiento" EntitySet="BitacoraMovimiento" />
+    </AssociationSet>
+    <AssociationSet Name="FK_BitacoraMovimiento_usuarioID" Association="Self.FK_BitacoraMovimiento_usuarioID">
+      <End Role="Usuarios" EntitySet="Usuarios" />
+      <End Role="BitacoraMovimiento" EntitySet="BitacoraMovimiento" />
+    </AssociationSet>
+    <AssociationSet Name="FK_BitacoraUsuarios_dhcpID" Association="Self.FK_BitacoraUsuarios_dhcpID">
+      <End Role="Ipv4" EntitySet="Ipv4" />
+      <End Role="BitacoraUsuarios" EntitySet="BitacoraUsuarios" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CatConceptoGastos_tipoSolicitudID" Association="Self.FK_CatConceptoGastos_tipoSolicitudID">
+      <End Role="CatTipoSolicitud" EntitySet="CatTipoSolicitud" />
+      <End Role="CatConceptoGastos" EntitySet="CatConceptoGastos" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CatDestino_entidadID" Association="Self.FK_CatDestino_entidadID">
+      <End Role="CatEntidadFederativa" EntitySet="CatEntidadFederativa" />
+      <End Role="CatDestino" EntitySet="CatDestino" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CatEntidadFederativa_codUA" Association="Self.FK_CatEntidadFederativa_codUA">
+      <End Role="CatUnidadAdministrativa" EntitySet="CatUnidadAdministrativa" />
+      <End Role="CatEntidadFederativa" EntitySet="CatEntidadFederativa" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CatEntidadFederativa_paisID" Association="Self.FK_CatEntidadFederativa_paisID">
+      <End Role="CatPais" EntitySet="CatPais" />
+      <End Role="CatEntidadFederativa" EntitySet="CatEntidadFederativa" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CatEstatusSolicitud_areasID" Association="Self.FK_CatEstatusSolicitud_areasID">
+      <End Role="CatAreas" EntitySet="CatAreas" />
+      <End Role="CatEstatusSolicitud" EntitySet="CatEstatusSolicitud" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CatMunicipioLocalidad_entidadID" Association="Self.FK_CatMunicipioLocalidad_entidadID">
+      <End Role="CatEntidadFederativa" EntitySet="CatEntidadFederativa" />
+      <End Role="CatMunicipioLocalidad" EntitySet="CatMunicipioLocalidad" />
+    </AssociationSet>
+    <AssociationSet Name="fk_CatPartidaObligatoria" Association="Self.fk_CatPartidaObligatoria">
+      <End Role="CatPartida" EntitySet="CatPartida" />
+      <End Role="CatPartidaObligatoria" EntitySet="CatPartidaObligatoria" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CatUnidadAdministrativa_regionID" Association="Self.FK_CatUnidadAdministrativa_regionID">
+      <End Role="CatRegion" EntitySet="CatRegion" />
+      <End Role="CatUnidadAdministrativa" EntitySet="CatUnidadAdministrativa" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CuotasDiarias_codPartida" Association="Self.FK_CuotasDiarias_codPartida">
+      <End Role="CatPartida" EntitySet="CatPartida" />
+      <End Role="CuotasDiarias" EntitySet="CuotasDiarias" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CuotasDiarias_conceptoGastosID" Association="Self.FK_CuotasDiarias_conceptoGastosID">
+      <End Role="CatConceptoGastos" EntitySet="CatConceptoGastos" />
+      <End Role="CuotasDiarias" EntitySet="CuotasDiarias" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CuotasDiarias_solicitudID" Association="Self.FK_CuotasDiarias_solicitudID">
+      <End Role="SolicitudRecursos" EntitySet="SolicitudRecursos" />
+      <End Role="CuotasDiarias" EntitySet="CuotasDiarias" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Documento_solicitudID" Association="Self.FK_Documento_solicitudID">
+      <End Role="SolicitudRecursos" EntitySet="SolicitudRecursos" />
+      <End Role="Documento" EntitySet="Documento" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Documento_tipoDocumentoID" Association="Self.FK_Documento_tipoDocumentoID">
+      <End Role="CatTipoDocumento" EntitySet="CatTipoDocumento" />
+      <End Role="Documento" EntitySet="Documento" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EstatusAcciones_accionesID" Association="Self.FK_EstatusAcciones_accionesID">
+      <End Role="CatAcciones" EntitySet="CatAcciones" />
+      <End Role="EstatusAcciones" EntitySet="EstatusAcciones" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EstatusAcciones_estatusID" Association="Self.FK_EstatusAcciones_estatusID">
+      <End Role="CatEstatusSolicitud" EntitySet="CatEstatusSolicitud" />
+      <End Role="EstatusAcciones" EntitySet="EstatusAcciones" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EstatusMovimiento_solicitudID" Association="Self.FK_EstatusMovimiento_solicitudID">
+      <End Role="SolicitudRecursos" EntitySet="SolicitudRecursos" />
+      <End Role="EstatusMovimiento" EntitySet="EstatusMovimiento" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EstatusMovimiento_usuarioID" Association="Self.FK_EstatusMovimiento_usuarioID">
+      <End Role="Usuarios" EntitySet="Usuarios" />
+      <End Role="EstatusMovimiento" EntitySet="EstatusMovimiento" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EstatusPerfil_estatusID" Association="Self.FK_EstatusPerfil_estatusID">
+      <End Role="CatEstatusSolicitud" EntitySet="CatEstatusSolicitud" />
+      <End Role="EstatusPerfil" EntitySet="EstatusPerfil" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EstatusPerfil_perfilID" Association="Self.FK_EstatusPerfil_perfilID">
+      <End Role="CatPerfil" EntitySet="CatPerfil" />
+      <End Role="EstatusPerfil" EntitySet="EstatusPerfil" />
+    </AssociationSet>
+    <AssociationSet Name="fk_evento_accion" Association="Self.fk_evento_accion">
+      <End Role="CatEventoAccion" EntitySet="CatEventoAccion" />
+      <End Role="CatEvento" EntitySet="CatEvento" />
+    </AssociationSet>
+    <AssociationSet Name="fk_evento_modulo" Association="Self.fk_evento_modulo">
+      <End Role="CatModulo" EntitySet="CatModulo" />
+      <End Role="CatEvento" EntitySet="CatEvento" />
+    </AssociationSet>
+    <AssociationSet Name="fk_evento_perfil" Association="Self.fk_evento_perfil">
+      <End Role="CatPerfil" EntitySet="CatPerfil" />
+      <End Role="CatEvento" EntitySet="CatEvento" />
+    </AssociationSet>
+    <AssociationSet Name="fk_evento_solicitud" Association="Self.fk_evento_solicitud">
+      <End Role="CatEvento" EntitySet="CatEvento" />
+      <End Role="SolicitudRecursos" EntitySet="SolicitudRecursos" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Factura_estatusFacturaID" Association="Self.FK_Factura_estatusFacturaID">
+      <End Role="CatEstatusFactura" EntitySet="CatEstatusFactura" />
+      <End Role="Factura" EntitySet="Factura" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Factura_monedaID" Association="Self.FK_Factura_monedaID">
+      <End Role="CatMoneda" EntitySet="CatMoneda" />
+      <End Role="Factura" EntitySet="Factura" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Factura_proveedoresID" Association="Self.FK_Factura_proveedoresID">
+      <End Role="Proveedores" EntitySet="Proveedores" />
+      <End Role="Factura" EntitySet="Factura" />
+    </AssociationSet>
+    <AssociationSet Name="FK_firmaElectronica_solicitudID" Association="Self.FK_firmaElectronica_solicitudID">
+      <End Role="SolicitudRecursos" EntitySet="SolicitudRecursos" />
+      <End Role="firmaElectronica" EntitySet="firmaElectronica" />
+    </AssociationSet>
+    <AssociationSet Name="FK_GastoCorriente_codPartida" Association="Self.FK_GastoCorriente_codPartida">
+      <End Role="CatPartida" EntitySet="CatPartida" />
+      <End Role="GastoCorriente" EntitySet="GastoCorriente" />
+    </AssociationSet>
+    <AssociationSet Name="FK_GastoCorriente_conceptoPagoID" Association="Self.FK_GastoCorriente_conceptoPagoID">
+      <End Role="CatConceptoPago" EntitySet="CatConceptoPago" />
+      <End Role="GastoCorriente" EntitySet="GastoCorriente" />
+    </AssociationSet>
+    <AssociationSet Name="FK_GastoCorriente_destinoID" Association="Self.FK_GastoCorriente_destinoID">
+      <End Role="CatDestino" EntitySet="CatDestino" />
+      <End Role="GastoCorriente" EntitySet="GastoCorriente" />
+    </AssociationSet>
+    <AssociationSet Name="FK_GastoCorriente_entidadID" Association="Self.FK_GastoCorriente_entidadID">
+      <End Role="CatEntidadFederativa" EntitySet="CatEntidadFederativa" />
+      <End Role="GastoCorriente" EntitySet="GastoCorriente" />
+    </AssociationSet>
+    <AssociationSet Name="FK_GastoCorriente_solicitudID" Association="Self.FK_GastoCorriente_solicitudID">
+      <End Role="SolicitudRecursos" EntitySet="SolicitudRecursos" />
+      <End Role="GastoCorriente" EntitySet="GastoCorriente" />
+    </AssociationSet>
+    <AssociationSet Name="FK_GastosAduanales_agenciaID" Association="Self.FK_GastosAduanales_agenciaID">
+      <End Role="CatAgenciaAduanal" EntitySet="CatAgenciaAduanal" />
+      <End Role="GastosAduanales" EntitySet="GastosAduanales" />
+    </AssociationSet>
+    <AssociationSet Name="FK_GastosAduanales_codPartida" Association="Self.FK_GastosAduanales_codPartida">
+      <End Role="CatPartida" EntitySet="CatPartida" />
+      <End Role="GastosAduanales" EntitySet="GastosAduanales" />
+    </AssociationSet>
+    <AssociationSet Name="FK_GastosAduanales_solicitudID" Association="Self.FK_GastosAduanales_solicitudID">
+      <End Role="SolicitudRecursos" EntitySet="SolicitudRecursos" />
+      <End Role="GastosAduanales" EntitySet="GastosAduanales" />
+    </AssociationSet>
+    <AssociationSet Name="FK_GastosFunerarios_codPartida" Association="Self.FK_GastosFunerarios_codPartida">
+      <End Role="CatPartida" EntitySet="CatPartida" />
+      <End Role="GastosFunerarios" EntitySet="GastosFunerarios" />
+    </AssociationSet>
+    <AssociationSet Name="FK_GastosFunerarios_solicitudID" Association="Self.FK_GastosFunerarios_solicitudID">
+      <End Role="SolicitudRecursos" EntitySet="SolicitudRecursos" />
+      <End Role="GastosFunerarios" EntitySet="GastosFunerarios" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ImpuestosSobreNomina_codPartida" Association="Self.FK_ImpuestosSobreNomina_codPartida">
+      <End Role="CatPartida" EntitySet="CatPartida" />
+      <End Role="ImpuestosSobreNomina" EntitySet="ImpuestosSobreNomina" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ImpuestosSobreNomina_solicitudID" Association="Self.FK_ImpuestosSobreNomina_solicitudID">
+      <End Role="SolicitudRecursos" EntitySet="SolicitudRecursos" />
+      <End Role="ImpuestosSobreNomina" EntitySet="ImpuestosSobreNomina" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Ipv4_usuarioID" Association="Self.FK_Ipv4_usuarioID">
+      <End Role="Usuarios" EntitySet="Usuarios" />
+      <End Role="Ipv4" EntitySet="Ipv4" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Laudos_codPartida" Association="Self.FK_Laudos_codPartida">
+      <End Role="CatPartida" EntitySet="CatPartida" />
+      <End Role="Laudos" EntitySet="Laudos" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Laudos_conceptoGastosID" Association="Self.FK_Laudos_conceptoGastosID">
+      <End Role="CatConceptoGastos" EntitySet="CatConceptoGastos" />
+      <End Role="Laudos" EntitySet="Laudos" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Laudos_solicitudID" Association="Self.FK_Laudos_solicitudID">
+      <End Role="SolicitudRecursos" EntitySet="SolicitudRecursos" />
+      <End Role="Laudos" EntitySet="Laudos" />
+    </AssociationSet>
+    <AssociationSet Name="FK_LogError_usuarioID" Association="Self.FK_LogError_usuarioID">
+      <End Role="Usuarios" EntitySet="Usuarios" />
+      <End Role="LogError" EntitySet="LogError" />
+    </AssociationSet>
+    <AssociationSet Name="FK_MovimientoAdministrativo_cuentaID" Association="Self.FK_MovimientoAdministrativo_cuentaID">
+      <End Role="CatCuenta" EntitySet="CatCuenta" />
+      <End Role="MovimientoAdministrativo" EntitySet="MovimientoAdministrativo" />
+    </AssociationSet>
+    <AssociationSet Name="FK_MovimientoAdministrativo_presionGastoID" Association="Self.FK_MovimientoAdministrativo_presionGastoID">
+      <End Role="PresionGasto" EntitySet="PresionGasto" />
+      <End Role="MovimientoAdministrativo" EntitySet="MovimientoAdministrativo" />
+    </AssociationSet>
+    <AssociationSet Name="FK_MovimientoAdministrativo_solicitudID" Association="Self.FK_MovimientoAdministrativo_solicitudID">
+      <End Role="SolicitudRecursos" EntitySet="SolicitudRecursos" />
+      <End Role="MovimientoAdministrativo" EntitySet="MovimientoAdministrativo" />
+    </AssociationSet>
+    <AssociationSet Name="FK_MovimientoBancario_cuentaID" Association="Self.FK_MovimientoBancario_cuentaID">
+      <End Role="CatCuenta" EntitySet="CatCuenta" />
+      <End Role="MovimientoBancario" EntitySet="MovimientoBancario" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PagoCheque_estatusPagoID" Association="Self.FK_PagoCheque_estatusPagoID">
+      <End Role="CatEstatusPago" EntitySet="CatEstatusPago" />
+      <End Role="PagoCheque" EntitySet="PagoCheque" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PagoCheque_movimientoAdmID" Association="Self.FK_PagoCheque_movimientoAdmID">
+      <End Role="MovimientoAdministrativo" EntitySet="MovimientoAdministrativo" />
+      <End Role="PagoCheque" EntitySet="PagoCheque" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Penalizaciones_monedaID" Association="Self.FK_Penalizaciones_monedaID">
+      <End Role="CatMoneda" EntitySet="CatMoneda" />
+      <End Role="Penalizaciones" EntitySet="Penalizaciones" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Penalizaciones_proveedoresID" Association="Self.FK_Penalizaciones_proveedoresID">
+      <End Role="Proveedores" EntitySet="Proveedores" />
+      <End Role="Penalizaciones" EntitySet="Penalizaciones" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PolizaPago_tipoPolizaID" Association="Self.FK_PolizaPago_tipoPolizaID">
+      <End Role="CatTipoPoliza" EntitySet="CatTipoPoliza" />
+      <End Role="PolizaPago" EntitySet="PolizaPago" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PresionGasto_estatusPresionID" Association="Self.FK_PresionGasto_estatusPresionID">
+      <End Role="CatEstatusPresion" EntitySet="CatEstatusPresion" />
+      <End Role="PresionGasto" EntitySet="PresionGasto" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PresupuestoClc_clcID" Association="Self.FK_PresupuestoClc_clcID">
+      <End Role="Clc" EntitySet="Clc" />
+      <End Role="PresupuestoClc" EntitySet="PresupuestoClc" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PresupuestoClc_solicitudID" Association="Self.FK_PresupuestoClc_solicitudID">
+      <End Role="SolicitudRecursos" EntitySet="SolicitudRecursos" />
+      <End Role="PresupuestoClc" EntitySet="PresupuestoClc" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Proveedores_codPartida" Association="Self.FK_Proveedores_codPartida">
+      <End Role="CatPartida" EntitySet="CatPartida" />
+      <End Role="Proveedores" EntitySet="Proveedores" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Proveedores_monedaID" Association="Self.FK_Proveedores_monedaID">
+      <End Role="CatMoneda" EntitySet="CatMoneda" />
+      <End Role="Proveedores" EntitySet="Proveedores" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Proveedores_solicitudID" Association="Self.FK_Proveedores_solicitudID">
+      <End Role="SolicitudRecursos" EntitySet="SolicitudRecursos" />
+      <End Role="Proveedores" EntitySet="Proveedores" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RegistroContable_SolicitudRecursos" Association="Self.FK_RegistroContable_SolicitudRecursos">
+      <End Role="SolicitudRecursos" EntitySet="SolicitudRecursos" />
+      <End Role="RegistroContable" EntitySet="RegistroContable" />
+    </AssociationSet>
+    <AssociationSet Name="fk_RegVol_SolRec" Association="Self.fk_RegVol_SolRec">
+      <End Role="SolicitudRecursos" EntitySet="SolicitudRecursos" />
+      <End Role="RegistroVolante" EntitySet="RegistroVolante" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SolicitudFirma_SolicitudFirma" Association="Self.FK_SolicitudFirma_SolicitudFirma">
+      <End Role="SolicitudFirma" EntitySet="SolicitudFirma" />
+      <End Role="SolicitudFirma1" EntitySet="SolicitudFirma" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SolicitudRecursos_codUA" Association="Self.FK_SolicitudRecursos_codUA">
+      <End Role="CatUnidadAdministrativa" EntitySet="CatUnidadAdministrativa" />
+      <End Role="SolicitudRecursos" EntitySet="SolicitudRecursos" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SolicitudRecursos_estatusID" Association="Self.FK_SolicitudRecursos_estatusID">
+      <End Role="CatEstatusSolicitud" EntitySet="CatEstatusSolicitud" />
+      <End Role="SolicitudRecursos" EntitySet="SolicitudRecursos" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SolicitudRecursos_prioridadID" Association="Self.FK_SolicitudRecursos_prioridadID">
+      <End Role="CatPrioridad" EntitySet="CatPrioridad" />
+      <End Role="SolicitudRecursos" EntitySet="SolicitudRecursos" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SolicitudRecursos_tipoSolicitudID" Association="Self.FK_SolicitudRecursos_tipoSolicitudID">
+      <End Role="CatTipoSolicitud" EntitySet="CatTipoSolicitud" />
+      <End Role="SolicitudRecursos" EntitySet="SolicitudRecursos" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TipoDocumentos_tipoSolicitudID" Association="Self.FK_TipoDocumentos_tipoSolicitudID">
+      <End Role="CatTipoSolicitud" EntitySet="CatTipoSolicitud" />
+      <End Role="CatTipoDocumento" EntitySet="CatTipoDocumento" />
+    </AssociationSet>
+    <AssociationSet Name="fk_TipoJDConfig_CatTipoJD" Association="Self.fk_TipoJDConfig_CatTipoJD">
+      <End Role="CatTipoJefeDepto" EntitySet="CatTipoJefeDepto" />
+      <End Role="TipoJefeDeptoConfig" EntitySet="TipoJefeDeptoConfig" />
+    </AssociationSet>
+    <AssociationSet Name="fk_TipoJDConfig_Usr" Association="Self.fk_TipoJDConfig_Usr">
+      <End Role="Usuarios" EntitySet="Usuarios" />
+      <End Role="TipoJefeDeptoConfig" EntitySet="TipoJefeDeptoConfig" />
+    </AssociationSet>
+    <AssociationSet Name="fk_TipoSolPorAreaCatAreas" Association="Self.fk_TipoSolPorAreaCatAreas">
+      <End Role="CatAreas" EntitySet="CatAreas" />
+      <End Role="TipoSolicitudPorAreaConfig" EntitySet="TipoSolicitudPorAreaConfig" />
+    </AssociationSet>
+    <AssociationSet Name="fk_TipoSolPorAreaCatRegion" Association="Self.fk_TipoSolPorAreaCatRegion">
+      <End Role="CatRegion" EntitySet="CatRegion" />
+      <End Role="TipoSolicitudPorAreaConfig" EntitySet="TipoSolicitudPorAreaConfig" />
+    </AssociationSet>
+    <AssociationSet Name="fk_TipoSolPorAreaCatTipoSol" Association="Self.fk_TipoSolPorAreaCatTipoSol">
+      <End Role="CatTipoSolicitud" EntitySet="CatTipoSolicitud" />
+      <End Role="TipoSolicitudPorAreaConfig" EntitySet="TipoSolicitudPorAreaConfig" />
+    </AssociationSet>
+    <AssociationSet Name="fk_TipoSolPorUACatRegion" Association="Self.fk_TipoSolPorUACatRegion">
+      <End Role="CatRegion" EntitySet="CatRegion" />
+      <End Role="TipoSolicitudPorUAConfig" EntitySet="TipoSolicitudPorUAConfig" />
+    </AssociationSet>
+    <AssociationSet Name="fk_TipoSolPorUACatTipoSol" Association="Self.fk_TipoSolPorUACatTipoSol">
+      <End Role="CatTipoSolicitud" EntitySet="CatTipoSolicitud" />
+      <End Role="TipoSolicitudPorUAConfig" EntitySet="TipoSolicitudPorUAConfig" />
+    </AssociationSet>
+    <AssociationSet Name="fk_TipoSolPorUACatUA" Association="Self.fk_TipoSolPorUACatUA">
+      <End Role="CatUnidadAdministrativa" EntitySet="CatUnidadAdministrativa" />
+      <End Role="TipoSolicitudPorUAConfig" EntitySet="TipoSolicitudPorUAConfig" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TransferenciaBancaria_estatusPagoID" Association="Self.FK_TransferenciaBancaria_estatusPagoID">
+      <End Role="CatEstatusPago" EntitySet="CatEstatusPago" />
+      <End Role="TransferenciaBancaria" EntitySet="TransferenciaBancaria" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TransferenciaBancaria_movimientoAdmID" Association="Self.FK_TransferenciaBancaria_movimientoAdmID">
+      <End Role="MovimientoAdministrativo" EntitySet="MovimientoAdministrativo" />
+      <End Role="TransferenciaBancaria" EntitySet="TransferenciaBancaria" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UsuarioRegionFiscalizacion_CatRegion" Association="Self.FK_UsuarioRegionFiscalizacion_CatRegion">
+      <End Role="CatRegion" EntitySet="CatRegion" />
+      <End Role="UsuarioRegionFiscalizacion" EntitySet="UsuarioRegionFiscalizacion" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UsuarioRegionFiscalizacion_Usuarios" Association="Self.FK_UsuarioRegionFiscalizacion_Usuarios">
+      <End Role="Usuarios" EntitySet="Usuarios" />
+      <End Role="UsuarioRegionFiscalizacion" EntitySet="UsuarioRegionFiscalizacion" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Usuarios_areadId" Association="Self.FK_Usuarios_areadId">
+      <End Role="CatAreas" EntitySet="CatAreas" />
+      <End Role="Usuarios" EntitySet="Usuarios" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Usuarios_codUA" Association="Self.FK_Usuarios_codUA">
+      <End Role="CatUnidadAdministrativa" EntitySet="CatUnidadAdministrativa" />
+      <End Role="Usuarios" EntitySet="Usuarios" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Usuarios_perfilID" Association="Self.FK_Usuarios_perfilID">
+      <End Role="CatPerfil" EntitySet="CatPerfil" />
+      <End Role="Usuarios" EntitySet="Usuarios" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Usuarios_rolID" Association="Self.FK_Usuarios_rolID">
+      <End Role="CatRol" EntitySet="CatRol" />
+      <End Role="Usuarios" EntitySet="Usuarios" />
+    </AssociationSet>
+    <AssociationSet Name="PK_CatCuenta_bancoID" Association="Self.PK_CatCuenta_bancoID">
+      <End Role="CatBanco" EntitySet="CatBanco" />
+      <End Role="CatCuenta" EntitySet="CatCuenta" />
+    </AssociationSet>
+    <AssociationSet Name="PK_CatPartida_tipoSolicitudID" Association="Self.PK_CatPartida_tipoSolicitudID">
+      <End Role="CatTipoSolicitud" EntitySet="CatTipoSolicitud" />
+      <End Role="CatPartida" EntitySet="CatPartida" />
+    </AssociationSet>
+    <AssociationSet Name="PK_PolizaPago_CatTipoPagoPoliza" Association="Self.PK_PolizaPago_CatTipoPagoPoliza">
+      <End Role="CatTipoPagoPoliza" EntitySet="CatTipoPagoPoliza" />
+      <End Role="PolizaPago" EntitySet="PolizaPago" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

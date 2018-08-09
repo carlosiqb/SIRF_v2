@@ -1,0 +1,1410 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="SIRFModeloStoreContainer" CdmEntityContainer="SIRF_Entities">
+    <FunctionImportMapping FunctionImportName="paCatUnidadAdministrativa_Read" FunctionName="SIRFModelo.Store.paCatUnidadAdministrativa_Read">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="SIRFModelo.paCatUnidadAdministrativa_Read_Result">
+          <ScalarProperty Name="codUA" ColumnName="codUA" />
+          <ScalarProperty Name="regionID" ColumnName="regionID" />
+          <ScalarProperty Name="unidadAdministrativa" ColumnName="unidadAdministrativa" />
+          <ScalarProperty Name="codigoPadre" ColumnName="codigoPadre" />
+          <ScalarProperty Name="abreviatura" ColumnName="abreviatura" />
+          <ScalarProperty Name="estatusLogico" ColumnName="estatusLogico" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="paChequesSolicitudRepPropPresGast_Read" FunctionName="SIRFModelo.Store.paChequesSolicitudRepPropPresGast_Read">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="SIRFModelo.paChequesSolicitudRepPropPresGast_Read_Result">
+          <ScalarProperty Name="cheque" ColumnName="cheque" />
+          <ScalarProperty Name="importe" ColumnName="importe" />
+          <ScalarProperty Name="Concepto" ColumnName="Concepto" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="paCuentasRepPresGastDir_Read" FunctionName="SIRFModelo.Store.paCuentasRepPresGastDir_Read">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="SIRFModelo.paCuentasRepPresGastDir_Read_Result">
+          <ScalarProperty Name="numeroCuenta" ColumnName="numeroCuenta" />
+          <ScalarProperty Name="Cuenta" ColumnName="Cuenta" />
+          <ScalarProperty Name="SaldoAnterior" ColumnName="SaldoAnterior" />
+          <ScalarProperty Name="SaldoFinal" ColumnName="SaldoFinal" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="paCuentasRepPropPresGast_Read" FunctionName="SIRFModelo.Store.paCuentasRepPropPresGast_Read">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="SIRFModelo.paCuentasRepPropPresGast_Read_Result">
+          <ScalarProperty Name="Cuenta" ColumnName="Cuenta" />
+          <ScalarProperty Name="Total" ColumnName="Total" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="paCuentasRepPropPresGastFooter_Read" FunctionName="SIRFModelo.Store.paCuentasRepPropPresGastFooter_Read">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="SIRFModelo.paCuentasRepPropPresGastFooter_Read_Result">
+          <ScalarProperty Name="Cuenta" ColumnName="Cuenta" />
+          <ScalarProperty Name="Total" ColumnName="Total" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="paCuentasRepPropPresGastHeader_Read" FunctionName="SIRFModelo.Store.paCuentasRepPropPresGastHeader_Read">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="SIRFModelo.paCuentasRepPropPresGastHeader_Read_Result">
+          <ScalarProperty Name="Cuenta" ColumnName="Cuenta" />
+          <ScalarProperty Name="Total" ColumnName="Total" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="paRegistroVolanteInsertSelect" FunctionName="SIRFModelo.Store.paRegistroVolanteInsertSelect">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="SIRFModelo.paRegistroVolanteInsertSelect_Result">
+          <ScalarProperty Name="registroVolanteID" ColumnName="registroVolanteID" />
+          <ScalarProperty Name="solicitudID" ColumnName="solicitudID" />
+          <ScalarProperty Name="area" ColumnName="area" />
+          <ScalarProperty Name="tipoDeGasto" ColumnName="tipoDeGasto" />
+          <ScalarProperty Name="importeDevuelto" ColumnName="importeDevuelto" />
+          <ScalarProperty Name="fechaRecepcion" ColumnName="fechaRecepcion" />
+          <ScalarProperty Name="fechaElaboracion" ColumnName="fechaElaboracion" />
+          <ScalarProperty Name="tipoMoneda" ColumnName="tipoMoneda" />
+          <ScalarProperty Name="numeroVolante" ColumnName="numeroVolante" />
+          <ScalarProperty Name="folio" ColumnName="folio" />
+          <ScalarProperty Name="oficio" ColumnName="oficio" />
+          <ScalarProperty Name="motivoDevolucion" ColumnName="motivoDevolucion" />
+          <ScalarProperty Name="tipoDeCambio" ColumnName="tipoDeCambio" />
+          <ScalarProperty Name="anioComprobado" ColumnName="anioComprobado" />
+          <ScalarProperty Name="fechaGeneracionVolante" ColumnName="fechaGeneracionVolante" />
+          <ScalarProperty Name="estatusLogico" ColumnName="estatusLogico" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="paSolicitudesRepPresGastDirFooter_Read" FunctionName="SIRFModelo.Store.paSolicitudesRepPresGastDirFooter_Read">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="SIRFModelo.paSolicitudesRepPresGastDirFooter_Read_Result">
+          <ScalarProperty Name="Concepto" ColumnName="Concepto" />
+          <ScalarProperty Name="monto" ColumnName="monto" />
+          <ScalarProperty Name="montoPropuesto" ColumnName="montoPropuesto" />
+          <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+          <ScalarProperty Name="unidad" ColumnName="unidad" />
+          <ScalarProperty Name="Tipo" ColumnName="Tipo" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="paSolicitudesRepPropPresGastFooter_Read" FunctionName="SIRFModelo.Store.paSolicitudesRepPropPresGastFooter_Read">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="SIRFModelo.paSolicitudesRepPropPresGastFooter_Read_Result">
+          <ScalarProperty Name="Concepto" ColumnName="Concepto" />
+          <ScalarProperty Name="monto" ColumnName="monto" />
+          <ScalarProperty Name="montoPropuesto" ColumnName="montoPropuesto" />
+          <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+          <ScalarProperty Name="unidad" ColumnName="unidad" />
+          <ScalarProperty Name="Tipo" ColumnName="Tipo" />
+          <ScalarProperty Name="tipoUA" ColumnName="tipoUA" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="paSolicitudRecursosSelectPorFiltro" FunctionName="SIRFModelo.Store.paSolicitudRecursosSelectPorFiltro" />
+    <FunctionImportMapping FunctionImportName="paSuficienciaPresupuestal_Create" FunctionName="SIRFModelo.Store.paSuficienciaPresupuestal_Create" />
+    <FunctionImportMapping FunctionImportName="PoblarBancosTMP" FunctionName="SIRFModelo.Store.PoblarBancosTMP">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="SIRFModelo.PoblarBancosTMP_Result">
+          <ScalarProperty Name="consecutivo" ColumnName="consecutivo" />
+          <ScalarProperty Name="UnidadAdmin" ColumnName="UnidadAdmin" />
+          <ScalarProperty Name="TipoSolicitud" ColumnName="TipoSolicitud" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_alterdiagram" FunctionName="SIRFModelo.Store.sp_alterdiagram" />
+    <FunctionImportMapping FunctionImportName="SP_ConsultaCargaMasivaCuotasDiarias" FunctionName="SIRFModelo.Store.SP_ConsultaCargaMasivaCuotasDiarias">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="SIRFModelo.SP_ConsultaCargaMasivaCuotasDiarias_Result">
+          <ScalarProperty Name="archivocargado" ColumnName="archivocargado" />
+          <ScalarProperty Name="NumTotalRegistros" ColumnName="NumTotalRegistros" />
+          <ScalarProperty Name="MontoTotal" ColumnName="MontoTotal" />
+          <ScalarProperty Name="fechaCarga" ColumnName="fechaCarga" />
+          <ScalarProperty Name="usuarioID" ColumnName="usuarioID" />
+          <ScalarProperty Name="NombreUsuario" ColumnName="NombreUsuario" />
+          <ScalarProperty Name="solicitudID" ColumnName="solicitudID" />
+          <ScalarProperty Name="LoadSessionId" ColumnName="LoadSessionId" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_creatediagram" FunctionName="SIRFModelo.Store.sp_creatediagram" />
+    <FunctionImportMapping FunctionImportName="sp_dropdiagram" FunctionName="SIRFModelo.Store.sp_dropdiagram" />
+    <FunctionImportMapping FunctionImportName="SP_EliminaArchivoPorLoadSessionId" FunctionName="SIRFModelo.Store.SP_EliminaArchivoPorLoadSessionId" />
+    <FunctionImportMapping FunctionImportName="SP_EliminaArchivoPorSolicitudIdYArchivoUniqueId" FunctionName="SIRFModelo.Store.SP_EliminaArchivoPorSolicitudIdYArchivoUniqueId" />
+    <FunctionImportMapping FunctionImportName="SP_GuardarSolicitudCargaMasiva" FunctionName="SIRFModelo.Store.SP_GuardarSolicitudCargaMasiva">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="SIRFModelo.SP_GuardarSolicitudCargaMasiva_Result">
+          <ScalarProperty Name="newSolicitudId" ColumnName="newSolicitudId" />
+          <ScalarProperty Name="consecutivo" ColumnName="consecutivo" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SP_GuardaTransferenciasBancarias" FunctionName="SIRFModelo.Store.SP_GuardaTransferenciasBancarias" />
+    <FunctionImportMapping FunctionImportName="sp_helpdiagramdefinition" FunctionName="SIRFModelo.Store.sp_helpdiagramdefinition">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="SIRFModelo.sp_helpdiagramdefinition_Result">
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_helpdiagrams" FunctionName="SIRFModelo.Store.sp_helpdiagrams">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="SIRFModelo.sp_helpdiagrams_Result">
+          <ScalarProperty Name="Database" ColumnName="Database" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Owner" ColumnName="Owner" />
+          <ScalarProperty Name="OwnerID" ColumnName="OwnerID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SP_JOB_CANCELA_SOL_5_DIAS_VU" FunctionName="SIRFModelo.Store.SP_JOB_CANCELA_SOL_5_DIAS_VU" />
+    <FunctionImportMapping FunctionImportName="sp_renamediagram" FunctionName="SIRFModelo.Store.sp_renamediagram" />
+    <FunctionImportMapping FunctionImportName="sp_upgraddiagrams" FunctionName="SIRFModelo.Store.sp_upgraddiagrams" />
+    <FunctionImportMapping FunctionImportName="SP_ValidaCargaMasivaCuotasDiarias" FunctionName="SIRFModelo.Store.SP_ValidaCargaMasivaCuotasDiarias" />
+    <FunctionImportMapping FunctionImportName="spCCP" FunctionName="SIRFModelo.Store.spCCP">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="SIRFModelo.spCCP_Result">
+          <ScalarProperty Name="solicitudID" ColumnName="solicitudID" />
+          <ScalarProperty Name="INTEGRANTE" ColumnName="INTEGRANTE" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spDirigidoOficioImpresion" FunctionName="SIRFModelo.Store.spDirigidoOficioImpresion">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="SIRFModelo.spDirigidoOficioImpresion_Result">
+          <ScalarProperty Name="solicitudID" ColumnName="solicitudID" />
+          <ScalarProperty Name="descripcionGradoFirmas" ColumnName="descripcionGradoFirmas" />
+          <ScalarProperty Name="NOMBRE" ColumnName="NOMBRE" />
+          <ScalarProperty Name="descripcionCargoFirmas" ColumnName="descripcionCargoFirmas" />
+          <ScalarProperty Name="unidadAdmDirigidoFirmas" ColumnName="unidadAdmDirigidoFirmas" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spInsCatLeyendaFirmas" FunctionName="SIRFModelo.Store.spInsCatLeyendaFirmas" />
+    <FunctionImportMapping FunctionImportName="spNombreFirmaOficioImpresion" FunctionName="SIRFModelo.Store.spNombreFirmaOficioImpresion">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="SIRFModelo.spNombreFirmaOficioImpresion_Result">
+          <ScalarProperty Name="solicitudID" ColumnName="solicitudID" />
+          <ScalarProperty Name="descripcionAreasFirmas" ColumnName="descripcionAreasFirmas" />
+          <ScalarProperty Name="comentarioTitulo" ColumnName="comentarioTitulo" />
+          <ScalarProperty Name="descripcionSaludosFirma" ColumnName="descripcionSaludosFirma" />
+          <ScalarProperty Name="descripcionGradoFirmas" ColumnName="descripcionGradoFirmas" />
+          <ScalarProperty Name="NOMBRE" ColumnName="NOMBRE" />
+          <ScalarProperty Name="unidadAdministrativa" ColumnName="unidadAdministrativa" />
+          <ScalarProperty Name="comentarioFirma" ColumnName="comentarioFirma" />
+          <ScalarProperty Name="DescripcionLeyendaFirmas" ColumnName="DescripcionLeyendaFirmas" />
+          <ScalarProperty Name="descripcionCargoFirmas" ColumnName="descripcionCargoFirmas" />
+          <ScalarProperty Name="Elabora" ColumnName="Elabora" />
+          <ScalarProperty Name="movimientosFirmasID" ColumnName="movimientosFirmasID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spObtieneCuotasDiariasPorArea" FunctionName="SIRFModelo.Store.spObtieneCuotasDiariasPorArea">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="SIRFModelo.spObtieneCuotasDiariasPorArea_Result">
+          <ScalarProperty Name="unidadAdministrativa" ColumnName="unidadAdministrativa" />
+          <ScalarProperty Name="Monto" ColumnName="Monto" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spObtieneTotalesSolicitudesReporteDirector" FunctionName="SIRFModelo.Store.spObtieneTotalesSolicitudesReporteDirector">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="SIRFModelo.spObtieneTotalesSolicitudesReporteDirector_Result">
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="Monto" ColumnName="Monto" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spObtieneViaticosCentralesAnioActual" FunctionName="SIRFModelo.Store.spObtieneViaticosCentralesAnioActual">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="SIRFModelo.spObtieneViaticosCentralesAnioActual_Result">
+          <ScalarProperty Name="Coordinacion" ColumnName="Coordinacion" />
+          <ScalarProperty Name="monto" ColumnName="monto" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spObtieneViaticosCentralesAnioAnterior" FunctionName="SIRFModelo.Store.spObtieneViaticosCentralesAnioAnterior">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="SIRFModelo.spObtieneViaticosCentralesAnioAnterior_Result">
+          <ScalarProperty Name="Coordinacion" ColumnName="Coordinacion" />
+          <ScalarProperty Name="monto" ColumnName="monto" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spObtieneViaticosPorRegion" FunctionName="SIRFModelo.Store.spObtieneViaticosPorRegion">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="SIRFModelo.spObtieneViaticosPorRegion_Result">
+          <ScalarProperty Name="Coordinacion" ColumnName="Coordinacion" />
+          <ScalarProperty Name="monto" ColumnName="monto" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spObtieneViaticosPorRegionAnioActual" FunctionName="SIRFModelo.Store.spObtieneViaticosPorRegionAnioActual">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="SIRFModelo.spObtieneViaticosPorRegionAnioActual_Result">
+          <ScalarProperty Name="Coordinacion" ColumnName="Coordinacion" />
+          <ScalarProperty Name="monto" ColumnName="monto" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spObtieneViaticosPorRegionAnioAnterior" FunctionName="SIRFModelo.Store.spObtieneViaticosPorRegionAnioAnterior">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="SIRFModelo.spObtieneViaticosPorRegionAnioAnterior_Result">
+          <ScalarProperty Name="Coordinacion" ColumnName="Coordinacion" />
+          <ScalarProperty Name="monto" ColumnName="monto" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spOficioSolicitudImpresion" FunctionName="SIRFModelo.Store.spOficioSolicitudImpresion">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="SIRFModelo.spOficioSolicitudImpresion_Result">
+          <ScalarProperty Name="solicitudID" ColumnName="solicitudID" />
+          <ScalarProperty Name="anio" ColumnName="anio" />
+          <ScalarProperty Name="consecutivo" ColumnName="consecutivo" />
+          <ScalarProperty Name="Partida" ColumnName="Partida" />
+          <ScalarProperty Name="Destino" ColumnName="Destino" />
+          <ScalarProperty Name="Importe" ColumnName="Importe" />
+          <ScalarProperty Name="Concepto" ColumnName="Concepto" />
+          <ScalarProperty Name="oficioRegion" ColumnName="oficioRegion" />
+          <ScalarProperty Name="unidadAdministrativa" ColumnName="unidadAdministrativa" />
+          <ScalarProperty Name="abreviatura" ColumnName="abreviatura" />
+          <ScalarProperty Name="Articulos" ColumnName="Articulos" />
+          <ScalarProperty Name="Viatico" ColumnName="Viatico" />
+          <ScalarProperty Name="oficioSolicitud" ColumnName="oficioSolicitud" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="TRY_CAST_2008" FunctionName="SIRFModelo.Store.TRY_CAST_2008" />
+    <EntitySetMapping Name="Agregaduria">
+      <EntityTypeMapping TypeName="SIRFModelo.Agregaduria">
+        <MappingFragment StoreEntitySet="Agregaduria">
+          <ScalarProperty Name="montoSolicitado" ColumnName="montoSolicitado" />
+          <ScalarProperty Name="catPartidaID" ColumnName="catPartidaID" />
+          <ScalarProperty Name="catPaisID" ColumnName="catPaisID" />
+          <ScalarProperty Name="catMonedaID" ColumnName="catMonedaID" />
+          <ScalarProperty Name="solicitudRecursoID" ColumnName="solicitudRecursoID" />
+          <ScalarProperty Name="agregaduriaID" ColumnName="agregaduriaID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Asignacion">
+      <EntityTypeMapping TypeName="SIRFModelo.Asignacion">
+        <MappingFragment StoreEntitySet="Asignacion">
+          <ScalarProperty Name="estatusLogico" ColumnName="estatusLogico" />
+          <ScalarProperty Name="usuarioID" ColumnName="usuarioID" />
+          <ScalarProperty Name="solicitudRecursoID" ColumnName="solicitudRecursoID" />
+          <ScalarProperty Name="asignacionID" ColumnName="asignacionID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Beca">
+      <EntityTypeMapping TypeName="SIRFModelo.Beca">
+        <MappingFragment StoreEntitySet="Beca">
+          <ScalarProperty Name="estatusLogico" ColumnName="estatusLogico" />
+          <ScalarProperty Name="cuentaBancaria" ColumnName="cuentaBancaria" />
+          <ScalarProperty Name="clabeInterbancaria" ColumnName="clabeInterbancaria" />
+          <ScalarProperty Name="institucionBancaria" ColumnName="institucionBancaria" />
+          <ScalarProperty Name="montoDepositar" ColumnName="montoDepositar" />
+          <ScalarProperty Name="numeroFaltas" ColumnName="numeroFaltas" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="rfc" ColumnName="rfc" />
+          <ScalarProperty Name="fechaFin" ColumnName="fechaFin" />
+          <ScalarProperty Name="fechaInicio" ColumnName="fechaInicio" />
+          <ScalarProperty Name="generacion" ColumnName="generacion" />
+          <ScalarProperty Name="catPartidaID" ColumnName="catPartidaID" />
+          <ScalarProperty Name="catAcademiaID" ColumnName="catAcademiaID" />
+          <ScalarProperty Name="solicitudRecursoID" ColumnName="solicitudRecursoID" />
+          <ScalarProperty Name="BecaID" ColumnName="BecaID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Becalos">
+      <EntityTypeMapping TypeName="SIRFModelo.Becalos">
+        <MappingFragment StoreEntitySet="Becalos">
+          <ScalarProperty Name="clabeInterbancaria" ColumnName="clabeInterbancaria" />
+          <ScalarProperty Name="numeroExpediente" ColumnName="numeroExpediente" />
+          <ScalarProperty Name="fechaFin" ColumnName="fechaFin" />
+          <ScalarProperty Name="fechaInicio" ColumnName="fechaInicio" />
+          <ScalarProperty Name="institucionBancaria" ColumnName="institucionBancaria" />
+          <ScalarProperty Name="cuentaBancaria" ColumnName="cuentaBancaria" />
+          <ScalarProperty Name="titularCuentaBan" ColumnName="titularCuentaBan" />
+          <ScalarProperty Name="montoOtorgado" ColumnName="montoOtorgado" />
+          <ScalarProperty Name="catPartidaID" ColumnName="catPartidaID" />
+          <ScalarProperty Name="solicitudRecursoID" ColumnName="solicitudRecursoID" />
+          <ScalarProperty Name="becalosID" ColumnName="becalosID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Beneficiario">
+      <EntityTypeMapping TypeName="SIRFModelo.Beneficiario">
+        <MappingFragment StoreEntitySet="Beneficiario">
+          <ScalarProperty Name="solicitudRecursoID" ColumnName="solicitudRecursoID" />
+          <ScalarProperty Name="estatusLogico" ColumnName="estatusLogico" />
+          <ScalarProperty Name="sexo" ColumnName="sexo" />
+          <ScalarProperty Name="RFC" ColumnName="RFC" />
+          <ScalarProperty Name="CURP" ColumnName="CURP" />
+          <ScalarProperty Name="fechaNacimiento" ColumnName="fechaNacimiento" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="apellidoMaterno" ColumnName="apellidoMaterno" />
+          <ScalarProperty Name="apellidoPaterno" ColumnName="apellidoPaterno" />
+          <ScalarProperty Name="catDependienteID" ColumnName="catDependienteID" />
+          <ScalarProperty Name="dependienteID" ColumnName="dependienteID" />
+          <ScalarProperty Name="identificadorTipo" ColumnName="identificadorTipo" />
+          <ScalarProperty Name="catSolicitudID" ColumnName="catSolicitudID" />
+          <ScalarProperty Name="beneficiarioID" ColumnName="beneficiarioID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Bitacora">
+      <EntityTypeMapping TypeName="SIRFModelo.Bitacora">
+        <MappingFragment StoreEntitySet="Bitacora">
+          <ScalarProperty Name="evento" ColumnName="evento" />
+          <ScalarProperty Name="modulo" ColumnName="modulo" />
+          <ScalarProperty Name="fecha" ColumnName="fecha" />
+          <ScalarProperty Name="usuarioID" ColumnName="usuarioID" />
+          <ScalarProperty Name="catEstatusSolicitudID" ColumnName="catEstatusSolicitudID" />
+          <ScalarProperty Name="solicitudRecursoID" ColumnName="solicitudRecursoID" />
+          <ScalarProperty Name="bitacoraID" ColumnName="bitacoraID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CargaCuotaDiaria">
+      <EntityTypeMapping TypeName="SIRFModelo.CargaCuotaDiaria">
+        <MappingFragment StoreEntitySet="CargaCuotaDiaria">
+          <ScalarProperty Name="usuarioID" ColumnName="usuarioID" />
+          <ScalarProperty Name="fechaCarga" ColumnName="fechaCarga" />
+          <ScalarProperty Name="estatusLogico" ColumnName="estatusLogico" />
+          <ScalarProperty Name="catConceptoGastoID" ColumnName="catConceptoGastoID" />
+          <ScalarProperty Name="solicitudRecursoID" ColumnName="solicitudRecursoID" />
+          <ScalarProperty Name="cargaCuotaDiariaID" ColumnName="cargaCuotaDiariaID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CatAcademia">
+      <EntityTypeMapping TypeName="SIRFModelo.CatAcademia">
+        <MappingFragment StoreEntitySet="CatAcademia">
+          <ScalarProperty Name="estatusLogico" ColumnName="estatusLogico" />
+          <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+          <ScalarProperty Name="catAcademiaID" ColumnName="catAcademiaID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CatAccion">
+      <EntityTypeMapping TypeName="SIRFModelo.CatAccion">
+        <MappingFragment StoreEntitySet="CatAccion">
+          <ScalarProperty Name="estatusLogico" ColumnName="estatusLogico" />
+          <ScalarProperty Name="controlFormulario" ColumnName="controlFormulario" />
+          <ScalarProperty Name="accion" ColumnName="accion" />
+          <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+          <ScalarProperty Name="catAccionID" ColumnName="catAccionID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CatAgenciaAduanal">
+      <EntityTypeMapping TypeName="SIRFModelo.CatAgenciaAduanal">
+        <MappingFragment StoreEntitySet="CatAgenciaAduanal">
+          <ScalarProperty Name="estatusLogico" ColumnName="estatusLogico" />
+          <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+          <ScalarProperty Name="catAgenciaAduanalID" ColumnName="catAgenciaAduanalID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CatArea">
+      <EntityTypeMapping TypeName="SIRFModelo.CatArea">
+        <MappingFragment StoreEntitySet="CatArea">
+          <ScalarProperty Name="areaPadre" ColumnName="areaPadre" />
+          <ScalarProperty Name="estatusLogico" ColumnName="estatusLogico" />
+          <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+          <ScalarProperty Name="catAreaID" ColumnName="catAreaID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CatBanco">
+      <EntityTypeMapping TypeName="SIRFModelo.CatBanco">
+        <MappingFragment StoreEntitySet="CatBanco">
+          <ScalarProperty Name="cveBanco" ColumnName="cveBanco" />
+          <ScalarProperty Name="estatusLogico" ColumnName="estatusLogico" />
+          <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+          <ScalarProperty Name="catBancoID" ColumnName="catBancoID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CatConceptoGasto">
+      <EntityTypeMapping TypeName="SIRFModelo.CatConceptoGasto">
+        <MappingFragment StoreEntitySet="CatConceptoGasto">
+          <ScalarProperty Name="estatusLogico" ColumnName="estatusLogico" />
+          <ScalarProperty Name="catSolicitudID" ColumnName="catSolicitudID" />
+          <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+          <ScalarProperty Name="catConceptoGastoID" ColumnName="catConceptoGastoID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CatConceptoPago">
+      <EntityTypeMapping TypeName="SIRFModelo.CatConceptoPago">
+        <MappingFragment StoreEntitySet="CatConceptoPago">
+          <ScalarProperty Name="estatusLogico" ColumnName="estatusLogico" />
+          <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+          <ScalarProperty Name="catConceptoPagoID" ColumnName="catConceptoPagoID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CatCuenta">
+      <EntityTypeMapping TypeName="SIRFModelo.CatCuenta">
+        <MappingFragment StoreEntitySet="CatCuenta">
+          <ScalarProperty Name="estatusLogico" ColumnName="estatusLogico" />
+          <ScalarProperty Name="anio" ColumnName="anio" />
+          <ScalarProperty Name="areaBanco" ColumnName="areaBanco" />
+          <ScalarProperty Name="numeroCuenta" ColumnName="numeroCuenta" />
+          <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+          <ScalarProperty Name="catBancoID" ColumnName="catBancoID" />
+          <ScalarProperty Name="catCuentaID" ColumnName="catCuentaID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CatDependiente">
+      <EntityTypeMapping TypeName="SIRFModelo.CatDependiente">
+        <MappingFragment StoreEntitySet="CatDependiente">
+          <ScalarProperty Name="estatusLogico" ColumnName="estatusLogico" />
+          <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+          <ScalarProperty Name="catDependienteVistaId" ColumnName="catDependienteVistaId" />
+          <ScalarProperty Name="catDependienteId" ColumnName="catDependienteId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CatDestino">
+      <EntityTypeMapping TypeName="SIRFModelo.CatDestino">
+        <MappingFragment StoreEntitySet="CatDestino">
+          <ScalarProperty Name="orden" ColumnName="orden" />
+          <ScalarProperty Name="estatusLogico" ColumnName="estatusLogico" />
+          <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+          <ScalarProperty Name="catEntidadFederativaID" ColumnName="catEntidadFederativaID" />
+          <ScalarProperty Name="catDestinoID" ColumnName="catDestinoID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CatDocumento">
+      <EntityTypeMapping TypeName="SIRFModelo.CatDocumento">
+        <MappingFragment StoreEntitySet="CatDocumento">
+          <ScalarProperty Name="estatusLogico" ColumnName="estatusLogico" />
+          <ScalarProperty Name="prefijo" ColumnName="prefijo" />
+          <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+          <ScalarProperty Name="catSolicitudID" ColumnName="catSolicitudID" />
+          <ScalarProperty Name="catDocumentoID" ColumnName="catDocumentoID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CatEntidadFederativa">
+      <EntityTypeMapping TypeName="SIRFModelo.CatEntidadFederativa">
+        <MappingFragment StoreEntitySet="CatEntidadFederativa">
+          <ScalarProperty Name="estatusLogico" ColumnName="estatusLogico" />
+          <ScalarProperty Name="abreviatura" ColumnName="abreviatura" />
+          <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+          <ScalarProperty Name="catPaisID" ColumnName="catPaisID" />
+          <ScalarProperty Name="catEntidadFederativaID" ColumnName="catEntidadFederativaID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CatEstatusFactura">
+      <EntityTypeMapping TypeName="SIRFModelo.CatEstatusFactura">
+        <MappingFragment StoreEntitySet="CatEstatusFactura">
+          <ScalarProperty Name="estatusLogico" ColumnName="estatusLogico" />
+          <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+          <ScalarProperty Name="catEstatusFacturaID" ColumnName="catEstatusFacturaID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CatEstatusPago">
+      <EntityTypeMapping TypeName="SIRFModelo.CatEstatusPago">
+        <MappingFragment StoreEntitySet="CatEstatusPago">
+          <ScalarProperty Name="estatusLogico" ColumnName="estatusLogico" />
+          <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+          <ScalarProperty Name="catEstatusPagoID" ColumnName="catEstatusPagoID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CatEstatusPresion">
+      <EntityTypeMapping TypeName="SIRFModelo.CatEstatusPresion">
+        <MappingFragment StoreEntitySet="CatEstatusPresion">
+          <ScalarProperty Name="estatusLogico" ColumnName="estatusLogico" />
+          <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+          <ScalarProperty Name="catEstatusPresionID" ColumnName="catEstatusPresionID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CatEstatusSolicitud">
+      <EntityTypeMapping TypeName="SIRFModelo.CatEstatusSolicitud">
+        <MappingFragment StoreEntitySet="CatEstatusSolicitud">
+          <ScalarProperty Name="catAreaID" ColumnName="catAreaID" />
+          <ScalarProperty Name="estatusLogico" ColumnName="estatusLogico" />
+          <ScalarProperty Name="estatusAltDev" ColumnName="estatusAltDev" />
+          <ScalarProperty Name="estatusAlternativo" ColumnName="estatusAlternativo" />
+          <ScalarProperty Name="estatusDevolucion" ColumnName="estatusDevolucion" />
+          <ScalarProperty Name="estatusSiguiente" ColumnName="estatusSiguiente" />
+          <ScalarProperty Name="descripcionCorta" ColumnName="descripcionCorta" />
+          <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+          <ScalarProperty Name="catEstatusSolicitudID" ColumnName="catEstatusSolicitudID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CatEvento">
+      <EntityTypeMapping TypeName="SIRFModelo.CatEvento">
+        <MappingFragment StoreEntitySet="CatEvento">
+          <ScalarProperty Name="catEventoAccionID" ColumnName="catEventoAccionID" />
+          <ScalarProperty Name="estatusLogico" ColumnName="estatusLogico" />
+          <ScalarProperty Name="catPerfilID" ColumnName="catPerfilID" />
+          <ScalarProperty Name="catModuloID" ColumnName="catModuloID" />
+          <ScalarProperty Name="descLargaEvento" ColumnName="descLargaEvento" />
+          <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+          <ScalarProperty Name="cveEvento" ColumnName="cveEvento" />
+          <ScalarProperty Name="catEventoID" ColumnName="catEventoID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CatEventoAccion">
+      <EntityTypeMapping TypeName="SIRFModelo.CatEventoAccion">
+        <MappingFragment StoreEntitySet="CatEventoAccion">
+          <ScalarProperty Name="estatusLogico" ColumnName="estatusLogico" />
+          <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+          <ScalarProperty Name="cveEventoAccion" ColumnName="cveEventoAccion" />
+          <ScalarProperty Name="catEventoAccionID" ColumnName="catEventoAccionID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CatFirma">
+      <EntityTypeMapping TypeName="SIRFModelo.CatFirma">
+        <MappingFragment StoreEntitySet="CatFirma">
+          <ScalarProperty Name="EstadoLogico" ColumnName="EstadoLogico" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="catFirmaID" ColumnName="catFirmaID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CatFormaComprobacion">
+      <EntityTypeMapping TypeName="SIRFModelo.CatFormaComprobacion">
+        <MappingFragment StoreEntitySet="CatFormaComprobacion">
+          <ScalarProperty Name="estatusLogico" ColumnName="estatusLogico" />
+          <ScalarProperty Name="FormaComprobacion" ColumnName="FormaComprobacion" />
+          <ScalarProperty Name="catFormaComprobacionID" ColumnName="catFormaComprobacionID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CatJefeDepto">
+      <EntityTypeMapping TypeName="SIRFModelo.CatJefeDepto">
+        <MappingFragment StoreEntitySet="CatJefeDepto">
+          <ScalarProperty Name="estatusLogico" ColumnName="estatusLogico" />
+          <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+          <ScalarProperty Name="descripcionCorta" ColumnName="descripcionCorta" />
+          <ScalarProperty Name="claveTipoJefeDepto" ColumnName="claveTipoJefeDepto" />
+          <ScalarProperty Name="catJefeDeptoID" ColumnName="catJefeDeptoID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CatModulo">
+      <EntityTypeMapping TypeName="SIRFModelo.CatModulo">
+        <MappingFragment StoreEntitySet="CatModulo">
+          <ScalarProperty Name="estatusLogico" ColumnName="estatusLogico" />
+          <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+          <ScalarProperty Name="catModuloID" ColumnName="catModuloID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CatMoneda">
+      <EntityTypeMapping TypeName="SIRFModelo.CatMoneda">
+        <MappingFragment StoreEntitySet="CatMoneda">
+          <ScalarProperty Name="estatusLogico" ColumnName="estatusLogico" />
+          <ScalarProperty Name="codigo" ColumnName="codigo" />
+          <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+          <ScalarProperty Name="catMonedaID" ColumnName="catMonedaID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CatMunicipio">
+      <EntityTypeMapping TypeName="SIRFModelo.CatMunicipio">
+        <MappingFragment StoreEntitySet="CatMunicipio">
+          <ScalarProperty Name="estatusLogico" ColumnName="estatusLogico" />
+          <ScalarProperty Name="masEconomico" ColumnName="masEconomico" />
+          <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+          <ScalarProperty Name="catEntidadFederativaID" ColumnName="catEntidadFederativaID" />
+          <ScalarProperty Name="catMunicipioID" ColumnName="catMunicipioID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CatPago">
+      <EntityTypeMapping TypeName="SIRFModelo.CatPago">
+        <MappingFragment StoreEntitySet="CatPago">
+          <ScalarProperty Name="estatusLogico" ColumnName="estatusLogico" />
+          <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+          <ScalarProperty Name="catPagoID" ColumnName="catPagoID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CatPagoPoliza">
+      <EntityTypeMapping TypeName="SIRFModelo.CatPagoPoliza">
+        <MappingFragment StoreEntitySet="CatPagoPoliza">
+          <ScalarProperty Name="estatusLogico" ColumnName="estatusLogico" />
+          <ScalarProperty Name="descripcioon" ColumnName="descripcioon" />
+          <ScalarProperty Name="catPagoPolizaID" ColumnName="catPagoPolizaID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CatPais">
+      <EntityTypeMapping TypeName="SIRFModelo.CatPais">
+        <MappingFragment StoreEntitySet="CatPais">
+          <ScalarProperty Name="estatusLogico" ColumnName="estatusLogico" />
+          <ScalarProperty Name="tipoControl" ColumnName="tipoControl" />
+          <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+          <ScalarProperty Name="catPaisID" ColumnName="catPaisID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CatPartida">
+      <EntityTypeMapping TypeName="SIRFModelo.CatPartida">
+        <MappingFragment StoreEntitySet="CatPartida">
+          <ScalarProperty Name="estatusLogico" ColumnName="estatusLogico" />
+          <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+          <ScalarProperty Name="denominacion" ColumnName="denominacion" />
+          <ScalarProperty Name="concepto" ColumnName="concepto" />
+          <ScalarProperty Name="capitulo" ColumnName="capitulo" />
+          <ScalarProperty Name="catSolicitudID" ColumnName="catSolicitudID" />
+          <ScalarProperty Name="catPartidaID" ColumnName="catPartidaID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CatPerfil">
+      <EntityTypeMapping TypeName="SIRFModelo.CatPerfil">
+        <MappingFragment StoreEntitySet="CatPerfil">
+          <ScalarProperty Name="estatusLogico" ColumnName="estatusLogico" />
+          <ScalarProperty Name="perfilAnalistaID" ColumnName="perfilAnalistaID" />
+          <ScalarProperty Name="descripcionCorta" ColumnName="descripcionCorta" />
+          <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+          <ScalarProperty Name="catPerfilID" ColumnName="catPerfilID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CatPoliza">
+      <EntityTypeMapping TypeName="SIRFModelo.CatPoliza">
+        <MappingFragment StoreEntitySet="CatPoliza">
+          <ScalarProperty Name="estatusLogico" ColumnName="estatusLogico" />
+          <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+          <ScalarProperty Name="catPolizaID" ColumnName="catPolizaID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CatPrioridad">
+      <EntityTypeMapping TypeName="SIRFModelo.CatPrioridad">
+        <MappingFragment StoreEntitySet="CatPrioridad">
+          <ScalarProperty Name="estatusLogico" ColumnName="estatusLogico" />
+          <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+          <ScalarProperty Name="catPrioridadID" ColumnName="catPrioridadID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CatRegion">
+      <EntityTypeMapping TypeName="SIRFModelo.CatRegion">
+        <MappingFragment StoreEntitySet="CatRegion">
+          <ScalarProperty Name="estatusLogico" ColumnName="estatusLogico" />
+          <ScalarProperty Name="oficioRegion" ColumnName="oficioRegion" />
+          <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+          <ScalarProperty Name="regionID" ColumnName="regionID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CatRol">
+      <EntityTypeMapping TypeName="SIRFModelo.CatRol">
+        <MappingFragment StoreEntitySet="CatRol">
+          <ScalarProperty Name="estatusLogico" ColumnName="estatusLogico" />
+          <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+          <ScalarProperty Name="catRolID" ColumnName="catRolID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CatSolicitud">
+      <EntityTypeMapping TypeName="SIRFModelo.CatSolicitud">
+        <MappingFragment StoreEntitySet="CatSolicitud">
+          <ScalarProperty Name="estatusLogico" ColumnName="estatusLogico" />
+          <ScalarProperty Name="areaPago" ColumnName="areaPago" />
+          <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+          <ScalarProperty Name="tipoSolicitudControlCod" ColumnName="tipoSolicitudControlCod" />
+          <ScalarProperty Name="catSolicitudID" ColumnName="catSolicitudID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CatSubmodulo">
+      <EntityTypeMapping TypeName="SIRFModelo.CatSubmodulo">
+        <MappingFragment StoreEntitySet="CatSubmodulo">
+          <ScalarProperty Name="estatusLogico" ColumnName="estatusLogico" />
+          <ScalarProperty Name="url" ColumnName="url" />
+          <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+          <ScalarProperty Name="catSubmoduloID" ColumnName="catSubmoduloID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CatUnidadAdm">
+      <EntityTypeMapping TypeName="SIRFModelo.CatUnidadAdm">
+        <MappingFragment StoreEntitySet="CatUnidadAdm">
+          <ScalarProperty Name="catTipoUnidadAdmID" ColumnName="catTipoUnidadAdmID" />
+          <ScalarProperty Name="estatusLogico" ColumnName="estatusLogico" />
+          <ScalarProperty Name="abreviatura" ColumnName="abreviatura" />
+          <ScalarProperty Name="codigoPadre" ColumnName="codigoPadre" />
+          <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+          <ScalarProperty Name="catRegionID" ColumnName="catRegionID" />
+          <ScalarProperty Name="catUnidadAdmID" ColumnName="catUnidadAdmID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Clc">
+      <EntityTypeMapping TypeName="SIRFModelo.Clc">
+        <MappingFragment StoreEntitySet="Clc">
+          <ScalarProperty Name="ejercicioCLC" ColumnName="ejercicioCLC" />
+          <ScalarProperty Name="saldoFinal" ColumnName="saldoFinal" />
+          <ScalarProperty Name="numeroClc" ColumnName="numeroClc" />
+          <ScalarProperty Name="totalCLC" ColumnName="totalCLC" />
+          <ScalarProperty Name="anioServicio" ColumnName="anioServicio" />
+          <ScalarProperty Name="avisoReintegro" ColumnName="avisoReintegro" />
+          <ScalarProperty Name="suficienciaPresupuestal" ColumnName="suficienciaPresupuestal" />
+          <ScalarProperty Name="fechaPago" ColumnName="fechaPago" />
+          <ScalarProperty Name="ejercicioFiscal" ColumnName="ejercicioFiscal" />
+          <ScalarProperty Name="pagoPesos" ColumnName="pagoPesos" />
+          <ScalarProperty Name="pagoMonedaExtranjera" ColumnName="pagoMonedaExtranjera" />
+          <ScalarProperty Name="tipoCambioPago" ColumnName="tipoCambioPago" />
+          <ScalarProperty Name="tipoCambioReferencial" ColumnName="tipoCambioReferencial" />
+          <ScalarProperty Name="retencionISR" ColumnName="retencionISR" />
+          <ScalarProperty Name="retencionIVA" ColumnName="retencionIVA" />
+          <ScalarProperty Name="retencionCincoMillar" ColumnName="retencionCincoMillar" />
+          <ScalarProperty Name="mesServicio" ColumnName="mesServicio" />
+          <ScalarProperty Name="actividad" ColumnName="actividad" />
+          <ScalarProperty Name="clcID" ColumnName="clcID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DetalleSolicitudRecurso">
+      <EntityTypeMapping TypeName="SIRFModelo.DetalleSolicitudRecurso">
+        <MappingFragment StoreEntitySet="DetalleSolicitudRecurso">
+          <ScalarProperty Name="ComprobanteOtraCuenta" ColumnName="ComprobanteOtraCuenta" />
+          <ScalarProperty Name="numeroTarjeta" ColumnName="numeroTarjeta" />
+          <ScalarProperty Name="catBancoID" ColumnName="catBancoID" />
+          <ScalarProperty Name="estatusLogico" ColumnName="estatusLogico" />
+          <ScalarProperty Name="cuenta" ColumnName="cuenta" />
+          <ScalarProperty Name="cuentaBancaria" ColumnName="cuentaBancaria" />
+          <ScalarProperty Name="clabeInterbancaria" ColumnName="clabeInterbancaria" />
+          <ScalarProperty Name="estatusHomologado" ColumnName="estatusHomologado" />
+          <ScalarProperty Name="numeroExpediente" ColumnName="numeroExpediente" />
+          <ScalarProperty Name="objetivoComision" ColumnName="objetivoComision" />
+          <ScalarProperty Name="nombreOperativo" ColumnName="nombreOperativo" />
+          <ScalarProperty Name="homologadoID" ColumnName="homologadoID" />
+          <ScalarProperty Name="solicitudRecursoID" ColumnName="solicitudRecursoID" />
+          <ScalarProperty Name="detalleSolicitudRecursoID" ColumnName="detalleSolicitudRecursoID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Documento">
+      <EntityTypeMapping TypeName="SIRFModelo.Documento">
+        <MappingFragment StoreEntitySet="Documento">
+          <ScalarProperty Name="contenido" ColumnName="contenido" />
+          <ScalarProperty Name="extensionDocumento" ColumnName="extensionDocumento" />
+          <ScalarProperty Name="estatus" ColumnName="estatus" />
+          <ScalarProperty Name="fechaRecepcion" ColumnName="fechaRecepcion" />
+          <ScalarProperty Name="anexo" ColumnName="anexo" />
+          <ScalarProperty Name="descripcionDocumento" ColumnName="descripcionDocumento" />
+          <ScalarProperty Name="catDocumentoID" ColumnName="catDocumentoID" />
+          <ScalarProperty Name="solicitudRecursoID" ColumnName="solicitudRecursoID" />
+          <ScalarProperty Name="documentoID" ColumnName="documentoID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EstatusAccion">
+      <EntityTypeMapping TypeName="SIRFModelo.EstatusAccion">
+        <MappingFragment StoreEntitySet="EstatusAccion">
+          <ScalarProperty Name="catAccionID" ColumnName="catAccionID" />
+          <ScalarProperty Name="catEstatusSolicitudID" ColumnName="catEstatusSolicitudID" />
+          <ScalarProperty Name="estatusAccionID" ColumnName="estatusAccionID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EstatusMovimiento">
+      <EntityTypeMapping TypeName="SIRFModelo.EstatusMovimiento">
+        <MappingFragment StoreEntitySet="EstatusMovimiento">
+          <ScalarProperty Name="modulo" ColumnName="modulo" />
+          <ScalarProperty Name="movimiento" ColumnName="movimiento" />
+          <ScalarProperty Name="observaciones" ColumnName="observaciones" />
+          <ScalarProperty Name="fechaMovimiento" ColumnName="fechaMovimiento" />
+          <ScalarProperty Name="usuarioID" ColumnName="usuarioID" />
+          <ScalarProperty Name="solicitudRecursoID" ColumnName="solicitudRecursoID" />
+          <ScalarProperty Name="estatusMovimientoID" ColumnName="estatusMovimientoID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EstatusPerfil">
+      <EntityTypeMapping TypeName="SIRFModelo.EstatusPerfil">
+        <MappingFragment StoreEntitySet="EstatusPerfil">
+          <ScalarProperty Name="catEstatusSolicitudID" ColumnName="catEstatusSolicitudID" />
+          <ScalarProperty Name="catPerfilID" ColumnName="catPerfilID" />
+          <ScalarProperty Name="estatusPerfilID" ColumnName="estatusPerfilID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Factura">
+      <EntityTypeMapping TypeName="SIRFModelo.Factura">
+        <MappingFragment StoreEntitySet="Factura">
+          <ScalarProperty Name="total" ColumnName="total" />
+          <ScalarProperty Name="tipoDeCambio" ColumnName="tipoDeCambio" />
+          <ScalarProperty Name="deductiva" ColumnName="deductiva" />
+          <ScalarProperty Name="retencionISR" ColumnName="retencionISR" />
+          <ScalarProperty Name="ISR" ColumnName="ISR" />
+          <ScalarProperty Name="retencionIVA" ColumnName="retencionIVA" />
+          <ScalarProperty Name="IVA" ColumnName="IVA" />
+          <ScalarProperty Name="subtotal" ColumnName="subtotal" />
+          <ScalarProperty Name="fecha" ColumnName="fecha" />
+          <ScalarProperty Name="concepto" ColumnName="concepto" />
+          <ScalarProperty Name="factura1" ColumnName="factura" />
+          <ScalarProperty Name="montoFactura" ColumnName="montoFactura" />
+          <ScalarProperty Name="descripcionFactura" ColumnName="descripcionFactura" />
+          <ScalarProperty Name="cuentaProveedorID" ColumnName="cuentaProveedorID" />
+          <ScalarProperty Name="estatusFacturaID" ColumnName="estatusFacturaID" />
+          <ScalarProperty Name="monedaID" ColumnName="monedaID" />
+          <ScalarProperty Name="proveedoresID" ColumnName="proveedoresID" />
+          <ScalarProperty Name="facturaID" ColumnName="facturaID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FirmaElectronica">
+      <EntityTypeMapping TypeName="SIRFModelo.FirmaElectronica">
+        <MappingFragment StoreEntitySet="FirmaElectronica">
+          <ScalarProperty Name="numeroTransaccion" ColumnName="numeroTransaccion" />
+          <ScalarProperty Name="folioTransaccion" ColumnName="folioTransaccion" />
+          <ScalarProperty Name="fecha" ColumnName="fecha" />
+          <ScalarProperty Name="cadenaOriginalFirma" ColumnName="cadenaOriginalFirma" />
+          <ScalarProperty Name="solicitudRecursoID" ColumnName="solicitudRecursoID" />
+          <ScalarProperty Name="firmaElectronicaID" ColumnName="firmaElectronicaID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GastoAduana">
+      <EntityTypeMapping TypeName="SIRFModelo.GastoAduana">
+        <MappingFragment StoreEntitySet="GastoAduana">
+          <ScalarProperty Name="importeSolicitado" ColumnName="importeSolicitado" />
+          <ScalarProperty Name="catPartidaID" ColumnName="catPartidaID" />
+          <ScalarProperty Name="catAgenciaAduanalID" ColumnName="catAgenciaAduanalID" />
+          <ScalarProperty Name="solicitudRecursoID" ColumnName="solicitudRecursoID" />
+          <ScalarProperty Name="gastoAduanaID" ColumnName="gastoAduanaID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GastoCorriente">
+      <EntityTypeMapping TypeName="SIRFModelo.GastoCorriente">
+        <MappingFragment StoreEntitySet="GastoCorriente">
+          <ScalarProperty Name="montoSolicitado" ColumnName="montoSolicitado" />
+          <ScalarProperty Name="numReciboPago" ColumnName="numReciboPago" />
+          <ScalarProperty Name="fechaFin" ColumnName="fechaFin" />
+          <ScalarProperty Name="fechaInicio" ColumnName="fechaInicio" />
+          <ScalarProperty Name="catPartidaID" ColumnName="catPartidaID" />
+          <ScalarProperty Name="catDetinoID" ColumnName="catDetinoID" />
+          <ScalarProperty Name="catEntidadFederativaID" ColumnName="catEntidadFederativaID" />
+          <ScalarProperty Name="catConceptoPagoID" ColumnName="catConceptoPagoID" />
+          <ScalarProperty Name="solicitudRecursoID" ColumnName="solicitudRecursoID" />
+          <ScalarProperty Name="gasCorrienteID" ColumnName="gasCorrienteID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GastoFunerario">
+      <EntityTypeMapping TypeName="SIRFModelo.GastoFunerario">
+        <MappingFragment StoreEntitySet="GastoFunerario">
+          <ScalarProperty Name="numeroExpediente" ColumnName="numeroExpediente" />
+          <ScalarProperty Name="monto" ColumnName="monto" />
+          <ScalarProperty Name="catPartidaID" ColumnName="catPartidaID" />
+          <ScalarProperty Name="solicitudRecursoID" ColumnName="solicitudRecursoID" />
+          <ScalarProperty Name="gastosFunerariosID" ColumnName="gastosFunerariosID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Homologado">
+      <EntityTypeMapping TypeName="SIRFModelo.Homologado">
+        <MappingFragment StoreEntitySet="Homologado">
+          <ScalarProperty Name="estatusLogico" ColumnName="estatusLogico" />
+          <ScalarProperty Name="numeroExpediente" ColumnName="numeroExpediente" />
+          <ScalarProperty Name="importeHomologado" ColumnName="importeHomologado" />
+          <ScalarProperty Name="homologadoID" ColumnName="homologadoID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ImpuestoSobreNomina">
+      <EntityTypeMapping TypeName="SIRFModelo.ImpuestoSobreNomina">
+        <MappingFragment StoreEntitySet="ImpuestoSobreNomina">
+          <ScalarProperty Name="importe" ColumnName="importe" />
+          <ScalarProperty Name="fechaFin" ColumnName="fechaFin" />
+          <ScalarProperty Name="fechaInicio" ColumnName="fechaInicio" />
+          <ScalarProperty Name="catPartidaID" ColumnName="catPartidaID" />
+          <ScalarProperty Name="solicitudRecursoID" ColumnName="solicitudRecursoID" />
+          <ScalarProperty Name="impuestoSobreNominaID" ColumnName="impuestoSobreNominaID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Laudo">
+      <EntityTypeMapping TypeName="SIRFModelo.Laudo">
+        <MappingFragment StoreEntitySet="Laudo">
+          <ScalarProperty Name="estatusLogico" ColumnName="estatusLogico" />
+          <ScalarProperty Name="importe" ColumnName="importe" />
+          <ScalarProperty Name="numeroExpediente" ColumnName="numeroExpediente" />
+          <ScalarProperty Name="catPartidaID" ColumnName="catPartidaID" />
+          <ScalarProperty Name="catConceptoGastoID" ColumnName="catConceptoGastoID" />
+          <ScalarProperty Name="solicitudRecursoID" ColumnName="solicitudRecursoID" />
+          <ScalarProperty Name="laudoID" ColumnName="laudoID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LogError">
+      <EntityTypeMapping TypeName="SIRFModelo.LogError">
+        <MappingFragment StoreEntitySet="LogError">
+          <ScalarProperty Name="stacktrace" ColumnName="stacktrace" />
+          <ScalarProperty Name="ipEquipo" ColumnName="ipEquipo" />
+          <ScalarProperty Name="nombreEquipo" ColumnName="nombreEquipo" />
+          <ScalarProperty Name="codigoError" ColumnName="codigoError" />
+          <ScalarProperty Name="fecha" ColumnName="fecha" />
+          <ScalarProperty Name="evento" ColumnName="evento" />
+          <ScalarProperty Name="formulario" ColumnName="formulario" />
+          <ScalarProperty Name="error" ColumnName="error" />
+          <ScalarProperty Name="usuarioID" ColumnName="usuarioID" />
+          <ScalarProperty Name="logErrorID" ColumnName="logErrorID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LugarSolicitudRecurso">
+      <EntityTypeMapping TypeName="SIRFModelo.LugarSolicitudRecurso">
+        <MappingFragment StoreEntitySet="LugarSolicitudRecurso">
+          <ScalarProperty Name="tipoCambio" ColumnName="tipoCambio" />
+          <ScalarProperty Name="importeOtorgado" ColumnName="importeOtorgado" />
+          <ScalarProperty Name="diasMedios" ColumnName="diasMedios" />
+          <ScalarProperty Name="diasCompletos" ColumnName="diasCompletos" />
+          <ScalarProperty Name="fechaFin" ColumnName="fechaFin" />
+          <ScalarProperty Name="fechaInicio" ColumnName="fechaInicio" />
+          <ScalarProperty Name="catDestinoID" ColumnName="catDestinoID" />
+          <ScalarProperty Name="catMunicipioID" ColumnName="catMunicipioID" />
+          <ScalarProperty Name="catEntidadFederativaID" ColumnName="catEntidadFederativaID" />
+          <ScalarProperty Name="catPaisID" ColumnName="catPaisID" />
+          <ScalarProperty Name="catMonedaID" ColumnName="catMonedaID" />
+          <ScalarProperty Name="detalleSolicitudRecursoID" ColumnName="detalleSolicitudRecursoID" />
+          <ScalarProperty Name="lugarSolicitudRecursoID" ColumnName="lugarSolicitudRecursoID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ModuloSubmodulo">
+      <EntityTypeMapping TypeName="SIRFModelo.ModuloSubmodulo">
+        <MappingFragment StoreEntitySet="ModuloSubmodulo">
+          <ScalarProperty Name="catSubmoduloID" ColumnName="catSubmoduloID" />
+          <ScalarProperty Name="catModuloID" ColumnName="catModuloID" />
+          <ScalarProperty Name="moduloSubmoduloID" ColumnName="moduloSubmoduloID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MovimientoAdministrativo">
+      <EntityTypeMapping TypeName="SIRFModelo.MovimientoAdministrativo">
+        <MappingFragment StoreEntitySet="MovimientoAdministrativo">
+          <ScalarProperty Name="estatusLogico" ColumnName="estatusLogico" />
+          <ScalarProperty Name="montoTotalSolicitud" ColumnName="montoTotalSolicitud" />
+          <ScalarProperty Name="descripcionPago" ColumnName="descripcionPago" />
+          <ScalarProperty Name="catCuentaID" ColumnName="catCuentaID" />
+          <ScalarProperty Name="presionGastoID" ColumnName="presionGastoID" />
+          <ScalarProperty Name="catPagoID" ColumnName="catPagoID" />
+          <ScalarProperty Name="solicitudRecursoID" ColumnName="solicitudRecursoID" />
+          <ScalarProperty Name="movimientoAdministrativoID" ColumnName="movimientoAdministrativoID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MovimientoBancario">
+      <EntityTypeMapping TypeName="SIRFModelo.MovimientoBancario">
+        <MappingFragment StoreEntitySet="MovimientoBancario">
+          <ScalarProperty Name="egreso" ColumnName="egreso" />
+          <ScalarProperty Name="ingreso" ColumnName="ingreso" />
+          <ScalarProperty Name="fecha" ColumnName="fecha" />
+          <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+          <ScalarProperty Name="catCuentaID" ColumnName="catCuentaID" />
+          <ScalarProperty Name="movimientoBancarioID" ColumnName="movimientoBancarioID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PagoCheque">
+      <EntityTypeMapping TypeName="SIRFModelo.PagoCheque">
+        <MappingFragment StoreEntitySet="PagoCheque">
+          <ScalarProperty Name="numeroExpediente" ColumnName="numeroExpediente" />
+          <ScalarProperty Name="importe" ColumnName="importe" />
+          <ScalarProperty Name="numeroCheque" ColumnName="numeroCheque" />
+          <ScalarProperty Name="pagueseA" ColumnName="pagueseA" />
+          <ScalarProperty Name="fechaEmision" ColumnName="fechaEmision" />
+          <ScalarProperty Name="catEstausPagoID" ColumnName="catEstausPagoID" />
+          <ScalarProperty Name="movimientoAdministrativoID" ColumnName="movimientoAdministrativoID" />
+          <ScalarProperty Name="pagoChequeID" ColumnName="pagoChequeID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Parametro">
+      <EntityTypeMapping TypeName="SIRFModelo.Parametro">
+        <MappingFragment StoreEntitySet="Parametro">
+          <ScalarProperty Name="valorInt" ColumnName="valorInt" />
+          <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+          <ScalarProperty Name="parametro1" ColumnName="parametro" />
+          <ScalarProperty Name="moduloID" ColumnName="moduloID" />
+          <ScalarProperty Name="parametroID" ColumnName="parametroID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PartidaSolicitudRecurso">
+      <EntityTypeMapping TypeName="SIRFModelo.PartidaSolicitudRecurso">
+        <MappingFragment StoreEntitySet="PartidaSolicitudRecurso">
+          <ScalarProperty Name="catPartidaID" ColumnName="catPartidaID" />
+          <ScalarProperty Name="detalleSolicitudRecursoID" ColumnName="detalleSolicitudRecursoID" />
+          <ScalarProperty Name="partidaSolicitudRecursoID" ColumnName="partidaSolicitudRecursoID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Penalizacion">
+      <EntityTypeMapping TypeName="SIRFModelo.Penalizacion">
+        <MappingFragment StoreEntitySet="Penalizacion">
+          <ScalarProperty Name="aplica" ColumnName="aplica" />
+          <ScalarProperty Name="total" ColumnName="total" />
+          <ScalarProperty Name="tipoDeCambio" ColumnName="tipoDeCambio" />
+          <ScalarProperty Name="retIVA" ColumnName="retIVA" />
+          <ScalarProperty Name="IVA" ColumnName="IVA" />
+          <ScalarProperty Name="importe" ColumnName="importe" />
+          <ScalarProperty Name="catMonedaID" ColumnName="catMonedaID" />
+          <ScalarProperty Name="proveedorID" ColumnName="proveedorID" />
+          <ScalarProperty Name="penalizacionID" ColumnName="penalizacionID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PerfilModulo">
+      <EntityTypeMapping TypeName="SIRFModelo.PerfilModulo">
+        <MappingFragment StoreEntitySet="PerfilModulo">
+          <ScalarProperty Name="catModuloID" ColumnName="catModuloID" />
+          <ScalarProperty Name="catPerfilID" ColumnName="catPerfilID" />
+          <ScalarProperty Name="perfilModuloID" ColumnName="perfilModuloID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PolizaPago">
+      <EntityTypeMapping TypeName="SIRFModelo.PolizaPago">
+        <MappingFragment StoreEntitySet="PolizaPago">
+          <ScalarProperty Name="fechaPoliza" ColumnName="fechaPoliza" />
+          <ScalarProperty Name="numeroPoliza" ColumnName="numeroPoliza" />
+          <ScalarProperty Name="pagoIdentificador" ColumnName="pagoIdentificador" />
+          <ScalarProperty Name="catPagoPolizaID" ColumnName="catPagoPolizaID" />
+          <ScalarProperty Name="catPolizaID" ColumnName="catPolizaID" />
+          <ScalarProperty Name="polizaPagoID" ColumnName="polizaPagoID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PresionGasto">
+      <EntityTypeMapping TypeName="SIRFModelo.PresionGasto">
+        <MappingFragment StoreEntitySet="PresionGasto">
+          <ScalarProperty Name="fechaPresion" ColumnName="fechaPresion" />
+          <ScalarProperty Name="folioPresion" ColumnName="folioPresion" />
+          <ScalarProperty Name="catEstausPresionID" ColumnName="catEstausPresionID" />
+          <ScalarProperty Name="presionGastoID" ColumnName="presionGastoID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PresupuestoClc">
+      <EntityTypeMapping TypeName="SIRFModelo.PresupuestoClc">
+        <MappingFragment StoreEntitySet="PresupuestoClc">
+          <ScalarProperty Name="montoClc" ColumnName="montoClc" />
+          <ScalarProperty Name="clcID" ColumnName="clcID" />
+          <ScalarProperty Name="solicitudRecursoID" ColumnName="solicitudRecursoID" />
+          <ScalarProperty Name="presupuestoClcID" ColumnName="presupuestoClcID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Proveedor">
+      <EntityTypeMapping TypeName="SIRFModelo.Proveedor">
+        <MappingFragment StoreEntitySet="Proveedor">
+          <ScalarProperty Name="anticipo" ColumnName="anticipo" />
+          <ScalarProperty Name="total" ColumnName="total" />
+          <ScalarProperty Name="tipoDeCambio" ColumnName="tipoDeCambio" />
+          <ScalarProperty Name="importe" ColumnName="importe" />
+          <ScalarProperty Name="oficioRM" ColumnName="oficioRM" />
+          <ScalarProperty Name="suficienciaPresupuestalID" ColumnName="suficienciaPresupuestalID" />
+          <ScalarProperty Name="catMonedaID" ColumnName="catMonedaID" />
+          <ScalarProperty Name="catPartidaID" ColumnName="catPartidaID" />
+          <ScalarProperty Name="solicitudRecursoID" ColumnName="solicitudRecursoID" />
+          <ScalarProperty Name="proveedorID" ColumnName="proveedorID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RegistroContable">
+      <EntityTypeMapping TypeName="SIRFModelo.RegistroContable">
+        <MappingFragment StoreEntitySet="RegistroContable">
+          <ScalarProperty Name="anio" ColumnName="anio" />
+          <ScalarProperty Name="fechaEmision" ColumnName="fechaEmision" />
+          <ScalarProperty Name="mes" ColumnName="mes" />
+          <ScalarProperty Name="consecutivo" ColumnName="consecutivo" />
+          <ScalarProperty Name="catTipoPolizaID" ColumnName="catTipoPolizaID" />
+          <ScalarProperty Name="solicitudRecursoID" ColumnName="solicitudRecursoID" />
+          <ScalarProperty Name="registroContableID" ColumnName="registroContableID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RegistroVolante">
+      <EntityTypeMapping TypeName="SIRFModelo.RegistroVolante">
+        <MappingFragment StoreEntitySet="RegistroVolante">
+          <ScalarProperty Name="estatusLogico" ColumnName="estatusLogico" />
+          <ScalarProperty Name="fechaGeneracionVolante" ColumnName="fechaGeneracionVolante" />
+          <ScalarProperty Name="anioComprobado" ColumnName="anioComprobado" />
+          <ScalarProperty Name="tipoDeCambio" ColumnName="tipoDeCambio" />
+          <ScalarProperty Name="motivoDevolucion" ColumnName="motivoDevolucion" />
+          <ScalarProperty Name="oficio" ColumnName="oficio" />
+          <ScalarProperty Name="folio" ColumnName="folio" />
+          <ScalarProperty Name="numeroVolante" ColumnName="numeroVolante" />
+          <ScalarProperty Name="tipoMoneda" ColumnName="tipoMoneda" />
+          <ScalarProperty Name="fechaElaboracion" ColumnName="fechaElaboracion" />
+          <ScalarProperty Name="fechaRecepcion" ColumnName="fechaRecepcion" />
+          <ScalarProperty Name="importeDevuelto" ColumnName="importeDevuelto" />
+          <ScalarProperty Name="tipoDeGasto" ColumnName="tipoDeGasto" />
+          <ScalarProperty Name="area" ColumnName="area" />
+          <ScalarProperty Name="solicitudRecursoID" ColumnName="solicitudRecursoID" />
+          <ScalarProperty Name="registroVolanteID" ColumnName="registroVolanteID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SolicitudCatUnidadAdm">
+      <EntityTypeMapping TypeName="SIRFModelo.SolicitudCatUnidadAdm">
+        <MappingFragment StoreEntitySet="SolicitudCatUnidadAdm">
+          <ScalarProperty Name="catSolicitudID" ColumnName="catSolicitudID" />
+          <ScalarProperty Name="catUnidadAdmID" ColumnName="catUnidadAdmID" />
+          <ScalarProperty Name="solicitudCatUnidadAdmID" ColumnName="solicitudCatUnidadAdmID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SolicitudFirma">
+      <EntityTypeMapping TypeName="SIRFModelo.SolicitudFirma">
+        <MappingFragment StoreEntitySet="SolicitudFirma">
+          <ScalarProperty Name="EstatusLogico" ColumnName="EstatusLogico" />
+          <ScalarProperty Name="FechaFirma" ColumnName="FechaFirma" />
+          <ScalarProperty Name="estatusID" ColumnName="estatusID" />
+          <ScalarProperty Name="catFirmaID" ColumnName="catFirmaID" />
+          <ScalarProperty Name="solicitudRecursoID" ColumnName="solicitudRecursoID" />
+          <ScalarProperty Name="solicitudFirmaID" ColumnName="solicitudFirmaID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SolicitudRecurso">
+      <EntityTypeMapping TypeName="SIRFModelo.SolicitudRecurso">
+        <MappingFragment StoreEntitySet="SolicitudRecurso">
+          <ScalarProperty Name="catFormaComprobacionID" ColumnName="catFormaComprobacionID" />
+          <ScalarProperty Name="folioSolicitud" ColumnName="folioSolicitud" />
+          <ScalarProperty Name="catEventoID" ColumnName="catEventoID" />
+          <ScalarProperty Name="fechaActualizacion" ColumnName="fechaActualizacion" />
+          <ScalarProperty Name="fechaControl" ColumnName="fechaControl" />
+          <ScalarProperty Name="oficioSolicitud" ColumnName="oficioSolicitud" />
+          <ScalarProperty Name="observaciones" ColumnName="observaciones" />
+          <ScalarProperty Name="fechaSolicitud" ColumnName="fechaSolicitud" />
+          <ScalarProperty Name="catEstatusSolicitudID" ColumnName="catEstatusSolicitudID" />
+          <ScalarProperty Name="catUnidadAdmID" ColumnName="catUnidadAdmID" />
+          <ScalarProperty Name="catPrioridadID" ColumnName="catPrioridadID" />
+          <ScalarProperty Name="catSolicitudID" ColumnName="catSolicitudID" />
+          <ScalarProperty Name="solicitudRecursoID" ColumnName="solicitudRecursoID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="SIRFModelo.sysdiagrams">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="definition" ColumnName="definition" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TipoSolicitudPorArea">
+      <EntityTypeMapping TypeName="SIRFModelo.TipoSolicitudPorArea">
+        <MappingFragment StoreEntitySet="TipoSolicitudPorArea">
+          <ScalarProperty Name="catRegionID" ColumnName="catRegionID" />
+          <ScalarProperty Name="catSolicitudID" ColumnName="catSolicitudID" />
+          <ScalarProperty Name="catAreaID" ColumnName="catAreaID" />
+          <ScalarProperty Name="tipoSolicitudPorAreaConfigID" ColumnName="tipoSolicitudPorAreaConfigID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TipoSolicitudPorUA">
+      <EntityTypeMapping TypeName="SIRFModelo.TipoSolicitudPorUA">
+        <MappingFragment StoreEntitySet="TipoSolicitudPorUA">
+          <ScalarProperty Name="estatusLogico" ColumnName="estatusLogico" />
+          <ScalarProperty Name="catUnidadAdmID" ColumnName="catUnidadAdmID" />
+          <ScalarProperty Name="catSolicitudID" ColumnName="catSolicitudID" />
+          <ScalarProperty Name="tipoSolicitudPorUAID" ColumnName="tipoSolicitudPorUAID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TransferenciaBancaria">
+      <EntityTypeMapping TypeName="SIRFModelo.TransferenciaBancaria">
+        <MappingFragment StoreEntitySet="TransferenciaBancaria">
+          <ScalarProperty Name="numeroExpediente" ColumnName="numeroExpediente" />
+          <ScalarProperty Name="concepto" ColumnName="concepto" />
+          <ScalarProperty Name="numeroTransferencia" ColumnName="numeroTransferencia" />
+          <ScalarProperty Name="banco" ColumnName="banco" />
+          <ScalarProperty Name="montoPago" ColumnName="montoPago" />
+          <ScalarProperty Name="cuentaClabe" ColumnName="cuentaClabe" />
+          <ScalarProperty Name="beneficiario" ColumnName="beneficiario" />
+          <ScalarProperty Name="fechaPago" ColumnName="fechaPago" />
+          <ScalarProperty Name="catEstatusPagoID" ColumnName="catEstatusPagoID" />
+          <ScalarProperty Name="movimientoAdministrativoID" ColumnName="movimientoAdministrativoID" />
+          <ScalarProperty Name="transferenciaBancariaID" ColumnName="transferenciaBancariaID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Usuario">
+      <EntityTypeMapping TypeName="SIRFModelo.Usuario">
+        <MappingFragment StoreEntitySet="Usuario">
+          <ScalarProperty Name="catRolID" ColumnName="catRolID" />
+          <ScalarProperty Name="estatusLogico" ColumnName="estatusLogico" />
+          <ScalarProperty Name="numeroExpediente" ColumnName="numeroExpediente" />
+          <ScalarProperty Name="correo" ColumnName="correo" />
+          <ScalarProperty Name="cuenta" ColumnName="cuenta" />
+          <ScalarProperty Name="catPerfilID" ColumnName="catPerfilID" />
+          <ScalarProperty Name="catUnidadAdmID" ColumnName="catUnidadAdmID" />
+          <ScalarProperty Name="usuarioID" ColumnName="usuarioID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UsuarioRegionFiscalizacion">
+      <EntityTypeMapping TypeName="SIRFModelo.UsuarioRegionFiscalizacion">
+        <MappingFragment StoreEntitySet="UsuarioRegionFiscalizacion">
+          <ScalarProperty Name="usuarioRegionFiscalizacionID" ColumnName="usuarioRegionFiscalizacionID" />
+          <ScalarProperty Name="estatusLogico" ColumnName="estatusLogico" />
+          <ScalarProperty Name="catRegionID" ColumnName="catRegionID" />
+          <ScalarProperty Name="usuarioID" ColumnName="usuarioID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AreaUnidadAdm">
+      <EntityTypeMapping TypeName="SIRFModelo.AreaUnidadAdm">
+        <MappingFragment StoreEntitySet="AreaUnidadAdm">
+          <ScalarProperty Name="estatusLogico" ColumnName="estatusLogico" />
+          <ScalarProperty Name="catUnidadAdmID" ColumnName="catUnidadAdmID" />
+          <ScalarProperty Name="catAreaID" ColumnName="catAreaID" />
+          <ScalarProperty Name="relacionAreaUA" ColumnName="relacionAreaUA" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TipoJefeDepto">
+      <EntityTypeMapping TypeName="SIRFModelo.TipoJefeDepto">
+        <MappingFragment StoreEntitySet="TipoJefeDepto">
+          <ScalarProperty Name="estatusLogico" ColumnName="estatusLogico" />
+          <ScalarProperty Name="catJefeDeptoID" ColumnName="catJefeDeptoID" />
+          <ScalarProperty Name="usuarioID" ColumnName="usuarioID" />
+          <ScalarProperty Name="TipoJefeDeptoID" ColumnName="TipoJefeDeptoID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="vEstatusMovimientoBanco">
+      <EntityTypeMapping TypeName="SIRFModelo.vEstatusMovimientoBanco">
+        <MappingFragment StoreEntitySet="vEstatusMovimientoBanco">
+          <ScalarProperty Name="estatusBanco" ColumnName="estatusBanco" />
+          <ScalarProperty Name="codPartida" ColumnName="codPartida" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="vwAsistentesEnlace">
+      <EntityTypeMapping TypeName="SIRFModelo.vwAsistentesEnlace">
+        <MappingFragment StoreEntitySet="vwAsistentesEnlace">
+          <ScalarProperty Name="expediente" ColumnName="expediente" />
+          <ScalarProperty Name="enlaceID" ColumnName="enlaceID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="vwBajaIntegrante">
+      <EntityTypeMapping TypeName="SIRFModelo.vwBajaIntegrante">
+        <MappingFragment StoreEntitySet="vwBajaIntegrante">
+          <ScalarProperty Name="movimiento" ColumnName="movimiento" />
+          <ScalarProperty Name="descripcionEstatusIntregrante" ColumnName="descripcionEstatusIntregrante" />
+          <ScalarProperty Name="codEstatusIntegrante" ColumnName="codEstatusIntegrante" />
+          <ScalarProperty Name="Adscripcion" ColumnName="Adscripcion" />
+          <ScalarProperty Name="cargo" ColumnName="cargo" />
+          <ScalarProperty Name="grado" ColumnName="grado" />
+          <ScalarProperty Name="RFC" ColumnName="RFC" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="expediente" ColumnName="expediente" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="vwCentrosDeDistribucion">
+      <EntityTypeMapping TypeName="SIRFModelo.vwCentrosDeDistribucion">
+        <MappingFragment StoreEntitySet="vwCentrosDeDistribucion">
+          <ScalarProperty Name="enlaceID" ColumnName="enlaceID" />
+          <ScalarProperty Name="codCentroDistribucion" ColumnName="codCentroDistribucion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="vwCuentasIntegrante">
+      <EntityTypeMapping TypeName="SIRFModelo.vwCuentasIntegrante">
+        <MappingFragment StoreEntitySet="vwCuentasIntegrante">
+          <ScalarProperty Name="estatusLogico" ColumnName="estatusLogico" />
+          <ScalarProperty Name="descripcionTipoCuenta" ColumnName="descripcionTipoCuenta" />
+          <ScalarProperty Name="tipoCuentaID" ColumnName="tipoCuentaID" />
+          <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+          <ScalarProperty Name="clabeInterbancaria" ColumnName="clabeInterbancaria" />
+          <ScalarProperty Name="descripcionCuenta" ColumnName="descripcionCuenta" />
+          <ScalarProperty Name="expediente" ColumnName="expediente" />
+          <ScalarProperty Name="cuentaIntegranteID" ColumnName="cuentaIntegranteID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="vwDatosIntegrante">
+      <EntityTypeMapping TypeName="SIRFModelo.vwDatosIntegrante">
+        <MappingFragment StoreEntitySet="vwDatosIntegrante">
+          <ScalarProperty Name="descripcionEstatusIntegrante" ColumnName="descripcionEstatusIntegrante" />
+          <ScalarProperty Name="codEstatusIntegrante" ColumnName="codEstatusIntegrante" />
+          <ScalarProperty Name="enlaceID" ColumnName="enlaceID" />
+          <ScalarProperty Name="codCentroDistribucion" ColumnName="codCentroDistribucion" />
+          <ScalarProperty Name="Adscripcion" ColumnName="Adscripcion" />
+          <ScalarProperty Name="codAdscripcion" ColumnName="codAdscripcion" />
+          <ScalarProperty Name="RFC" ColumnName="RFC" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="cargo" ColumnName="cargo" />
+          <ScalarProperty Name="grado" ColumnName="grado" />
+          <ScalarProperty Name="expediente" ColumnName="expediente" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="vwDependientesIntegrante">
+      <EntityTypeMapping TypeName="SIRFModelo.vwDependientesIntegrante">
+        <MappingFragment StoreEntitySet="vwDependientesIntegrante">
+          <ScalarProperty Name="sexo" ColumnName="sexo" />
+          <ScalarProperty Name="RFC" ColumnName="RFC" />
+          <ScalarProperty Name="CURP" ColumnName="CURP" />
+          <ScalarProperty Name="fechaNacimiento" ColumnName="fechaNacimiento" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="apellidoMaterno" ColumnName="apellidoMaterno" />
+          <ScalarProperty Name="apellidoPaterno" ColumnName="apellidoPaterno" />
+          <ScalarProperty Name="descripcionTipoDependiente" ColumnName="descripcionTipoDependiente" />
+          <ScalarProperty Name="tipoDependienteID" ColumnName="tipoDependienteID" />
+          <ScalarProperty Name="expediente" ColumnName="expediente" />
+          <ScalarProperty Name="dependienteID" ColumnName="dependienteID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="vwIncidenciasIntegrante">
+      <EntityTypeMapping TypeName="SIRFModelo.vwIncidenciasIntegrante">
+        <MappingFragment StoreEntitySet="vwIncidenciasIntegrante">
+          <ScalarProperty Name="fechaFinal" ColumnName="fechaFinal" />
+          <ScalarProperty Name="fechaInicial" ColumnName="fechaInicial" />
+          <ScalarProperty Name="tipoIncidencia" ColumnName="tipoIncidencia" />
+          <ScalarProperty Name="expediente" ColumnName="expediente" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="vwTipoDependientesIntegrante">
+      <EntityTypeMapping TypeName="SIRFModelo.vwTipoDependientesIntegrante">
+        <MappingFragment StoreEntitySet="vwTipoDependientesIntegrante">
+          <ScalarProperty Name="estatusLogico" ColumnName="estatusLogico" />
+          <ScalarProperty Name="descripcionTipoDependiente" ColumnName="descripcionTipoDependiente" />
+          <ScalarProperty Name="tipoSNSPID" ColumnName="tipoSNSPID" />
+          <ScalarProperty Name="tipoDepID" ColumnName="tipoDepID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

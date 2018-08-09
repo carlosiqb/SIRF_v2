@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{7949847F-360E-4CB6-AB2F-D64FEB1FB6C1}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SIRF.Objetos</RootNamespace>
+    <AssemblyName>SIRF.Objetos</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Debug\SIRF.Objetos.XML</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ITipoSolicitud.cs" />
+    <Compile Include="OSelect.cs" />
+    <Compile Include="OMenu.cs" />
+    <Compile Include="OAccion.cs" />
+    <Compile Include="OBancos.cs" />
+    <Compile Include="OConceptoGastos.cs" />
+    <Compile Include="OCuentaBancaria.cs" />
+    <Compile Include="OCuotaExcel.cs" />
+    <Compile Include="OCuotaDiaria.cs" />
+    <Compile Include="ODestino.cs" />
+    <Compile Include="OEntidadFederativa.cs" />
+    <Compile Include="OEstatusMovimiento.cs" />
+    <Compile Include="OBusquedaParametro.cs" />
+    <Compile Include="ODocumento.cs" />
+    <Compile Include="OEstatusSolicitud.cs" />
+    <Compile Include="OEvento.cs" />
+    <Compile Include="OExpedienteCuenta.cs" />
+    <Compile Include="OExpedienteDato.cs" />
+    <Compile Include="OFirma.cs" />
+    <Compile Include="OFormaComprobacion.cs" />
+    <Compile Include="OHomologado.cs" />
+    <Compile Include="OIpv4.cs" />
+    <Compile Include="OLogError.cs" />
+    <Compile Include="OLogin.cs" />
+    <Compile Include="OModulo.cs" />
+    <Compile Include="OMoneda.cs" />
+    <Compile Include="OMunicipioLocalidad.cs" />
+    <Compile Include="OPaises.cs" />
+    <Compile Include="OPartida.cs" />
+    <Compile Include="OPermisos.cs" />
+    <Compile Include="OPersonalizada.cs" />
+    <Compile Include="OPrioridad.cs" />
+    <Compile Include="ORegion.cs" />
+    <Compile Include="ORegional.cs" />
+    <Compile Include="OSolicitud.cs" />
+    <Compile Include="OSolicitudRecursos.cs" />
+    <Compile Include="OSubModulo.cs" />
+    <Compile Include="OTipoCuota.cs" />
+    <Compile Include="OTipoDocumento.cs" />
+    <Compile Include="OTipoPago.cs" />
+    <Compile Include="OTipoSolicitud.cs" />
+    <Compile Include="OUnidadAdministrativa.cs" />
+    <Compile Include="OUsuario.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="OucvDocumentos.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

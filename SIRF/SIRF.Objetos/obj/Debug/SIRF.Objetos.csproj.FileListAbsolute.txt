@@ -1,0 +1,28 @@
+D:\--- SITIO POLICIA FEDERAL\SIRF_v2\SIRF.Objetos\bin\Debug\SIRF.Objetos.dll
+D:\--- SITIO POLICIA FEDERAL\SIRF_v2\SIRF.Objetos\bin\Debug\SIRF.Objetos.pdb
+D:\--- SITIO POLICIA FEDERAL\SIRF_v2\SIRF.Objetos\obj\Debug\SIRF.Objetos.csprojResolveAssemblyReference.cache
+D:\--- SITIO POLICIA FEDERAL\SIRF_v2\SIRF.Objetos\obj\Debug\SIRF.Objetos.dll
+D:\--- SITIO POLICIA FEDERAL\SIRF_v2\SIRF.Objetos\obj\Debug\SIRF.Objetos.pdb
+D:\--- SITIO POLICIA FEDERAL\SIRF_v2\SIRF.Objetos\bin\Debug\SIRF.Objetos.XML
+C:\Users\luisg.indra\Documents\Ultrasist\SIRF\SIRF_V2.0\SIRF_V2\SIRF.Objetos\bin\Debug\SIRF.Objetos.XML
+C:\Users\luisg.indra\Documents\Ultrasist\SIRF\SIRF_V2.0\SIRF_V2\SIRF.Objetos\bin\Debug\SIRF.Objetos.dll
+C:\Users\luisg.indra\Documents\Ultrasist\SIRF\SIRF_V2.0\SIRF_V2\SIRF.Objetos\bin\Debug\SIRF.Objetos.pdb
+C:\Users\luisg.indra\Documents\Ultrasist\SIRF\SIRF_V2.0\SIRF_V2\SIRF.Objetos\obj\Debug\SIRF.Objetos.csproj.CoreCompileInputs.cache
+C:\Users\luisg.indra\Documents\Ultrasist\SIRF\SIRF_V2.0\SIRF_V2\SIRF.Objetos\obj\Debug\SIRF.Objetos.dll
+C:\Users\luisg.indra\Documents\Ultrasist\SIRF\SIRF_V2.0\SIRF_V2\SIRF.Objetos\obj\Debug\SIRF.Objetos.pdb
+C:\Users\adrianal.ultrasist\Desktop\SIRF_V2\SIRF.Objetos\bin\Debug\SIRF.Objetos.XML
+C:\Users\adrianal.ultrasist\Desktop\SIRF_V2\SIRF.Objetos\bin\Debug\SIRF.Objetos.dll
+C:\Users\adrianal.ultrasist\Desktop\SIRF_V2\SIRF.Objetos\bin\Debug\SIRF.Objetos.pdb
+C:\Users\adrianal.ultrasist\Desktop\SIRF_V2\SIRF.Objetos\obj\Debug\SIRF.Objetos.dll
+C:\Users\adrianal.ultrasist\Desktop\SIRF_V2\SIRF.Objetos\obj\Debug\SIRF.Objetos.pdb
+C:\Users\adrianal.ultrasist\Desktop\SIRF\SIRF\SIRF.Objetos\bin\Debug\SIRF.Objetos.XML
+C:\Users\adrianal.ultrasist\Desktop\SIRF\SIRF\SIRF.Objetos\bin\Debug\SIRF.Objetos.dll
+C:\Users\adrianal.ultrasist\Desktop\SIRF\SIRF\SIRF.Objetos\bin\Debug\SIRF.Objetos.pdb
+C:\Users\adrianal.ultrasist\Desktop\SIRF\SIRF\SIRF.Objetos\obj\Debug\SIRF.Objetos.dll
+C:\Users\adrianal.ultrasist\Desktop\SIRF\SIRF\SIRF.Objetos\obj\Debug\SIRF.Objetos.pdb
+C:\Users\adrianal.ultrasist\Desktop\SIRF\SIRF_V3\SIRF\SIRF\SIRF.Objetos\bin\Debug\SIRF.Objetos.XML
+C:\Users\adrianal.ultrasist\Desktop\SIRF\SIRF_V3\SIRF\SIRF\SIRF.Objetos\bin\Debug\SIRF.Objetos.dll
+C:\Users\adrianal.ultrasist\Desktop\SIRF\SIRF_V3\SIRF\SIRF\SIRF.Objetos\bin\Debug\SIRF.Objetos.pdb
+C:\Users\adrianal.ultrasist\Desktop\SIRF\SIRF_V3\SIRF\SIRF\SIRF.Objetos\obj\Debug\SIRF.Objetos.dll
+C:\Users\adrianal.ultrasist\Desktop\SIRF\SIRF_V3\SIRF\SIRF\SIRF.Objetos\obj\Debug\SIRF.Objetos.pdb
+C:\Users\adrianal.ultrasist\Desktop\SIRF\SIRF_V3\SIRF\SIRF\SIRF.Objetos\obj\Debug\SIRF.Objetos.csprojResolveAssemblyReference.cache

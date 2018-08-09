@@ -1,0 +1,336 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>SIRF.Datos</name>
+    </assembly>
+    <members>
+        <member name="M:SIRF.Datos.DBancos.ObtenerLista(System.Boolean)">
+            <summary>
+            Consulta catálogo de bancos
+            </summary>
+            <param name="soloActivos">Filtro opcional</param>
+            <returns></returns>
+        </member>
+        <member name="T:SIRF.Datos.DDocumento">
+            <summary>
+            Capa correspondein
+            </summary>
+        </member>
+        <member name="M:SIRF.Datos.DDocumento.Guardar(SIRF.Objetos.ODocumento,SIRF.Objetos.OLogin)">
+            <summary>
+            Registrar documentos de solicitud : Author JUVA
+            </summary>
+            ///
+            <param name="documento"></param>
+            <param name="login">Objeto de tipo OLogin</param>
+            <returns>Respuesta genérica de tipo Int</returns>
+        </member>
+        <member name="M:SIRF.Datos.DDocumento.ActualizarSolicitud(SIRF.Objetos.OSolicitudRecursos,SIRF.Objetos.OLogin)">
+            <summary>
+            Registrar documentos de solicitud
+            </summary>
+            <param name="documentos">Documento</param>
+            <param name="login">Objeto de tipo OLogin</param>
+            <returns>Respuesta genérica de tipo Int</returns>
+        </member>
+        <member name="M:SIRF.Datos.DDocumento.ObtenerLista(System.Int32,SIRF.Objetos.OLogin)">
+            <summary>
+            Consultar documentos de la solicitud
+            </summary>
+            <param name="solicitudId">Identificador de la slicitud</param>
+            <param name="login">Objeto de tipo OLogin</param>
+            <returns>Respuesta genérica de tipo ODocumento</returns>
+        </member>
+        <member name="M:SIRF.Datos.DDocumento.Eliminar(SIRF.Objetos.ODocumento,SIRF.Objetos.OLogin)">
+            <summary>
+            Eliminar documentos de solicitud
+            </summary>
+            <param name="documento"></param>
+            <param name="login">Objeto de tipo OLogin</param>
+            <returns>Respuesta de transacción</returns>
+        </member>
+        <member name="M:SIRF.Datos.DDocumento.ObtenerListaV(System.Int32,System.Boolean)">
+            <summary>
+            Consulta tipo de documetos
+            </summary>
+            <param name="tipoSolicitudID">Filtro</param>
+            <param name="soloActivos">Filtro opciona</param>
+            <returns>Tipos de documento</returns>
+        </member>
+        <member name="M:SIRF.Datos.DEstadoSolicitud.ObtenerLista(System.Int32,System.Boolean)">
+            <summary>
+            Catálogo : Author ?
+            </summary>
+            <param name="perfilID">Filtro por perfil</param>
+            <returns>Estatus correspondientes al perfil</returns>
+        </member>
+        <member name="M:SIRF.Datos.DExpedienteCuenta.ObtenerCuentasIntegrante(System.Int32)">
+            <summary>
+            Obtiene las cuentas bancarias del integrate : Author JUVA
+            </summary>
+            <param name="numeroExpediente">Numero de expediente</param>
+            <returns>Cuentas</returns>
+        </member>
+        <member name="M:SIRF.Datos.DExpedienteDato.ObtenerDatosIntegrante(System.Int32)">
+            <summary>
+            
+            </summary>
+            <update>JUVA</update>
+            <param name="numeroExpediente"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SIRF.Datos.DExpedienteDato.ObtenerCuentaIntegrante(System.Int32)">
+            <summary>
+            
+            </summary>
+            <updte>JUVA</updte>
+            <param name="numeroExpediente"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SIRF.Datos.DFormaComprobacion.ObtenerLista(System.Boolean)">
+            <summary>
+            Consulta catálogo de bancos
+            </summary>
+            <param name="soloActivos">Filtro opcional</param>
+            <returns></returns>
+        </member>
+        <member name="T:SIRF.Datos.DGestionExpediente">
+            <summary>
+            Clase de la capa de Datos correspondiente a DGestionExpediente
+            </summary>
+        </member>
+        <member name="M:SIRF.Datos.DGestionExpediente.ObtenerCentrosDistribucion(System.Int32,SIRF.Objetos.OLogin)">
+            <summary>
+            Método para la obtención del Centro de Distribución.
+            </summary>
+            <param name="numeroExpediente">Número de expediente del usuario logueado.</param>
+            <param name="login">Parametro de tipo OLogin</param>
+            <returns>Respuesta genérica de tipo lista de cadenas.</returns>
+        </member>
+        <member name="T:SIRF.Datos.DGestionLogError">
+            <summary>
+            Clase de la capa de negocio correspondiente a DGestionLogError
+            </summary>
+        </member>
+        <member name="M:SIRF.Datos.DGestionLogError.GuardarError(SIRF.Objetos.OLogError,SIRF.Objetos.OLogin)">
+            <summary>
+            Método para el registro del log de errores.
+            </summary>
+            <param name="logError">Parametro de tipo OLogError</param>
+            <param name="login">Parametro de tipo OLogin</param>
+            <returns>Respuesta genérica de tipo string</returns>
+        </member>
+        <member name="T:SIRF.Datos.DMoneda">
+            <summary>
+            Clase de la capa de datos correspondiente al catalogo de Patidas
+            </summary>
+        </member>
+        <member name="M:SIRF.Datos.DPaises.ObtenerLista(System.Boolean,System.String)">
+            <summary>
+            Consulta catálogo de partida
+            </summary>
+            <param name="soloActivos">Filtro opcional</param>
+            <param name="zonaPais">Filtro</param>
+            <returns></returns>
+        </member>
+        <member name="T:SIRF.Datos.DPartida">
+            <summary>
+            Clase de la capa de datos correspondiente al catalogo de Patidas
+            </summary>
+        </member>
+        <member name="M:SIRF.Datos.DPartida.ObtenerLista(System.Int32,System.Boolean,System.String)">
+            <summary>
+            Consulta catálogo de partida
+            </summary>
+            <param name="tipoSolicitudID">Filtro</param>
+            <param name="soloActivos">Filtro opcional</param>
+            <param name="zonaPartidas">Filtro opcional</param>
+            <returns></returns>
+        </member>
+        <member name="M:SIRF.Datos.DPartida.ObtenerListaPasajes(System.Int32,System.Boolean,System.String)">
+            <summary>
+            Consulta catálogo de partida
+            </summary>
+            <param name="tipoSolicitudID">Filtro</param>
+            <param name="soloActivos">Filtro opcional</param>
+            <param name="zonaPasajes">Filtro opcional</param>
+            <returns></returns>
+        </member>
+        <member name="M:SIRF.Datos.DSolicitud.ObtenerSolicitudesVentanillaUnica(SIRF.Objetos.OSolicitud)">
+            <summary>
+            
+            </summary>
+            <param name="filtro"></param>
+            <returns></returns>
+        </member>
+        <member name="T:SIRF.Datos.DTipoDocumento">
+            <summary>
+            Clase de la capa de datos de tipo DTipoDocumento
+            </summary>
+        </member>
+        <member name="M:SIRF.Datos.DTipoDocumento.ObtenerLista(System.Int32,System.Boolean,SIRF.Objetos.OLogin)">
+            <summary>
+            Consulta tipo de documetos
+            </summary>
+            <param name="tipoSolicitudID">Filtro</param>
+            <param name="soloActivos">Filtro opciona.</param>
+            <param name="login">Objeto de tipo OLogin.</param>
+            <returns>Tipos de documento</returns>
+        </member>
+        <member name="M:SIRF.Datos.DTipoDocumento.ObtenerLista(System.Int32,SIRF.Objetos.OLogin)">
+            <summary>
+            Consulta tipo de documetos
+            </summary>
+            <param name="tipoSolicitudID">Filtro</param>
+            <param name="login">Objeto de tipo OLogin.</param>
+            <returns>Tipos de documento</returns>
+        </member>
+        <member name="M:SIRF.Datos.DTipoDocumento.ObtenerListaV(System.Int32,System.Boolean)">
+            <summary>
+            Consulta tipo de documetos
+            </summary>
+            <param name="tipoSolicitudID">Filtro</param>
+            <param name="soloActivos">Filtro opciona</param>
+            <returns>Tipos de documento</returns>
+        </member>
+        <member name="M:SIRF.Datos.DTipoPago.ObtenerLista(System.Boolean,System.Int32)">
+            <summary>
+            Consulta catálogo de bancos
+            </summary>
+            <param name="soloActivos">Filtro opcional</param>
+            <param name="TipoSolControlCod">Filtro</param>
+            <returns></returns>
+        </member>
+        <member name="M:SIRF.Datos.DTipoSolicitud.ObtenerLista(System.Int32,System.Boolean)">
+            <summary>
+            Consulta los tipos de solicitud : Authos JUVA
+            </summary>
+            <param name="regionID">Filtro</param>
+            <param name="soloActivas">Filtro opcional</param>
+            <returns></returns>
+        </member>
+        <member name="M:SIRF.Datos.DTipoSolicitud.ObtenerLista">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:SIRF.Datos.DTipoSolicitud.ObtenerLista(System.Int32,System.Int32,System.Boolean)">
+            <summary>
+            
+            </summary>
+            <param name="regionID"></param>
+            <param name="codUa"></param>
+            <param name="soloActivas"></param>
+            <returns></returns>
+        </member>
+        <member name="T:SIRF.Datos.DucvDocumentos">
+            <summary>
+            Clase correspondiente a la capa de datos de tipo DucvDocumentos.
+            </summary>
+        </member>
+        <member name="M:SIRF.Datos.DucvDocumentos.GetEstatusSolicitudDocumentos(System.Collections.Generic.List{SIRF.Objetos.OucvDocumentos},SIRF.Objetos.OLogin)">
+            <summary>
+            Método para obtener EstatusSolicitudDocumentos
+            </summary>
+            <param name="listaDocumentos">Lista de documentos</param>
+            <param name="login">Objeto de tipo OLogin</param>
+            <returns>Respuesta genérica de tipo OucvDocumentos</returns>
+        </member>
+        <member name="M:SIRF.Datos.DucvDocumentos.Guardar(System.Collections.Generic.List{SIRF.Objetos.ODocumento},System.Int32,SIRF.Objetos.OLogin)">
+            <summary>
+            Método para guardar el o los documentos cargados
+            </summary>
+            <param name="documentos">Lista de documentos cargados</param>
+            <param name="solicitudId">Identificador unico de la solicitud</param>
+            <param name="login">Objeto de tipo OLogin</param>
+            <returns>Respuesta genérica de tipo OucvDocumentos</returns>
+        </member>
+        <member name="M:SIRF.Datos.DucvDocumentos.Eliminar(System.Collections.Generic.List{SIRF.Objetos.ODocumento},System.Int32,SIRF.Objetos.OLogin)">
+            <summary>
+            Método para eliminar el o los documentos cargados
+            </summary>
+            <param name="documentos">Lista de documentos cargados</param>
+            <param name="solicitudId">Identificador unico de la solicitud</param>
+            <param name="login">Objeto de tipo OLogin</param>
+            <returns>Respuesta genérica de tipo OucvDocumentos</returns>
+        </member>
+        <member name="T:SIRF.Datos.DUnidadAdministrativa">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:SIRF.Datos.DUnidadAdministrativa.ObtenerLista(SIRF.Objetos.ORegion)">
+            <summary>
+            Consulta de unidades administrativas por region
+            </summary>
+            <param name="region"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SIRF.Datos.DUnidadAdministrativa.ObtenerListaPorRegionId(System.Int32)">
+            <summary>
+            Lista por region
+            </summary>
+            <param name="regionId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SIRF.Datos.DUnidadAdministrativa.ObtenerPorCodUA(System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="codUa"></param>
+            <returns></returns>
+        </member>
+        <member name="T:SIRF.Datos.DGestionUsuarios">
+            <summary>
+            Clase de la capa de datos correspondiente a la Gestión de usuarios
+            </summary>
+        </member>
+        <member name="M:SIRF.Datos.DGestionUsuarios.ObtenerUsuario(SIRF.Objetos.OBusquedaParametro,SIRF.Objetos.OLogin)">
+            <summary>
+            Método para la obtención de la información del usuario.
+            </summary>
+            <param name="par">Parametros de búsqueda.</param>
+            <param name="login">Parametros de tipo OLogin.</param>
+            <returns>Respuesta genérica de tipo ObjetoUsuario.</returns>        
+        </member>
+        <member name="M:SIRF.Datos.DGestionUsuarios.ObtenerPermisos(SIRF.Objetos.OBusquedaParametro,SIRF.Objetos.OLogin)">
+            <summary>
+            Método para la obtención de los permisos del usuario logueado.
+            </summary>
+            <param name="par">Parametros de búsqueda.</param>
+            <param name="login">Parametros de tipo OLogin.</param>
+            <returns>Respuesta genérica de tipo OPermisos</returns> 
+        </member>
+        <member name="T:SIRF.Datos.DGestionarCuotasDiarias">
+            <summary>
+            Capa de negocio correspondiente a DGestionarCuotasDiarias
+            </summary>
+        </member>
+        <member name="M:SIRF.Datos.DGestionarCuotasDiarias.ObtenerConceptosPago(SIRF.Objetos.OSolicitud,SIRF.Objetos.OLogin)">
+            <summary>
+            Método para obtener la información correspondiente a los concepto de pago
+            </summary>
+            <param name="soliciutd">Objeto de tipo OSolicitud</param>
+            <param name="login">Objeto de tipo OLogin</param>
+            <returns>Respuesta genérica de tipo OTipoCuota</returns>
+        </member>
+        <member name="M:SIRF.Datos.DGestionarCuotasDiarias.ObtenerPartidas(SIRF.Objetos.OSolicitud,System.String,SIRF.Objetos.OLogin)">
+            <summary>
+            Método para obtener la información correspondiente a las partidas
+            </summary>
+            <param name="soliciutd">Objeto de tipo OSolicitud</param>
+            <param name="zonaPartidas">Zona de la partida</param>
+            <param name="login">Objeto de tipo OLogin</param>
+            <returns>Respuesta genérica de tipo OTipoCuota</returns>
+        </member>
+        <member name="M:SIRF.Datos.DGestionarCuotasDiarias.ObtenerCuentasIntegrante(System.Int32,SIRF.Objetos.OLogin)">
+            <summary>
+            Obtiene las cuentas bancarias del integrate : Author JUVA
+            </summary>
+            <param name="numeroExpediente">Numero de expediente</param>
+            <param name="login">Objeto de tipo OLogin</param>
+            <returns>Cuentas</returns>
+        </member>
+    </members>
+</doc>
