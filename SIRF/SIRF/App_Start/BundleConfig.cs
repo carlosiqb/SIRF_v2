@@ -26,6 +26,13 @@ namespace SIRF
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
                       "~/Content/site.css"));
+
+            bundles.Add(new ScriptBundle("~/Css").Include(
+                      "~/Content/bootstrap.css",
+                      "~/Content/bootstrap.min.css",
+                      "~/Css/StyleMaster.css",
+                      "~/Css/bootstrap-datepicker.css",
+                      "~/Css/select2.min.css"));
         }
     }
 }
