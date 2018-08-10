@@ -15,7 +15,7 @@ namespace SIRF.Negocio
         /// </summary>
         /// <param name="region"></param>
         /// <returns>Unidades administrativas</returns>
-        public List<OUnidadAdministrativa> ObtenerLista(ORegion region)
+        public List<OSelect> ObtenerLista(ORegion region)
         {
             DUnidadAdministrativa unidadAdministrativa = new DUnidadAdministrativa();
             return unidadAdministrativa.ObtenerLista(region);

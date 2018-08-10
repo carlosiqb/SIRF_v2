@@ -16,7 +16,7 @@ namespace SIRF.Persistencia
         /// </summary>
         /// <param name="region"></param>
         /// <returns></returns>
-        public List<OUnidadAdministrativa> ObtenerLista(ORegion region)
+        public List<OSelect> ObtenerLista(ORegion region)
         {
             using (SIRFPROD_v2Entities db = new SIRFPROD_v2Entities())
             {
@@ -25,25 +25,18 @@ namespace SIRF.Persistencia
                     in db.CatUnidadAdm
                                 where
                                 ua.estatusLogico // Esta linea se descomenta en base a las observaciones del 28/02/2017
-                                select new OUnidadAdministrativa
+                                select new OSelect()
                                 {
-                                    CodUA = ua.catUnidadAdmID,
-                                    UnidadAdministrativa = ua.descripcion,
-                                    CodigoPadre = ua.codigoPadre,
-                                    Abreviatura = ua.abreviatura,
-                                    Activo = ua.estatusLogico,
-                                    Region = new ORegion
-                                    {
-                                        RegionID = ua.catRegionID
-                                    }
+                                    Valor = ua.catUnidadAdmID,
+                                    Concepto = ua.descripcion,
                                 }).ToList();
 
-                consulta.Add(new OUnidadAdministrativa
+                consulta.Add(new OSelect()
                 {
-                    CodUA = -1,
-                    UnidadAdministrativa = Constantes.SELECTOPTION
+                    Valor = -1,
+                    Concepto = Constantes.SELECTOPTION
                 });
-                return consulta.OrderBy(u => u.CodUA).ToList();
+                return consulta.OrderBy(u => u.Valor).ToList();
 
             }
         }

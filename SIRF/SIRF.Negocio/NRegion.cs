@@ -7,7 +7,7 @@ namespace SIRF.Negocio
 {
     public class NRegion : Instance<NRegion>
     {
-        public List<ORegion> ObtenerListaTodas()
+        public List<OSelect> ObtenerListaTodas()
         {
             DRegion tipo = new DRegion();
             return tipo.ObtenerListaTodas();

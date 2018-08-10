@@ -7,7 +7,7 @@ namespace SIRF.Persistencia
 {
     public class DFirma
     {
-        public List<OFirma> ObtenerListaTodas()
+        public List<OSelect> ObtenerListaTodas()
         {
             using (SIRFPROD_v2Entities db = new SIRFPROD_v2Entities())
             {
@@ -15,20 +15,19 @@ namespace SIRF.Persistencia
                 var consulta = (from cs
                     in db.CatFirma
                                 where cs.EstadoLogico == true //MM Agrega quitar los inactivos
-                                select new OFirma
+                                select new OSelect()
                                 {
-                                    FirmaID = cs.catFirmaID,
-                                    Descripcion = cs.Descripcion.Trim(),
-                                    EstadoLogico = cs.EstadoLogico
+                                    Valor = cs.catFirmaID,
+                                    Concepto= cs.Descripcion.Trim(),
                                 }).ToList();
 
-                consulta.Add(new OFirma
+                consulta.Add(new OSelect()
                 {
-                    FirmaID = -1,
-                    Descripcion = Constantes.SELECTOPTION
+                    Valor = -1,
+                    Concepto= Constantes.SELECTOPTION
                 });
 
-                return consulta.OrderBy(ts => ts.FirmaID).ToList();
+                return consulta.OrderBy(ts => ts.Valor).ToList();
 
             }
         }

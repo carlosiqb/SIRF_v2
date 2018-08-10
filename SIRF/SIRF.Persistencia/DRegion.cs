@@ -7,27 +7,26 @@ namespace SIRF.Persistencia
 {
     public class DRegion
     {
-        public List<ORegion> ObtenerListaTodas()
+        public List<OSelect> ObtenerListaTodas()
         {
             using (var db = new SIRFPROD_v2Entities())
             {
                 var consulta = (from cs
                     in db.CatRegion
                                 where cs.estatusLogico //MM Agrega quitar los inactivos
-                                select new ORegion
+                                select new OSelect()
                     {
-                        RegionID = cs.regionID,
-                        DescripcionRegion = cs.descripcion.Trim(),
-                        EstatusLogico = cs.estatusLogico
+                        Valor = cs.regionID,
+                        Concepto = cs.descripcion.Trim(),
                     }).ToList();
 
-                consulta.Add(new ORegion
+                consulta.Add(new OSelect()
                 {
-                    RegionID = -1,
-                    DescripcionRegion = Constantes.SELECTOPTION
+                    Valor = -1,
+                    Concepto = Constantes.SELECTOPTION
                 });
 
-                return consulta.OrderBy(ts => ts.RegionID).ToList();
+                return consulta.OrderBy(ts => ts.Valor).ToList();
 
             }
         }

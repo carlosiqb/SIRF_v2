@@ -13,7 +13,7 @@ namespace SIRF.Persistencia
         /// </summary>
         /// <param name="perfilID">Filtro por perfil</param>
         /// <returns>Estatus correspondientes al perfil</returns>
-        public List<OEstatusSolicitud> ObtenerLista(int perfilID, bool estatusLogico)
+        public List<OSelect> ObtenerLista(int perfilID, bool estatusLogico)
         {
             using (SIRFPROD_v2Entities db = new SIRFPROD_v2Entities())
             {
@@ -24,28 +24,22 @@ namespace SIRF.Persistencia
                                 where
                                 ep.catPerfilID == perfilID &&
                                 es.estatusLogico == estatusLogico
-                                select new OEstatusSolicitud
+                                select new OSelect
                     {
-                        EstatusID = es.catEstatusSolicitudID,
-                        DescripcionEstatus = es.descripcion,
-                        DescripcionCorta = es.descripcionCorta,
-                        EstatusLogico = es.estatusLogico,
-                        EstatusSiguiente = es.estatusSiguiente,
-                        EstatusDevolucion = es.estatusDevolucion
+                        Valor = es.catEstatusSolicitudID,
+                        Concepto= es.descripcion,
 
                     }).ToList();
 
                 if (consulta.Count != 1)
                 {
-                    consulta.Add(new OEstatusSolicitud
+                    consulta.Add(new OSelect
                     {
-                        EstatusID = -1,
-                        DescripcionEstatus = Constantes.SELECTOPTION,
-                        DescripcionCorta = Constantes.SELECTOPTION,
-                        EstatusLogico = true
+                        Valor = -1,
+                        Concepto= Constantes.SELECTOPTION,
                     });
                 }
-                return consulta.OrderBy(es => es.EstatusID).ToList();
+                return consulta.OrderBy(es => es.Valor).ToList();
             }
         }
 

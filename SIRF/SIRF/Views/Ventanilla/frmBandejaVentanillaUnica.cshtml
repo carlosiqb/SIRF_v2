@@ -5,8 +5,8 @@
     </div>
     <div class="panel-body">
         <div class="panel panel-default">
-            <div class="panel-heading">
-                <div class="row">
+            <div class="panel-heading" style="height: 20px;">
+                <div class="col-md-12">
                     <button type="button" id="btnSalir" class="btn btn-default btn-sm  pull-right tooltips col-sm-1"
                             data-toggle="tooltip"
                             style="margin-right: 5px"
@@ -21,9 +21,9 @@
                 </div>
             </div>
             <div class="panel-body">
-                <div class="row">
+                <div class="col-md-12">
                     <div class="col-sm-6">
-                        <div class="row">
+                        <div class="col-md-12">
                             <label class="control-label col-sm-4 text-left" for="ddlTipoSolicitud" id="lblTipoSolicitud" runat="server">
                                 @MsnVentanilla.TIPOSOLICITUD
                             </label>
@@ -32,36 +32,24 @@
                                     <div class="input-group-addon input-sm">
                                         <i class="glyphicon glyphicon-flag glyphicon-sm"></i>
                                     </div>
-                                    <select id="ddlTipoSolicitud" class="form-control input-sm"></select>
+                                    <select id="ddlTipoSolicitud" onchange="CargarSolicitudes();" class="form-control input-sm"></select>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="col-sm-6">
-                        <div class="row">
+                        <div class="col-md-12">
                             <label class="control-label col-sm-4 text-left" for="txtFechaInicial" runat="server" id="lblPeriodo">
                                 @MsnVentanilla.PERIODO
                             </label>
                             <div class="controls col-sm-8">
-                                <div class="input-group input-daterange">
-                                    <button type="button" id="txtFechaInicial"
-                                            class="form-control input-sm">
-                                        <span class="glyphicon glyphicon-calendar"></span>
-                                    </button>
-                                    <span class="input-group-addon" runat="server" id="spanA">
-                                        @MsnVentanilla.A
-                                    </span>
-                                    <button type="button" ID="txtFechaFinal"
-                                            class="form-control input-sm">
-                                        <span class="glyphicon glyphicon-calendar"></span>
-                                    </button>
-                                </div>
+                                <input type="text" id="txtPeriodo"
+                                       class="form-control col-sm-9" maxlength="20" />
                             </div>
                         </div>
                     </div>
-                    <div class="col-sm-12" style="height: 10px;">&nbsp;</div>
                     <div class="col-sm-6">
-                        <div class="row">
+                        <div class="col-md-12">
                             <label class="control-label col-sm-4 text-left" for="ddlEstatus" runat="server" id="lblEstatus">
                                 @MsnVentanilla.ESTATUS
                             </label>
@@ -70,14 +58,14 @@
                                     <div class="input-group-addon input-sm">
                                         <i class="glyphicon glyphicon-flag glyphicon-sm"></i>
                                     </div>
-                                    <select ID="ddlEstatus" 
+                                    <select id="ddlEstatus" onchange="CargarSolicitudes();"
                                             class="form-control input-sm"></select>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="col-sm-6">
-                        <div class="row">
+                        <div class="col-md-12">
                             <label class="control-label col-sm-4 text-left" for="txtNumeroExpediente" runat="server" id="lblNumeroExpediente">
                                 @MsnVentanilla.FOLIO
                             </label>
@@ -86,15 +74,14 @@
                                     <div class="input-group-addon input-sm">
                                         <i class="glyphicon glyphicon-file glyphicon-sm"></i>
                                     </div>
-                                    <input type="text" ID="txtFolio"
-                                           class="form-control col-sm-9" MaxLength="20" />
+                                    <input type="text" id="txtFolio"
+                                           class="form-control col-sm-9" maxlength="20" />
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-sm-12" style="height: 10px;">&nbsp;</div>
                     <div class="col-sm-12">
-                        <div class="row">
+                        <div class="col-md-12">
                             <label class="control-label col-sm-2 text-left" for="ddlUniAdministrariva" runat="server" id="lblUniAdministrativa" visible="true">
                                 @MsnVentanilla.UNIDADADMIN
                             </label>
@@ -103,15 +90,14 @@
                                     <div class="input-group-addon input-sm">
                                         <i class="glyphicon glyphicon-flag glyphicon-sm"></i>
                                     </div>
-                                    <select ID="ddlUniAdministrativa" 
+                                    <select id="ddlUniAdministrativa" onchange="CargarSolicitudes();"
                                             class="form-control input-sm"></select>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-sm-12" style="height: 10px;">&nbsp;</div>
                     <div class="col-sm-6">
-                        <div class="row">
+                        <div class="col-md-12">
                             <label class="control-label col-sm-4 text-left" for="ddlRegion" runat="server" id="lblRegion" visible="true">
                                 @MsnVentanilla.REGION
                             </label>
@@ -120,14 +106,14 @@
                                     <div class="input-group-addon input-sm">
                                         <i class="glyphicon glyphicon-flag glyphicon-sm"></i>
                                     </div>
-                                    <select ID="ddlRegion" 
+                                    <select id="ddlRegion" onchange="CargarSolicitudes();"
                                             class="form-control input-sm"></select>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="col-sm-6">
-                        <div class="row">
+                        <div class="col-md-12">
                             <label class="control-label col-sm-4 text-left" for="ddlTipoFirma" runat="server" id="lblTipoFirma" visible="true">
                                 @MsnVentanilla.TIPOFIRMA
                             </label>
@@ -136,8 +122,8 @@
                                     <div class="input-group-addon input-sm">
                                         <i class="glyphicon glyphicon-flag glyphicon-sm"></i>
                                     </div>
-                                    <select ID="ddlTipoFirma"
-                                            class="form-control input-sm" ></select>
+                                    <select id="ddlTipoFirma" onchange="CargarSolicitudes();"
+                                            class="form-control input-sm"></select>
                                 </div>
                             </div>
                         </div>
@@ -145,66 +131,11 @@
                 </div>
             </div>
         </div>
-        <div class="row">
+        <div class="col-md-12">
             <div class="col-sm-12">
-                <div id="divBusqueda" class="row">
+                <div id="divBusqueda" class="col-md-12">
                     <div class="col-sm-12" style="position: inherit">
-                        <div class="scrolling-table-container">
-                            <!--<asp:GridView ID="gvSolicitud" runat="server" AutoGenerateColumns="False"
-                                          CssClass="table table-striped table-bordered table-hover" OnRowCommand="gvSolicitud_RowCommand"
-                                          PageSize="5" AllowPaging="false" OnPageIndexChanging="gvSolicitud_PageIndexChanging"
-                                          ShowHeaderWhenEmpty="True">
-                                <columns>
-                                    <asp:templatefield headertext="SolicitudID" visible="false">
-                                        <itemtemplate>
-                                            <asp:Label ID="lblSolicitudID" runat="server" Text='<%# Eval("SolicitudID") '></asp:Label>
-                                        </itemtemplate>
-                                    </asp:templatefield>
-                                    <asp:boundfield headertext="Número de folio" datafield="FolioSolicitud" />
-                                    <asp:boundfield headertext="Monto" datafield="Monto" dataformatstring="{0:C2}">
-                                        <itemstyle horizontalalign="Right" />
-                                    </asp:boundfield>
-                                    <asp:templatefield headertext="TipoSolicitudID" visible="false">
-                                        <itemtemplate>
-                                            <asp:Label ID="lblTipoSolicitudID" runat="server" Text='<%# Eval("TipoSolicitud.TipoSolicitudID") '></asp:Label>
-                                        </itemtemplate>
-                                    </asp:templatefield>
-                                    <asp:boundfield headertext="Tipo de solicitud" datafield="TipoSolicitud.DescripcionTipoSolicitud" />
-                                    <asp:boundfield headertext=" @MsnVentanilla.HEADER_GRID_UNIDAD_ADMINISTRATIVA " datafield=" unidadadministrativa.unidadadministrativa" />
-                                    <asp:boundfield headertext="Prioridad" datafield="Prioridad.DescripcionPrioridad" visible="false" />
-                                    <asp:boundfield headertext="EstatusID" datafield="Estatus.EstatusID" visible="false" />
-                                    <asp:boundfield headertext="Estatus" datafield="Estatus.DescripcionEstatus" />
-                                    <asp:boundfield headertext="Fecha" datafield="FechaSolicitud" dataformatstring="{0:d}" />
-                                    <asp:boundfield headertext="Observaciones" datafield="Observaciones" visible="false" />
-                                    <asp:boundfield headertext="Oficio" datafield="OficioSolicitud" />
-                                    <asp:boundfield headertext="Rechazada" datafield="Rechazada" visible="false" />
-                                    <asp:boundfield headertext="Tipo Firma" datafield="Descripcion" />
-                                    <asp:templatefield headertext="">
-                                        <itemtemplate>
-                                            <div class="btn-group">
-                                                <asp:LinkButton ID="btnDetalle" CssClass="btn btn-default btn-sm tooltips" runat="server"
-                                                                data-toggle="tooltip" ToolTip="@MsnVentanilla.IRADETALLE" CommandName="MostrarDetalle"
-                                                                CommandArgument="<%# ((GridViewRow) Container).RowIndex " OnClientClick="ShowProgress();"
-                                                                Visible='<%# (bool.Parse(Eval("Rechazada").ToString()) != true) '>
-                                                    <span class="glyphicon glyphicon-eye-open"></span>
-                                                </asp:LinkButton>
-                                                <asp:LinkButton ID="LinkButton1" CssClass="btn btn-danger btn-sm tooltips" runat="server"
-                                                                data-toggle="tooltip" ToolTip="@MsnVentanilla.IRADETALLE " CommandName="MostrarDetalle"
-                                                                CommandArgument="<%# ((GridViewRow) Container).RowIndex "
-                                                                Visible='<%# (bool.Parse(Eval("Rechazada").ToString())) '>
-                                                    <span class="glyphicon glyphicon-eye-close"></span>
-                                                </asp:LinkButton>
-                                            </div>
-                                        </itemtemplate>
-                                    </asp:templatefield>
-                                </columns>
-                                <headerstyle backcolor="#335A8E" forecolor="White" horizontalalign="Center" />
-                                <rowstyle backcolor="White" />
-                                <emptydatarowstyle forecolor="#335a8e" cssclass="table table-bordered" />
-                                <emptydatatemplate>
-                                    @Mensajes.infNoExisteInformacionGrids
-                                </emptydatatemplate>
-                            </asp:GridView>-->
+                        <div class="scrolling-table-container" id="SeccionResultadosDiv">
                         </div>
                     </div>
                 </div>
@@ -214,7 +145,49 @@
 </div>
 <script type="text/javascript">
 
-    $(document).ready(function () {
+    $(document).ready(function() {
+        CargaInicial();
     });
+
+    function CargaInicial() {
+        CargaSolicitud();
+        CargaRegion();
+        CargaEstatus();
+        CargaUnidadAdm();
+        CargaFirma();
+    }
+
+    function CargaSolicitud() {
+        EjecutaAjax("../Ventanilla/CargaSolicitud", null, null, "ddlTipoSolicitud");
+    }
+
+    function CargaRegion() {
+        EjecutaAjax("../Ventanilla/CargaRegion", null, null, "ddlRegion");
+    }
+
+    function CargaEstatus() {
+        EjecutaAjax("../Ventanilla/CargaEstatus", null, null, "ddlEstatus");
+    }
+
+    function CargaUnidadAdm() {
+        EjecutaAjax("../Ventanilla/CargaUnidadAdm", null, null, "ddlUniAdministrativa");
+    }
+
+    function CargaFirma() {
+        EjecutaAjax("../Ventanilla/CargaFirma", null, null, "ddlTipoFirma");
+    }
+
+    function CargarSolicitudes() {
+        var modelo = {
+            tipoSolicitud_int: $("#ddlTipoSolicitud").val(),
+            estatus_int: $("#ddlEstatus").val(),
+            region_int: $("#ddlRegion").val(),
+            tipoFirma_int: $("#ddlTipoFirma").val(),
+            uniAdministrativa_int: $("#ddlUniAdministrativa").val(),
+            periodo: $("#txtPeriodo").val(),
+            FolioSolicitud: $("#txtFolio").val()
+        };
+        EjecutaAjax("../Ventanilla/frmCargarSolicitudes", modelo, null, "SeccionResultadosDiv");
+    }
 
 </script>

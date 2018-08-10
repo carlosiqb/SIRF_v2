@@ -178,6 +178,12 @@ namespace SIRF.Objetos
         public string FolioSolicitud { get; set; }
         public DateTime? FechaInicial { get; set; }
         public DateTime? FechaFinal { get; set; }
+        public int? tipoFirma_int { get; set; }
+        public int uniAdministrativa_int { get; set; }
+        public int tipoSolicitud_int { get; set; }
+        public int region_int { get; set; }
+        public short estatus_int { get; set; }
+        public string periodo { get; set; }
     }
 }
 

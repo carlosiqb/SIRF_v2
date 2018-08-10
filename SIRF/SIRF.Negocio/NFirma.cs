@@ -7,7 +7,7 @@ namespace SIRF.Negocio
 {
     public class NFirma : Instance<NFirma>
     {
-        public List<OFirma> ObtenerListaTodas()
+        public List<OSelect> ObtenerListaTodas()
         {
             DFirma tipo = new DFirma();
             return tipo.ObtenerListaTodas();

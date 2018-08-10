@@ -12,7 +12,7 @@ namespace SIRF.Negocio
         /// </summary>
         /// <param name="perfilID">Filtro por perfil</param>
         /// <returns>Estatus correspondientes al perfil</returns>
-        public List<OEstatusSolicitud> ObtenerLista(int perfilID, bool estatusLogico)
+        public List<OSelect> ObtenerLista(int perfilID, bool estatusLogico)
         {
             DEstadoSolicitud estatusSolicitudDatos = new DEstadoSolicitud();
             return estatusSolicitudDatos.ObtenerLista(perfilID, estatusLogico);
